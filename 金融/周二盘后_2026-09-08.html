@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融域周二盘后深度复盘 · 2026-09-08</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1140px;margin:0 auto}
+  .backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:18px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px}
+  .kpi .nm{color:#7d8590;font-size:12px;margin-bottom:4px}
+  .kpi .px{font-size:19px;font-weight:700}
+  .kpi .px.r{color:#f85149}.kpi .px.g{color:#3fb950}
+  .kpi .ch{font-size:12px;margin-top:2px}
+  .kpi .ch.r{color:#f85149}.kpi .ch.g{color:#3fb950}
+  .kpi .ex{font-size:11px;color:#7d8590;margin-top:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .box{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
+  .box h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box h3.r{color:#f85149}.box h3.g{color:#3fb950}.box h3.b{color:#58a6ff}.box h3.y{color:#d29922}
+  .box ul{list-style:none;padding-left:16px}
+  .box li{font-size:12.5px;color:#c9d1d9;padding:4px 0;position:relative}
+  .box li:before{content:"▸";position:absolute;left:-14px}
+  .box.r li:before{color:#f85149}.box.g li:before{color:#3fb950}.box.b li:before{color:#58a6ff}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+  table th{background:#21262d;color:#8b949e;font-weight:600;padding:8px 6px;text-align:left;border-bottom:1px solid #30363d;font-size:11px}
+  table td{padding:7px 6px;border-bottom:1px solid #21262d;color:#c9d1d9}
+  table td.r{color:#f85149}table td.g{color:#3fb950}
+  .tier{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .lb{background:#21262d;border:1px solid #30363d;border-radius:8px;padding:8px 12px;font-size:12px}
+  .lb .h{color:#d29922;font-weight:700;margin-bottom:2px}
+  .lb .s{color:#c9d1d9}
+  .lb .t{color:#7d8590;font-size:11px}
+  .hold{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .hold h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .hold .hr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #30363d22;font-size:13px;flex-wrap:wrap;gap:6px}
+  .hold .hr:last-child{border-bottom:none}
+  .hold .hr .l{color:#c9d1d9}.hold .hr .r{color:#e6edf3;font-weight:600}
+  .hold .hr .r.r{color:#f85149}.hold .hr .r.g{color:#3fb950}
+  .hold .det{font-size:11.5px;color:#7d8590;margin-top:2px;width:100%}
+  .risk{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .risk h3{color:#f85149;font-size:14px;margin-bottom:8px}
+  .risk p{color:#f85149cc;font-size:12.5px;margin-bottom:4px}
+  .outlook{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .outlook h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .outlook p{font-size:12.5px;color:#c9d1d9;margin-bottom:6px}
+  .outlook b{color:#e6edf3}
+  .scn{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
+  .scn .c{border-radius:10px;padding:14px 16px;border:1px solid #30363d}
+  .scn .c.b{background:rgba(63,185,80,.06);border-color:rgba(63,185,80,.35)}
+  .scn .c.m{background:rgba(210,153,34,.06);border-color:rgba(210,153,34,.35)}
+  .scn .c.r{background:rgba(248,81,73,.06);border-color:rgba(248,81,73,.35)}
+  .scn .c h4{font-size:13px;margin-bottom:8px}
+  .scn .c.b h4{color:#3fb950}.scn .c.m h4{color:#d29922}.scn .c.r h4{color:#f85149}
+  .scn .c p{font-size:11.5px;color:#c9d1d9;margin-bottom:4px}
+  .disc{margin-top:18px;color:#484f58;font-size:11px;border-top:1px solid #30363d;padding-top:12px;line-height:1.6}
+  .foot{margin-top:14px;color:#484f58;font-size:11px;text-align:center}
+  .note{background:#d299220d;border:1px solid #d29922;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#d29922cc}
+  .emo{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .emo h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .emo .bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12px}
+  .emo .bar .l{flex:0 0 88px;color:#7d8590}
+  .emo .bar .track{flex:1;height:8px;background:#21262d;border-radius:4px;overflow:hidden;position:relative}
+  .emo .bar .fill{height:100%;border-radius:4px}
+  .emo .bar .v{flex:0 0 44px;text-align:right;font-weight:600}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>金融域 · 周二盘后深度复盘</h1>
+  <div class="sub">2026-09-08 周二 16:30 · A股全天收盘口径(15:00) · 盘后深度复盘</div>
+  <div class="meta">
+    <span class="tag y">数据源：WebSearch(财联社/NeoData/东财/证券时报/凤凰/腾讯/每经/新浪国金策略)</span>
+    <span class="tag r">Wind MCP 本会话未连接，已直说不造数</span>
+    <span class="tag b">口径：当日收盘15:00 + 盘后龙虎榜(T+1)</span>
+    <span class="tag r">风控红色高亮</span>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 数据源说明：本次 Wind mcp__wind-finance__* 工具在本会话不可用（连接器未激活）。已按规则<b>直说不造数</b>，改用 WebSearch 抓取财联社盘后连板分析/NeoData情绪复盘/东方财富收评/证券时报/凤凰/腾讯每经/新浪国金策略等9月8日15:00收盘+盘后龙虎榜数据替代，全部数字可溯源到来源+时点。涨停家数存在口径差异（财联社盘后复盘75家 vs 东财收评74家），本报告取财联社盘后口径75家并标注。9月8日龙虎榜席位明细为T+1数据（今晚盘后更新），今日可见为9月7日席位。
+</div>
+
+<div class="sec">一、今日收盘回顾 · 9月8日全天（15:00）</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">上证指数 000001.SH</div><div class="px r">3940.55</div><div class="ch r">+0.20%</div><div class="ex">昨3932.70 / 开3935.55 / 高3951.32 / 低3925.72 / 振幅0.65%</div></div>
+  <div class="kpi"><div class="nm">创业板指 399006.SZ</div><div class="px g">3359.72</div><div class="ch g">-1.15%</div><div class="ex">昨3398.68 / 开3394.35 / 高3418.48 / 低3346.71 / 振幅2.11% · 冲高跳水</div></div>
+  <div class="kpi"><div class="nm">深证成指 399001.SZ</div><div class="px g">13703.21</div><div class="ch g">-0.52%</div><div class="ex">昨13774.91 / 开13782.86 / 高13843.92 / 低13655.84 / 振幅1.37%</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">科创综指</div><div class="px g">1880.10</div><div class="ch g">-1.09%</div><div class="ex">科创50连续两日领跌 · 科技题材拖累双创</div></div>
+  <div class="kpi"><div class="nm">两市合计成交</div><div class="px">19603 亿</div><div class="ch y">微放量 +143亿(+0.7%)</div><div class="ex">较前日19460亿 / 沪9155.66亿+深10447.68亿 · 连续两日稳1.9万亿上方</div></div>
+  <div class="kpi"><div class="nm">涨 / 跌 / 平</div><div class="px r">3417/2026/115</div><div class="ch r">涨股比61%创近期新高</div><div class="ex">涨跌比1.69:1 · 表面科技退潮实则普涨扩散</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">涨停 / 跌停</div><div class="px r">75 / 1</div><div class="ch y">较昨日95家收缩</div><div class="ex">财联社盘后口径75家(东财收评74家) · 跌停仅1家无恐慌</div></div>
+  <div class="kpi"><div class="nm">市场结构</div><div class="px y">风格一日切换</div><div class="ch">沪强深弱·与昨日完全反向</div><div class="ex">昨日"沪指弱·创业板强"→今日"沪指红·创业板跌"</div></div>
+  <div class="kpi"><div class="nm">北向资金</div><div class="px y">未获取</div><div class="ch">数据源矛盾不造数</div><div class="ex">国金策略测算北上重新净卖出A股 · 全天净额未获确切数字</div></div>
+</div>
+<div class="box" style="margin-top:8px"><p style="font-size:12px;color:#7d8590">三大指数涨跌不一，呈"沪强深弱"结构分化，与昨日(沪指+0.07%/创业板+3.41%)完全反向——风格一日切换。沪指+0.20%靠煤炭焦炭+5.23%/油服+4.71%/银行护盘收红，创业板-1.15%冲高3418后跳水（把9月7日+3.41%大阳线回吐一半），科创50连续两日领跌。两市成交19603亿(+143亿)连续两日稳1.9万亿上方。全市场3417涨(61%创近期新高)但涨停75家较昨日95家回落，跌停仅1家无恐慌——核心矛盾在高度板：总龙头龙版传媒盘中7连板封死尾盘炸板收+9.12%（AI视频营收仅80元极致反差炒作遭监管警示），高度从7板压缩到4板。资金未离场而是从高位传媒/算力切向农业（厄尔尼诺+尿素涨价）有政策天气实锤的新主线——定性"高位分歧+主线切换"温和退潮，非崩盘。</p></div>
+
+<div class="sec">二、涨停梯队 · 连板高度压缩</div>
+<div class="box b">
+  <h3 class="b">连板梯队全景（财联社盘后连板分析口径）</h3>
+  <ul>
+    <li><b>连板股总数 18 只</b>（三连板及以上 6 只）· 昨日连板 13 只 · <b>连板晋级率 46.15%</b>（不含ST/退市）</li>
+    <li><b>最高连板 4 板</b>（从昨日7板压缩3档）：龙版传媒盘中7连板尾盘<b style="color:#f85149">炸板</b>收+9.12%，全场高度回落到4板</li>
+  </ul>
+</div>
+<div class="tier">
+  <div class="lb"><div class="h">4连板</div><div class="s">亚盛集团 +10.00%</div><div class="t">农业种植·一字封单7.32亿·全场资金认可度最高</div></div>
+  <div class="lb"><div class="h">4连板</div><div class="s">百大集团 +10.00%</div><div class="t">消费零售·一字晋级</div></div>
+  <div class="lb"><div class="h">4连板</div><div class="s">爱仕达 +10.00%</div><div class="t">机器人·智元合作（AI收入仅13.72万）</div></div>
+  <div class="lb"><div class="h">8天5板</div><div class="s">敦煌种业 +10.00%</div><div class="t">种业·中报预增157%·股价创11年新高</div></div>
+  <div class="lb"><div class="h">3连板</div><div class="s">中国出版 +10.00%</div><div class="t">传媒出版·数字人智能体</div></div>
+  <div class="lb"><div class="h">3连板</div><div class="s">海欣食品 +10.05%</div><div class="t">食品消费·鱼丸龙头</div></div>
+  <div class="lb"><div class="h">2连板</div><div class="s">金正大 +10.00%</div><div class="t">化肥·尿素涨价+中期分红</div></div>
+  <div class="lb"><div class="h">20CM</div><div class="s">中信出版 +19.99%</div><div class="t">传媒·开盘6分钟封板</div></div>
+  <div class="lb"><div class="h">17天9板</div><div class="s">金健米业（午后炸板）</div><div class="t">粮食·7月以来+184%逼近历史高点</div></div>
+</div>
+<div class="box g" style="margin-top:10px">
+  <h3 class="g">首板新血 · 农业链全面接棒</h3>
+  <ul>
+    <li><b>化肥/农化（当日最强新主线·7只涨停）</b>：泸天化/川发龙蟒/金正大2连板/赤天化/新安股份/和邦生物/华锦股份 · 主力净流入27.17亿（5日+12.87亿趋势最好）· 尿素涨价1750-1820元/吨+秋肥旺季</li>
+    <li><b>白糖/代糖（涨停潮）</b>：中粮糖业/中粮科技/保龄宝/三元生物 · 白糖+7.79%概念第一 · 泰国糖减产+原糖涨价</li>
+    <li><b>农业种植</b>：苏垦农发/海南橡胶首板 · 厄尔尼诺90%+概率升级超强级别（Niño3.4达+2.7℃）+CBOT粮价7月以来涨超20%</li>
+    <li><b>铜/有色</b>：精艺股份涨停/北方铜业触板 · LME铜突破14530美元创历史新高（铜关税预期+AI/电网需求）</li>
+    <li><b>油气/煤炭</b>：中曼石油涨停 · 焦炭+5.23%云煤能源涨停 · 布伦特原油站上98美元/桶</li>
+    <li><b>CRO/医药</b>：奥浦迈20CM涨停 · 医疗服务主力5日净流入30.64亿 · 2026版国家基本药物目录施行</li>
+  </ul>
+</div>
+<div class="box r">
+  <h3 class="r">炸板与分歧 · 高位退潮信号</h3>
+  <ul>
+    <li><b>炸板率 17.0% → 34.6% 翻倍</b>（NeoData/Theme Alpha口径）· 昨日温和分歧今日显著加剧</li>
+    <li><b>金健米业、万向德农午后双双炸板</b>（财联社）· 万向德农尾盘一度跳水 · 农业板块高位分歧加剧</li>
+    <li><b>龙版传媒7板尾盘炸板</b>（收+9.12%）· AI视频6月营收仅80元/7月7.5万元（占营收不足0.01%）极致反差炒作遭上交所监管警示+深交所重点监控</li>
+    <li><b>一进二 11.4% → 9.4%</b>跌入个位数 · 二进三50% · 晋级率15.4%（Theme Alpha口径）</li>
+    <li>昨日6只2板全部断板但均录得正收益（安记食品+8.41%）· 首板破板无大面 · 退潮温和无核按钮——"换赛道"非"散场子"</li>
+  </ul>
+</div>
+
+<div class="sec">三、情绪周期定位 · 高位分歧+主线切换</div>
+<div class="emo">
+  <h3>情绪温度计（NeoData口径）</h3>
+  <div class="bar"><span class="l">今日情绪</span><span class="track"><span class="fill" style="width:60%;background:linear-gradient(90deg,#d29922,#f0883e)"></span></span><span class="v" style="color:#d29922">60° 暖</span></div>
+  <div class="bar"><span class="l">昨日情绪</span><span class="track"><span class="fill" style="width:68%;background:linear-gradient(90deg,#f85149,#d29922)"></span></span><span class="v" style="color:#f85149">68° 热</span></div>
+  <p style="font-size:12px;color:#7d8590;margin-top:8px">↓ 退8° 但未崩 · 定性：<b style="color:#d29922">主升途中的高位分歧+主线切换</b>，非新退潮周期</p>
+</div>
+<div class="box y">
+  <h3 class="y">六维情绪雷达（NeoData · 今日 vs 昨日）</h3>
+  <table>
+    <tr><th>维度</th><th>今日</th><th>昨日</th><th>方向</th></tr>
+    <tr><td>涨股比</td><td class="g">61</td><td>56</td><td class="g">↑ 普涨扩散</td></tr>
+    <tr><td>涨停强度</td><td class="r">72</td><td>85</td><td class="r">↓ 高度板炸板</td></tr>
+    <tr><td>量能</td><td>56</td><td>55</td><td>→ 稳1.96万亿</td></tr>
+    <tr><td>主线强度</td><td class="r">78</td><td>85</td><td class="r">↓ 算力歇脚换农业</td></tr>
+    <tr><td>资金情绪</td><td class="r">75</td><td>80</td><td class="r">↓ 高低切避险</td></tr>
+    <tr><td>技术形态</td><td class="r">62</td><td>72</td><td class="r">↓ 创业板回吐</td></tr>
+  </table>
+  <p style="font-size:12px;color:#7d8590">六维四降一升一平，全部仍在<b style="color:#3fb950">55分上方中轴</b>，与9月3-4日四维跌破40的真冰点完全不同——退潮只发生在"高位科技+妖股"局部，全市场赚钱效应未收缩。涨股比升至61（普涨面比昨日还大）是唯一亮点。</p>
+</div>
+<div class="note">
+  📌 周期定位结论：<b>主升途中的高位分歧期</b>。情绪从68°退到60°但骨架没坏——高度板压缩(7→4板)与算力主线歇脚是两大降分项，资金从"融资北向扫货算力"转为"农化+27.17亿/工业金属+44.53亿/医疗服务+20.70亿的低位避险"。若明日农业/化肥2连确认+权重补涨，情绪可重新冲高；若高度板继续炸板引发连锁，则回落至50°区间防守。Theme Alpha独立复盘判定剧本C（退潮/继续下杀，非崩盘）。
+</div>
+
+<div class="sec">四、板块资金流向 · 高低切（科技→农业周期）</div>
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">主力净流入方向（Wind实时监测/腾讯每经口径）</h3>
+    <ul>
+      <li><b>基础化工 +71亿</b>（化肥/农化主升 · 当日最强新主线）</li>
+      <li><b>有色金属 +65亿</b>（工业金属+44.53亿 · LME铜创历史新高14530美元）</li>
+      <li><b>医药生物 +40亿</b>（医疗服务5日+30.64亿 · CRO奥浦迈20CM）</li>
+      <li><b>农林牧渔 +40亿</b>（厄尔尼诺+尿素涨价+秋肥旺季）</li>
+      <li>房地产/石油石化/国防军工 均+20亿</li>
+      <li>概念：资源股+91亿 / 算力金属+61亿 / 存储芯片+50亿 / 工业金属+50亿</li>
+      <li>主力净流入板块Top：国企改革+44.73亿(35涨停) / 金属铜+43.55亿 / 小金属+42.89亿 / 黄金+37.33亿 / 煤化工+30.10亿(7涨停)</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">主力净流出方向</h3>
+    <ul>
+      <li><b>计算机 -43亿</b>（高位科技让路）</li>
+      <li><b>电子 -34亿</b>（昨日算力硬件CPO/光模块/PCB全线回调）</li>
+      <li><b>非银金融 -19亿</b>（证券/题材退潮）</li>
+      <li>概念流出：<b>5G应用 -101亿</b> / 新基建-97亿 / <b>AI算力 -81亿</b> / 数字经济/信创-70亿</li>
+      <li>通信设备从+204.52亿转为净流出 · 元件/半导体同步失血</li>
+      <li>液冷服务器领跌：中石科技盘中-15%（昨日+17.39%创新高后被列深交所重点监控）</li>
+      <li>消费电子/电池/贵金属/稀土 全线调整</li>
+    </ul>
+  </div>
+</div>
+<div class="box" style="margin-top:6px"><p style="font-size:12px;color:#7d8590">资金高低切主线明确：从昨日吸金王（通信设备+204.52亿/CPO/光模块/PCB）今日全线撤出，切向有天气与涨价实锤的农化（基础化工+71亿）、有色铜（+65亿/LME创新高）、医药（+40亿/低位连续流入）。但龙虎榜显示机构在算力回调中反而大举建仓（见下节），说明高低切主要是游资/杠杆资金的短线行为，机构底仓仍在科技。</p></div>
+
+<div class="sec">五、机构龙虎榜 · 算力回调中机构建仓（9月7日T+1席位）</div>
+<div class="box b">
+  <h3 class="b">机构席位扫货算力硬件（9月7日龙虎榜 · 今日盘后可见T+1数据）</h3>
+  <table>
+    <tr><th>个股</th><th>机构席位数</th><th>净买入</th><th>方向</th></tr>
+    <tr><td>景旺电子</td><td class="b" style="color:#58a6ff">4席</td><td class="r">+10.63 亿</td><td>PCB</td></tr>
+    <tr><td>沪电股份</td><td class="b" style="color:#58a6ff">5席</td><td class="r">+8.88 亿</td><td>PCB</td></tr>
+    <tr><td>光迅科技</td><td class="b" style="color:#58a6ff">5席</td><td class="r">+6.55 亿</td><td>光模块</td></tr>
+    <tr><td>江海股份</td><td class="b" style="color:#58a6ff">5席</td><td class="r">+2.91 亿</td><td>电容</td></tr>
+    <tr><td>深南电路</td><td class="b" style="color:#58a6ff">6席</td><td class="r">+2.50 亿</td><td>PCB</td></tr>
+    <tr><td>兴森科技</td><td class="b" style="color:#58a6ff">5席</td><td class="r">+40亿(个股净流入)</td><td>PCB</td></tr>
+  </table>
+  <p style="font-size:12px;color:#7d8590">⚠️ 9月8日龙虎榜席位明细为T+1数据（今晚盘后更新，明日复盘呈现）。今日可见昨日(9月7日)席位：<b style="color:#3fb950">机构在算力硬件回调中真金白银建仓</b>——景旺电子4席买10.63亿、沪电股份5席8.88亿、光迅科技5席6.55亿、深南电路6席、江海股份5席。PCB/光模块是机构重点扫货方向，与今日股价回调形成背离——<b style="color:#3fb950">回调是洗盘不是出货</b>。反观高位妖股龙版传媒（T+1昨日龙虎榜见游资），机构与游资行为完全分化。</p>
+</div>
+
+<div class="sec">六、持仓股复盘 · 9月8日 15:00 口径</div>
+<div class="hold">
+  <h3>当前持仓 · WebSearch 实数据</h3>
+  <div class="hr"><span class="l">新锐股份 688257.SH（硬质合金刀具·钨概念）</span><span class="r r">53.10 元 · +0.57%</span></div>
+  <div class="det">昨52.80 / 开52.69 / 高53.58 / 低51.38 / 振幅4.18% / 换手3.90% / 成交7.29亿 · 今年以来+114.20% · 融资余额10.83亿(9月7日) · 北向持股94.85万股(6月30日) · 所属机械设备-0.08%/通用设备-0.32%/金属制品-0.35%板块略弱 · 12.4亿元定增方案9月4日获证监会注册 · 当日属个股独立行情，板块弱但个股微涨，振幅4.18%显示分歧较大 · <b style="color:#d29922">盘后定性：独立行情非板块驱动，定增注册后关注落地节奏与解禁压力</b></div>
+  <div class="hr"><span class="l">小鹏集团 09868.HK / XPEV</span><span class="r g">42.40 港币 · +0.95%</span></div>
+  <div class="det">昨42.00 / 开42.20 / 高42.94 / 低41.60 · 港股汽车板块普跌中逆势微涨（吉利-3.45%/比亚迪-1.60%/小米-2.91%/理想-2.18%/零跑-2.11%，小鹏独涨） · 31位分析师：80.65%强力推荐/19.36%买入，目标价均价86.64（最高126/最低57.60） · 年初至今-46.87%仍处下降通道 · <b style="color:#d29922">盘后定性：反弹不追，关注41.60低点支撑，跌破则下看40整数关</b></div>
+  <div class="hr"><span class="l">菲利克（用户口径）</span><span class="r">@142.60</span></div>
+  <div class="det">数据源缺失，沿用盘前口径，不造数</div>
+  <div class="hr"><span class="l">九坤量化指增（对标中证500）</span><span class="r">回撤约20%</span></div>
+  <div class="det">数据源缺失，沿用盘前口径，不造数 · 今日创业板-1.15%成长回调或阶段性不利指增产品净值，但沪指+0.20%企稳 · 持续纠结期</div>
+</div>
+
+<div class="sec">七、明日三情景展望</div>
+<div class="scn">
+  <div class="c b">
+    <h4>🟢 乐观情景（概率约30%）</h4>
+    <p>农业/化肥2连扩散确认 + 亚盛集团5板稳定 + 权重补涨</p>
+    <p>算力硬件龙虎榜机构建仓效应发酵，光模块/PCB缩量企稳龙头发力</p>
+    <p>量能重回2万亿上方</p>
+    <p>→ 情绪重回65°+ · 创业板收复3400 · 新主线确认</p>
+    <p><b>操作</b>：右侧确认后可小仓跟进农业2连品种，算力回调到位龙龙跌不追涨</p>
+  </div>
+  <div class="c m">
+    <h4>🟡 中性情景（概率约50%）</h4>
+    <p>高位分歧延续，风格继续轮动（农业↔周期↔科技反复）</p>
+    <p>量能维持1.9-2万亿区间</p>
+    <p>涨停维持60-80家，炸板率30%左右</p>
+    <p>→ 情绪55-62°震荡 · 指数横盘 · 结构性行情</p>
+    <p><b>操作</b>：持仓≤7成只卖不买，不追当日领涨，等明确主线或量能信号</p>
+  </div>
+  <div class="c r">
+    <h4>🔴 悲观情景（概率约20%）</h4>
+    <p>高度板继续炸板引发连锁（亚盛/百大/爱仕达断板）</p>
+    <p>创业板破3350支撑，科创50连续三日领跌</p>
+    <p>北向继续净卖出+两融活跃度进一步走低</p>
+    <p>→ 情绪回落50°防守 · 退潮加速 · 题材全线退潮</p>
+    <p><b>操作</b>：降至5成以下，高位品种借反弹减仓，现金优先</p>
+  </div>
+</div>
+
+<div class="sec">八、风控红色高亮</div>
+<div class="risk">
+  <h3>⚠️ 风格一日切换 · 量能不足2万亿 · 高位分歧加剧</h3>
+  <p>· 沪指+0.20% vs 创业板-1.15%，与昨日(沪指+0.07%/创业板+3.41%)完全反向，风格一日切换，追涨杀跌风险极高</p>
+  <p>· 两市19603亿，量能维持2万亿下方，反弹/上涨缺乏增量资金支撑，持续性存疑</p>
+  <p>· 涨停75家较昨日95家回落，炸板率17%→34.6%翻倍，赚钱效应在收窄</p>
+  <p>· 总龙头龙版传媒7板尾盘炸板（AI视频营收仅80元极致反差炒作遭监管警示），高度压缩7→4板，高位妖股被监管与业绩双重纠偏</p>
+  <p>· 金健米业/万向德农午后双双炸板，农业板块高位分歧加剧——新主线持续性存疑</p>
+  <p>· 北向资金：国金策略测算北上重新净卖出A股，外资偏谨慎；两融活跃度降至2025年下半年以来低点</p>
+  <p>· 美联储9月加息预期升温（8月非农超预期，9月加息概率60%+）+周五美国CPI是最大不确定性</p>
+  <p>· <b>持仓 ≤ 7 成，只卖不买</b>，风格快速切换下避免追涨当日领涨方向（尤其农业首板追高风险大）</p>
+  <p>· <b>新锐股份</b>+0.57%微涨但板块弱，振幅4.18%分歧大，属个股独立行情非板块驱动，定增注册后关注落地节奏与解禁压力</p>
+  <p>· <b>小鹏集团</b>+0.95%逆势微涨（港股汽车普跌中独涨），但年初至今-46.87%仍处下降通道，反弹不追，关注41.60低点</p>
+  <p>· 盯盘三信号：明日量能能否回2万亿 / 创业板3350支撑 / 农业主线持续性（亚盛5板能否晋级+化肥2连扩散）</p>
+</div>
+
+<div class="sec">九、机构观点与明日跟踪</div>
+<div class="outlook">
+  <h3>券商策略（中国银河/中信建投/国金）</h3>
+  <p>▸ <b>中国银河证券</b>：当前A股处于9月业绩空窗期，外围扰动/国内政策落地/市场量能变化三条线索。建议寻找政策确定性和景气兑现度更高的结构机会。配置四主线：①科技精选（半导体/通信/算力基建可验证细分）②红利底仓（金融/公用/煤炭）③供需改善涨价（石油石化/煤化工/厄尔尼诺农业）④"六张网"政策链条（电网/储能/电力配套/建材/工程机械）</p>
+  <p>▸ <b>中信建投</b>：短期市场或延续"指数震荡筑底+结构高低切换"格局。科技能否持续走强+成交能否重回2万亿以上是关键。操作上不宜盲目追高，耐心等待成交放量或明确主线确认后右侧布局</p>
+  <p>▸ <b>国金策略</b>：两融活跃度降至2025年下半年以来低点，股票ETF继续回流托底（科创50/半导体/创业板指ETF被净申购），北上重新净卖出A股。农林牧渔/建材/传媒/钢铁/房地产龙虎榜热度上升</p>
+  <p>▸ <b>核心催化</b>：第27届光博会9月9日-11日深圳召开（光通信产业链催化·高端产品供不应求紧平衡）· 工信部"十五五"信息通信规划（6G商用·2030年智能算力9800 EFLOPS）· 伦铜创历史新高14530美元 · 厄尔尼诺90%+超强级别</p>
+</div>
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">偏多方向（明日跟踪）</h3>
+    <ul>
+      <li>农业/化肥/种植（厄尔尼诺+尿素涨价+秋肥旺季，亚盛5板稳定性是情绪标杆）</li>
+      <li>白糖/代糖（泰国糖减产+原糖涨价，涨停潮能否扩散）</li>
+      <li>铜/工业金属（LME创新高，铜关税预期+AI/电网需求）</li>
+      <li>算力硬件回调龙（机构龙虎榜建仓，需2-3日缩量企稳+龙头发力才可回补，追跌不追涨）</li>
+      <li>CRO/医疗服务（低位+资金5日连续流入30.64亿）</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">风险方向（规避）</h3>
+    <ul>
+      <li>高位AI妖股（龙版传媒7板炸板·AI营收80元炒作·监管警示）</li>
+      <li>爱仕达4板（具身智能收入仅13.72万）·中石科技盘中-15%被重点监控</li>
+      <li>农业首板追高（金健米业/万向德农午后炸板·分歧加剧）</li>
+      <li>半导体/消费电子/电池（科技回调·昨日主线今日调整）</li>
+      <li>贵金属/证券/机器人（题材退潮）</li>
+      <li>高位题材接力（量能不足2万亿·炸板率翻倍·风格一日切换追高风险极高）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="disc">
+  ⚠️ 免责声明：本复盘为学习台金融域基于公开数据(财经媒体WebSearch)的盘后情绪梳理与主线复盘推演，<b>仅供学习研究，不构成任何投资建议</b>。本次Wind MCP未连接，已直说不造数，所有数字可溯源到来源+时点(9月8日15:00收盘+盘后龙虎榜T+1)。涨停家数存在口径差异（财联社75 vs 东财74），北向资金全天净额因数据源矛盾未披露。据此操作风险自担。股市有风险，入市需谨慎。
+</div>
+<div class="foot">
+  学习台金融域 · 周二盘后深度复盘 · 2026-09-08 16:30 · 数据口径9月8日全天收盘15:00 + 盘后龙虎榜T+1<br>
+  数据源：WebSearch(财联社/NeoData/东财/证券时报/凤凰/腾讯每经/新浪国金策略) · 持仓：新锐688257.SH/小鹏09868.HK
+</div>
+
+</body>
+</html>

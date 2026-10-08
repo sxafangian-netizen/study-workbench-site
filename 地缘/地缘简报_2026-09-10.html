@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>地缘早间简报 · 2026-09-10</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1180px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:28px 32px;margin-bottom:20px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:.5px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.a{color:#f0883e;border-color:#f0883e33}
+  .sec{margin:24px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:8px}
+  .ncard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+  .ncard.hot{border-left:3px solid #f85149}
+  .ncard.warm{border-left:3px solid #f0883e}
+  .ncard.cool{border-left:3px solid #3fb950}
+  .ncard .nt{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .ncard .lvl{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .lvl.crit{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .lvl.high{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .lvl.mid{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .lvl.low{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .ncard h3{font-size:14.5px;font-weight:600;color:#e6edf3}
+  .ncard p{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+  .ncard .src{font-size:11px;color:#7d8590;margin-top:6px}
+  .ncard .src a{color:#58a6ff;text-decoration:none}
+  .fw{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;overflow:hidden;margin-bottom:14px}
+  .fw .fh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #30363d;background:#161b22}
+  .fw .fh .ft{font-size:15.5px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .num{width:28px;height:28px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+  .fw .body{padding:14px 20px}
+  .fw .body p{color:#c9d1d9;font-size:13.5px;margin-bottom:8px}
+  .fw .body p:last-child{margin-bottom:0}
+  .kw{color:#58a6ff;font-weight:600}
+  .kw.r{color:#f85149}
+  .kw.g{color:#3fb950}
+  .kw.a{color:#f0883e}
+  .lp{background:#0d1117;border:1px solid #30363d33;border-radius:8px;padding:10px 14px;margin-top:8px;border-left:3px solid #3fb950}
+  .lp .lt{font-size:12px;color:#7d8590;font-weight:600;margin-bottom:4px}
+  .lp .lb{font-size:13px;color:#c9d1d9}
+  .vf{background:#0d1117;border:1px solid #30363d33;border-radius:10px;margin-top:10px;overflow:hidden}
+  .vf .vrow{display:grid;grid-template-columns:130px 60px 1fr;gap:10px;padding:9px 14px;border-bottom:1px solid #30363d33;align-items:start;font-size:13px}
+  .vf .vrow:last-child{border-bottom:none}
+  .vf .vp{color:#7d8590;font-size:12px;font-weight:600}
+  .vf .vs{font-size:11px;font-weight:700;padding:2px 7px;border-radius:4px;text-align:center}
+  .vs.hit{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .vs.part{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .vs.wait{color:#7d8590;background:#30363d40;border:1px solid #30363d60}
+  .vs.miss{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .vf .vd{color:#c9d1d9}
+  .holdbox{background:linear-gradient(135deg,#1c2128 0%,#161b22 100%);border:1px solid #d2992240;border-radius:12px;padding:20px 24px;margin-top:14px}
+  .holdbox h2{font-size:16px;color:#d29922;margin-bottom:12px}
+  .hrow{display:grid;grid-template-columns:160px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid #30363d33}
+  .hrow:last-child{border-bottom:none}
+  .hrow .hl{color:#7d8590;font-size:12px;font-weight:600;padding-top:2px}
+  .hrow .hr{color:#c9d1d9;font-size:13.5px}
+  .hrow .hr b{color:#e6edf3}
+  .stance{background:#3fb9500d;border:1px solid #3fb950;border-radius:12px;padding:18px 24px;margin-top:16px}
+  .stance h2{color:#3fb950;font-size:15px;margin-bottom:8px}
+  .stance p{color:#c9d1d9;font-size:13.5px;margin-bottom:6px}
+  .stance p:last-child{margin-bottom:0}
+  .discl{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 20px;margin-top:16px}
+  .discl h3{color:#f85149;font-size:13px;margin-bottom:6px}
+  .discl p{color:#7d8590;font-size:12px}
+  .foot{margin-top:24px;color:#484f58;font-size:11px;text-align:center;border-top:1px solid #30363d;padding-top:14px}
+</style>
+<style>.backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>🌍 地缘早间简报 · 2026-09-10 周四</h1>
+  <div class="sub">geopolitics-coach 五大框架实战 · 隔夜国际局势结构化扫描 · 盘前参考</div>
+  <div class="meta">
+    <span class="tag r">⚠ 美伊冲突再升级·布油破百</span>
+    <span class="tag a">🤖 中美AI治理博弈升温</span>
+    <span class="tag b">🤝 台海一线两军首会晤</span>
+    <span class="tag g">🛡 南海·菲防长纸条事件</span>
+  </div>
+</div>
+
+<div class="sec">隔夜要闻（2026-09-08 至 09-09 周期）</div>
+<div class="news-grid">
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">极高</span><h3>美伊冲突再升级·伊朗设海上"制裁区域"</h3></div>
+    <p>美军中央司令部声明称"摧毁"伊朗革命卫队5艘油轮（回应此前伊朗向美舰发射弹道导弹）。伊朗革命卫队宣布<b style="color:#f85149">打击约旦美军基地、2艘美国军舰、8艘油轮及10艘违规船只</b>，并宣布将设立新的海上"制裁区域"——大致从伊朗东南部恰巴哈尔港开始，延伸到阿曼湾和阿拉伯海部分海域，任何进入该区域的船只都将被制裁。伊朗列举停战五条件：完全停止军事行动并放弃再次威胁、以军从黎巴嫩撤离、解除对也门封锁、解冻伊朗被冻结的244亿美元资产、停止干涉核与导弹研发。</p>
+    <p>特朗普称美伊战事将在11月中期选举后"立即终结"，届时油价急跌。截至北京9日15时，布伦特原油突破<b style="color:#f85149">100美元/桶</b>（5周来首次），美油突破95美元（6月初以来新高）。美政经军日报统计累计838人伤亡。</p>
+    <p class="src">来源：央视新闻 / 美军中央司令部声明 / 伊朗革命卫队声明 / 陆家嘴财经早餐（<a href="https://www.163.com/dy/article/L6EQ6DNM05198RSU.html" target="_blank">网易转</a> · <a href="https://www.toutiao.com/article/7683660394103915044/" target="_blank">央视国际早知道</a>）</p>
+  </div>
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl high">高</span><h3>美AI蒸馏指控·商务部强烈反驳·中美AI对话并行</h3></div>
+    <p>美东时间9-8，美NSA/FBI/CISA三机构联合公告，指控<b>DeepSeek、月之暗面、阿里、MiniMax、阶跃星辰、智谱</b>6家中国AI企业对美开展"工业规模"蒸馏，提取Claude/ChatGPT/Gemini/Grok能力，称蒸馏是这些企业"核心战略"。</p>
+    <p>商务部9-9强烈回应：<b style="color:#f85149">"于事无凭、于法无据""科技霸权、算力垄断、打压竞争""双重标准"</b>，蒸馏是行业通行做法、美企也在蒸馏中国模型，若以打击蒸馏为名实施遏压中国AI企业，中方必将坚决反制。同时重申两国元首已同意开展AI政府间对话，愿以平等互利原则建设性讨论。另有消息中美正筹备AI高级别对话。DeepSeek备战科创板IPO、V4.1 Flash 9-10前后发布+官宣降价。</p>
+    <p class="src">来源：商务部（<a href="https://www.mofcom.gov.cn/syxwfb/art/2026/art_1d982b77535347f1bdebc1e5f59a9b4e.html" target="_blank">发言人答记者问</a>） / 环球时报 / 外交部9-9例行记者会</p>
+  </div>
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">高</span><h3>台海一线两军首次线下会晤·管控通道建立</h3></div>
+    <p>第28届印太国防军司令会议（加拿大维多利亚）期间，解放军东部战区司令员杨志斌与美军印太司令部司令帕帕罗完成台海方向两军最高主官<b>首次面对面会谈</b>（2022年台海局势升级以来该方向最高级别线下军事对话）。美方通稿全程未提台海南海，关键词：保持高层沟通、降低误判风险、推动部队安全和专业行动。</p>
+    <p>台岛专家判断"美国不能不愿不敢与中方正面军事冲突"；F-16V Block 70交付节奏被美方叫停（9-7两架从夏威夷起飞后折返）；但日本跨党派议员团窜访台湾谈防卫合作；大陆海警"普陀山舰"编队在台湾岛以东海域常态化执法巡查（国台办9-9发布会肯定）；特朗普淡化解放军台海军演称"20年海军例行活动"。南部战区黄岩岛进入长期化体系化管理新阶段。</p>
+    <p class="src">来源：国防部9-4发布会 / 王鹏国际关系 / 国台办9-9例行发布会（<a href="https://new.qq.com/rain/a/20260909A0CJM600" target="_blank">中国周边动态日报</a>）</p>
+  </div>
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl mid">中</span><h3>俄乌外交信号·三方谈判通道试探</h3></div>
+    <p>特朗普9-9称与普京"进行了很好的交谈"，可能举行双边会晤；俄方称期待恢复三方谈判；俄对外情报局长称俄美情报部门保持接触、不排除回访美，美特使威特科夫曾携方案斡旋。但实质停火仍未落地（前日记录的"三日停火"仅限首都、前线未停）。</p>
+    <p class="src">来源：央视新闻 / 中国新闻网 / 小鲜看世界</p>
+  </div>
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl low">低</span><h3>南海·菲防长"纸条"事件·中方驳斥</h3></div>
+    <p>菲律宾防长特奥多罗在国际论坛收到阐明中方"南海仲裁案"立场纸条，称是中方"胁迫、霸凌和侵略"。外交部发言人毛宁9-9回应：菲方单方面提起"南海仲裁案"是对《联合国海洋法公约》争端解决机制的扭曲和滥用，<b>真正违反《公约》规定、破坏《公约》完整性和权威性的是菲方</b>。奉劝菲方个别人停止哗众取宠、挑事生非，停止破坏中菲关系和南海稳定。</p>
+    <p class="src">来源：外交部9-9例行记者会（<a href="https://www.mfa.gov.cn/fyrbt_673021/202609/t20260909_12019125.shtml" target="_blank">外交部官网</a>）</p>
+  </div>
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl high">高</span><h3>地缘经济连锁·油价铜价美债三共振</h3></div>
+    <p>布油破100、美油破95；LME铜与纽约铜双双刷新历史纪录（14858.5美元/吨、6.894美元/磅，关税预期+供应短缺+中东通胀隐忧）；美财政部60亿美元长债回购（3倍扩容）仍低于预期，<b style="color:#f85149">10年期美债收益率破4.84%创2023年11月来新高</b>；美联储9月加息概率升至60.2%；中国8月CPI同比0.8%/PPI 3.8%双双环比转正（国际油价与食品季节性上涨带动）。美股三大指数连续第三日收跌。</p>
+    <p class="src">来源：陆家嘴财经早餐 / 华尔街见闻 / 国家统计局</p>
+  </div>
+</div>
+
+<div class="sec">五大框架分析</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">1</span>海权 vs 陆权（马汉/麦金德）</div></div>
+  <div class="body">
+    <p><span class="kw r">霍尔木兹"灰色互蚀"向更高级别对抗滑落。</span>伊朗设立"制裁区域"是马汉海权博弈的新形态——不直接封锁海峡（避免触发美军全面战争红线），而在海峡外海域（恰巴哈尔港→阿曼湾→阿拉伯海）划定"可制裁区"以威慑进入船只。这是"非对称海权"：弱国用法律+威慑手段部分剥夺强国对咽喉的控制权，而非正面海战。布油破百是市场对海权风险的定价。</p>
+    <p>陆权方向，俄乌外交信号（特朗普-普京通话、三方谈判通道试探）若落地可缓释中欧班列北线经俄的风险；但俄方"期待恢复三方谈判"仍是试探性表态，实质停火未落地，欧亚陆桥风险存续。特朗普"战事中期选举后立即终结"的表态，将中东海权博弈与美国内政周期绑定，存在选举后突变风险。</p>
+    <div class="lp"><div class="lt">落点</div><div class="lb">盯"制裁区域"坐标公布后是否有船只被实质制裁/扣押（从威慑走向行动）；盯美伊是否滑向正面海战或特朗普是否提前抽身（选举政治变量）；盯俄乌三方谈判能否从试探走向实质停火。</div></div>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">2</span>均势理论（基辛格/摩根索）</div></div>
+  <div class="body">
+    <p><span class="kw">美伊缠斗时，第三极的均势操作继续推进。</span>中国商务部对AI蒸馏指控的回应是教科书式均势表述——既强硬反制（"必将坚决采取措施"），又留护栏（"两国元首已同意AI政府间对话""愿平等互利建设性讨论"），在守成国（美）用国家强权维护技术垄断时，争取道义高地（开源开放+普惠共享）。</p>
+    <p>本周末金砖峰会在印度举行（南方国家多极化平台，中方将由谁率团待公布）；德国选择党在6日地方选举获萨安州39席，特朗普公开赞赏——欧洲内部均势出现右倾重组信号。台海一线两军首次线下会晤，是均势"竞争不消失但管控通道建立"的体现：美方不愿为台海承担冲突代价，但也不会放弃台湾这张战略牌。</p>
+    <div class="lp"><div class="lt">落点</div><div class="lb">盯金砖峰会成果（南方国家多极化机制化）；盯美AI蒸馏指控是否从公告升级为对中国AI企业的实质制裁行动（均势压力测试）；盯欧洲右倾（德国选择党）对欧盟对华政策的影响。</div></div>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">3</span>修昔底德陷阱（崛起国 vs 守成国）</div></div>
+  <div class="body">
+    <p><span class="kw a">AI蒸馏事件是修昔底德结构竞争在科技领域的经典再现。</span>守成国（美）将前沿大模型视为"具有战略价值的技术资产"，动用FBI/NSA/CISA三安全部门国家强权维护算力/数据垄断；崛起国（中）坚持开源开放+反制威胁，争取"普惠共享"道义。复旦大学刘典点出关键：美方把蒸馏从企业知识产权/商业竞争提升到国家安全和地缘科技竞争层面。</p>
+    <p>但双方都留有"AI政府间对话"护栏——符合柯庆生"休战非缓和"判断的延续：结构性竞争不可逆，但避免热战。台海一线两军首次线下会晤是同一逻辑的军事投射：竞争不消失，但管控误判的通道在建立。特朗普淡化台海军演+叫停F-16V交付，显示其不愿为台海承担冲突代价，但"精细化计算何时打台湾牌"的风险仍在。</p>
+    <div class="lp"><div class="lt">落点</div><div class="lb">盯美AI蒸馏指控是否从公告升级为实质制裁（修昔底德科技竞争压力测试）；盯AI政府间对话能否成为中美新型管控支柱；警惕台湾问题被当作"谈判筹码"的误判风险（柯庆生警告）。</div></div>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">4</span>文明冲突（亨廷顿）</div></div>
+  <div class="body">
+    <p><span class="kw r">美伊热战在文明断层线持续兑现。</span>伊朗打击约旦美军基地——外溢至阿拉伯国家境内美军设施；伊朗"对等回应时代已结束""打击美军基地仅是开始"的表态，以及停战五条件含以军撤离黎巴嫩、解除也门封锁——显示"抵抗之弧"（什叶派）跨域联动，远超单一双边冲突。</p>
+    <p>这是亨廷顿预言的西方（基督教文明主体）与伊斯兰什叶派（伊朗为核心的"抵抗之弧"）直接军事对抗，已外溢多个阿拉伯国家。但关键变量仍在：阿拉伯国家在美伊间的立场（亲美vs不配合），将决定冲突是停留在"互蚀"还是滑向文明断层线全面热战。特朗普"选举后立即终结"的表态本身也是文明叙事的一部分——将战争与美国内政周期绑定。</p>
+    <div class="lp"><div class="lt">落点</div><div class="lb">盯美伊是否从"互蚀"升级为全面战争（伊前外长曾警告美动核引三战）；盯阿拉伯国家在美伊间的立场分化；盯"制裁区域"是否引发第三方船只实质冲突。</div></div>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">5</span>地缘经济（能源/供应链/制裁/货币）</div></div>
+  <div class="body">
+    <p><span class="kw r">油价破百+铜价双创新高+美债收益率走高，地缘经济冲击三重共振。</span>传导链：中东油价→全球通胀→美债收益率（4.84%创2023年11月来新高）→美联储加息预期（60.2%）→美元强势→新兴市场承压。中国8月CPI/PPI双双环比转正，是油价传导的国内显现。</p>
+    <p>LME铜+纽约铜双创新高叠加关税预期（金属流向压缩美国以外供应），供应链"韧性+多元"仍是长期主题。DeepSeek备战科创板IPO+官宣降价（缓存命中0.02元/未命中1元，价差50倍），是AI算力民主化对地缘科技垄断的对冲力量——与商务部"反对算力垄断、推动普惠共享"的官方表态同频。习访埃及拓展能源/基建合作（首期已记录）是地缘经济对冲。</p>
+    <div class="lp"><div class="lt">落点</div><div class="lb">盯油价破百后国内PPI与航运/化工股传导；盯美债收益率走高对成长股（含中概）估值的压制；盯铜价创新高对硬质合金/有色链的溢出；盯DeepSeek IPO+降价对AI算力地缘格局的重塑。</div></div>
+  </div>
+</div>
+
+<div class="sec">昨日预判校验（回看 2026-09-09 简报落点）</div>
+<div class="fw">
+  <div class="body">
+    <div class="vf">
+      <div class="vrow">
+        <div class="vp">霍尔木兹是否滑向实质封锁/正面海战</div>
+        <div><span class="vs part">部分命中·升级</span></div>
+        <div class="vd">伊朗设立海上"制裁区域"（恰巴哈尔港→阿曼湾→阿拉伯海），是封锁逻辑的升级形态，但非完全封锁霍尔木兹；美伊互袭油轮级别明显升高，接近"正面海战"但尚未全面战争。预判方向命中，升级速度快于预期。</div>
+      </div>
+      <div class="vrow">
+        <div class="vp">俄乌冬季停火能否落地</div>
+        <div><span class="vs wait">待观察</span></div>
+        <div class="vd">特朗普-普京通话、俄方期待三方谈判，外交信号增强，但实质停火仍未落地（"三日停火"仅限首都、前线未停）。仍待冬季窗口。</div>
+      </div>
+      <div class="vrow">
+        <div class="vp">AI安全谈判是否成中美新型管控支柱</div>
+        <div><span class="vs part">部分命中</span></div>
+        <div class="vd">AI确成中美焦点，但方向是"竞争升级+对话通道并存"——美方三机构公告指控蒸馏，中方强硬反制但重申政府间对话。符合预判的"管控支柱"判断，竞争烈度高于预期。</div>
+      </div>
+      <div class="vrow">
+        <div class="vp">台湾问题被当作"谈判筹码"风险</div>
+        <div><span class="vs part">部分命中</span></div>
+        <div class="vd">台海一线两军首次线下会晤建立降温通道，但特朗普叫停F-16V交付、淡化军演，显示美方"精细化计算何时打台湾牌"。符合"谈判筹码"风险预判，当前偏"管控"方向。</div>
+      </div>
+      <div class="vrow">
+        <div class="vp">VLSFO/原油价格传导至国内PPI</div>
+        <div><span class="vs hit">命中</span></div>
+        <div class="vd">布油破百、中国8月PPI 3.8%双双环比转正（国际油价带动），油价传导已在PPI显现。预判兑现。</div>
+      </div>
+      <div class="vrow">
+        <div class="vp">G20贸易失衡议题武器化 / 稀土出口管制升级</div>
+        <div><span class="vs wait">待观察</span></div>
+        <div class="vd">本周期未见新进展，持续跟踪。</div>
+      </div>
+    </div>
+    <p style="color:#7d8590;margin-top:10px">📊 校验小结：6项预判中<span class="kw g">命中1</span> / <span class="kw a">部分命中3</span> / <span class="kw">待观察2</span> / 落空0。昨日"美伊冲突高风险"判断方向命中且升级速度超预期，"油价传导PPI"精准兑现。AI与台海预判命中但竞争烈度/管控力度均高于预期，反映地缘节奏加快。</p>
+  </div>
+</div>
+
+<div class="sec">持仓间接含义（客观提示·非买卖建议）</div>
+<div class="holdbox">
+  <h2>⚠ 仅供风险感知，不构成投资建议</h2>
+  <div class="hrow">
+    <div class="hl">新锐股份 688257<br><span style="color:#7d8590;font-weight:400">硬质合金刀具·出口</span></div>
+    <div class="hr">
+      <p><b>承压方向：</b>美伊冲突若持续升级→全球risk-off+出口链航运成本上升；美AI蒸馏指控若升级为对中国企业实质制裁→出口链合规压力；美债收益率走高压制A股风险偏好。</p>
+      <p><b>利好方向：</b>铜价创新高+油价上涨→制造业成本上升，硬质合金（耐磨降本替代）需求韧性逻辑强化；俄乌战事持续利好军工/工业材料需求；8月PPI转正显示工业品价格回暖。</p>
+      <p><b>综合：</b><span class="kw a">中性偏观望</span>，地缘冲击属间接传导，核心仍看自身订单与硬质合金行业景气。油价破百对国内PPI上行的传导是新关注点。</p>
+    </div>
+  </div>
+  <div class="hrow">
+    <div class="hl">小鹏集团 XPEV<br><span style="color:#7d8590;font-weight:400">美股中概·新能源车出海</span></div>
+    <div class="hr">
+      <p><b>利好方向：</b>油价破百强化新能源车长期替代逻辑；中美AI对话通道+习特会筹备+台海两军首会晤三重管控信号利好中概风险偏好；DeepSeek IPO+降价带动中概AI/科技情绪。</p>
+      <p><b>承压方向：</b>美伊冲突若升级为全面战争→全球risk-off压制中概估值；美股三连跌+10年期美债收益率破4.84%压制成长股估值；美AI蒸馏指控若升级为制裁→中概科技股承压。</p>
+      <p><b>综合：</b><span class="kw a">短期受油价+美债收益率+中美情绪多重影响</span>，地缘因素偏正面（油价涨强化替代+中美管控信号），但需警惕美债收益率走高对成长股估值的压制这条新变量。</p>
+    </div>
+  </div>
+</div>
+
+<div class="stance">
+  <h2>🇨🇳 立场声明</h2>
+  <p>本简报严格遵循中国官方立场。台湾是中国领土不可分割的一部分，台湾问题是中国的内政，是中国核心利益中的核心。南海诸岛及其附近海域主权无可争辩，菲方单方面提起"南海仲裁案"是对《联合国海洋法公约》争端解决机制的扭曲和滥用。解放军位台岛周边战备警巡与黄岩岛巡逻是维护国家主权和领土完整的正当行动。中国香港、中国澳门、中国台湾的称谓不可更改。</p>
+  <p>地缘分析以学术框架（海权陆权/均势/修昔底德/文明冲突/地缘经济）结构化呈现，不预判敏感事件走向，不做政策建议。所有判断基于公开信息，数据缺失处直说不造数。</p>
+</div>
+
+<div class="discl">
+  <h3>⚠ 免责声明</h3>
+  <p>地缘分析仅供学习研究，不构成投资/政策建议。持仓间接含义仅为客观风险提示，不构成任何买卖建议。投资有风险，决策需谨慎。数据来源：新华社/央视/外交部/国防部/商务部/国家统计局/路透/彭博/环球时报/华尔街见闻/陆家嘴财经早餐等公开渠道，截至2026-09-09。</p>
+</div>
+
+<div class="foot">
+  学习台 · 地缘政治域 · 地缘早间简报 2026-09-10 · geopolitics-coach 五大框架实战 · 深色主题（#0d1117 / 涨红跌绿）· 第2期（含昨日预判校验闭环）
+</div>
+</body>
+</html>

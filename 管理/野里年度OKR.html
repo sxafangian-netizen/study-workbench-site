@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>野里年度OKR · 管理域实战</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1100px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:20px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .o{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;margin-bottom:14px;overflow:hidden}
+  .oh{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #30363d;background:#161b22}
+  .oh .ot{font-size:15px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .oh .num{width:26px;height:26px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .oh .st{font-size:11px;font-weight:700;padding:3px 10px;border-radius:12px}
+  .st-todo{background:#6e76811a;color:#7d8590;border:1px solid #6e768140}
+  .st-doing{background:#d299221a;color:#d29922;border:1px solid #d2992240}
+  .ob{padding:14px 18px}
+  .kr{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #30363d22}
+  .kr:last-child{border-bottom:none}
+  .kr .dot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex-shrink:0}
+  .dot-todo{background:#7d8590}.dot-doing{background:#d29922}.dot-done{background:#3fb950}
+  .kr .txt{font-size:13px;color:#c9d1d9}
+  .kr .txt b{color:#e6edf3}
+  .kr .metric{color:#58a6ff;font-weight:600}
+  .qbox{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:12px;padding:18px 22px;margin-top:16px}
+  .qbox h2{color:#58a6ff;font-size:16px;margin-bottom:12px}
+  .qrow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+  .qcell{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:10px 12px;text-align:center}
+  .qcell .qt{font-size:12px;color:#7d8590;margin-bottom:4px}
+  .qcell .qd{font-size:12px;color:#c9d1d9}
+  .danger{background:#f851490d;border:1px solid #f85149;border-radius:12px;padding:18px 24px;margin-top:16px;text-align:center}
+  .danger h2{color:#f85149;font-size:15px;margin-bottom:6px}
+  .danger p{color:#f85149cc;font-size:13px;font-weight:600}
+  .foot{margin-top:22px;color:#484f58;font-size:11px;text-align:center;border-top:1px solid #30363d;padding-top:14px}
+</style>
+<style>.backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>野里项目 · 2026 年度 OKR</h1>
+  <div class="sub">management-coach 实战样例 · 管理域框架③ · 19年运营期拆年度目标 + 季度复盘节奏</div>
+  <div class="meta">
+    <span class="tag b">当前：2026-Q3</span>
+    <span class="tag">融资 3000万天使轮</span>
+    <span class="tag">一期 1000万开发</span>
+    <span class="tag b">季度复盘 · 月滚动466万红线</span>
+    <span class="tag">口径：对外不点名合同主体</span>
+  </div>
+</div>
+
+<div class="sec">年度目标 O1-O4 + 关键结果 KR</div>
+
+<!-- O1 -->
+<div class="o">
+  <div class="oh"><div class="ot"><span class="num">O1</span>完成天使轮融资3000万，启动一期开发</div><span class="st st-doing">进行中</span></div>
+  <div class="ob">
+    <div class="kr"><div class="dot dot-doing"></div><div class="txt">签约 <span class="metric">≥2家</span> 意向投资人，到位资金 <span class="metric">≥1500万</span>（Q3末）</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">天使轮 <b>3000万</b> 全额到账（Q4末）</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">资金成本控制在 <span class="metric">IRR 15%</span> 目标内，分红型现金流结构</div></div>
+  </div>
+</div>
+
+<!-- O2 -->
+<div class="o">
+  <div class="oh"><div class="ot"><span class="num">O2</span>一期1000万开发内容落地（成山农场+夹层+南广场入口形象）</div><span class="st st-doing">进行中</span></div>
+  <div class="ob">
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">成山农场主体完工 <span class="metric">≥80%</span></div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">南广场入口形象工程交付（注重视觉精致度）</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">夹层结构封顶</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">一期实际开发投入 <span class="metric">≤1000万</span> 红线（不超支）</div></div>
+  </div>
+</div>
+
+<!-- O3 -->
+<div class="o">
+  <div class="oh"><div class="ot"><span class="num">O3</span>主力店招商签约率达标</div><span class="st st-todo">待启动</span></div>
+  <div class="ob">
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">黄金四件套（好利来/瑞幸/霸王茶姬/每一天）签约率 <span class="metric">100%</span></div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">主力店（盒马mini/永辉/中影/万达/乐刻/超级猩猩）签约 <span class="metric">≥4家</span></div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">整体招商签约率 <span class="metric">≥60%</span></div></div>
+  </div>
+</div>
+
+<!-- O4 -->
+<div class="o">
+  <div class="oh"><div class="ot"><span class="num">O4</span>19年运营期管理体系搭建</div><span class="st st-todo">待启动</span></div>
+  <div class="ob">
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">OKR 季度复盘机制落地（本研报即首版）</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">月滚动 <span class="metric">466万</span> 营收红线监控上线</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">成本严控：运营成本 <span class="metric">20%</span> + 垫资 <span class="metric">7790万</span> 不超支</div></div>
+    <div class="kr"><div class="dot dot-todo"></div><div class="txt">10年摊销改造投入 + 甲方净利润 <span class="metric">30%</span> 分成口径季度对账</div></div>
+  </div>
+</div>
+
+<div class="qbox">
+  <h2>季度复盘节奏</h2>
+  <div class="qrow">
+    <div class="qcell"><div class="qt">Q1</div><div class="qd">目标设定 + 复盘启动</div></div>
+    <div class="qcell"><div class="qt">Q2</div><div class="qd">中期过堂 + 红黄绿状态</div></div>
+    <div class="qcell"><div class="qt">Q3</div><div class="qd">攻坚 + 资源再倾斜</div></div>
+    <div class="qcell"><div class="qt">Q4</div><div class="qd">年度结算 + 下年OKR</div></div>
+  </div>
+  <p style="color:#7d8590;font-size:12px;margin-top:12px">每季度末过 OKR：红=未达预期/黄=进行中有风险/绿=达成。月度看月滚动466万红线（年营收11495万÷12），超支或欠收即触发排错流程。</p>
+</div>
+
+<div class="danger">
+  <h2>⚠ 生死线护栏 · 硬约束</h2>
+  <p>绝不签个人连带担保 — 每季度复核一次，O4-KR 永久纳入</p>
+</div>
+
+<div class="foot">
+  管理域实战样例 · OKR 框架 · 对照野里 YAYALI · 数据口径以融资测算为准<br>
+  生成时间：2026-09-06 · 学习台管理域
+</div>
+
+</body>
+</html>

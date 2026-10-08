@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融域周五盘前简报 · 2026-09-11</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1140px;margin:0 auto}
+  .backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:18px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px}
+  .kpi .nm{color:#7d8590;font-size:12px;margin-bottom:4px}
+  .kpi .px{font-size:19px;font-weight:700}
+  .kpi .px.r{color:#f85149}.kpi .px.g{color:#3fb950}
+  .kpi .ch{font-size:12px;margin-top:2px}
+  .kpi .ch.r{color:#f85149}.kpi .ch.g{color:#3fb950}.kpi .ch.y{color:#d29922}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .box{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
+  .box h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box h3.r{color:#f85149}.box h3.g{color:#3fb950}.box h3.b{color:#58a6ff}
+  .box ul{list-style:none;padding-left:16px}
+  .box li{font-size:12.5px;color:#c9d1d9;padding:4px 0;position:relative}
+  .box li:before{content:"▸";position:absolute;left:-14px}
+  .box.r li:before{color:#f85149}.box.g li:before{color:#3fb950}.box.b li:before{color:#58a6ff}
+  .scene{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:12px 0}
+  .scene .st{display:grid;grid-template-columns:80px 1fr;gap:8px;padding:8px 0;border-bottom:1px solid #30363d22;font-size:12.5px}
+  .scene .st:last-child{border-bottom:none}
+  .scene .st .p{color:#58a6ff;font-weight:600}
+  .scene .st .c{color:#c9d1d9}
+  .hold{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .hold h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .hold .hr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #30363d22;font-size:13px}
+  .hold .hr:last-child{border-bottom:none}
+  .hold .hr .l{color:#c9d1d9}.hold .hr .r{color:#e6edf3;font-weight:600}
+  .hold .hr .r.up{color:#f85149}.hold .hr .r.dn{color:#3fb950}
+  .risk{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .risk h3{color:#f85149;font-size:14px;margin-bottom:8px}
+  .risk p{color:#f85149cc;font-size:12.5px;margin-bottom:4px}
+  .disc{margin-top:18px;color:#484f58;font-size:11px;border-top:1px solid #30363d;padding-top:12px;line-height:1.6}
+  .foot{margin-top:14px;color:#484f58;font-size:11px;text-align:center}
+  .note{background:#d299220d;border:1px solid #d2992240;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#d29922cc}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>金融域 · 周五盘前简报</h1>
+  <div class="sub">2026-09-11 周五 08:00 · WebSearch 行情 + 隔夜外盘 + 三情景推演</div>
+  <div class="meta">
+    <span class="tag y">数据源：WebSearch（Wind MCP 本轮未连·连续4次）</span>
+    <span class="tag b">A股收盘口径：9月10日周四</span>
+    <span class="tag">美股9/10正常交易</span>
+    <span class="tag r">风控红色高亮</span>
+    <span class="tag r">布油107.63·WTI102.48·油价暴涨</span>
+    <span class="tag r">美8月PPI+5.4%超预期·加息概率73%</span>
+    <span class="tag y">今晚20:30 美国8月CPI=本周最大变量</span>
+    <span class="tag g">金融十五五规划出台·定心丸</span>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 数据来源说明：本轮 Wind MCP 连接器未激活（连续第4次），全部行情数据来自 WebSearch（财联社/东方财富/证券时报/新华财经/华尔街见闻/雪球/腾讯财经/Yahoo Finance 等）公开源，非 Wind 直连。数字可溯源到来源+时点，数据源缺失直说不造数。
+</div>
+
+<div class="sec">外盘 · 美股9月10日周四收盘（三大指数四连跌·油价暴涨+PPI超预期双杀估值）</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">道琼斯</div><div class="px g">52064.10</div><div class="ch g">-0.60%（跌316点·四连跌）</div></div>
+  <div class="kpi"><div class="nm">纳斯达克</div><div class="px g">26081.72</div><div class="ch g">-0.65%（跌171点）</div></div>
+  <div class="kpi"><div class="nm">标普500</div><div class="px g">7591.70</div><div class="ch g">-0.58%（跌44点·四连阴）</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">费城半导体</div><div class="px g">跌超2%</div><div class="ch g">存储链溃败：拉姆研究-5.65%/SK海力士ADR-5.2%/美光-4%+</div></div>
+  <div class="kpi"><div class="nm">美元指数</div><div class="px r">99.07</div><div class="ch r">PPI后脉冲上行</div></div>
+  <div class="kpi"><div class="nm">离岸人民币</div><div class="px">6.716</div><div class="ch g">韧性较强·结汇托底</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">WTI原油</div><div class="px r">$102.48</div><div class="ch r">+6.69%（盘中103.84·暴涨）</div></div>
+  <div class="kpi"><div class="nm">布伦特原油</div><div class="px r">$107.63</div><div class="ch r">+6.34%（站稳100上方）</div></div>
+  <div class="kpi"><div class="nm">现货黄金</div><div class="px g">4314.82</div><div class="ch g">-1.91%（被美债实际利率压制）</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">COMEX铜</div><div class="px g">6.5275美元/磅</div><div class="ch g">-5.24%（伦铜大跌·全球需求转弱信号）</div></div>
+  <div class="kpi"><div class="nm">COMEX白银</div><div class="px g">65.16</div><div class="ch g">-5.09%（波动大于黄金）</div></div>
+  <div class="kpi"><div class="nm">美债10年</div><div class="px r">4.92-4.96%</div><div class="ch r">逼近5%·创2023年10月来新高</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">美债30年</div><div class="px r">5.36%</div><div class="ch r">2007年来新高</div></div>
+  <div class="kpi"><div class="nm">纳斯达克金龙中概</div><div class="px g">-2.08%</div><div class="ch g">小鹏-2.18%/理想-4%+</div></div>
+  <div class="kpi"><div class="nm">富时A50期指夜盘</div><div class="px g">14513</div><div class="ch g">-0.66%（指向A股开盘偏弱）</div></div>
+</div>
+<div class="box" style="margin-top:8px"><p style="font-size:12px;color:#7d8590">美股四连跌的核心变量是<b style="color:#f85149">油价暴涨+PPI超预期双杀估值</b>——特朗普称高油价可能持续到中期选举，WTI单日暴涨6.69%至102.48美元、布伦特站稳107.63；美国8月PPI同比+5.4%超预期(核心+4.6%)，CME显示美联储9月加息25bp概率从64%骤升至73%，10月累计加息概率82%。美债10年逼近5%、30年创2007年来新高，全球无风险利率上移压制权益估值。标普十一大板块九跌二涨，材料-1.48%/公用事业-1.00%领跌，通信服务+0.25%/必需消费+0.24%逆涨。结构亮点：①苹果+3.56%（折叠屏iPhone Duo发布后利好兑现）；②甲骨文盘中-5%但盘后+7%（FY27Q1营收193亿+30%/云收入翻倍/净利+60%）；③能源板块逆势走强。但存储/AI硬件链集体溃败（费半-2%+/拉姆研究-5.65%/SK海力士ADR-5.2%/美光-4%+/英特尔-5%+/英伟达-2%+），对A股算力/存储/光模块链构成直接情绪压制。今晚20:30美国8月CPI是FOMC前最后通胀读数，为本周全球最大变量。</p></div>
+
+<div class="sec">隔夜亚太/港股/欧股（9月10日收盘）</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">恒生指数</div><div class="px g">-0.17%</div><div class="ch g">25274→续跌·100日线附近争持</div></div>
+  <div class="kpi"><div class="nm">恒生科技</div><div class="px g">-0.76%</div><div class="ch g">阿里-2.8%/美团-3.4%/小鹏-3.4%</div></div>
+  <div class="kpi"><div class="nm">南向资金</div><div class="px r">逆势加仓</div><div class="ch r">港股承压时持续买入</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">斯托克欧洲600</div><div class="px g">-1.41%</div><div class="ch g">7月来最大跌幅（9/9数据）</div></div>
+  <div class="kpi"><div class="nm">欧洲央行</div><div class="px r">加息25bp</div><div class="ch r">年内第二次·表态高油价推升通胀</div></div>
+  <div class="kpi"><div class="nm">澳洲3年国债</div><div class="px r">5.017%</div><div class="ch r">2011年5月来最高</div></div>
+</div>
+<div class="box" style="margin-top:8px"><p style="font-size:12px;color:#7d8590">港股小幅收跌（恒生科技-0.76%），阿里-2.8%/美团-3.4%/小鹏-3.4%领跌，但南向资金逆势加仓。欧洲央行9/10加息25bp为年内第二次，表态高油价可能推升通胀，非美央行同步紧缩。全球无风险利率集体上行（美/欧/澳），美元指数与人民币汇率压力并存。A50期指夜盘收跌0.66%报14513，指向A股开盘偏弱。</p></div>
+
+<div class="sec">A股 · 9月10日周四收盘（沪指退潮·情绪续降·银行电力红利避险抱团）</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">上证指数</div><div class="px g">3934.40</div><div class="ch g">-0.43%（开3939.09/高3949.25/低3927.35）</div></div>
+  <div class="kpi"><div class="nm">深证成指</div><div class="px g">13617.67</div><div class="ch g">-0.77%</div></div>
+  <div class="kpi"><div class="nm">创业板指</div><div class="px g">3338.42</div><div class="ch g">-0.49%（开3324.33/高3368.73/低3308.71）</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">沪深300</div><div class="px g">续跌</div><div class="ch g">靠权重护盘跌幅收窄</div></div>
+  <div class="kpi"><div class="nm">科创50</div><div class="px g">-0.69%</div><div class="ch g">连续领跌</div></div>
+  <div class="kpi"><div class="nm">两市成交</div><div class="px g">1.66万亿</div><div class="ch g">续缩·连续多日低于2万亿</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">涨/跌家数</div><div class="px g">954涨/4512跌</div><div class="ch g">上涨占比仅17.20%</div></div>
+  <div class="kpi"><div class="nm">涨停/跌停</div><div class="px g">40家/14家</div><div class="ch g">涨停95→75→49→40四连降</div></div>
+  <div class="kpi"><div class="nm">连板高度</div><div class="px y">4板</div><div class="ch y">桂林旅游4连板（全场最高标·梯队断层）</div></div>
+</div>
+<div class="box" style="margin-top:8px"><p style="font-size:12px;color:#7d8590">周四走出<b style="color:#f85149">"退潮期延续+资金弃题材抱防御"行情</b>——沪指-0.43%、深成-0.77%、创业板-0.49%、科创50-0.69%，4512跌/954涨（上涨占比仅17.20%）、成交1.66万亿续缩（连续多日低于2万亿）。涨停家数95→75→49→40四连降、连板高度仅4板（桂林旅游·梯队断层）、封板率60.61%、跌停14家。情绪温度35°→进一步降温，电风扇存量博弈。资金方向：<b style="color:#3fb950">抱防御</b>——银行（南京/江苏/杭州/成都银行创历史新高）、电力（华银电力/闽东电力/乐山电力涨停）、玻璃玻纤（九鼎新材/凯胜新能涨停）、PCB涨价链（金安国纪涨停·封单2.88亿·建滔年内第7张涨价函）；<b style="color:#f85149">撤题材</b>——农林牧渔/农化制品/白酒/医疗服务/影视院线/CRO概念领跌。本质是退潮期资金高低切换未离场、抱红利避险+涨价链、弃高位题材。</p></div>
+
+<div class="sec">今日盘前重磅消息面</div>
+<div class="grid2">
+  <div class="box b">
+    <h3 class="b">政策与数据（定心丸 vs 加息警报）</h3>
+    <ul>
+      <li>《金融强国建设"十五五"规划》正式出台 + 央行配套9份行动方案——总体目标2030年形成中国特色现代金融体系框架/2035年基本建成</li>
+      <li>证监会李超9/10发布会"定心丸"：①年内中长期资金净买入A股超6000亿元（持有流通市值较2025年底+12.5%）②持续加强稳市场机制建设全力维护平稳运行 ③更大力度释放并购重组活力 ④将A股打造为境内优质企业上市首选地 ⑤严格执行退市制度</li>
+      <li>美国8月PPI同比+5.4%超预期(预期5.3%/前值4.7%)·核心PPI+4.6%→CME显示美联储9月加息25bp概率73%(从64%升)·10月累计加息概率82%</li>
+      <li>今晚20:30美国8月CPI=FOMC(9/15-16)前最后通胀读数=本周全球最大变量：超预期→加息落地成长承压；低于预期→加息预期回落贵金属成长反弹</li>
+      <li>欧洲央行9/10加息25bp（年内第二次）·表态高油价可能推升通胀·报道称最快10月再行动</li>
+      <li>两部门治理低价无序竞争·明确重要工业品成本核算规则（发改委+市场监管总局）——"反内卷"利多钢铁/化工/建材价格中枢</li>
+      <li>储能电池新建项目审批收紧（多家企业确认·非一刀切·后续随供需动态调整）——供给端收缩利多储能头部</li>
+      <li>中上协：2025年度A股分红总额2.4万亿+3.3%创新高·近七成公司派现·20家银行中期拟派息2661亿（国有大行集体提分红至31%）</li>
+      <li>商务部：中美正就300亿美元对等降税框架安排进行磋商</li>
+      <li>央行9.14-9.17开展隔夜逆回购·单日上限6000亿保障资金面平稳</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h3>产业与事件（油价暴涨·算力capex续加·存储链承压）</h3>
+    <ul>
+      <li>国际油价暴涨：WTI+6.69%至$102.48/布伦特+6.34%至$107.63——特朗普称高油价持续到中期选举·胡塞拿下红海沿岸穆哈·曼德海峡控制权生变·沙特8月产量降至623.8万桶/日(1990年来最低)·霍尔木兹威胁等级"严重"</li>
+      <li>燧原科技(688801)今日科创板上市（发行价142.18/募资61.19亿）——国产GPU四小龙齐聚（前两只摩尔线程/沐曦首日涨425%/693%但已透支·注意"上市即顶"）</li>
+      <li>MLCC龙头村田停产部分低端消费级/车用型号——被动元件供需格局边际改善</li>
+      <li>中国联通表态十五五撬动千亿级算力网络投资——算力链政策催化</li>
+      <li>甲骨文FY27Q1营收193亿+30%/云基础设施收入翻倍/净利+60%/全年capex维持900-950亿美元；微软计划数据中心容量从12GW扩至38GW(增两倍)——AI基建投资周期未见拐点</li>
+      <li>OpenAI推出Agents API公测版·Codex底层基础设施向开发者开放</li>
+      <li>华为/寒武纪AI芯片涨价传闻(涨幅20-50%)·寒武纪盘中辟谣·华为未辟谣</li>
+      <li>DeepSeek V4.1 Flash发布+价格下调（空闲缓存命中输入降至0.02元/百万Token降60%）</li>
+      <li>远望谷拟收购光泰通信100%股权（切入光通信自动化设备）·鼎通科技1亿设子公司布局液冷散热</li>
+      <li>科创50指数今日收盘后正式更换5只成分股——收盘前存在调仓换股交易行为</li>
+      <li>厄尔尼诺确认超强级别（CPC预测2026-27北半球秋冬超90%概率）·ICE原糖8月初至今+34%·国内郑糖+7%·A股糖概念集体走强</li>
+      <li>特朗普拟向美国成年人每人发5000美元(总额1.2万亿·称无需国会批准)·Meta宣布每股派现0.53美元</li>
+      <li>险资年内调研A股10185次·主攻硬科技（电子元件/工业机械/集成电路）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sec">今日三情景推演 · 关键点位：支撑3920(5日线)→3900 / 压力3950→3970</div>
+<div class="scene">
+  <div class="st"><span class="p">情景一</span><span class="c"><b style="color:#d29922">基准(约45%)</b> · 隔夜外围偏空（美股四连跌+油价暴涨+PPI超预期+美债逼近5%+A50夜盘-0.66%），沪指低开3920-3930附近，但金融十五五定心丸+中长期资金6000亿+反内卷政策对冲。开盘后银行/电力红利继续抱团稳指数，资源能源股高开但易兑现，存储/AI硬件低开承压。沪指围绕3930震荡，压力3950。沪强深弱延续，只做低位前排，不追高开资源。</span></div>
+  <div class="st"><span class="p">情景二</span><span class="c"><b style="color:#3fb950">强势(约20%)</b> · 金融十五五+中长期资金6000亿+并购重组催化大金融/权重异动，沪指高开反包3950试探3970，银行/券商/红利领涨，算力链（联通千亿投资+甲骨文capex+微软38GW）午后回流。但创业板仍可能承压（存储映射压制）。需今晚CPI低于预期配合下周一延续。</span></div>
+  <div class="st"><span class="p">情景三</span><span class="c"><b style="color:#f85149">弱势(约35%)</b> · 油价暴涨+PPI超预期+美债逼近5%+欧央行加息+铜大跌(需求转弱信号)+存储链溃败映射，沪指低开跌破3920回踩3900，创业板破3330/科创50续跌。高位题材继续杀跌，资金避险抱银行电力红利。今晚CPI若超预期将加剧下周一杀估值。减仓为先，等CPI明朗。</span></div>
+</div>
+
+<div class="sec">持仓股最新收盘(9月10日)</div>
+<div class="hold">
+  <h3>当前持仓 · WebSearch 公开源</h3>
+  <div class="hr"><span class="l">新锐股份 688257.SH（硬质合金刀具/工业母机）</span><span class="r dn">51.73 元 -1.24%</span></div>
+  <div class="hr"><span class="l">小鹏集团 09868.HK（港股）</span><span class="r dn">41.60 港币 -1.65%</span></div>
+  <div class="hr"><span class="l">小鹏集团 XPEV（美股9/10）</span><span class="r dn">10.34 美元 -2.18%</span></div>
+  <div class="hr"><span class="l">菲利克（用户口径）</span><span class="r">@142.60</span></div>
+  <div class="hr"><span class="l">九坤量化指增（对标中证500）</span><span class="r">回撤约20%</span></div>
+</div>
+<div class="box" style="margin-top:8px">
+  <p style="font-size:12px;color:#7d8590">
+    <b style="color:#f85149">新锐股份</b>：51.73元-1.24%（开51.80/高53.16/低51.15/成交4.04亿/换手2.18%/总市值约186亿）。8月17日高点66元→持续回调，9/4低点51.11→9/7 52.80→9/8 53.10→9/9 52.38→9/10 51.73，<b style="color:#f85149">5日连续阴跌·回调未止·贴近9/4低点51.11</b>。2026H1营收20.57亿+80.39%/归母净利5.65亿+460.51%（中报大增），主营硬质合金/凿岩/切削/油服。<b style="color:#f85149">关注：高位回调未企稳，20日主力成本57元是压力，等缩量企稳再考虑，下方51.11是近期支撑·破则下一台阶</b>。<br>
+    <b style="color:#f85149">小鹏集团</b>：港股41.60港币-1.65%（开41.20/高41.80/低40.36/成交5330万/振幅3.40%），<b style="color:#f85149">创52周新低40.36！</b>（52周高110.8/低40.36·此前低点为41.60今日下破）。美股XPEV 10.34美元-2.18%。总市值约797亿港元。TTM仍亏损（PE亏损）。隔夜中概金龙-2.08%、理想-4%+拖累，汽车板块失血式竞争+账期新规落地。小鹏9/8启用全球首条高阶通用人形机器人产线（产业亮点但股价未反应）。<b style="color:#f85149">贴近52周新低破位边缘·趋势性弱势确认</b>。
+  </p>
+</div>
+
+<div class="sec">风控红色高亮</div>
+<div class="risk">
+  <h3>⚠️ 大盘评分 45/100 · 退潮期延续 · 外围偏空+定心丸对冲 · 偏谨慎</h3>
+  <p>· 沪指-0.43%/创业板-0.49%/深成-0.77%/科创50-0.69%——4512跌/954涨(上涨占比仅17.20%)、成交1.66万亿续缩(连续多日低于2万亿)</p>
+  <p>· 涨停家数95→75→49→40四连降、连板高度仅4板(桂林旅游·梯队断层)、封板率60.61%、跌停14家 → 退潮期延续</p>
+  <p>· 隔夜外围偏空：美股四连跌+油价暴涨(WTI+6.69%至$102.48)+PPI超预期(+5.4%)+美债10年逼近5%+铜大跌(-5.24%需求转弱信号)+A50夜盘-0.66%</p>
+  <p>· 全球加息预期骤升：美PPI超预期→9月加息概率73%(从64%升)·10月累计加息概率82%·欧央行加息25bp年内第二次·澳洲3年国债5.017%(2011年来最高)</p>
+  <p>· 存储/AI硬件链隔夜溃败：费半-2%+/拉姆研究-5.65%/SK海力士ADR-5.2%/美光-4%+/英特尔-5%+ → 对A股算力/存储/光模块构成直接情绪压制</p>
+  <p>· 持仓承压：新锐5日连续阴跌贴近9/4低点51.11·小鹏创52周新低40.36(趋势性弱势确认)</p>
+  <p>· 今晚20:30美国8月CPI=本周全球最大变量：超预期→加息落地成长承压·低于预期→加息预期回落贵金属成长反弹</p>
+  <p>· 利好对冲：①金融十五五规划出台+证监会"定心丸"(中长期资金6000亿+稳市场+并购重组) ②反内卷政策(重要工业品成本核算·利多钢铁化工建材) ③储能审批收紧(供给收缩利多头部) ④算力capex续加(联通千亿+甲骨文900-950亿+微软38GW) ⑤分红2.4万亿创新高强化红利类债属性 ⑥油价暴涨利多能源油运链</p>
+  <p>· 盯盘三信号：①今晚20:30美国8月CPI ②沪指能否守住3920/3900、创业板守住3330 ③燧原上市+科创50换成分股的调仓行为</p>
+  <p>· 持仓 ≤ 5 成，退潮期防守优先，只做低位涨价链(PCB/玻纤)+政策催化(算力/反内卷)+能源避险，不做中位2进3/3进4，不追高开资源（易高开兑现），炸板即走，等今晚CPI明朗再决定下周一仓位</p>
+</div>
+
+<div class="sec">今日热点方向</div>
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">偏多方向</h3>
+    <ul>
+      <li>银行/电力红利避险（南京/江苏/杭州/成都银行创历史新高·华银电力/闽东电力/乐山电力涨停·退潮期资金首选+分红2.4万亿强化类债属性）</li>
+      <li>油运/航运/能源（WTI暴涨6.69%至$102.48/布伦特$107.63·特朗普称高油价持续到中期选举·沙特产量1990年来最低·明牌但易高开兑现看分歧承接）</li>
+      <li>PCB涨价链（金安国纪涨停·封单2.88亿·建滔年内第7张涨价函·超声电子/逸豪新材·位置低+涨价逻辑硬）</li>
+      <li>玻璃玻纤（九鼎新材/凯胜新能涨停·位置低+产能收缩）</li>
+      <li>算力/光通信（联通千亿投资+甲骨文capex900-950亿+微软38GW+远望谷收购光泰·产业逻辑硬但隔夜存储映射压制·看低吸承接）</li>
+      <li>储能头部（新建项目审批收紧·供给收缩利多头部·非一刀切）</li>
+      <li>反内卷（钢铁/化工/建材·两部门明确重要工业品成本核算规则·利多价格中枢）</li>
+      <li>国产GPU/算力芯片（燧原688801今日上市·国产四小龙齐聚·注意"上市即顶"结构·看分歧后承接）</li>
+      <li>糖概念（厄尔尼诺超强级别确认·ICE原糖+34%·内外盘价差大·情绪驱动型追高需防证伪）</li>
+      <li>液冷散热（鼎通科技1亿设子公司·算力扩容配套·位置低）</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">风险方向</h3>
+    <ul>
+      <li>存储/AI硬件（费半-2%+/拉姆研究-5.65%/SK海力士-5.2%/美光-4%+/英特尔-5%+·隔夜溃败直接映射A股算力/存储/光模块）</li>
+      <li>高估值成长（全球加息预期骤升+美债10年逼近5%+美债30年创2007年来新高·久期长的高估值品种承压）</li>
+      <li>贵金属（现货黄金-1.91%/白银-5.09%·被美债实际利率压制·强势美元+实际利率上行）</li>
+      <li>有色铜（COMEX铜-5.24%/伦铜大跌·全球需求转弱信号·对A股有色板块负面映射）</li>
+      <li>农林牧渔/农化/白酒/医疗服务/CRO（续退潮·资金持续撤出）</li>
+      <li>港股汽车板块（中概金龙-2.08%/小鹏创52周新低40.36/理想-4%+·汽车失血式竞争+账期新规）</li>
+      <li>高位股补跌（连板高度仅4板·梯队断层·涨停95→75→49→40四连降·高位筹码松动）</li>
+      <li>追高油运/能源（油价暴涨后所有人都会看到·竞价极端高开则性价比快速下降·易高开兑现）</li>
+      <li>燧原首日博弈（前两只首日涨425%/693%已透支·首日高开博弈风险极大·注意"上市即顶"）</li>
+    </ul>
+  </div>
+</div>
+
+<div class="sec">今日事件日历</div>
+<div class="box">
+  <ul>
+    <li>🇺🇸 今晚20:30 美国8月CPI（FOMC前最后通胀读数·本周全球最大变量）</li>
+    <li>🇺🇸 今晚22:00 美国9月密歇根消费者信心初值</li>
+    <li>🇺🇸 次日01:00 美国石油钻井数</li>
+    <li>🇪🇺 16:00 IEA月度原油市场报告</li>
+    <li>🇷🇺 18:00 俄罗斯央行利率决议</li>
+    <li>🆕 今日 燧原科技(688801)科创板上市（国产GPU四小龙齐聚）</li>
+    <li>📊 今日收盘后 科创50指数正式更换5只成分股（收盘前调仓换股行为）</li>
+    <li>⛽ 今日 国内成品油开启新一轮调价窗口</li>
+    <li>🤖 9/11-13 2026中国算力大会（河北廊坊·"共织算力网 智启新未来"）</li>
+    <li>🇺🇸 9/15-16 美联储FOMC议息会议（加息概率73%）</li>
+    <li>📅 9/20-23 2026世界制造业大会（合肥·16款人形机器人）</li>
+  </ul>
+</div>
+
+<div class="disc">
+  ⚠️ 免责声明：本简报为学习台金融域基于公开数据(WebSearch/财经媒体)的复盘与框架推演，<b>仅供学习研究，不构成任何投资建议</b>。所有数字可溯源到来源+时点，数据源缺失会直说不造数。据此操作风险自担。<br>
+  数据来源：财联社/东方财富/证券时报/新华财经/华尔街见闻/雪球/腾讯财经/Yahoo Finance/同花顺 等。Wind MCP 本轮未连接（连续第4次），行情以 WebSearch 公开源为准。美股9月10日(周四)正常交易。美股夏令时21:30开盘。
+</div>
+<div class="foot">
+  学习台金融域 · 周五盘前简报 · 2026-09-11 08:00 · 数据口径9月10日A股收盘+9月10日美股收盘+隔夜外盘<br>
+  行情源：上证000001.SH/创业板399006.SZ/新锐688257.SH/小鹏09868.HK（均WebSearch公开源）
+</div>
+
+</body>
+</html>

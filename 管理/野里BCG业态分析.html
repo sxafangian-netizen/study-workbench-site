@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="pikVG82k5SH7iE0CXDIlP3">
+<head data-page-node-id="qkucHTEpiAHqhAkkKG1GmA">
+<meta charset="UTF-8" data-page-node-id="zDqSMNDL1uLIwDqaMCCQ3z">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="UcOL98aBRFaWSTqsNu1s3K">
+<title>野里BCG业态矩阵 · 管理域实战</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1100px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:20px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+
+  /* ===== BCG 矩阵 修复版 =====
+     标准布局：
+       [纵轴] | 明星(左上) | 问题(右上)
+       [纵轴] | 现金牛(左下) | 瘦狗(右下)
+       [空]   | 横轴(跨两列)
+  */
+  .bcg{
+    display:grid;
+    grid-template-columns:56px 1fr 1fr;   /* 纵轴 + 左右两象限 */
+    grid-template-rows:1fr 1fr 36px;       /* 上下象限 + 横轴 */
+    gap:0;
+    margin:18px 0;
+    border:1px solid #30363d;
+    border-radius:12px;
+    overflow:hidden;
+    background:#0d1117;
+    min-height:320px;
+  }
+  /* 纵轴：跨上下两行 */
+  .yax{
+    grid-row:1 / 3;
+    grid-column:1;
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+    text-align:center;
+    font-size:12px;
+    color:#7d8590;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-right:1px solid #30363d;
+    padding:8px 4px;
+    letter-spacing:1px;
+  }
+  /* 四象限显式定位 */
+  .q-star {grid-row:1; grid-column:2}   /* 左上 高份额+高增长 */
+  .q-ques {grid-row:1; grid-column:3}   /* 右上 低份额+高增长 */
+  .q-cash {grid-row:2; grid-column:2}   /* 左下 高份额+低增长 */
+  .q-dog  {grid-row:2; grid-column:3}   /* 右下 低份额+低增长 */
+  /* 横轴：跨左右两列 */
+  .xax{
+    grid-row:3;
+    grid-column:2 / 4;
+    text-align:center;
+    font-size:12px;
+    color:#7d8590;
+    padding:8px 0;
+    border-top:1px solid #30363d;
+    letter-spacing:1px;
+  }
+  /* 象限内边距 + 分隔线 */
+  .quad{
+    padding:14px 16px;
+    position:relative;
+    min-height:150px;
+  }
+  .q-star, .q-ques{border-bottom:1px solid #30363d33}
+  .q-ques, .q-dog {border-left:1px solid #30363d33}
+  .qt{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .qstar{color:#3fb950}
+  .qcash{color:#58a6ff}
+  .qq{color:#d29922}
+  .qdog{color:#f85149}
+  .qd{font-size:11px;color:#7d8590;margin-bottom:10px}
+  .biz{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 9px;font-size:11.5px;color:#c9d1d9;margin:2px 3px 2px 0}
+  .biz.star{border-color:#3fb95040;color:#3fb950}
+  .biz.cash{border-color:#58a6ff40;color:#58a6ff}
+  .biz.q{border-color:#d2992240;color:#d29922}
+  .biz.dog{border-color:#f8514940;color:#f85149}
+
+  .detail{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px;margin-bottom:10px}
+  .detail .dt{font-size:14px;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+  .detail p{color:#c9d1d9;font-size:13px;margin-bottom:6px}
+  .detail p:last-child{margin-bottom:0}
+  .alloc{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:12px;padding:20px 24px;margin-top:16px}
+  .alloc h2{color:#58a6ff;font-size:16px;margin-bottom:12px}
+  .barwrap{margin:10px 0}
+  .barwrap .bl{display:flex;justify-content:space-between;font-size:12px;color:#c9d1d9;margin-bottom:4px}
+  .bar{height:10px;background:#21262d;border-radius:5px;overflow:hidden;position:relative}
+  .bar .fill{height:100%;border-radius:5px}
+  .bar .now{background:#f85149}
+  .bar .sug{position:absolute;top:0;left:0;height:100%;border-right:2px dashed #3fb950}
+  .foot{margin-top:22px;color:#484f58;font-size:11px;text-align:center;border-top:1px solid #30363d;padding-top:14px}
+</style>
+<style>.backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}</style>
+</head>
+<body data-page-node-id="AKd0PTrMi8MEIs6yJUGa9P">
+<a href="../" class="backbtn" data-page-node-id="CWCFf1nHKmpQofpFORZ9N3">← 返回学习台</a>
+
+<div class="hd" data-page-node-id="Ewr89UU4i12YBNUBtlEqcd">
+  <h1 data-page-node-id="4yarQadLrCkEq5p21As7bc">野里项目 · BCG 业态矩阵</h1>
+  <div class="sub" data-page-node-id="FMydsD1qHQSpNP9Ubw7EEs">management-coach 实战样例 · 管理域框架② · 业态组合资源倾斜分析</div>
+  <div class="meta" data-page-node-id="0W8LZ5vkP2kJDCikG9oNke">
+    <span class="tag b" data-page-node-id="Zq6IU8nUBXNqPd8AlrNGuq">横轴：相对市场份额</span>
+    <span class="tag b" data-page-node-id="C9M0IZLZ0GOVf7GaNCVEvb">纵轴：市场增长率</span>
+    <span class="tag" data-page-node-id="97nCSJghE7wGcXWK2J42Wb">西安 · 社区商业语境</span>
+    <span class="tag" data-page-node-id="Vfru1pDbIAAWwBAEC2XmEE">口径：对外不点名合同主体</span>
+  </div>
+</div>
+
+<div class="sec" data-page-node-id="cIAuIw54g5e26y6tRK50gy">BCG 四象限矩阵 · 野里六业态定位</div>
+<div class="bcg" data-page-node-id="6kYk67zCERkv7pALm14RmL">
+  <div class="yax" data-page-node-id="rnHsjKE1TFHdhdUGsd1zOk">市场增长率（高 ↑ / 低 ↓）</div>
+
+  <!-- 左上：明星 高份额+高增长 -->
+  <div class="quad q-star" data-page-node-id="7olH2A9AltB3ghC6TwVG3v">
+    <div class="qt qstar" data-page-node-id="yLCJo1m7CPClxxuHjqd6j8">⭐ 明星 · 高份额 + 高增长</div>
+    <div class="qd" data-page-node-id="2RSwoSvDuNvafCVnH2kCCf">增长引擎，资源加码</div>
+    <span class="biz star" data-page-node-id="zEhttpAVGoRxd44xKvy2HS">盒马mini 新零售</span>
+    <span class="biz star" data-page-node-id="E5RQFnT4ivtECamfur57Gk">运动健身 乐刻/超级猩猩</span>
+  </div>
+
+  <!-- 右上：问题 低份额+高增长 -->
+  <div class="quad q-ques" data-page-node-id="o5dTPb4cGquAjlgaY1Qilt">
+    <div class="qt qq" data-page-node-id="slJiXIezetbhzRJ6YD5ZKu">❓ 问题 · 低份额 + 高增长</div>
+    <div class="qd" data-page-node-id="Apjv2f6nhXx6m0vTN6uEka">潜力业态，需培育或决断</div>
+    <span class="biz q" data-page-node-id="x7UponFCEqUBvUkfVtV1if">宠物服务（占比5%）</span>
+    <span class="biz q" data-page-node-id="CDxnbOhYc0liDAYGAdqvhH">文化体验（影院之外的）</span>
+  </div>
+
+  <!-- 左下：现金牛 高份额+低增长 -->
+  <div class="quad q-cash" data-page-node-id="DxJNytkuw93jTSk4oEmOP0">
+    <div class="qt qcash" data-page-node-id="xDfGVvlAjUTc35C7oljxOw">💰 现金牛 · 高份额 + 低增长</div>
+    <div class="qd" data-page-node-id="lGs7PG9SEHtiwv6wrKRjrH">现金流来源，维持不加码</div>
+    <span class="biz cash" data-page-node-id="mjGWX2C2STFWXVSIibDieM">餐饮黄金四件套 好利来/瑞幸/霸王茶姬/每一天</span>
+    <span class="biz cash" data-page-node-id="5UVRvTM8Yey7QuNqKMNeQ3">影院 中影/万达</span>
+    <span class="biz cash" data-page-node-id="AJadAyygRBwnCDk2foDj3T">永辉改造店</span>
+  </div>
+
+  <!-- 右下：瘦狗 低份额+低增长 -->
+  <div class="quad q-dog" data-page-node-id="EE0EeOKPMy6PC6JIU0p3dF">
+    <div class="qt qdog" data-page-node-id="DNTgNbQBFVWbalWmen4kPJ">🍂 瘦狗 · 低份额 + 低增长</div>
+    <div class="qd" data-page-node-id="BnVdCerHUwkdTd7tbL3XGb">受冲击业态，压降或退出</div>
+    <span class="biz dog" data-page-node-id="DCUjo6x3ZFVDpgeOXTxHui">纯零售（受电商冲击）</span>
+  </div>
+
+  <div class="xax" data-page-node-id="8vQTqySDKFFKikdHyBPbiV">相对市场份额（高 ← | → 低）</div>
+</div>
+
+<div class="sec" data-page-node-id="onHmAPJYYoRV1ngzCLqG3j">各业态逐一归因</div>
+
+<div class="detail" data-page-node-id="Cs6LAai3tCMkrTDe9MJdJH">
+  <div class="dt qstar" data-page-node-id="tdh2UlieWLN8WMvvkx6KRl">⭐ 明星 · 加码</div>
+  <p data-page-node-id="2R9iy2qikZXvZri71E1o8H"><b data-page-node-id="ATZ766poTOwXiNJbpmbmPp">盒马mini新零售</b>：野里主力店自带流量，新零售赛道高增长，份额相对高。是一期1000万开发内容锚点之一。</p>
+  <p data-page-node-id="xHQCqaJs5nIvndwcwdd5IG"><b data-page-node-id="grC8AWndRfkkjFi23uWCdY">运动健身（乐刻/超级猩猩）</b>：体验型高增长、线上难替代、社区高频复购，差异化护城河。当前占比8%偏小，应加码。</p>
+</div>
+
+<div class="detail" data-page-node-id="G3YufxFnTA0mvGC6vgGWeF">
+  <div class="dt qcash" data-page-node-id="zI89S8EnPAMr7biDDUmvif">💰 现金牛 · 维持</div>
+  <p data-page-node-id="HTRoVFBEtaGzS7yj7xDNYJ"><b data-page-node-id="zPNFs5kwWD2CLh5iPktfBd">餐饮黄金四件套（好利来/瑞幸/霸王茶姬/每一天）</b>：刚需高频、自带到店属性、现金流稳定。但增长平、占比40%过重，现金牛过重拖整体增长，应适当让位。</p>
+  <p data-page-node-id="T7hn2t2U1bv3WFX9u3GfLy"><b data-page-node-id="bLaCkDHOyE94qlXzGl7G53">影院（中影/万达）</b>：稳定客流基石，但受流媒体冲击增长承压，维持即可不加码。</p>
+</div>
+
+<div class="detail" data-page-node-id="4tSGMZAW1tj0whmFwlr1ny">
+  <div class="dt qq" data-page-node-id="2h7ZE54RhPUbaR6VEFehi2">❓ 问题 · 培育</div>
+  <p data-page-node-id="t2GDW2p5vygM1XnnMQAay3"><b data-page-node-id="nXYQ2cvZzTlh1YbnXRoPpN">宠物服务（5%）</b>：宠物经济高增长、体验型难替代，是明星预备役。占比小=问题，加大培育可转明星。</p>
+  <p data-page-node-id="K2s53NSwNK9rj06e6IcBsg"><b data-page-node-id="GkOPnklEFSV5wPqZiEHyyC">文化体验（影院之外）</b>：需做出差异化（书店/手作/剧场），培育期不急于规模。</p>
+</div>
+
+<div class="detail" data-page-node-id="WuoWekx8LOh0RFmnMtOH0S">
+  <div class="dt qdog" data-page-node-id="0FLBjDEEZsCSOoESh3fBI8">🍂 瘦狗 · 压降</div>
+  <p data-page-node-id="84CowGd6mBvLmutSocjNHF"><b data-page-node-id="KVD4hvbBBpFT8wsQwhS7Mu">纯零售</b>：受电商冲击最重，份额低增长低。野里零售15%应精选（体验型/即时型），非体验型零售压降。</p>
+</div>
+
+<div class="alloc" data-page-node-id="tu1CujX6lOKFf4m99eFSnY">
+  <h2 data-page-node-id="7QBHZEtANRiNCDnazmbWen">业态配比调整建议（现金牛让位明星/问题）</h2>
+  <div class="barwrap" data-page-node-id="vCAvM3TDZOyyUGpxuoRBtO">
+    <div class="bl" data-page-node-id="DsRoIeRjF80OcdGdICnaJJ"><span data-page-node-id="GEILLet9exX2fumqra3tke">餐饮</span><span style="color:#f85149" data-page-node-id="PjWHf1TN77Pfkq5VYvYoJf">现 40% → <span style="color:#3fb950" data-page-node-id="YjrJiUoW8SDvoTMVvYTUal">建议 35%</span></span></div>
+    <div class="bar" data-page-node-id="omftxN6YTHLrDeqdYn9MRX"><div class="fill now" style="width:40%" data-page-node-id="aZ3fyoSOnVXZFZr0Eg1HMG"></div><div class="sug" style="width:35%" data-page-node-id="8wiM616bfjCb6Zui4KLW1F"></div></div>
+  </div>
+  <div class="barwrap" data-page-node-id="oeQowzQHdlJqR0M3PI28k7">
+    <div class="bl" data-page-node-id="vHXW0UUSaHPKcvwrDKm9Ba"><span data-page-node-id="868wfCqtHBviuu6ymZYrvM">运动+宠物</span><span style="color:#f85149" data-page-node-id="yUwVmApLT2dFooNok5VsY9">现 13% → <span style="color:#3fb950" data-page-node-id="WDcbIfrSmKPaku1AsLlZHI">建议 18%</span></span></div>
+    <div class="bar" data-page-node-id="KGQrAS7QijF62ZQYEygyoA"><div class="fill now" style="width:13%" data-page-node-id="aIQeaNpVVFVH8LOini8cDz"></div><div class="sug" style="width:18%" data-page-node-id="DaiyuwEzThI18AkOkapGcv"></div></div>
+  </div>
+  <div class="barwrap" data-page-node-id="40uWGf0m0iSp0B7gmpYCk5">
+    <div class="bl" data-page-node-id="b9RY2D5gWQqKmVehCyrhXB"><span data-page-node-id="7jmykqBQtXWCGdUa6vkzYF">纯零售（非体验型）</span><span style="color:#f85149" data-page-node-id="U5m3ej1lSRdUp291oboEha">现 15% → <span style="color:#3fb950" data-page-node-id="2yn8xX4M6UkqhXFvE2pgiE">建议 ≤10%</span></span></div>
+    <div class="bar" data-page-node-id="6gLHrUuQ6JW5dIXT7bnthq"><div class="fill now" style="width:15%" data-page-node-id="frer5EJkPYZCW7bRI82EnC"></div><div class="sug" style="width:10%" data-page-node-id="VXksgHHDIJoxOpuONyh9Th"></div></div>
+  </div>
+  <p style="color:#7d8590;font-size:12px;margin-top:10px" data-page-node-id="FvXmMFOH9RL131d4R7KFNT">红线=现状占比，绿虚线=建议占比。逻辑：明星加码、现金牛让位、瘦狗压降，把资源从低增长现金牛移向高增长明星/问题。</p>
+</div>
+
+<div class="foot" data-page-node-id="QfkeMo58pPgKxvItoEzAfA">
+  管理域实战样例 · BCG 业态矩阵 · 对照野里 YAYALI · 配比为运营基准(年营收11495万口径)的对冲建议<br data-page-node-id="KJDBJyyLd4NN9Vzph6D44g">
+  生成时间：2026-09-06 · 修订：2026-09-07（修复矩阵 grid 布局）· 学习台管理域
+</div>
+
+</body>
+</html>

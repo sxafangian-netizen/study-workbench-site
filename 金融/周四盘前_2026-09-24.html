@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融域周四盘前简报 · 2026-09-24</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1140px;margin:0 auto}
+  .backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:18px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px}
+  .kpi .nm{color:#7d8590;font-size:12px;margin-bottom:4px}
+  .kpi .px{font-size:19px;font-weight:700}
+  .kpi .px.r{color:#f85149}.kpi .px.g{color:#3fb950}
+  .kpi .ch{font-size:12px;margin-top:2px}
+  .kpi .ch.r{color:#f85149}.kpi .ch.g{color:#3fb950}
+  .kpi .ex{font-size:11px;color:#7d8590;margin-top:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .box{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
+  .box h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box h3.r{color:#f85149}.box h3.g{color:#3fb950}.box h3.b{color:#58a6ff}.box h3.y{color:#d29922}
+  .box ul{list-style:none;padding-left:16px}
+  .box li{font-size:12.5px;color:#c9d1d9;padding:4px 0;position:relative}
+  .box li:before{content:"\25b8";position:absolute;left:-14px}
+  .box.r li:before{color:#f85149}.box.g li:before{color:#3fb950}.box.b li:before{color:#58a6ff}
+  .hold{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .hold h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .hold .hr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #30363d22;font-size:13px;flex-wrap:wrap;gap:6px}
+  .hold .hr:last-child{border-bottom:none}
+  .hold .hr .l{color:#c9d1d9}.hold .hr .r{color:#e6edf3;font-weight:600}
+  .hold .hr .r.r{color:#f85149}.hold .hr .r.g{color:#3fb950}
+  .hold .det{font-size:11.5px;color:#7d8590;margin-top:2px;width:100%}
+  .risk{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .risk h3{color:#f85149;font-size:14px;margin-bottom:8px}
+  .risk p{color:#f85149cc;font-size:12.5px;margin-bottom:4px}
+  .outlook{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .outlook h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .outlook p{font-size:12.5px;color:#c9d1d9;margin-bottom:6px}
+  .outlook b{color:#e6edf3}
+  .scen{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .scen h3{font-size:14px;margin-bottom:10px;color:#58a6ff}
+  .scen .row{display:flex;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+  .scen .pct{font-size:13px;font-weight:700;padding:2px 10px;border-radius:6px;min-width:80px;text-align:center}
+  .scen .pct.r{color:#f85149;background:#f8514915;border:1px solid #f8514933}
+  .scen .pct.y{color:#d29922;background:#d2992215;border:1px solid #d2992233}
+  .scen .pct.g{color:#3fb950;background:#3fb95015;border:1px solid #3fb95033}
+  .scen .txt{font-size:12.5px;color:#c9d1d9;flex:1}
+  .disc{margin-top:18px;color:#484f58;font-size:11px;border-top:1px solid #30363d;padding-top:12px;line-height:1.6}
+  .foot{margin-top:14px;color:#484f58;font-size:11px;text-align:center}
+  .note{background:#d299220d;border:1px solid #d29922;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#d29922cc}
+  .score{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #d2992240;border-radius:10px;padding:16px 24px;margin:14px 0;display:flex;align-items:center;gap:20px}
+  .score .num{font-size:38px;font-weight:800;color:#d29922}
+  .score .lab{font-size:13px;color:#7d8590}
+  .score .lab b{color:#e6edf3}
+  .news{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .news h3{font-size:14px;color:#58a6ff;margin-bottom:10px}
+  .news .item{font-size:12.5px;color:#c9d1d9;padding:5px 0;border-bottom:1px solid #30363d22}
+  .news .item:last-child{border-bottom:none}
+  .news .item .tag2{font-size:11px;padding:1px 6px;border-radius:4px;margin-right:6px;font-weight:600}
+  .news .item .tag2.r{color:#f85149;background:#f8514915}.news .item .tag2.g{color:#3fb950;background:#3fb95015}.news .item .tag2.y{color:#d29922;background:#d2992215}.news .item .tag2.b{color:#58a6ff;background:#58a6ff15}
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}.scen .row{flex-direction:column}}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">&#8592; 返回学习台</a>
+
+<div class="hd">
+  <h1>金融域 &#183; 周四盘前简报</h1>
+  <div class="sub">2026-09-24 周四 08:00 &#183; A股上一交易日9/23(周三)收盘口径 &#183; 隔夜美股9/23(周三)收盘 &#183; 当日盘前消息面</div>
+  <div class="meta">
+    <span class="tag y">数据源：WebSearch(每经/财联社/腾讯新闻/新浪财经/同花顺/e公司/Investing/富途/东方财富)</span>
+    <span class="tag r">Wind MCP 本会话未连接（连续第9次），已直说不造数</span>
+    <span class="tag b">口径：9/23 A股15:00收盘 + 9/23美股收盘(夏令时21:30开盘) + 港股9/23收盘</span>
+    <span class="tag r">风控红色高亮</span>
+    <span class="tag r">&#9888;&#65039; 今日是节前最后交易日！9/25起中秋国庆休市11天至10/8恢复</span>
+  </div>
+</div>
+
+<div class="note">
+  &#9888;&#65039; 数据源说明：Wind mcp__wind-finance__* 工具在本会话不可用（ToolSearch确认无匹配，连续第9次）。已按规则<b>直说不造数</b>，改用 WebSearch 抓取每经网/财联社/腾讯新闻/新浪财经/同花顺/e公司/Investing/富途/东方财富等公开源9月23日收盘数据，全部数字可溯源到来源+时点。9/23美股为周三收盘（夏令时21:30开盘口径）。今日核心变量：今日是国庆中秋休市前最后交易日 / 中美元首会晤9/23-25进行中 / 隔夜美股三大指数集体收跌纳指-1.13% / 央行8000亿MLF呵护节前流动性 / 节前效应最大风险。
+</div>
+
+<!-- ===== 外盘3列卡片 ===== -->
+<div class="sec">隔夜外盘 &#183; 9月23日（周三）收盘</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">道琼斯 .DJI</div><div class="px g">51678.55</div><div class="ch g">-0.68% (-185.14)</div><div class="ex">大金融承压：摩根大通-3.42%/美银-3.04%/富国-3.92%/摩根士丹利-2.88% / 思科-4.5%拖累道指</div></div>
+  <div class="kpi"><div class="nm">标普500 .INX</div><div class="px g">7709.89</div><div class="ch g">-0.75% (-54.75)</div><div class="ex">十一大板块普跌 / 光通信存储芯片多数下跌 闪迪/康宁/Coherent/Ciena/SK海力士跌逾3%</div></div>
+  <div class="kpi"><div class="nm">纳斯达克 .IXIC</div><div class="px g">26936.21</div><div class="ch g">-1.13% (-308.07)</div><div class="ex">前一日创收盘历史新高后回吐 / 美光-2%+ / 西部数据逆势+2% / 大型科技股普跌</div></div>
+</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="nm">纳斯达克金龙中国</div><div class="px g">5763.01</div><div class="ch g">-1.43%</div><div class="ex">阿里巴巴-4.74% / 拼多多-1.43% / 新东方+2.45% / 中概逆势走弱</div></div>
+  <div class="kpi"><div class="nm">A50期指主连</div><div class="px g">夜盘-0.5%</div><div class="ch g">开盘承压</div><div class="ex">恒生指数主连夜盘-0.43%报24709 / 恒生科技-0.5%报4356</div></div>
+  <div class="kpi"><div class="nm">美元 / 离岸人民币</div><div class="px">101.125 / 6.7115</div><div class="ch g">美元+0.52% / 人民币贬值127点</div><div class="ex">美债10年5.108% / 2年4.897% / 美元走强压制新兴市场</div></div>
+</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="nm">布伦特原油</div><div class="px r">98.39</div><div class="ch r">+3.12%</div><div class="ex">美油92.71+2.42% / 油价反弹 / 巴斯夫TDI/MDI供给收缩利好化工</div></div>
+  <div class="kpi"><div class="nm">现货黄金</div><div class="px g">4286.30</div><div class="ch g">-1.71%</div><div class="ex">白银-3.95%报64.43 / 黄金矿业股普跌 / 风险情绪回落</div></div>
+  <div class="kpi"><div class="nm">LME铜</div><div class="px">14562</div><div class="ch">基本持平</div><div class="ex">海外有色金属板块普跌 / 南方铜业/麦克莫兰/纽蒙特前一日大涨后回吐</div></div>
+</div>
+
+<!-- ===== A股收盘卡片 ===== -->
+<div class="sec">A股上一交易日 &#183; 9月23日（周三）收盘</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">上证指数 000001.SH</div><div class="px g">3936.52</div><div class="ch g">-0.39% (-15.61)</div><div class="ex">跌破5日线 / 20日线斜率-0.07&#8240;(向下) / 60日线走平</div></div>
+  <div class="kpi"><div class="nm">深证成指 399001</div><div class="px g">13636.07</div><div class="ch g">-0.64% (-87.66)</div><div class="ex">20日线向下 / 60日线向下 / 高开低走延续</div></div>
+  <div class="kpi"><div class="nm">创业板指 399006</div><div class="px g">3379.61</div><div class="ch g">-0.60% (-20.32)</div><div class="ex">高开低走 / 领跌 / 已跌破5/10日线</div></div>
+</div>
+
+<div class="grid3">
+  <div class="kpi"><div class="nm">沪深300 / 科创50</div><div class="px g">4517.28 / 1660.85</div><div class="ch g">-0.60% / -0.25%</div><div class="ex">权重股相对抗跌 / 科创50小幅调整</div></div>
+  <div class="kpi"><div class="nm">两市成交额</div><div class="px">1.76万亿</div><div class="ch g">缩量3706亿</div><div class="ex">连续两日缩量 / 节前效应明显 / 交投清淡</div></div>
+  <div class="kpi"><div class="nm">涨跌家数 / 涨停</div><div class="px g">1891涨 / 3564跌</div><div class="ch g">涨停51家 / 跌停14家</div><div class="ex">上涨占比仅34.7% / 赚钱效应回落 / 主力净流出114.14亿</div></div>
+</div>
+
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">&#128994; 涨幅居前板块</h3>
+    <ul>
+      <li><b>PCB产业链</b>：大亚圣象4连板 / 澳弘电子9天7板续创历史新高 / 依顿电子+中一科技+江南新材涨停 / 覆铜板涨价10%（宏瑞兴）+电子布涨价15-20%（中国巨石）传导完成</li>
+      <li><b>玻璃基板</b>：沃格光电+三峡新材涨停 / 帝尔激光/美迪凯/联得装备跟涨 / 京东方5年800亿研发+8000亿采购 / 1年内敲定玻璃基钙钛矿+封装载板量产线</li>
+      <li><b>地产链</b>：我爱我家+华远控股+华丽家族3连板 / 万科A一度涨停 / 上海二手房9/19单日网签1495套创半年新高</li>
+      <li><b>VNA仪器</b>：优利德+东方中科+普源精电涨停 / AI高速互连催化PCB全检需求 / VNA量价齐升</li>
+      <li><b>CXO/创新药</b>：义翘神州+奥浦迈+益诺思涨超10% / 创新药对外授权今年突破1200亿美元同比+36%</li>
+      <li><b>黄酒</b>：古越龙山涨停 / 会稽山7天5板股价创历史新高 / 1个月累计涨超100%</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">&#128308; 跌幅居前板块</h3>
+    <ul>
+      <li><b>传媒/影视</b>：中信出版跌超12% / 华媒控股+龙版传媒+中视传媒跌停 / 9/22领涨后9/23大幅分化</li>
+      <li><b>煤炭</b>：云煤能源跌停 / 8月用电量同比+1.7%增速放缓 / 高股息防御逻辑弱化</li>
+      <li><b>通信</b>：-0.70% / 光通信高位品种调整 / 源杰科技-4.65%+中际旭创-2.48% / 主力净流出43.88亿居首</li>
+      <li><b>交通运输</b>：-1.17%领跌 / 航运港口集体走弱 / 招商轮船+招商南油下挫 / 前期地缘驱动高位品种兑现</li>
+      <li><b>钢铁/建材</b>：钢铁-0.95%/建材-0.92% / 周期与地产链承压 / 中材科技-5.65%</li>
+      <li><b>贵金属</b>：延续退潮 / 山东黄金-2.42% / 资金向成长方向迁移</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== 连板梯队 ===== -->
+<div class="sec">9/23连板梯队</div>
+<div class="box b">
+  <h3 class="b">&#128640; 连板梯队（封板率约69% / 短线情绪较周一降温）</h3>
+  <ul>
+    <li><b>4连板</b>：新华文轩（收购四川民族出版社）/ 大亚圣象（PCB产业链）</li>
+    <li><b>3连板</b>：新华传媒（购买界面财联社）/ 泰慕士（纺织）/ 华远控股（控股股东变更为金融街资本）/ 南威软件（AI应用）/ 奥佳华（控股股东转让10%）/ 我爱我家（地产）/ 华丽家族（地产）</li>
+    <li><b>2连板</b>：天威视讯（AI应用）/ 澳弘电子（PCB）/ 江淮汽车（与华为尊界合作放量）</li>
+    <li><b>反包/历史新高</b>：澳弘电子9天7板续创历史新高 / 华瓷股份6连板股价创历史新高 / 中新赛克9天5板</li>
+  </ul>
+</div>
+
+<!-- ===== 大盘评分 ===== -->
+<div class="score">
+  <div class="num">40/100</div>
+  <div class="lab"><b>中性偏弱</b>（较上次9/22 60分显著下调）<br>节前效应叠加隔夜美股拖累 / 缩量3706亿 / 主力净流出114亿 / 三大指数均跌破5日线 / 节前最后交易日避险情绪浓</div>
+</div>
+
+<!-- ===== 当日消息面 ===== -->
+<div class="sec">9/24当日盘前消息面</div>
+<div class="news">
+  <h3>宏观政策与资金面</h3>
+  <div class="item"><span class="tag2 g">利好</span><b>央行9/24开展8000亿元MLF操作</b>（1年期/多重价位中标） — 季末+节前呵护流动性充裕，对冲跨长假资金价格波动</div>
+  <div class="item"><span class="tag2 g">利好</span><b>中美元首会晤9/23-25进行中</b> — 习近平访美第三日 / 出海链+外贸+关税敏感型行业情绪受提振 / 关注会晤期间具体成果</div>
+  <div class="item"><span class="tag2 b">中性</span><b>LPR连续16个月按兵不动</b> — 1年期3.0%/5年期3.5%维持 / 美联储9月加息25bp至3.75-4.00% 中美利差倒挂压缩降息空间</div>
+  <div class="item"><span class="tag2 b">中性</span><b>10年美债收益率升至5.108%</b>（2007年来最高）/ 2年4.897%（14个月新高）— 全球风险资产估值压力</div>
+  <div class="item"><span class="tag2 y">提示</span><b>国新办9/24两场发布会</b> — 10时"十五五"文化和旅游高质量发展 / "促进能源绿色转型与供应保障"中外记者见面会</div>
+</div>
+
+<div class="news">
+  <h3>产业与公司动态</h3>
+  <div class="item"><span class="tag2 r">强催化</span><b>半导体12英寸硅片涨价</b> — 2027年长约上涨趋势确立 / 外延片+15-25% 抛光硅片+40%以上 部分二线客户涨幅超50% / 立昂微+有研硅+沪硅产业+西安奕材</div>
+  <div class="item"><span class="tag2 r">强催化</span><b>台积电2027年1月上调晶圆代工价格3-6%</b> / 三星电子首代亚10nm级DRAM采用混合键合结构 — 半导体材料+设备链景气延续</div>
+  <div class="item"><span class="tag2 r">强催化</span><b>巴斯夫上海TDI/MDI或受事故影响</b> — 供给收缩有望催化价格上行 / 沧州大化+万华化学</div>
+  <div class="item"><span class="tag2 r">强催化</span><b>小鹏首条人形机器人生产线本月广东落地</b> — 全球首次"机器人自动化生产机器人" / 12月底量产 / 明年二季度中国市场交付 / 四季度走向全球</div>
+  <div class="item"><span class="tag2 r">强催化</span><b>高通骁龙峰会发布双旗舰2纳米芯片</b> — 第六代骁龙8超级至尊版+至尊版 / 主频5GHz / 支持300亿参数MoE模型 / Adreno NeuralFusion超分+帧生成</div>
+  <div class="item"><span class="tag2 r">强催化</span><b>首个大型具身智能主题乐园9/24横琴启幕</b> / 2026词元出海创新发展大会9/24开幕 / 乐奇Rokid新一代AI眼镜9/24发布</div>
+  <div class="item"><span class="tag2 b">中性</span><b>牛磺酸龙头企业10月年度检修15-30天甚至更长</b> — 永安药业供给收缩</div>
+  <div class="item"><span class="tag2 b">中性</span><b>国内成品油将开启新一轮调价窗口</b> / 上海期货交易所不锈钢期货业务细则修订版9/24实施</div>
+  <div class="item"><span class="tag2 y">新股</span><b>今日1申购1上市</b> — 粤芯半导体(301660)申购 / 百瑞吉(920201)上市</div>
+  <div class="item"><span class="tag2 y">减持</span><b>地雷阵</b> — 信通电子-4.25%/华兰股份-3.00%/德邦科技-3.00%/比依股份-3.00%/多浦乐-1.86%/星源卓镁-1.50%等股东拟减持</div>
+</div>
+
+<!-- ===== 持仓股 ===== -->
+<div class="sec">持仓股 &#183; 9/23收盘</div>
+<div class="hold">
+  <h3>&#128230; 持仓跟踪（执行长持策略 / 不追高 / 等企稳）</h3>
+
+  <div class="hr"><span class="l">新锐股份 688257.SH</span><span class="r r">60.91 元</span><span class="r r">+4.26%</span></div>
+  <div class="det">硬质合金刀具（PCB刀具+工业母机+专精特新）/ 开盘59.03 / 最高62.50 / 最低58.21 / 振幅7.34% / 成交9.67亿 / 换手4.50% / 总市值216.39亿</div>
+  <div class="det">主力净流入7674.98万（行业排名8/250）/ 融资余额10.89亿环比+1.10% / 3日累计+1.55亿 / 5日+2.63亿 / 10日+3.12亿 / 20日+3.36亿 / 筹码均成本58.59元</div>
+  <div class="det">YTD +145%（近20日+15.36%）/ 异动逻辑：2/12公告收购慧联电子PCB刀具业务+2026一季报预增473-603%+2026中报预增424-523%</div>
+
+  <div class="hr"><span class="l">小鹏集团 09868.HK</span><span class="r g">40.40 港元</span><span class="r g">-0.83%</span></div>
+  <div class="det">全球领先物理AI公司（图灵AI芯片+物理世界基座模型+智能汽车/Robotaxi/人形机器人）/ 开盘40.66 / 最高40.74 / 最低40.24 / 成交2.93亿港元 / 市值775.14亿</div>
+  <div class="det">52周区间39.54-110.80 / 距52周低点仅2.17%生死线 / 平均目标价75.45港元（+86.75%上行空间）/ 25位分析师推荐买入</div>
+  <div class="det">美股XPEV 9/23收10.29美元-1.81% / 小鹏首条人形机器人生产线本月广东落地 / 12月底量产 / 明年Q2中国交付 / Q4走向全球</div>
+</div>
+
+<!-- ===== 风控红色高亮 ===== -->
+<div class="risk">
+  <h3>&#9888;&#65039; 风控红色提示</h3>
+  <p>&#9888;&#65039; <b>今日是节前最后交易日！</b>9/25起中秋国庆休市11个自然日至10/8恢复交易。跨长假风险溢价叠加三季度末机构考核约束，市场大概率延续震荡与轮动，节前持仓建议谨慎，重仓者建议减仓避险（特别是高位题材股）。</p>
+  <p>&#9888;&#65039; <b>隔夜美股三大指数集体收跌</b>，纳指-1.13%（前一日创新高后回吐）/ 标普-0.75% / 道指-0.68% / 中概金龙-1.43% / 阿里-4.74%。A50期货夜盘-0.5%，恒生主连-0.43%，今日开盘承压。</p>
+  <p>&#9888;&#65039; <b>两市缩量3706亿至1.76万亿</b>，连续两日缩量，节前交投清淡。主力净流出114.14亿（连续净流出），通信-43.88亿居首，资金持续向传媒/计算机相对低位方向腾挪。</p>
+  <p>&#9888;&#65039; <b>小鹏持仓09868贴近52周低点</b>（9/23收40.40港 / 52周低39.54 / 距离2.17%），生死线位置。美股XPEV 9/23收10.29美元-1.81%，中概金龙隔夜-1.43%拖累今日港股开盘。</p>
+  <p>&#9888;&#65039; <b>新锐股份振幅7.34%</b>（最低58.21/最高62.50/收60.91），波动放大。节前最后交易日振幅可能进一步放大，盘中波动剧烈需警惕。</p>
+  <p>&#9888;&#65039; <b>10年美债收益率升至5.108%</b>（2007年来最高），2年4.897%（14个月新高），全球风险资产估值压力持续。</p>
+  <p>&#9888;&#65039; <b>地雷阵</b>：信通电子/华兰股份/德邦科技/比依股份/多浦乐/星源卓镁等多家股东拟减持，节前避险情绪叠加减持利空，相关个股需警惕。</p>
+</div>
+
+<!-- ===== 今日热点 ===== -->
+<div class="sec">今日热点推演（9/24）</div>
+<div class="box b">
+  <h3 class="b">&#128293; 今日热点板块推演</h3>
+  <ul>
+    <li><b>PCB产业链（强主线延续）</b>：大亚圣象4连板+澳弘电子9天7板续创历史新高+依顿电子/中一科技涨停 / 覆铜板+电子布涨价链传导完成 / 国金证券梳理三条受益环节：超快激光钻孔/层压机/曝光设备</li>
+    <li><b>玻璃基板（强催化）</b>：沃格光电+三峡新材涨停 / 京东方未来5年800亿研发+8000亿采购 / 1年内敲定玻璃基钙钛矿+封装载板量产线 / 英伟达要求2年内完成玻璃基板开发导入</li>
+    <li><b>半导体硅片（新催化）</b>：12英寸硅片涨价超50% / 立昂微+有研硅+沪硅产业+西安奕材 / 2027年长约涨价趋势确立 / 台积电2027年1月上调代工价3-6%</li>
+    <li><b>VNA仪器（AI互连催化）</b>：优利德+东方中科+普源精电涨停 / 数据中心网络向800G/1.6T演进 / 高速连接器+线缆+高端PCB对VNA需求量价齐升</li>
+    <li><b>地产链（政策催化）</b>：我爱我家+华远控股+华丽家族3连板 / 上海二手房9/19单日网签1495套创半年新高 / 8月一线城市房价同比降幅收窄</li>
+    <li><b>AI应用（Meta Muse催化）</b>：南威软件3连板 / Meta Muse登顶App Store超越ChatGPT / OpenAI发布GPT-6 Sol/Luna降本50% / Anthropic Claude Opus 5.5降本40%</li>
+    <li><b>小鹏人形机器人（持仓相关）</b>：首条人形机器人生产线本月广东落地 / 12月底量产 / 明年Q2中国交付 / 关注产业链对标（均胜电子/科森科技/拓普集团/绿的谐波）</li>
+    <li><b>化工涨价（巴斯夫事故）</b>：沧州大化+万华化学 / TDI/MDI供给收缩 / 牛磺酸10月检修15-30天（永安药业）</li>
+  </ul>
+</div>
+
+<!-- ===== 三情景推演 ===== -->
+<div class="sec">9/24三情景推演</div>
+<div class="scen">
+  <h3>&#127919; 三情景推演（节前最后交易日）</h3>
+
+  <div class="row">
+    <span class="pct g">乐观 25%</span>
+    <span class="txt"><b>中美元首会晤催化+8000亿MLF释放+主线PCB/玻璃基板延续</b>，沪指站上3950，收阳迎节。AI应用+半导体硅片+VNA仪器接力，节前最后日资金抢筹。深成指/创业板指同步翻红。新锐股份冲击62元上方。</span>
+  </div>
+
+  <div class="row">
+    <span class="pct y">中性 40%</span>
+    <span class="txt"><b>节前观望情绪浓+缩量震荡3880-3940</b>，主线PCB/玻璃基板/AI应用分化。三大指数小幅低开后区间震荡，成交维持1.7-1.8万亿。资金高切低延续，前期强势股负反馈。新锐股份围绕59-61元震荡。</span>
+  </div>
+
+  <div class="row">
+    <span class="pct r">悲观 35%</span>
+    <span class="txt"><b>隔夜美股拖累+节前避险+跌破3900</b>，回踩3850-3880。中概金龙-1.43%/A50夜盘-0.5%直接施压开盘，前期强势股大面积兑现，主力净流出加剧。小鹏持仓可能再创52周新低，新锐股份回踩58元支撑。</span>
+  </div>
+</div>
+
+<!-- ===== 操作建议 ===== -->
+<div class="outlook">
+  <h3>&#128203; 节前最后交易日操作建议</h3>
+  <p>&#8226; <b>仓位控制为主</b>：节前11天休市+海外不确定性（美债收益率历史高位+中美会晤进行中），重仓者建议减至5成以下，轻仓者可适度试探。</p>
+  <p>&#8226; <b>主线跟随</b>：PCB产业链（覆铜板涨价链+大亚圣象/澳弘电子）+ 玻璃基板（沃格光电/三峡新材）+ VNA仪器（优利德/东方中科）+ 半导体硅片（立昂微/有研硅/沪硅产业/西安奕材）四条主线。</p>
+  <p>&#8226; <b>持仓不动</b>：新锐股份（PCB刀具业务+工业母机+中报预增460%）和小鹏集团（人形机器人12月量产+图灵AI芯片）均执行长持策略，节前不减仓，等节后产业催化。</p>
+  <p>&#8226; <b>风险对冲</b>：警惕前期高位股负反馈（华天科技/中际旭创/源杰科技/华纺股份），警惕地雷阵减持利空个股，警惕隔夜美股A50拖累开盘。</p>
+  <p>&#8226; <b>节后关注</b>：10/8恢复交易后，关注中美元首会晤成果落地+三季度业绩预告+政策接力（十五五系列发布会）+小鹏人形机器人12月量产进度。</p>
+</div>
+
+<div class="disc">
+  &#9888;&#65039; <b>免责声明</b>：本简报仅供学习研究使用，不构成任何投资建议。所有数据来源于公开渠道（每经/财联社/腾讯/新浪/同花顺/e公司/Investing/富途/东方财富等），已尽力核实但不保证绝对准确。市场有风险，投资需谨慎。据此操作，风险自担。<br>
+  &#9888;&#65039; 涉及个股（新锐股份688257/小鹏集团09868）均为作者本人持仓，存在利益相关性，分析观点可能受持仓影响，请独立判断。<br>
+  &#9888;&#65039; 美股夏令时口径：美股21:30开盘（冬令时22:30），9/23美股收盘对应北京时间9/24凌晨04:00。
+</div>
+
+<div class="foot">
+  学习台 &#183; 金融域盘前简报 &#183; 自动化ID b48857aa-9a5e-43c3-ae05-a05f20708b37 &#183; 生成时间 2026-09-24 08:00
+</div>
+
+</body>
+</html>

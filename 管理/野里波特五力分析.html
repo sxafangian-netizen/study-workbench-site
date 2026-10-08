@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="g9bcU5xTfvLHcNQ5nzRnZr">
+<head data-page-node-id="uDjjg9kFCbwp1eyIKaXouM">
+<meta charset="UTF-8" data-page-node-id="2IOBCqIpacFdEyddSn1jh3">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="91sY9X0L1BmCtPnd9XaPuh">
+<title>野里波特五力分析 · 管理域实战</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1180px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:28px 32px;margin-bottom:20px}
+  .hd h1{font-size:24px;font-weight:700;margin-bottom:6px;letter-spacing:.5px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px}
+  .kpi .v{font-size:20px;font-weight:700;color:#e6edf3}
+  .kpi .v.r{color:#f85149}
+  .kpi .v.g{color:#3fb950}
+  .kpi .l{color:#7d8590;font-size:12px;margin-top:4px}
+  .sec{margin:24px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .force{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;overflow:hidden;margin-bottom:14px}
+  .force .fh{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #30363d;background:#161b22}
+  .force .fh .ft{font-size:16px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .force .fh .badge{font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px}
+  .b-high{background:#f851491a;color:#f85149;border:1px solid #f8514940}
+  .b-mid{background:#d299221a;color:#d29922;border:1px solid #d2992240}
+  .b-low{background:#3fb9501a;color:#3fb950;border:1px solid #3fb95040}
+  .num{width:28px;height:28px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+  .force .body{padding:16px 20px}
+  .force .body p{color:#c9d1d9;font-size:13.5px;margin-bottom:10px}
+  .force .body p:last-child{margin-bottom:0}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+  .box{background:#0d1117;border:1px solid #30363d33;border-radius:8px;padding:12px 14px}
+  .box .bt{font-size:12px;color:#7d8590;margin-bottom:6px;font-weight:600}
+  .box .bb{font-size:13px;color:#c9d1d9}
+  .box.r{border-left:3px solid #f85149}
+  .box.g{border-left:3px solid #3fb950}
+  .box.y{border-left:3px solid #d29922}
+  .summary{background:linear-gradient(135deg,#1c2128 0%,#161b22 100%);border:1px solid #1f6feb40;border-radius:12px;padding:22px 26px;margin-top:18px}
+  .summary h2{font-size:17px;color:#58a6ff;margin-bottom:12px}
+  .summary ul{list-style:none;padding-left:0}
+  .summary li{color:#c9d1d9;font-size:13.5px;padding:6px 0 6px 22px;position:relative}
+  .summary li:before{content:"▸";color:#3fb950;position:absolute;left:6px;font-size:14px}
+  .summary li.r:before{content:"▸";color:#f85149}
+  .pm{background:#161b22;border:1px solid #d2992240;border-radius:12px;padding:20px 24px;margin-top:16px}
+  .pm h2{font-size:17px;color:#d29922;margin-bottom:12px}
+  .pm .q{color:#7d8590;font-size:12px;margin:10px 0 4px;font-weight:600}
+  .pm p{color:#c9d1d9;font-size:13.5px;margin-bottom:8px}
+  .pm ul{list-style:none;padding-left:18px}
+  .pm li{color:#c9d1d9;font-size:13.5px;padding:4px 0;position:relative}
+  .pm li:before{content:"▸";color:#f85149;position:absolute;left:-14px}
+  .danger{background:#f851490d;border:1px solid #f85149;border-radius:12px;padding:18px 24px;margin-top:16px;text-align:center}
+  .danger h2{color:#f85149;font-size:16px;margin-bottom:8px}
+  .danger p{color:#f85149cc;font-size:14px;font-weight:600}
+  .foot{margin-top:24px;color:#484f58;font-size:11px;text-align:center;border-top:1px solid #30363d;padding-top:14px}
+</style>
+<style>.backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}</style>
+</head>
+<body data-page-node-id="kpbxSGeUcGmnZq3KMap3g9">
+<a href="../" class="backbtn" data-page-node-id="6NeGujansgfvGkAQTZwEJV">← 返回学习台</a>
+
+<div class="hd" data-page-node-id="FCvs6fCQKY4p8bD1DVhu96">
+  <h1 data-page-node-id="3BzrTG77FiWdQvMcGGJH20">野里项目 · 波特五力竞争分析</h1>
+  <div class="sub" data-page-node-id="dZFEv3jQcqyvbJvlp0zOOB">management-coach 实战样例 · 管理域框架① · 对照野里 YAYALI 商业零售项目</div>
+  <div class="meta" data-page-node-id="7rF81HqHrEgJUvPHe3nXlg">
+    <span class="tag b" data-page-node-id="GHgwHIQKDYsBtVt45C4vf2">西安 · 莲湖区唐延路</span>
+    <span class="tag" data-page-node-id="zSJdhv2XcFgwIyYZfnI7YN">城市更新项目</span>
+    <span class="tag" data-page-node-id="9avDi8HN1VoGGEWDeMAkZG">委托运营 19 年</span>
+    <span class="tag b" data-page-node-id="1kdjvQHo5KkqzntDSrIi2w">差异化定位：松弛邻里运动商业聚落</span>
+    <span class="tag" data-page-node-id="dG2oXodRjPBaiALpP76FqC">口径：对外不点名合同主体</span>
+  </div>
+</div>
+
+<div class="grid" data-page-node-id="7xBt3UHtPgvxdWLNYDi9Cj">
+  <div class="kpi" data-page-node-id="IeEwHF8B5DNta5l5Fv8ABv"><div class="v" data-page-node-id="Uo0q2iqz8luYaY5WPspWzJ">7.1万㎡</div><div class="l" data-page-node-id="oUPIJSToyB39CF9NUKzZvl">商业体量（一期地下4.8万+二期地面2.3万）</div></div>
+  <div class="kpi" data-page-node-id="Vo5jhbmcDaztOosXAOK1Lo"><div class="v r" data-page-node-id="jmxytGQQELhDqEwF1FTBc8">1.52亿</div><div class="l" data-page-node-id="PDsDkbEMEx7BelAhm3VQdx">总投资（一期7,200万+二期8,000万）</div></div>
+  <div class="kpi" data-page-node-id="iQVaVSxvYfZot45ltch0s0"><div class="v g" data-page-node-id="Iqfc1lHvs1xPgSyLkMhVo6">11,495万</div><div class="l" data-page-node-id="0BEFLFGtjncFiO1ZjvVc3H">年营收基准 · 月滚动466万</div></div>
+  <div class="kpi" data-page-node-id="EIzud0LNgyoi5hEDz9dEyr"><div class="v" data-page-node-id="wFsig7nU1CStGn2zrPM9JP">30%</div><div class="l" data-page-node-id="fSy5dPGGFEoabhBGIinJEg">甲方净利润分成（19年期）</div></div>
+</div>
+
+<div class="sec" data-page-node-id="32k3YaSgJoEWFuIrTfRPnM">五力逐项分析</div>
+
+<!-- 力1 -->
+<div class="force" data-page-node-id="6nDQwTBrnhCFgpHAG60Q4p">
+  <div class="fh" data-page-node-id="y053zXzVUQr8EFvZOi6Hf7">
+    <div class="ft" data-page-node-id="I8YDNxqOHdzq9jek1mVRpa"><span class="num" data-page-node-id="XVnfTQBnWFFAlIKJgrM0hm">1</span>现有竞争者威胁 · 周边成熟商业体</div>
+    <span class="badge b-high" data-page-node-id="GVuXfHT7vAZnB3fws1avdc">高 · 不利</span>
+  </div>
+  <div class="body" data-page-node-id="XrzqQ2C8cinE8RKamkGtJP">
+    <p data-page-node-id="h9jPTpa1jc5Hx2aCnvSCl8">西安莲湖区/高新区交界为成熟商圈，周边已有综合购物中心与社区商业布局。野里 7.1万㎡属中等体量，正面硬刚规模型商业体不占优。</p>
+    <div class="row" data-page-node-id="C2Ry5HzFv6XXRJm7FcrBd8">
+      <div class="box r" data-page-node-id="ATVJUtTZbE3NvwrWaXdqp1"><div class="bt" data-page-node-id="fz4n6vCzDEwbAGeoos5qtr">野里落点</div><div class="bb" data-page-node-id="jKn9T7hqnD85iafDC4x7C4">业态配比餐饮40%/生活20%/零售15%/文化12%/运动8%/宠物5%——偏向体验型，已主动规避纯零售红海。</div></div>
+      <div class="box g" data-page-node-id="AWk77ooUeMq6XEaIzWN4Qy"><div class="bt" data-page-node-id="ruwQSEixJeXLJoJVFboJJE">应对策略</div><div class="bb" data-page-node-id="i92lQ9FNIxOl3FA4avW0P0">强化"松弛邻里+运动+秘境花园"差异化标签，不与规模商业比体量，比社区粘性与体验密度。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 力2 -->
+<div class="force" data-page-node-id="4DTTumeCToAtuA27k22FyW">
+  <div class="fh" data-page-node-id="7zdmmQs7RpK9Lj6z1ucNp8">
+    <div class="ft" data-page-node-id="1Y3ds2mnl8XoBiGkyFZgfE"><span class="num" data-page-node-id="LsOprrcHZQIrtdqf2JzNIq">2</span>潜在进入者威胁 · 新商业体/城市更新</div>
+    <span class="badge b-mid" data-page-node-id="huEY5bCGkXgSvq7Jg3BIeh">中</span>
+  </div>
+  <div class="body" data-page-node-id="66jMTNTygiAfXB7Bfl3Uss">
+    <p data-page-node-id="8QtoqZBuVjFUdHuY6rykcO">城市更新地块有政策与资金壁垒，稀缺性构成天然护城河；但19年长运营期内，区域内仍可能出现新竞品规划。</p>
+    <div class="row" data-page-node-id="qUGFELKzuSdHCJvP44AnyC">
+      <div class="box g" data-page-node-id="4JzFodzx1NQnuzre4HAUXc"><div class="bt" data-page-node-id="vleZUBUXa7QDqZCeTAm363">野里落点</div><div class="bb" data-page-node-id="PjT3xu6eEc2SHtIY5bHBbr">一期1,000万开发内容（成山农场+夹层+南广场入口形象）已锁定，先发卡位抢占周边3-5公里客群心智。</div></div>
+      <div class="box y" data-page-node-id="ZAoluT6UA3ILuyUhpAWaV1"><div class="bt" data-page-node-id="ocqcToZEGsiHet1so5RQPj">应对策略</div><div class="bb" data-page-node-id="aQaHTrK7etccAnESqpQOri">长运营期内保持业态动态调整能力，主力店长约锁租，新竞品入场时已建立社区复购习惯。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 力3 -->
+<div class="force" data-page-node-id="scCtzLOcEu2il0vLi0Fh1u">
+  <div class="fh" data-page-node-id="2mzNmpHJj6EPapyD6CQXHj">
+    <div class="ft" data-page-node-id="ExOO34mLO1oL4vsXJGH3mE"><span class="num" data-page-node-id="y6HIg7z2VhudkDsF4BVHZb">3</span>替代品威胁 · 电商/外卖/线上</div>
+    <span class="badge b-high" data-page-node-id="JOpODq3APMI9jm8p0omlqH">高 · 不利</span>
+  </div>
+  <div class="body" data-page-node-id="SdiBtnITwNpcYF7QxfToZ8">
+    <p data-page-node-id="E7NL98mWdAkUkbIOWybY4i">餐饮40%+零售15%受外卖与电商分流压力最大。但运动健身、宠物服务、文化体验属线上难替代的体验型业态。</p>
+    <div class="row" data-page-node-id="MUoSkNVzA1BXswPzpNITFx">
+      <div class="box r" data-page-node-id="LrkvjsjsvrdINYyNHb4ILl"><div class="bt" data-page-node-id="Gw1uFksy2ITWFpGjaAKLiS">野里落点</div><div class="bb" data-page-node-id="Gy3SEd4r8eKLgrBDgGEBYF">餐饮占比偏高，需警惕外卖对到店消费的侵蚀；零售部分需精选而非堆量。</div></div>
+      <div class="box g" data-page-node-id="ZF8GbBEtHDwn1E9Emzqsyp"><div class="bt" data-page-node-id="NXTpwNHrqzYXhKfeBgsHv1">应对策略</div><div class="bb" data-page-node-id="i6nNGjmfp7UdpMmURDCNNr">餐饮主做"堂食体验型"（黄金四件套好利来/瑞幸/霸王茶姬/每一天自带到店属性）；放大运动+宠物+文化的不可替代性。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 力4 -->
+<div class="force" data-page-node-id="jsiItLaPUMCiGqxKb0eyEE">
+  <div class="fh" data-page-node-id="1uU7QJRgaiEwHQ4SaPSVHj">
+    <div class="ft" data-page-node-id="Vq4VsEgEib1sBThAnGksxB"><span class="num" data-page-node-id="ECm2rf2CDV3FO9cFCJ0kZb">4</span>供应商议价能力 · 品牌主力店</div>
+    <span class="badge b-high" data-page-node-id="QWTsjAt5ChUbHW5mVqAfDa">高 · 不利</span>
+  </div>
+  <div class="body" data-page-node-id="VUkxvQuZLc52gkJ0cbfCrC">
+    <p data-page-node-id="EAkrBCFtIJAFsogS1PLH95">主力店为成熟连锁品牌（盒马mini/永辉改造店、中影/万达、乐刻/超级猩猩、好利来/瑞幸/霸王茶姬/每一天），品牌方议价能力强，租金扣点谈判主动权偏向品牌。</p>
+    <div class="row" data-page-node-id="fUtAXMXs8GnhtRRdl442Np">
+      <div class="box r" data-page-node-id="qL6dx0TQwQfnHh5PPvTOQo"><div class="bt" data-page-node-id="ToB2QLBaY81c6ZZSCrUm9O">野里落点</div><div class="bb" data-page-node-id="kPM15HirZCJQQj3GdCA3YD">主力店是流量基石但也是成本中心，初始招商期话语权弱，易接受低租/长免租换入驻。</div></div>
+      <div class="box g" data-page-node-id="qpEP8cV4vcNNfQ8ABgeNUQ"><div class="bt" data-page-node-id="dVBH6GvvMnDd0zW1ZRxsdm">应对策略</div><div class="bb" data-page-node-id="UVWclEqtzGhdxOFnlG9h9t">利用19年长运营期锁定长约低租+营收分成结构，把主力店绑成利益共同体；备选品牌清单防单点破裂。</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 力5 -->
+<div class="force" data-page-node-id="iDjmBELpiWl6MLnymi7zxG">
+  <div class="fh" data-page-node-id="s520msti1xWDPH519vBQ0g">
+    <div class="ft" data-page-node-id="ULlkaK67QrJEl0Clb2naST"><span class="num" data-page-node-id="5qcr13BPgoI14aTcQVAbbG">5</span>买方议价能力 · 消费者</div>
+    <span class="badge b-mid" data-page-node-id="ZohnzIrQyli9t34TCScXFp">中</span>
+  </div>
+  <div class="body" data-page-node-id="KSfJ118bsAeOiC2VgM2mjj">
+    <p data-page-node-id="M4aMHDDGeHmBqj5JRlruhx">邻里社区定位锁定周边3-5公里客群，复购粘性强；但消费力受经济周期影响，价格敏感度中等。</p>
+    <div class="row" data-page-node-id="A0sb2tBniO9HGCqzaHT7xN">
+      <div class="box y" data-page-node-id="8b8tGl7iC9CsUxeopx2viw"><div class="bt" data-page-node-id="Le29mIyHygKURK2x9Y8Igf">野里落点</div><div class="bb" data-page-node-id="Zgno5CuoMRsERG2TtFP9Fw">客群半径有限，单客LTV（生命周期价值）依赖复购频次，非一次性流量。</div></div>
+      <div class="box g" data-page-node-id="873r3m2eM9zGCW5q9R8ddb"><div class="bt" data-page-node-id="SXwUzDa5VJmYHfJqU9CKh9">应对策略</div><div class="bb" data-page-node-id="0tlkZO82g2oSl8A47tENHu">会员体系+社区活动锁复购；运动/宠物/文化业态天然高频，做"家门口第二客厅"心智。</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="summary" data-page-node-id="pw2dnCNyAt7Ez8dCtuDQXV">
+  <h2 data-page-node-id="hy4zAcasFBFG4sIwoA7ebi">综合战略结论</h2>
+  <ul data-page-node-id="z0qkladvZJ8UcvDaqv2Iz1">
+    <li class="r" data-page-node-id="QSvQzLLm6JMKcYmlexHaM6">五力格局偏激烈：现有竞争者高+替代品高+品牌议价高，三高压力</li>
+    <li data-page-node-id="YxTKEATDitp7zNXil1tmVJ">差异化定位（松弛邻里+运动+秘境花园）是对冲三高的核心抓手，必须做透、不能模糊</li>
+    <li data-page-node-id="JX8Qdw6sHb9tCOCCLrF0f2">业态配比已主动偏向体验型（运动/宠物/文化/堂食餐饮），是规避电商替代的正确方向</li>
+    <li data-page-node-id="hnBHZoxE7xQ23c9iCbdeI3">主力店议价能力强，靠19年长约+利益绑定结构对冲，备选清单防破裂</li>
+    <li data-page-node-id="VbkXM22RZg1peMpxh72n2Q">社区复购粘性是买方端最大护城河，会员体系+高频业态是关键动作</li>
+  </ul>
+</div>
+
+<div class="pm" data-page-node-id="beF8Svev4BOSZCPHWBsb3l">
+  <h2 data-page-node-id="Lkh44INDffdade6cY9i2v4">事前验尸（决策复盘 · Pre-mortem）</h2>
+  <p style="color:#7d8590;font-size:12px" data-page-node-id="Vl4gZc1FfpcfQey7YdnLqH">假设：19年后野里运营失败，最可能的失败原因排序</p>
+  <ul data-page-node-id="uaImT6PVLVcPXPvsdBL16M">
+    <li data-page-node-id="q65apEEIahaHXapKJgrp2s">主力店谈判破裂或临阵退出 → 一期空置率高，现金流断裂（概率最高）</li>
+    <li data-page-node-id="kiFsft9mdpegL4jXLbTJMq">融资不到位或滚动开发节奏失衡 → 一期延期，错失卡位窗口</li>
+    <li data-page-node-id="cVMTtPDl0YGkYgPKeaXuGj">运营成本超支（综合税费7%+运营成本20%+垫资7,790万）→ 净利润被吃掉</li>
+    <li data-page-node-id="a4cO3xuT0CTp4DDUEEQgT8">签了个人连带担保 → 个人身家被拖垮（已立为生死线拒绝）</li>
+    <li data-page-node-id="sQ3IiPLyFfkX73WEeEltJ2">差异化定位执行走样 → 沦为普通社区商业，丧失溢价</li>
+  </ul>
+  <div class="q" data-page-node-id="zsWny8QxCeGP9MjGdJcDuQ">对应防御动作</div>
+  <p data-page-node-id="cjB19hKT3H5FKD2qsNiOUq">主力店备选清单常态化 / 融资分轮分阶段锁定 / 成本严控+月滚动466万红线监控 / <span style="color:#f85149;font-weight:700" data-page-node-id="zIJjNSzYFDZgSRRP1kRJPv">绝不签个人连带担保</span> / 定位执行清单化验收</p>
+</div>
+
+<div class="danger" data-page-node-id="bkuKgLFLL4RuLS7CRD3Ot5">
+  <h2 data-page-node-id="CbSSzvtuMyuhSJkLipPX3S">⚠ 生死线 · 硬约束</h2>
+  <p data-page-node-id="me5YrdG68hM3PpgEaRZZv0">绝不签个人连带担保 — 风险偏好极低，框架分析时先排除此类动作</p>
+</div>
+
+<div class="foot" data-page-node-id="IdkCZ7T5yhxDNTp6l5jyQC">
+  管理域实战样例 · 波特五力框架 · 对照野里 YAYALI · 数据口径以项目融资材料为准 · 对外文件不点名合同主体<br data-page-node-id="0aiAztxQpRkPHQZOJVFzRG">
+  生成时间：2026-09-06 · 学习台管理域
+</div>
+
+</body>
+</html>

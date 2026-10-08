@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>地缘早间简报 · 2026-10-04</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1180px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:28px 32px;margin-bottom:20px;position:relative}
+  .backbtn{position:absolute;top:20px;right:24px;background:#21262d;border:1px solid #30363d;color:#c9d1d9;padding:6px 14px;border-radius:6px;font-size:12px;text-decoration:none;transition:all .2s}
+  .backbtn:hover{background:#30363d;color:#58a6ff}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:.5px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.a{color:#f0883e;border-color:#f0883e33}
+  .sec{margin:24px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:8px}
+  .ncard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+  .ncard.hot{border-left:3px solid #f85149}
+  .ncard.warm{border-left:3px solid #f0883e}
+  .ncard.cool{border-left:3px solid #3fb950}
+  .ncard .nt{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .ncard .lvl{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .lvl.crit{color:#f85149;background:#f8514920;border:5px solid #f8514940}
+  .lvl.high{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .lvl.mid{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .lvl.low{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .ncard h3{font-size:14.5px;font-weight:600;color:#e6edf3}
+  .ncard p{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+  .ncard .src{font-size:11px;color:#7d8590;margin-top:6px}
+  .fw{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;overflow:hidden;margin-bottom:14px}
+  .fw .fh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #30363d;background:#161b22}
+  .fw .fh .ft{font-size:15.5px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .num{width:28px;height:28px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+  .fw .body{padding:14px 20px}
+  .fw .body p{color:#c9d1d9;font-size:13.5px;margin-bottom:8px}
+  .fw .body p:last-child{margin-bottom:0}
+  .kw{color:#58a6ff;font-weight:600}
+  .kw.r{color:#f85149}
+  .kw.g{color:#3fb950}
+  .kw.a{color:#f0883e}
+  .lp{background:#0d1117;border:1px solid #30363d33;border-radius:8px;padding:10px 14px;margin-top:8px;border-left:3px solid #3fb950}
+  .lp .lt{font-size:12px;color:#7d8590;font-weight:600;margin-bottom:4px}
+  .lp .lb{font-size:13px;color:#c9d1d9}
+  .vf{background:#0d1117;border:1px solid #30363d33;border-radius:10px;margin-top:10px;overflow:hidden}
+  .vf .vrow{display:grid;grid-template-columns:200px 90px 1fr;gap:10px;padding:9px 14px;border-bottom:1px solid #30363d33;align-items:start;font-size:13px}
+  .vf .vrow:last-child{border-bottom:none}
+  .vp{color:#c9d1d9}
+  .vs{font-weight:700;font-size:12px;padding:3px 8px;border-radius:4px;text-align:center}
+  .vs.hit{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .vs.part{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .vs.miss{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .vs.wait{color:#7d8590;background:#7d859020;border:1px solid #7d859033}
+  .vs.rev{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .vd{color:#c9d1d9;font-size:12.5px}
+  .holdbox{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .holdbox h2{font-size:15px;color:#f0883e;margin-bottom:12px}
+  .hrow{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #30363d33}
+  .hrow:last-child{border-bottom:none}
+  .hl{color:#58a6ff;font-weight:600;font-size:13.5px}
+  .hr{color:#c9d1d9;font-size:12.5px;line-height:1.75}
+  .stance{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .stance h2{font-size:15px;color:#58a6ff;margin-bottom:10px}
+  .stance p{color:#c9d1d9;font-size:13px;margin-bottom:8px}
+  .stance p:last-child{margin-bottom:0}
+  .discl{background:#1a0f0f;border:1px solid #f8514933;border-radius:10px;padding:14px 18px;margin-top:14px}
+  .discl h3{color:#f85149;font-size:13px;margin-bottom:6px}
+  .discl p{color:#c9d1d9;font-size:12px}
+  .foot{text-align:center;color:#7d8590;font-size:11px;margin-top:18px;padding-top:14px;border-top:1px solid #30363d}
+  @media(max-width:760px){.news-grid{grid-template-columns:1fr}.vf .vrow{grid-template-columns:1fr;gap:4px}.hrow{grid-template-columns:1fr;gap:6px}.hd .backbtn{position:static;margin-bottom:10px;display:inline-block}}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <a href="../" class="backbtn">← 返回学习台</a>
+  <h1>🌍 地缘政治域 · 每日早间简报</h1>
+  <div class="sub">2026-10-04 周日 · 国庆长假第四天盘前参考 · 10-1至10-7休市·10-8开市 · 隔夜国际局势复盘 + 五大框架分析 + 昨日预判校验</div>
+  <div class="meta">
+    <span class="tag r">🔥 美伊关键反转</span>
+    <span class="tag r">🔥 俄乌连续三日袭桥</span>
+    <span class="tag a">⚡ 油价过山车</span>
+    <span class="tag b">💰 美股新高·港股大跌</span>
+    <span class="tag b">🤝 中美AI 11月对话</span>
+    <span class="tag g">🇨🇳 中国官方立场</span>
+  </div>
+</div>
+
+<div class="sec">一、隔夜要闻（10-3全天至10-4凌晨）</div>
+<div class="news-grid">
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">关键</span></div>
+    <h3>Trump 10-3称美伊谈判"非常顺利"·协议可能本周末达成·与昨日"外交渠道冻结"关键反转</h3>
+    <p>特朗普10-3白宫表态："谈判进展非常顺利，<b>协议可能在本周末达成</b>"·"他们距离签署协议已经非常接近"·<b>签字后霍尔木兹海峡"立即"恢复通航</b>（前提是对个别区域最后扫雷清理）·协议草案新增"<b>绝不从外部购买</b>核武器"条款（原仅"不自行研发"·两周谈判最终加上）·"<b>我们完全可以再耗两三周把对方彻底消灭·但我宁愿不那样做</b>"·尝试将霍尔木兹开放与黎巴嫩战事<b>区分处理</b>·与黎真主党对话已达成"互不攻击"共识·<b>鲁比奥重申"美对伊军事行动已结束·'史诗怒火'行动结束·美国已胜利"</b>·伊美谅解备忘录若敲定将<b>分四阶段推进</b>·第三阶段讨论核问题。<b>与昨日"卢比奥驱逐伊朗代表团·外交渠道正式冻结"形成关键反转</b>。</p>
+    <div class="src">央视/新京报/南方+/国际在线 10-3</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl high">政治</span></div>
+    <h3>美众议院10-3通过决议叫停对伊军事行动·215:208·4名共和党倒戈</h3>
+    <p>美众议院3日以<b>215票赞成208票反对</b>通过决议，要求特朗普政府停止对伊军事行动（除非获国会授权）·<b>4名共和党人倒戈</b>与民主党一同投赞成票。决议<b>象征意义大于实质</b>——仍需共和党多数参议院审议·特朗普可否决·<b>但反映国会内部对战争担忧正日益加剧</b>·与特朗普"协议本周末达成"表态形成内部制衡。特朗普在Truth Social发文"欧洲同意释放大量柴油储备"。</p>
+    <div class="src">新京报/南方+ 10-3</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">军事</span></div>
+    <h3>俄军连续第三日袭基辅跨河桥梁·北桥10-3被击中·50万人通勤受阻</h3>
+    <p>俄军10-3凌晨无人机袭基辅<b>北公路桥</b>（第聂伯河）·<b>连续第三日袭基辅跨河桥梁</b>（10-1南桥+10-2南桥+10-3北桥）·50万人跨河通勤受阻·俄国防部定性<b>"乌军部队调动和军事物资运输"设施</b>·乌方：俄<b>157架无人机</b>袭乌（含喷气式Shahed）·乌拦截131架·<b>8死83伤</b>（哈尔科夫5死49伤·苏梅3死10伤·第聂伯4伤·顿涅茨克9伤·赫尔松4伤·扎波罗热2伤·尼古拉耶夫3伤）·<b>泽连斯基10-3表态将加强对俄炼油厂打击</b>回应俄大规模空袭·乌军爱国者拦截弹库存降至所需量1/10·对俄弹道导弹拦截率跌至15%以下。</p>
+    <div class="src">央视/上观/ Kyiv Independent 10-3</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">能源</span></div>
+    <h3>油价过山车·布伦特+0.45%报$102.70·WTI-1.78%报$91.26·G7释放1亿桶储备</h3>
+    <p><b>布伦特12月+0.45%报$102.70</b>（周线+5.44%）·<b>WTI 11月-1.78%报$91.26</b>（周线-1.28%）。<b>G7同意释放1亿桶柴油和原油</b>（4个月投放·前20天重点柴油）+承诺避免能源出口限制·<b>特朗普放弃美国柴油出口禁令威胁</b>·IEA署长比罗尔称油价已跌约$5。布伦特仍位于100上方·美柴油$6.39/加仑创纪录·<b>沙特9月出口激增至540万桶/日</b>·沙特东西管道修复至350万桶/日·<b>中国暂停10月燃料出口</b>·OPEC+产能评估推迟至11月·油轮日租金飙涨25倍。</p>
+    <div class="src">汇通/汇金/华尔街见闻 10-3</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">摩擦</span></div>
+    <h3>美伊军事摩擦"罗生门"持续·霍尔木兹通行口径争议</h3>
+    <p>伊朗军方10-3深夜声明<b>阿曼湾打击美驱逐舰</b>·美军中央司令部否认。科威特国际机场遇袭航站楼受损·<b>伊朗否认发射导弹称是美制爱国者拦截弹坠落</b>·美军否认称伊朗蓄意攻击民用机场。霍尔木兹通行口径分裂：<b>IMF PortWatch数据1艘/日（战前97艘/日·1%通行率）</b>·vs WSJ/沙特数据9月日均936万桶（8月580万桶·战前高峰水平）·<b>"影子油轮"关闭AIS偷渡+船对船转运</b>。<b>伊朗里亚尔250万兑1美元历史新低·通胀62.2%·食品99%</b>·9月伊朗油轮"零原油"装船外运。</p>
+    <div class="src">Iran SITREP/nexuswild/ perceptiondaily 10-3</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">中东</span></div>
+    <h3>沙特筹备对胡塞大规模军事行动·麦加防务协议下周利雅得会议</h3>
+    <p>Reuters:<b>沙特正筹备对胡塞大规模军事行动</b>（10万也门地面部队+沙特空中力量）针对曼德海峡·<b>与美方时机同步</b>。也门军方24小时356次打击·476胡塞消灭·胡塞称沙特38次空袭（自局势升级以来1123次）。<b>麦加防务协议下周利雅得会议</b>讨论伊朗提议政治接触胡塞——巴沙土三方协调·巴基斯坦称伊朗提议非正式书面。<b>美约旦通话</b>讨论黎巴嫩三方框架实施+解除真主党武装+叙利亚局势·约旦国王警告以色列在叙南部升级。胡塞袭麦地那泰拜变电站（为先知清真寺供电）后续。</p>
+    <div class="src">Reuters/arzi news/signalb4noise 10-3</div>
+  </div>
+
+  <div class="ncard">
+    <div class="nt"><span class="lvl mid">朝核</span></div>
+    <h3>朝鲜10-3晨发射弹道导弹·700km+·落日本EEZ外·继9-20后第二次</h3>
+    <p>韩国联合参谋本部：朝鲜10-3晨6:30从<b>元山</b>向东发射弹道导弹·飞行超700km·落日本EEZ外·<b>继9-20后第二次试射</b>。日韩紧急安保会议。金与正10-2拒地雷事件道歉"utterly pathetic"·称朝方"永久切断与韩关系"。10-3发射或为施压美韩10月军演。日媒炒作朝鲜"永久切断"成势。</p>
+    <div class="src">Al Jazeera/Yahoo Finance/Geo News 10-3</div>
+  </div>
+
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl low">AI</span></div>
+    <h3>玉渊谭天：中美11月AI对话三大核心议题披露</h3>
+    <p>玉渊谭天10-3披露：<b>11月中美AI对话将聚焦三大核心议题</b>——①共同制定AI<b>风险分类分级标准</b>·厘清"重大风险"定义；②建立<b>模型失控等风险事件的通报机制</b>·明确上报范围·时限与约束；③将AI治理纳入更广泛的<b>多边框架</b>·扩大各国参与。<b>加州或率先破局</b>·推动互信与制度框架落地。<b>10-5 CME联合SiliconData推算力期货合约</b>是下周AI算力链关键变量。</p>
+    <div class="src">玉渊谭天/华尔街见闻 10-3</div>
+  </div>
+
+  <div class="ncard">
+    <div class="nt"><span class="lvl mid">市场</span></div>
+    <h3>美股收涨·纳指盘中新高30808·港股大跌·美债10年期5.273%</h3>
+    <p><b>道指+0.49%报51176.96/标普+0.73%报7722.72/纳指+1.19%报27190.86</b>（盘中创历史新高30808后回落）·特斯拉+4.65%（Q3交付486532辆超预期）·英伟达AMD齐创新高·<b>存储板块大跌</b>（西数-10.22%/希捷-10.21%·东芝扩产）。<b>中概金龙-2.09%</b>（理想-3.87%/小鹏-1.80%/网易-2.82%）。<b>港股恒指-2.6%创3月23日以来最大跌幅</b>（友邦-6%/百济-6%/天数智芯-7%）。<b>美债10年期5.273%（+3bp·周线+10bp）/30年期5.623%（周线+13bp·2002年来新高）/2年期4.82%（周线-3bp）</b>——长端收益率回升·就业报告后涨幅未能守住。<b>COMEX黄金-0.94%报$4133.7·周线-3.59%四个月最大周跌幅·白银周线-6.68%</b>。美油周线-1.41%·布油周线+4.94%·两地价差扩大。<b>离岸人民币6.7063</b>·美元指数102.11。</p>
+    <div class="src">格隆汇/华尔街见闻 10-3</div>
+  </div>
+
+  <div class="ncard">
+    <div class="nt"><span class="lvl mid">外围</span></div>
+    <h3>欧洲CPI回升+法德利差2011年来最宽+韩国检察改革+日本CPI超预期</h3>
+    <p><b>欧元区9月CPI同比3.8%</b>（前值3.2%·创2023年9月来最高）·核心2.5%·<b>能源+18.8%</b>推升。<b>法国-德国10年期国债利差扩大至159bp</b>（2011年欧元区主权债务危机以来最宽·一周前仅110bp）·英国30年期6%创1998年来新高·<b>全球主权债市Q3创1994年来最大季度跌幅</b>。<b>韩国检察制度10-2迎来78年来重大改革</b>·公诉厅和重大犯罪调查厅成立·检察厅正式关闭。<b>日本东京9月CPI 2.7%</b>（前值1.9%）·核心2.7%（预期2.4%）·失业率升至2.5%·高市早苗透露特朗普9月纽约会晤指出日元疲软给美国贸易带来困难。</p>
+    <div class="src">陆家嘴/新浪财经 10-3</div>
+  </div>
+
+  <div class="ncard">
+    <div class="nt"><span class="lvl low">数据</span></div>
+    <h3>9月非农+29K大幅不及预期·10月加息概率从64%骤降至22.7%</h3>
+    <p><b>非农+29K vs 预期84-90K</b>·失业率4.1%→4.2%·<b>7月下修至-10K·8月下修至+133K·合计下修60K</b>·3个月平均51K·时薪环比+0.1%（预期0.3%）·U6降至7.6%·长期失业占比27.1%。<b>10月加息概率从64%骤降至22.7%</b>·12月加息概率从81%降至76%·美债10年期5.18%回落但盘中5.16%后反弹至5.273%。<b>初请失业金仍徘徊57年来低点·企业利润稳健·国内需求强劲·无大规模裁员迹象</b>——9月数据疲软很可能主要源于季节性调整因素失真·就业市场基本面仍具韧性。<b>美联储理事Barr仍鹰"20个月仅2次达成2%目标"·达拉斯联储Logan"应再加息50bp"</b>。</p>
+    <div class="src">waverider/themortgagereports 10-3</div>
+  </div>
+
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl low">中日</span></div>
+    <h3>高市早苗透露特朗普9月纽约会晤指出日元疲软给美贸易带来困难</h3>
+    <p>高市早苗10-3表示·<b>9月在纽约与特朗普会面期间·美方明确向她指出日元疲软正给美国贸易带来困难</b>。高市还表示·美国财长贝森特在与日本财务大臣片山皋月的沟通中表示"理解日本的经济政策"·<b>未就政策走向提出任何具体要求</b>。<b>这是9-24华府习特会后中美经贸+中日战略沟通的外溢</b>——汇率问题进入中日博弈议程。</p>
+    <div class="src">陆家嘴财经早餐 10-3</div>
+  </div>
+
+</div>
+
+<div class="sec">二、五大框架分析</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">1</span>🌊 海权陆权·霍尔木兹通行口径分裂+陆权备选通道实质化+麦加防务协议</div></div>
+  <div class="body">
+    <p><b class="kw r">霍尔木兹通行口径分裂延续</b>: <b>IMF PortWatch数据1艘/日（战前97艘/日·1%通行率）</b>·vs <b>WSJ/沙特数据9月日均936万桶</b>（8月580万桶·战前高峰水平）·<b>"影子油轮"关闭AIS偷渡+船对船转运</b>——同一海峡两个口径背后是<b>政治叙事博弈</b>：美方需"完全控制"叙事支撑谈判筹码·伊方需"封锁有效"叙事支撑威慑。<b>伊朗里亚尔250万兑1美元历史新低·通胀62.2%·食品99%·9月油轮零原油装船</b>——伊朗经济压力达临界·这恰是特朗普"协议本周末达成"信心的来源·<b>但里亚尔崩盘也降低伊朗让步空间</b>（强硬派"宁为玉碎"叙事强化）。</p>
+    <p><b class="kw">陆权备选通道实质化深化</b>: <b>沙特东西管道修复至350万桶/日</b>（设计产能一半）·<b>阿曼杜库姆港扩建储油能力500→1000万桶陆上+400万桶浮式</b>——霍尔木兹备选枢纽实质化。<b>40%海湾原油通过管道绕过霍尔木兹</b>（战前仅17%）·海权封锁+陆权备选同时失效的概率下降·但物理通行能力仍受限于管道设计产能。<b>沙特正筹备对胡塞大规模军事行动</b>（10万也门地面部队+沙特空中力量针对曼德海峡）——若曼德海峡被胡塞封锁打破·则红海-苏伊士运河航线再度受冲击·陆权备选通道价值进一步上升。</p>
+    <p><b class="kw a">麦加防务协议下周利雅得会议</b>: <b>伊朗提议政治接触胡塞</b>·巴沙土三国协调·巴基斯坦称非正式书面——<b>逊尼派-什叶派断层线出现"边打边谈"新维度</b>·伊朗试图将胡塞问题从美伊直接对抗中剥离·沙特则借军事行动施压。<b>美约旦通话讨论黎巴嫩三方框架实施+解除真主党武装</b>·约旦国王警告以色列在叙南部升级——<b>中东均势博弈从"美伊双边"向"多边协调"演进</b>。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">2</span>⚖ 均势·美伊"边谈边撤"信号+俄乌四国调停+欧债利差2011年来最宽</div></div>
+  <div class="body">
+    <p><b class="kw g">美伊均势·"边谈边撤"信号</b>: <b>特朗普"协议本周末达成"+鲁比奥"'史诗怒火'行动已结束·美国已胜利"+美众议院叫停决议</b>——美方策略从"边打边谈"切换至<b>"边谈边撤"信号</b>·<b>但策略切换背后的约束有三</b>：①美军三航母11月底前部署节奏未变·进攻性姿态保留；②众议院决议象征意义大于实质（参议院共和党多数+特朗普否决权）·但4名共和党倒戈反映政治约束；③美伊"罗生门"军事摩擦持续（伊朗称打击美驱逐舰+科威特机场遇袭）·"边谈边打"实质未变。<b>特朗普"我可以再耗两三周把对方彻底消灭·但宁愿不那样做"</b>反映"军事选项仍在·但政治上倾向协议"的复合策略·<b>协议能否本周末达成取决于伊朗强硬派是否接受"绝不从外部购买核武器"新条款</b>。</p>
+    <p><b class="kw">俄乌均势·基础设施战争深化</b>: <b>俄军连续第三日袭基辅跨河桥梁</b>（南桥→北桥）·50万人通勤受阻·俄国防部定性"乌军后勤保障"设施——<b>"中断城市生活"新战术固化</b>·为冬季大规模电网打击铺垫。<b>乌军爱国者拦截弹库存降至所需量1/10·对俄弹道导弹拦截率跌至15%以下</b>·防空火力崩溃临界。<b>泽连斯基10-3加强打击俄炼油厂</b>·乌反攻击中萨马拉LPDS+伏尔加格勒炼油厂——<b>结构性能源对抗固化</b>·俄GDP已损失1%。<b>四国调停提案后续</b>：俄方要"全面解决"·乌方要"无条件前线停火"·结构性矛盾持续——<b>均势结构固化后双方均不接受临时停火</b>。</p>
+    <p><b class="kw r">欧洲均势内部金融压力</b>: <b>法国-德国10年期国债利差扩大至159bp</b>（2011年欧元区主权债务危机以来最宽）·一周前仅110bp·<b>10年期日本国债收益率3%以上30年来最高</b>·英国30年期6%创1998年来新高·<b>Q3全球主权债市创1994年来最大季度跌幅</b>。<b>欧元区9月CPI同比3.8%创2023年9月来最高</b>·能源+18.8%推升——<b>地缘冲突引发的能源冲击正转化为欧元区通胀压力</b>·与欧洲央行加息预期共振。马克龙呼吁G7协调行动遏制燃油价格上涨——欧洲均势内部政治动荡与金融压力共振延续。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">3</span>🔥 修昔底德陷阱·中美AI对话三大议题+国会叫停决议对华间接含义+小鹏理想承压</div></div>
+  <div class="body">
+    <p><b class="kw">修昔底德陷阱·中美AI对话机制化</b>: <b>玉渊谭天10-3披露11月中美AI对话三大核心议题</b>——①共同制定AI风险分类分级标准·厘清"重大风险"定义；②建立模型失控等风险事件通报机制·明确上报范围时限与约束；③将AI治理纳入更广泛多边框架·扩大各国参与——<b>查步里斯"AI或占美GDP 25%"vs 中方"共同制定标准"</b>·修昔底德科技竞争从"全面封锁"向"规则共构"演进·但执行约束力待观察。<b>10-5 CME联合SiliconData推算力期货合约</b>+Anthropic 11月IPO估值1.5-2万亿+博通420亿美元可转债——AI算力链资本端持续景气。<b>存储板块大跌</b>（西数-10.22%/希捷-10.21%）反映AI算力链内部结构性分化。</p>
+    <p><b class="kw a">国会叫停决议对华间接含义</b>: <b>美众议院215:208叫停对伊军事行动</b>·4名共和党倒戈——<b>反映美国国内对"无止境战争"的厌倦</b>·与9-24华府习特会"中美二战盟友"历史话语权外溢共振·<b>对华间接含义是美方在中东消耗越大·对华战略竞争资源分配越受约束</b>·但不改变结构性竞争主线。<b>特朗普"我可以再耗两三周把对方彻底消灭"</b>反映美方仍保留军事选项·<b>"边谈边撤"信号需与三航母部署节奏交叉验证</b>。</p>
+    <p><b class="kw">中概承压·港股大跌</b>: <b>中概金龙-2.09%</b>（理想-3.87%/小鹏-1.80%/网易-2.82%）+<b>港股恒指-2.6%创3月23日以来最大跌幅</b>·长假期间外盘定价基调对<b>A股10-8开市方向影响偏负面</b>——美债10年期5.273%回升+地缘风险溢价+港股大跌共振·但纳指盘中新高+加息预期降温部分对冲。<b>耐克大中华区按固定汇率-26%</b>反映中国消费端疲软信号。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">4</span>⚡ 文明冲突·俄乌"桥梁战争"+中东逊尼什叶断层线+日本"新型军国主义"闭环</div></div>
+  <div class="body">
+    <p><b class="kw r">俄乌文明断层线·"桥梁战争"新战术</b>: <b>俄军连续第三日袭基辅跨河桥梁</b>（南桥+帕顿桥+地铁大桥+北桥）·50万人通勤瘫痪·<b>这是莫斯科"折磨城市居民"新战术</b>（此前已袭击公寓楼/超市仓库/加油站/数据中心）。<b>普京9月下令取消对俄空袭行动约束"现在没有规则"</b>——<b>准备扩大打击范围至更广泛民用和数字基础设施</b>·冬季大规模电网打击前兆。<b>乌反击深度打击俄罗斯石油枢纽</b>——萨马拉LPDS+伏尔加格勒炼油厂·<b>结构性能源对抗固化</b>。</p>
+    <p><b class="kw a">中东逊尼什叶派文明断层线</b>: <b>沙特正筹备对胡塞大规模军事行动</b>（10万也门地面部队+沙特空中力量针对曼德海峡）·也门军方24小时356次打击476胡塞消灭·胡塞称沙特38次空袭（自局势升级以来1123次）。<b>伊以黎三方有条件停火</b>（真主党全面停火+从利塔尼河以南撤出）但<b>真主党卡迈提明确拒绝遵守黎政府与以色列谈判承诺</b>——脆弱性高。<b>特朗普与内塔尼亚胡通话爆粗口斥责其"疯了"</b>+用贪腐案"敲打"——美以分歧公开化·黎以战线降温窗口与脆弱性并存。</p>
+    <p><b class="kw">日本"新型军国主义"闭环+朝鲜半岛联动</b>: <b>高市早苗透露特朗普9月纽约会晤指出日元疲软给美贸易带来困难</b>——日本右翼政府"情报+核+国际规则"三重突破闭环延续·美日首脑会晤汇率分歧曝光。朝鲜10-3晨发射弹道导弹700km+（继9-20后8天内第二次）·金与正拒地雷事件道歉"utterly pathetic"·称朝方"永久切断与韩关系"·<b>朝核地位"绝对"叙事强化</b>。日韩政治动荡（韩国78年检察制度终结·日本CPI超预期）共振。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">5</span>💰 地缘经济·非农不及预期+油价过山车+美债回升+港股大跌</div></div>
+  <div class="body">
+    <p><b class="kw g">9月非农+29K大幅不及预期·加息预期降温</b>: <b>非农+29K vs 预期84-90K</b>·7月下修至-10K·8月下修至+133K·合计下修60K·<b>10月加息概率从64%骤降至22.7%</b>·12月加息概率从81%降至76%。<b>美债10年期5.273%（+3bp·周线+10bp）/30年期5.623%（周线+13bp·2002年来新高）</b>——<b>债市未能守住就业报告后涨幅·收益率早盘回落后反弹</b>·反映"通胀不是唯一驱动长期利率的力量"延续·T.Rowe Price Clewell"10年期美债收益率可能向5.5%-6%上升"。<b>但9月数据疲软很可能主要源于季节性调整因素失真</b>——初请失业金仍徘徊57年来低点·企业利润稳健·国内需求强劲·无大规模裁员迹象·<b>就业市场基本面仍具韧性</b>。<b>美联储理事Barr"20个月仅2次达成2%目标"仍鹰·达拉斯联储Logan"应再加息50bp"</b>。</p>
+    <p><b class="kw a">油价过山车·地缘溢价vs储备释放博弈</b>: <b>布伦特+0.45%报$102.70·WTI-1.78%报$91.26</b>·<b>G7同意释放1亿桶柴油和原油</b>（4个月投放·前20天重点柴油）+特朗普放弃柴油出口禁令威胁+承诺避免能源出口限制。<b>但布伦特仍位于100上方</b>·美柴油$6.39/加仑创纪录·<b>低库存状态对油价形成托底</b>（东证期货"布伦特四季度波动区间80-110美元"）。<b>沙特9月出口激增至540万桶/日（环比+58%）·沙特东西管道修复至350万桶/日</b>——陆权备选通道实质化深化。<b>中国暂停10月燃料出口</b>——全球供应进一步收紧。<b>OPEC+产能评估推迟至11月</b>。</p>
+    <p><b class="kw">美股·纳指盘中新高30808</b>: <b>道指+0.49%/标普+0.73%/纳指+1.19%</b>·特斯拉+4.65%·费半+2.40%·英伟达AMD齐创新高·存储板块大跌（西数-10.22%/希捷-10.21%·东芝扩产）。<b>中概金龙-2.09%</b>·<b>港股恒指-2.6%创3月来最大跌幅</b>·<b>COMEX黄金-0.94%报$4133.7·周线-3.59%四个月最大周跌幅</b>·白银周线-6.68%。<b>A股10-1至7国庆休市10-8开市</b>·长假期间外盘定价基调（美股收涨+油价过山车+美债回升+港股大跌+中概-2.09%）对A股10-8开市方向影响偏中性偏负面——美债回升+港股大跌+中概回调压制估值端·但加息预期降温+纳指新高+油价回落支撑风险偏好。</p>
+    <div class="lp"><div class="lt">下一周期落点</div><div class="lb">盯美伊"边谈边撤"信号能否落地（特朗普"协议本周末达成"窗口+伊美谅解备忘录四阶段推进+核问题第三阶段+伊朗强硬派是否接受"绝不从外部购买"新条款+众议院叫停决议政治约束）；盯俄乌"桥梁战争"是否升级为冬季电网打击（乌军爱国者库存1/10·拦截率15%以下临界·萨马拉LPDS+伏尔加格勒炼油厂受损评估·泽连斯基加强打击俄炼油厂）；盯油价方向（G7 1亿桶储备释放4个月节奏+OPEC+产能评估推迟至11月+布伦特100上方持续性+沙特筹备对胡塞大规模军事行动+中国暂停10月燃料出口）；盯美债10年期5.273%回升持续性vs 9月非农下修60K+10月加息概率22.7%+通胀预期；盯长假最后窗口外盘定价基调对A股10-8开市方向影响（美股收涨+港股大跌+中概回调+美债回升）；盯10-5 CME算力期货合约+Anthropic 11月IPO对AI算力链影响；盯朝鲜10-3发射后续美日韩三边反应+日本高市早苗右翼政府闭环；盯中美11月AI对话三大议题落地节奏+加州破局可能。</div></div>
+  </div>
+</div>
+
+<div class="sec">三、10-03预判校验（回看 2026-10-03 简报五大框架落点）</div>
+<div class="vf">
+  <div class="vrow">
+    <div class="vp">盯美伊"边打边谈"是否重启（卢比奥驱逐后第三方斡旋通道是否切换）</div>
+    <div class="vs rev">关键反转兑现·外交渠道重新开启</div>
+    <div class="vd"><b>特朗普10-3"谈判非常顺利·协议可能本周末达成"</b>+<b>鲁比奥"'史诗怒火'行动已结束·美国已胜利"</b>+<b>伊美谅解备忘录四阶段推进结构披露</b>——<b>与昨日"卢比奥驱逐伊朗代表团·外交渠道正式冻结·卢比奥驱逐+特朗普ultimatum+三航母集结使窗口日益收窄"预判形成关键反转</b>。<b>"顺序僵局"在外部压力下出现松动信号</b>（特朗普"宁愿不那样做"+众议院叫停决议+G7释放储备+港股大跌）。但<b>三航母部署未变+军事摩擦"罗生门"持续</b>·"边谈边撤"vs"边谈边打"待10-5至10-7窗口验证。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯特朗普ultimatum"很快决定"窗口</div>
+    <div class="vs rev">关键反转·ultimatum转向"协议接近签署"</div>
+    <div class="vd"><b>特朗普"他们距离签署协议已经非常接近"</b>+<b>"协议可能本周末达成"</b>+协议草案新增"绝不从外部购买核武器"条款——<b>与昨日"公开ultimatum'很快决定是打还是谈'+拒绝伊朗停火提案'不够好'+暗示11月3日中期选举后恢复轰炸'有可能'"形成关键反转</b>。<b>但"绝不从外部购买"新条款引发两周谈判</b>·伊朗强硬派是否接受仍是变量·"理论上接近"与"实际签署"仍有距离。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯美军三航母11月底前部署节奏</div>
+    <div class="vs wait">待观察·部署计划未变但"行动已结束"信号</div>
+    <div class="vd">"罗斯福"号航母打击群+"马金岛"号两栖戒备群部署计划未变·10月底三航母齐聚中东节奏延续。<b>但鲁比奥"行动已结束"表态与三航母部署形成矛盾</b>——<b>进攻性姿态vs防御性姿态的双重信号</b>·待11月中期选举后窗口验证。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯俄乌"能源战争"冬季升级节奏+萨马拉LPDS/伏尔加格勒炼油厂受损评估</div>
+    <div class="vs hit">持续兑现·袭桥新战术固化+乌加强反击</div>
+    <div class="vd"><b>俄军连续第三日袭基辅跨河桥梁</b>（南桥→北桥）·50万人通勤受阻·俄国防部定性"乌军后勤保障"设施——<b>"中断城市生活"新战术固化</b>·为冬季电网打击铺垫。<b>泽连斯基10-3表态将加强对俄炼油厂打击</b>回应俄大规模空袭·乌军爱国者拦截弹库存降至1/10·对俄弹道导弹拦截率15%以下临界。<b>萨马拉LPDS+伏尔加格勒炼油厂受损后续</b>——结构性能源对抗固化。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯油价方向（G7 1亿桶储备+OPEC+10月4日会议）</div>
+    <div class="vs hit">关键兑现·G7正式释放·过山车延续</div>
+    <div class="vd"><b>G7同意释放1亿桶柴油和原油</b>（4个月投放·前20天重点柴油）+特朗普放弃柴油出口禁令威胁——<b>与昨日预判"G7+EU同意释放1亿桶储备原油"完全兑现</b>。<b>布伦特+0.45%报$102.70·WTI-1.78%报$91.26</b>·与10-1反转大涨形成"过山车"。<b>但布伦特仍位于100上方</b>·美柴油$6.39/加仑创纪录·低库存状态托底。<b>OPEC+产能评估推迟至11月</b>取代原定10月4日会议。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯美债10年期5.18%能否继续回落</div>
+    <div class="vs rev">反转回升·5.273%+3bp</div>
+    <div class="vd"><b>美债10年期5.273%（+3bp·周线+10bp）/30年期5.623%（周线+13bp·2002年来新高）</b>——<b>与昨日"美债10年期5.18%回落"预判形成反转回升</b>·债市未能守住就业报告后涨幅·收益率早盘回落后反弹。<b>反映"通胀不是唯一驱动长期利率的力量"</b>——长端利率受财政赤字担忧+全球主权债抛售共振（法德利差159bp·英国30年期6%·日本10年期3%+）。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯长假期间外盘定价基调对A股10-8开市方向影响</div>
+    <div class="vs wait">待观察·10-8开市验证</div>
+    <div class="vd"><b>美股收涨+纳指新高</b>（利好）·<b>港股大跌2.6%</b>（利空）·<b>中概金龙-2.09%</b>（利空）·<b>美债10年期5.273%回升</b>（利空）——<b>整体偏中性偏负面</b>·10-8开市窗口需消化9月累积跌幅。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯10-5 CME算力期货合约+Anthropic 11月IPO</div>
+    <div class="vs wait">待观察·10-5验证</div>
+    <div class="vd">10-5 CME联合SiliconData推算力期货合约+Anthropic最快11月启动IPO路演估值1.5-2万亿+博通420亿美元可转债——<b>AI算力链资本端持续景气</b>·10-5为关键验证窗口。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯日本高市早苗右翼政府三重突破后续+11月APEC深圳中日元首会晤窗口</div>
+    <div class="vs part">部分兑现·日元疲软分歧曝光</div>
+    <div class="vd"><b>高市早苗10-3透露特朗普9月纽约会晤指出日元疲软给美贸易带来困难</b>+<b>韩国检察制度78年来重大改革</b>——<b>日本右翼政府"情报+核+国际规则"三重突破闭环延续</b>·美日首脑会晤汇率分歧曝光。APEC深圳中日元首会晤窗口仍未明朗。</div>
+  </div>
+</div>
+
+<div class="holdbox">
+  <h2>💼 持仓含义提示（客观提示·不给买卖建议）</h2>
+  <div class="hrow">
+    <div class="hl">新锐股份 688257<br><span style="color:#7d8590;font-size:11px">(硬质合金/出口)</span></div>
+    <div class="hr">
+      <b>利好方向</b>：①<b>特朗普"协议本周末达成"+鲁比奥"行动已结束"</b>——美伊地缘风险溢价边际回落·若协议达成则全球风险资产估值修复·出口链受益；②9月非农+29K大幅不及预期·10月加息概率从64%骤降至22.7%——美联储加息路径放缓利好出口链估值；③中美11月AI对话三大核心议题披露+30亿对等降税机制化——中美经贸链结构性改善持续；④陆权备选通道实质化（沙特东西管道350万桶/日+阿曼杜库姆港扩建）——中东原油输出恢复接近战前水平·原材料进口端成本压力边际缓解；⑤美股纳指盘中创历史新高30808+特斯拉+4.65%——全球科技景气持续利好硬质合金刀具下游需求端；⑥纳斯达克新高+日韩政治动荡（韩国检察改革+日本CPI超预期）可能催化亚太资金向A股回流（间接）。<br>
+      <b>风险方向</b>：①<b>美众议院叫停决议象征意义大于实质</b>·三航母部署未变+军事摩擦"罗生门"持续——地缘风险溢价仍存·若协议落空则油价可能再度冲击110+；②<b>美债10年期5.273%回升+30年期5.623%2002年来新高</b>——长端利率高位压制全球风险资产估值；③<b>港股恒指-2.6%创3月来最大跌幅+中概金龙-2.09%</b>——长假期间外盘定价基调偏负面·对10-8开市情绪扰动；④金价周线-3.59%四个月最大周跌幅反映避险资产分化·市场定价"外交窗口vs军事对抗"双轨；⑤美油-1.78%但布伦特+0.45%两地价差扩大——能源市场分化加剧；⑥耐克大中华区-26%反映中国消费端疲软·出口链下游需求端隐忧。
+    </div>
+  </div>
+  <div class="hrow">
+    <div class="hl">小鹏集团 XPEV<br><span style="color:#7d8590;font-size:11px">(美股中概/出海)</span></div>
+    <div class="hr">
+      <b>利好方向</b>：①<b>特朗普"协议本周末达成"+鲁比奥"行动已结束"</b>——美伊缓和利好中概风险偏好；②特斯拉+4.65%（Q3交付486532辆超预期）——新能源车板块整体景气·小鹏出海逻辑共振；③中美11月AI对话三大议题披露+30亿对等降税机制化——中美经贸链结构性改善持续；④港股大跌但<b>美股纳指盘中新高30808</b>——美股新能源车估值锚上移；⑤美债10年期5.273%回升但9月非农大幅不及预期·加息路径放缓对成长股估值端中长期利好；⑥港股恒指-2.6%大跌后10-8 A股开市可能引发补跌但午后企稳概率存在。<br>
+      <b>风险方向</b>：①<b>中概金龙-2.09%·小鹏-1.80%</b>——长假期间中概回调对10-8开市情绪直接扰动；②<b>港股恒指-2.6%创3月来最大跌幅</b>+恒生科技指数联动——10-8港股开市若延续则小鹏港股承压；③特朗普"我可以再耗两三周把对方彻底消灭"——美伊缓和信号下仍有军事选项保留·若协议落空则中概首当其冲；④美元指数102.11偏强+美债10年期5.273%回升——汇率+利率双压制中概估值；⑤10-3伊美军事摩擦"罗生门"持续（伊朗称打击美驱逐舰+科威特机场遇袭）——地缘风险溢价仍存；⑥日本高市早苗右翼政府闭环+朝鲜10-3发射弹道导弹——东亚地缘风险溢价持续·中概出海环境承压。
+    </div>
+  </div>
+</div>
+
+<div class="stance">
+  <h2>⚖ 立场声明</h2>
+  <p><b>台湾是中国领土不可分割的一部分</b>·台湾问题纯属中国内政不容任何外来干涉。一个中国原则是国际关系基本准则和国际社会的普遍共识·也是中美关系的政治基础。坚持一个中国原则就理所应当反对"台独"分裂。习近平9-30国庆77周年招待会讲话重申"坚决打击台独分裂势力·反对外部势力干涉·推进祖国统一大业"。"从'反对'到'打击'的措辞升级体现对台独分裂势力的态度更加明确"——环球时报。"解决台湾问题·实现祖国完全统一的历史进程不可阻挡·顺之者昌·逆之者亡"——外交部双语视频《回家的路》。</p>
+  <p><b>黄岩岛及南海诸岛是中国固有领土</b>·中国对相关海域拥有主权与海洋权益。当前南海局势总体保持稳定·中方坚定捍卫领土主权和海洋权益·致力于同当事国通过对话协商妥善处理分歧。菲方挑衅滋事责任完全在菲方。中国科考船在相关海域活动是正常科研行为·菲方"炒作"破坏中国海洋权益。</p>
+  <p><b>日本"新型军国主义"成势为患是不争的事实</b>·日本现政权否认侵略历史、美化战争罪行、加速"再军事化"持续挑战战后国际秩序。《联合国宪章》"敌国条款"是二战后的重要制度安排·不容删改。中方敦促日方切实反思纠错·以实际行动回归《中日联合声明》等四个政治文件的初心和原点。高市早苗右翼政府"情报+核+国际规则"三重突破闭环成势·日媒炒作退出联合国"跟二战前日本退出国联全力扩张的路子一模一样"。</p>
+  <p><b>中方反对缺乏联合国授权和国际法依据的单边制裁</b>·反对以涉及第三方为由对他国采取所谓次级制裁措施。中国10-1在联大否决权特别会议发言说明对伊朗制裁决议反对票立场——"坚持正确的是非观·维护伊朗核问题政治解决大局·妥善解决防扩散关切·中东地区长治久安"。中方一贯坚持和平利用外空·反对外空武器化、战场化和军备竞赛。文明冲突断层线军事化与文明间深层对话同步推进。</p>
+</div>
+
+<div class="discl">
+  <h3>⚠ 免责声明</h3>
+  <p>本简报基于公开信息整理·仅供学习研究·不构成投资/政策建议。地缘事件发展具有高度不确定性·持仓含义提示仅为客观映射·不构成买卖建议。投资者应独立判断并自行承担风险。立场严格遵循中国官方立场·台湾/南海/中日等问题按中国官方表述。</p>
+</div>
+
+<div class="foot">
+  <p>学习台 · 地缘政治域每日早间简报 · geopolitics-coach 五大框架实战 · 2026-10-04 周日 · 国庆长假第四天盘前参考</p>
+</div>
+
+</body>
+</html>

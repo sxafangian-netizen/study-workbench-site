@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融域周一收盘简报 · 2026-10-05 · 国庆假期休市(节中第五日·港股低开高走反弹)</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1140px;margin:0 auto}
+  .backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#0f1a0f 0%,#0d1117 100%);padding:26px 30px;margin-bottom:18px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px;color:#3fb950}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #3fb950;padding-left:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px}
+  .kpi .nm{color:#7d8590;font-size:12px;margin-bottom:4px}
+  .kpi .px{font-size:19px;font-weight:700}
+  .kpi .px.r{color:#f85149}.kpi .px.g{color:#3fb950}.kpi .px.y{color:#d29922}.kpi .px.b{color:#58a6ff}
+  .kpi .ch{font-size:12px;margin-top:2px}
+  .kpi .ch.r{color:#f85149}.kpi .ch.g{color:#3fb950}.kpi .ch.y{color:#d29922}
+  .kpi .ex{font-size:11px;color:#7d8590;margin-top:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .box{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
+  .box h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box h3.r{color:#f85149}.box h3.g{color:#3fb950}.box h3.b{color:#58a6ff}.box h3.y{color:#d29922}
+  .box ul{list-style:none;padding-left:16px}
+  .box li{font-size:12.5px;color:#c9d1d9;padding:4px 0;position:relative}
+  .box li:before{content:"▸";position:absolute;left:-14px}
+  .box.r li:before{color:#f85149}.box.g li:before{color:#3fb950}.box.b li:before{color:#58a6ff}.box.y li:before{color:#d29922}
+  .hold{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .hold h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .hold .hr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #30363d22;font-size:13px;flex-wrap:wrap;gap:6px}
+  .hold .hr:last-child{border-bottom:none}
+  .hold .hr .l{color:#c9d1d9}.hold .hr .r{color:#e6edf3;font-weight:600}
+  .hold .hr .r.r{color:#f85149}.hold .hr .r.g{color:#3fb950}.hold .hr .r.y{color:#d29922}
+  .hold .det{font-size:11.5px;color:#7d8590;margin-top:2px;width:100%}
+  .risk{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .risk h3{color:#f85149;font-size:14px;margin-bottom:8px}
+  .risk p{color:#f85149cc;font-size:12.5px;margin-bottom:4px}
+  .outlook{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .outlook h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .outlook p{font-size:12.5px;color:#c9d1d9;margin-bottom:6px}
+  .outlook b{color:#e6edf3}
+  .disc{margin-top:18px;color:#484f58;font-size:11px;border-top:1px solid #30363d;padding-top:12px;line-height:1.6}
+  .foot{margin-top:14px;color:#484f58;font-size:11px;text-align:center}
+  .note{background:#d299220d;border:1px solid #d29922;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#d29922cc}
+  .holiday{background:linear-gradient(135deg,#0f2a0f,#0a1607);border:1px solid #3fb950;border-radius:12px;padding:20px 24px;margin:14px 0;text-align:center}
+  .holiday .big{font-size:26px;font-weight:700;color:#3fb950;margin-bottom:6px}
+  .holiday .sub{color:#7d8590;font-size:12.5px}
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:12px 0}
+  .tl{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 12px;font-size:11.5px}
+  .tl .d{color:#58a6ff;font-weight:700;font-size:12px;margin-bottom:3px}
+  .tl .e{color:#c9d1d9;font-size:11.5px}
+  .tl .v{color:#d29922;font-size:11px;margin-top:2px}
+  .tbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+  .tbl th,.tbl td{border:1px solid #30363d;padding:6px 8px;text-align:left}
+  .tbl th{background:#21262d;color:#7d8590;font-weight:600;font-size:11.5px}
+  .tbl td.r{color:#f85149}.tbl td.g{color:#3fb950}
+  .alert{background:#f8514915;border:2px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .alert h3{color:#f85149;font-size:15px;margin-bottom:8px}
+  .alert p{color:#f85149dd;font-size:13px;margin-bottom:4px}
+  .alert b{color:#f85149}
+  .ok{background:#3fb9500d;border:1px solid #3fb950;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .ok h3{color:#3fb950;font-size:14px;margin-bottom:8px}
+  .ok p{color:#3fb950cc;font-size:12.5px;margin-bottom:4px}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>金融域 · 国庆假期休市收盘简报（节中第五日·港股低开高走反弹）</h1>
+  <div class="sub">2026-10-05 周一 15:30 · 国庆假期第五日（A股+港股通 10/1-10/7休市 · 10/8周四复市）· 港股10/5正常开市低开高走收涨·美股10/2非农夜大涨确认（10/3-10/4周末休市）· 今晚22:00 ISM服务业PMI→10/8 02:00 FOMC纪要→10/8复市首日</div>
+  <div class="meta">
+    <span class="tag y">数据源：WebSearch(每经/财华社/东方财富/大河财立方/中证报/FT.com/腾讯新闻/新浪财经/华尔街见闻/金十数据/Trading Economics/Yahoo Finance)</span>
+    <span class="tag r">Wind MCP 本会话未连接（连续第15次），已直说不造数</span>
+    <span class="tag b">口径：A股休市无收盘数据；港股10/5收盘；美股10/2收盘（10/3-10/4周末）</span>
+    <span class="tag r">风控红色高亮·持仓恶化预警</span>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 数据源说明：今日（10/5）为国庆假期第五日，A股+港股通休市（10/1-10/7），10/8周四复市。本次 Wind mcp__wind-finance__* 工具在本会话不可用（ToolSearch 确认无此工具，连续第15次）。已按规则<b>直说不造数</b>。港股10/5正常开市（10/2开市后10/3-10/4周末休市，10/5周一恢复交易），是节中观察外资对中国资产定价的"先行指标"；美股10/2（周五非农夜）全线大涨确认，10/3-10/4周末休市，10/5周一恢复交易但收盘数据本简报生成时尚未发布。本简报为"节前9/30收官回顾+节中港股10/5收盘+美股10/2非农夜大涨+小鹏持仓节中风险持续触发+节中剩余变量+节后10/8复市展望"组合，全部数字可溯源到来源+时点。
+</div>
+
+<!-- A股休市状态 -->
+<div class="holiday">
+  <div class="big">🛌 A股休市中 · 国庆假期第五日</div>
+  <div class="sub">10/1-10/7 全程休市 · 10/8 周四复市 · 港股通同步关闭 · 期间无A股收盘数据可拉</div>
+</div>
+
+<!-- 节前9/30收官回顾 -->
+<div class="sec">节前9/30 A股收官回顾（最新可得A股数据）</div>
+<div class="grid3">
+  <div class="kpi">
+    <div class="nm">沪指 000001.SH</div>
+    <div class="px r">3842.19</div>
+    <div class="ch r">+0.31% 微涨收官</div>
+    <div class="ex">9/30 15:00收盘</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">深成指 399001.SZ</div>
+    <div class="px g">12887.62</div>
+    <div class="ch g">-0.11%</div>
+    <div class="ex">9/30 15:00收盘</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">创业板指 399006.SZ</div>
+    <div class="px g">3135.28</div>
+    <div class="ch g">-0.23%</div>
+    <div class="ex">9/30 15:00收盘</div>
+  </div>
+</div>
+<div class="box y">
+  <h3 class="y">节前收官特征</h3>
+  <ul>
+    <li>成交约1.44万亿（放量288亿但仍低位）/2567涨2824跌/56涨停12跌停/赚钱效应47.6%</li>
+    <li><b style="color:#f85149">⚠️ Q3季线：创业板-27.8%/科创50-30%+均刷新历史最惨单季纪录</b></li>
+    <li>主线：医药涨停潮（CRO/CMO/疫苗/创新药·康希诺/泰诺麦博20CM）vs 元件/半导体跌停潮（板块一日反转·9/29元件+4%→9/30元件跌停）</li>
+    <li>科创50-2.51%领跌/北证50+0.70%/沪指+0.31%微涨收官=蓝筹防御抗跌+高估值成长杀跌</li>
+    <li>消息面：9月PMI 50.1%重返扩张区间/2500亿超长期特别国债以旧换新资金全部下达/央行PSL降息扩围六张网/购房贴息10/1起实施</li>
+  </ul>
+</div>
+
+<!-- 节中海外·美股10/2非农夜大涨确认 -->
+<div class="sec">节中海外 · 美股10/2（周五非农夜）全线大涨确认</div>
+<div class="grid3">
+  <div class="kpi">
+    <div class="nm">道琼斯</div>
+    <div class="px r">51176.96</div>
+    <div class="ch r">+0.49% (+250点)</div>
+    <div class="ex">美东10/2收盘（10/3-10/4周末休市）</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">标普500</div>
+    <div class="px r">7722.72</div>
+    <div class="ch r">+0.73% (+55.91点)</div>
+    <div class="ex">美东10/2收盘·全周累跌0.27%</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">纳斯达克综合</div>
+    <div class="px r">27190.86</div>
+    <div class="ch r">+1.19% (+319.93点)</div>
+    <div class="ex">美东10/2收盘·全周累涨0.45%</div>
+  </div>
+</div>
+
+<div class="ok">
+  <h3>🌟 三大利好共振 · 非农爆冷+OPEC+维持产量+ISM制造业回升</h3>
+  <p><b>① 9月非农+29K大幅不及预期</b>（预期8.4-9万/前值13.3万下修）·失业率微升至4.2%→加息预期68%→22.1%大幅降温·CME美联储观察10月按兵不动概率78%</p>
+  <p><b>② OPEC+维持11月产量不变</b>（市场原预期增产274K-411K·偏紧）·但G7决定4个月释放1亿桶柴油和原油库存·WTI 10/2收91.11美元-1.90%（全周累跌1.41%）·布伦特102.25-0.06%（全周累涨4.94%）</p>
+  <p><b>③ ISM制造业PMI 54.5</b>低于预期但价格77.9滞胀·美联储哈马克"非农符合近期招聘趋势有充足时间决定政策立场"vs洛根"至少再加息50bp"内部分歧</p>
+</div>
+
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">美股10/2科技巨头全线走强</h3>
+    <ul>
+      <li><b style="color:#3fb950">英伟达 +1.34% 报233.95美元</b>（盘中创5月14日以来新高237.88·费半+2.4%）</li>
+      <li>博通 +3.35% / 阿斯麦 +3.25% / AMD +2.9%</li>
+      <li>纳指100收涨1%创历史新高30817.93</li>
+      <li>特斯拉 +4.65%（Q3交付486,532辆超预期463,761辆）</li>
+      <li>SpaceX +7.35% / 戴尔 +3.8% / ARM/博通/AMD走强</li>
+      <li>赛富时+3.14%/卡特彼勒+2.30%/联合健康+1.77%领涨道指</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">中概股普跌（10/2）· 纳斯达克中国金龙 -2.09%</h3>
+    <ul>
+      <li><b style="color:#f85149">小鹏汽车 XPEV -1.80% 收9.25美元（52周新低9.18触及·持仓直接相关）</b></li>
+      <li>阿里巴巴 -1.47% / 百度 -1.48% / 网易 -0.45%</li>
+      <li>京东 -0.86% / 拼多多 -1.85% / 蔚来 -5%</li>
+      <li>理想 -4% / 万国数据 -10%+ / 富途控股 -3.73%</li>
+      <li>美股普涨背景下中概逆势下跌·外资对中国资产定价偏空</li>
+    </ul>
+  </div>
+</div>
+
+<div class="box y">
+  <h3 class="y">节中其他关键变量</h3>
+  <ul>
+    <li><b>美债</b>：10年期5.27%-5.283%仍高位（全周累升11bp）·30年期5.65%创2002年来新高·长端利率仍是成长股天花板</li>
+    <li><b>商品</b>：COMEX黄金4133.7美元/盎司（全周累跌3.59%四个月最大周跌）·期银累跌6.68%·期铜6.492美元/磅累跌3.1%</li>
+    <li><b>原油</b>：WTI 91.11-1.90% / 布伦特102.25-0.06%·G7释1亿桶储备+中东局势并存</li>
+    <li><b>外汇</b>：美元指数加速跌离一年半高位·离岸人民币曾逼近6.70（USD/CNY≈6.705）</li>
+    <li><b>欧股</b>：德国DAX+1.17%/英国富时100+0.32%/欧洲斯托克50+1.02%全线收涨</li>
+    <li><b>中东地缘</b>：美伊双轨外交浮现（Witkoff+Kushner与阿拉格齐纽约密谈）·霍尔木兹海峡问题待解·胡塞袭沙特阿美·伊朗石油部长辞职·美向沙卡增派爱国者</li>
+    <li><b>美联储官员分歧</b>：哈马克"非农符合近期招聘趋势有充足时间"vs洛根"至少再加息50bp"vs哈塞特"鲍威尔应离开美联储理事会"vs贝森特"淡化AI泡沫担忧"</li>
+  </ul>
+</div>
+
+<!-- 节中港股10/5全天行情 -->
+<div class="sec">节中先行指标 · 港股10/5全天行情（低开高走·收涨反弹）</div>
+<div class="grid3">
+  <div class="kpi">
+    <div class="nm">恒生指数</div>
+    <div class="px r">24104.15</div>
+    <div class="ch r">+0.28% (+67.78点)</div>
+    <div class="ex">10/5 16:00 HKT收盘·早盘低开-0.39%后午盘-0.08%午后反弹收涨</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">恒生科技指数</div>
+    <div class="px g">4169.36</div>
+    <div class="ch r">+0.27%</div>
+    <div class="ex">10/5午盘收盘·收盘价数据源矛盾（uSMART报5955点明显错误已弃用）按规则不造数</div>
+  </div>
+  <div class="kpi">
+    <div class="nm">国企指数</div>
+    <div class="px g">8515.55</div>
+    <div class="ch g">-0.07% (-5.64点)</div>
+    <div class="ex">10/5 16:00 HKT收盘</div>
+  </div>
+</div>
+
+<div class="grid2">
+  <div class="box g">
+    <h3 class="g">港股10/5领涨板块（PCB/半导体/疫苗反弹）</h3>
+    <ul>
+      <li><b style="color:#3fb950">PCB概念股集体爆发</b>：建滔积层板涨近11%/景旺电子+11%/广合科技+7%（英伟达新一代AI计算系统CoreWeave投产催化·覆铜板出货量同比+14%）</li>
+      <li>半导体/硬件拉升：傅里叶+18%/澜起科技+4%/智谱+5%/联想+5%/华虹宏力+3%/MINIMAX+1%/中芯国际+1%</li>
+      <li>疫苗股集体反弹：复星医药+15.12%/康希诺+6%</li>
+      <li>油气板块走高：中国石油+7%/中海油+2%（G7释1亿桶储备但中东地缘仍在）</li>
+      <li>9月南向资金加仓：智谱净买入78.84亿港元/MINIMAX净买入15.26亿港元</li>
+    </ul>
+  </div>
+  <div class="box r">
+    <h3 class="r">港股10/5领跌板块（地产/黄金）</h3>
+    <ul>
+      <li>地产股普跌：融创中国-10%+/中国奥园-10%+/富力地产-9%+（与9月地产政策链预期收敛）</li>
+      <li>黄金概念股继续颓靡：近8个交易日内7阴跌·灵宝黄金-1.68%/紫金矿业-1.05%/招金矿业-1.36%（受美元美债走强压制）</li>
+      <li>早盘低开-0.39%后扩大至-0.78%（恒科）受10/2大跌惯性+美债高位压制</li>
+      <li>午后反弹主因：美股10/2非农夜大涨情绪传导+港股10/2超跌后技术性反抽</li>
+    </ul>
+  </div>
+</div>
+
+<div class="note">
+  ℹ️ 港股10/5行情脉络：早盘低开-0.39%（恒指）/ -0.78%（恒科）受10/2大跌惯性延续；午盘跌幅收窄至-0.08%/0.27%（PCB/半导体拉升）；午后强势反弹收涨+0.28%（恒指）但国企指数仍微跌-0.07%。恒生科技指数收盘价数据源矛盾（uSMART报5955点明显错误已弃用），按规则不造数，仅采用午盘4169.36 +0.27%作为最可靠午盘口径。
+</div>
+
+<!-- 持仓节中风险 -->
+<div class="sec">持仓节中风险跟踪</div>
+
+<div class="hold">
+  <h3>📦 持仓节中表现（10/5最新可得数据）</h3>
+  <div class="hr"><span class="l">新锐股份 688257.SH</span><span class="r y">53.58 元（9/30收盘·A股休市无10/5数据）</span></div>
+  <div class="det">9/30收盘-3.49%·开55.60/高56.14/低53.37/振幅4.99%·PE16.84·YTD+123.72%·5日-6.92%·主力早盘净流入961万逆势吸筹/融资净买入2126万/近3日净流入1972万·<b style="color:#f85149">收盘53.58再破54关键支撑·下一支撑51.15·Q3季报10/30</b>·定增12.32亿9/23到账+12亿现金管理·华鑫证券买入评级EPS26-28年2.50/3.40/4.35·数控刀片/凿岩/精密刀具产能扩张</div>
+  
+  <div class="hr"><span class="l">小鹏集团 09868.HK</span><span class="r r">盘中 36.14 港 -0.61%（FT.com 13:17 BST=13:17北京时间）·收盘价未直接获取</span></div>
+  <div class="det">
+    <b style="color:#f85149">⚠️ 10/5盘中创52周新低 35.64 港（破10/2刚创35.90·破历史52周低）</b><br>
+    FT.com数据（13:17 BST=13:17北京时间午盘休市前最后价）：Open 36.18 / High 36.30 / Low 35.64 / Prev 36.36 / Bid 36.12 / Ask 36.14·1年-60.87%·Beta 2.03<br>
+    moomoo 10:42 15min延迟：Prev Close 36.360 / Open 36.180 / High 36.300 / Low 35.640·与FT一致<br>
+    <b style="color:#f85149">持仓最大独立风险线已从"临界"升级为"持续触发且加速恶化"</b><br>
+    美股XPEV 10/2收盘9.25 -1.80%·52周低9.18触及·1年-60.85%·5年-75.44%·YTD-54.72%·市值90.2亿美元<br>
+    摩根大通9/29下调至Neutral目标价11.5美元（腰斩）·Barclays目标价14美元Underweight·UBS 12美元Neutral·Weiss Ratings Sell·分析师共识Hold均价22.09美元<br>
+    Q3交付118,390辆+15% QoQ / 9月交付41,256辆+5% MoM（运营数据改善但市场不买账）·G9L 10/12巴黎车展全球首发·10/8复市港股或跳空补跌
+  </div>
+</div>
+
+<div class="alert">
+  <h3>⚠️ 持仓恶化预警 · 小鹏持仓最大独立风险线已触发且加速恶化</h3>
+  <p><b>节中恶化轨迹</b>：9/29港股收盘37.44（52周新低）→ 10/2港股收盘36.36（-3.96%·再创52周新低35.90·破9/29的37.44）→ 10/2美股XPEV收9.25（-1.80%·52周低9.18触及）→ <b>10/5港股盘中再创52周新低35.64</b>（破10/2刚创35.90）</p>
+  <p><b>5日累跌</b>：港股09868 9/29→10/5约-4.7%·美股XPEV 9/29→10/2约-8.6%·下降通道持续加速</p>
+  <p><b>触发逻辑</b>：港股10/2创52周新低35.90 → 10/5盘中破35.90至35.64 = <b>持仓最大独立风险线已从"临界"升级为"持续触发且加速恶化"</b></p>
+  <p><b>10/8复市港股大概率跳空低开补跌</b>（10/2-10/5期间美股XPEV 9.25美元·按ADR 1:2对应港股约36.5港·但市场情绪偏空+摩根大通下调+行业失血竞争持续）</p>
+  <p><b>风控建议</b>：长持不补·破36加速恶化·破35.64进入加速恶化通道·下一关键支撑看34港（2024年10月近2年低点区域）</p>
+</div>
+
+<div class="risk">
+  <h3>⚠️ 风控提示</h3>
+  <p>1. 小鹏持仓最大独立风险线已触发且加速恶化（10/5盘中创52周新低35.64港）·长持不补·破36加速恶化·破35.64进入加速恶化通道</p>
+  <p>2. 新锐股份9/30收盘53.58再破54关键支撑·下一支撑51.15·Q3季报10/30验证·定增落地+主力逆势吸筹+融资净买入=属高位获利回吐+板块偏弱共振非个股独立恶化</p>
+  <p>3. 节后10/8复市首日：港股10/2-10/5期间累计波动（恒指10/2-2.6% + 10/5+0.28% ≈ -2.34%）将集中反映到A股开盘·大概率跳空低开</p>
+  <p>4. 美债10Y5.27%/30Y5.65%双创2002年新高·长端利率压制成长股估值天花板·小鹏/新锐均属成长股</p>
+  <p>5. 中概金龙10/2-2.09%逆势下跌·外资对中国资产定价偏空·与美股普涨背离</p>
+  <p>6. 节前只卖不买主基调验证·存量博弈深化·破位不加仓·右侧确认再动</p>
+</div>
+
+<!-- 节中剩余变量时间线 -->
+<div class="sec">节中剩余变量时间线（10/5晚→10/8复市）</div>
+<div class="timeline">
+  <div class="tl"><div class="d">10/5 周一</div><div class="e">港股10/5收盘</div><div class="v">恒指+0.28%反弹</div></div>
+  <div class="tl"><div class="d">10/5 22:00</div><div class="e">美国ISM服务业PMI</div><div class="v">前51.5/预期51.8</div></div>
+  <div class="tl"><div class="d">10/6 周二</div><div class="e">美股正常交易</div><div class="v">港股正常交易</div></div>
+  <div class="tl"><div class="d">10/7 周三</div><div class="e">假期最后1日</div><div class="v">美股正常交易</div></div>
+  <div class="tl"><div class="d">10/8 02:00</div><div class="e">FOMC纪要</div><div class="v">9月会议纪要</div></div>
+  <div class="tl"><div class="d">10/8 周四</div><div class="e">A股复市首日</div><div class="v">⚠️ 跳空低开概率大</div></div>
+</div>
+
+<!-- 节后10/8复市展望 -->
+<div class="sec">节后10/8复市展望</div>
+<div class="outlook">
+  <h3>📊 节后10/8复市三情景</h3>
+  <p><b>乐观35%</b>（↑10·站3880-3920）：美股10/2大涨情绪传导+港股10/5反弹+ISM服务业PMI超预期+FOMC纪要鸽派→节后跳空高开补涨·小鹏跟随反弹但下降通道未破</p>
+  <p><b>中性40%</b>（3830-3880震荡）：港股节中累计-2.34%小幅映射·A股低开后震荡消化·存量博弈格局延续·板块轮动加速</p>
+  <p><b>悲观25%</b>（↓5·跌破3830回踩3780）：美债收益率继续走高+中东地缘升级+小鹏持仓风险传染+节前获利盘集中兑现·破3830回踩3780</p>
+  
+  <h3 style="margin-top:14px">📋 历史规律参考</h3>
+  <p>2016年以来（剔除2018/2024）国庆前一周沪指下跌概率87.5%平均-1.1%·<b>节后一周上涨概率62.5%平均+1.3%</b>·节前缩量是季节性主导因素</p>
+  <p>但今年特殊变量：Q3创业板-27.8%/科创50-30%+创历史最惨单季+美债30Y5.65%创2002年新高+小鹏持仓风险已触发·节后反弹力度取决于量能重回1.5万亿+</p>
+</div>
+
+<div class="box b">
+  <h3 class="b">📋 执行清单（节后10/8复市首日）</h3>
+  <ul>
+    <li>① 开盘前：拉取隔夜美股10/5-10/7三日累计涨跌+A50期货夜盘+港股10/5-10/7三日累计涨跌</li>
+    <li>② 开盘后30分钟：观察沪指能否守住3830·量能是否回到800亿/半小时以上</li>
+    <li>③ 小鹏持仓：开盘价 vs 9/30前收36.36港（实际港股10/8开盘价 vs 10/5前收36.36港）·跳空低开幅度决定是否触发被动减仓线</li>
+    <li>④ 新锐持仓：观察53.58→51.15区间能否企稳·主力是否延续逆势吸筹·Q3季报10/30</li>
+    <li>⑤ 板块轮动：节中港股PCB/半导体/疫苗反弹 vs 地产/黄金跌·映射A股节后可能的板块切换</li>
+    <li>⑥ 风控：节前只卖不买主基调延续·破位不加仓·右侧确认再动</li>
+  </ul>
+</div>
+
+<!-- 免责声明 -->
+<div class="disc">
+  <b>免责声明</b>：本简报为学习台金融域复盘+教育用途，基于公开数据（WebSearch fallback，Wind MCP本会话不可用连续第15次），不构成任何投资建议。所有数据可溯源到来源+时点，数据源缺失处已如实标注"不造数"。涉及买卖建议部分均附免责声明。投资有风险，决策需谨慎。本简报不针对任何特定投资者的投资目标、财务状况或需求作出个性化建议。持仓节中风险跟踪基于公开行情数据，不构成持仓调整建议，长持不补为用户既定策略。
+</div>
+
+<div class="foot">
+  学习台金融域 · 收盘持仓更新（工作日15:30） · 国庆休市节中第五日版<br>
+  生成时间：2026-10-05 15:30 北京时间 · 数据口径：A股休市无收盘/港股10/5收盘/美股10/2收盘（10/3-10/4周末休市）<br>
+  数据源：WebSearch（每经/财华社/东方财富/大河财立方/中证报/FT.com/腾讯新闻/新浪财经/华尔街见闻/金十数据/Trading Economics/Yahoo Finance/TipRanks/Investing.com）
+</div>
+
+</body>
+</html>

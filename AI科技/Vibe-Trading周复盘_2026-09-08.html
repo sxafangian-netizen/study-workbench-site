@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vibe-Trading 周复盘 · 2026-09-08</title>
+<style>
+:root{--bg:#0d1117;--card:#21262d;--border:#30363d;--txt:#c9d1d9;--mut:#8b949e;--blue:#58a6ff;--up:#f85149;--down:#3fb950;--amber:#d29922;--purple:#bc8cff;--teal:#39d0d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6;padding:20px;max-width:1100px;margin:0 auto}
+.backbtn{position:fixed;top:24px;right:24px;background:var(--card);color:var(--blue);padding:8px 14px;border-radius:8px;border:1px solid var(--border);text-decoration:none;font-size:13px;font-weight:600;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.backbtn:hover{background:#30363d}
+@media(max-width:600px){.backbtn{top:18px;right:14px;font-size:11px;padding:6px 10px}}
+h1{font-size:22px;margin:16px 0 4px;letter-spacing:.5px}
+.sub{color:var(--mut);font-size:13px;margin-bottom:16px}
+.sec{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin:14px 0}
+.sec h2{font-size:16px;color:var(--blue);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sec h2 .tag{font-size:11px;padding:2px 8px;border-radius:4px;background:rgba(88,166,255,.15);color:var(--blue)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.item{background:#161b22;border:1px solid var(--border);border-radius:8px;padding:14px}
+.item h3{font-size:14px;margin-bottom:8px}
+.item .meta{font-size:11px;color:var(--mut);margin-bottom:8px}
+.item .verdict{font-size:12px;padding:6px 10px;border-radius:4px;margin-top:8px;display:inline-block}
+.v-up{background:rgba(248,81,73,.15);color:var(--up)}
+.v-down{background:rgba(63,185,80,.15);color:var(--down)}
+.v-wait{background:rgba(210,153,34,.15);color:var(--amber)}
+.kv{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed var(--border);font-size:13px}
+.kv:last-child{border:none}
+.kv .k{color:var(--mut)}
+.kv .v{font-weight:600}
+.alert{background:rgba(248,81,73,.1);border-left:3px solid var(--up);padding:10px 14px;border-radius:0 6px 6px 0;margin:10px 0;font-size:13px}
+.todo{background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.3);border-radius:8px;padding:14px;margin:12px 0}
+.todo h3{color:var(--blue);font-size:14px;margin-bottom:10px}
+.todo ul{list-style:none;padding-left:0}
+.todo li{padding:5px 0 5px 20px;position:relative;font-size:13px}
+.todo li:before{content:"▸";position:absolute;left:0;color:var(--blue)}
+.disclaim{color:var(--mut);font-size:11px;margin-top:20px;padding-top:12px;border-top:1px solid var(--border);text-align:center}
+.summary-box{background:linear-gradient(135deg,rgba(88,166,255,.1),rgba(188,140,255,.1));border:1px solid rgba(88,166,255,.3);border-radius:10px;padding:16px;margin:12px 0}
+.summary-box h3{color:var(--purple);font-size:14px;margin-bottom:8px}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--border)}
+th{color:var(--blue);font-weight:600}
+.hot{color:var(--up)}
+.cool{color:var(--down)}
+</style>
+</head>
+<body data-page-node-id="vibeReview0908">
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<h1>🤖 Vibe-Trading 周复盘 · 四维追踪</h1>
+<div class="sub">2026-09-08 周二 · ai-tech-radar 技能驱动 · 锚定 Vibe-Trading 量化系统</div>
+
+<div class="summary-box">
+<h3>📌 本周一句话结论</h3>
+<div style="font-size:13px;line-height:1.7">本周 AI 科技圈三件事直接冲击 Vibe-Trading：<b style="color:var(--up)">①DeepSeek V4.1 Flash 内测（9月8日今天）</b>原生多模态+更快更便宜，官方问卷直接问"能否替换 V4 Pro"——Vibe-Trading 用的 DeepSeek 面临换型决策窗口；<b style="color:var(--up)">②HANET 论文（arXiv 2606.00624，6月发布）</b>用分层交叉注意力把宏观周期嵌进 LSTM，55 个期货品种跑赢所有忽略宏观的神经网络——直击 Vibe-Trading LSTM+Attention 架构的"缺宏观维度"短板；<b style="color:var(--up)">③TradingAgents v0.4.0（103k Star，9月8日今天更新）</b>多智能体交易框架，价格 grounding + 决策记忆 + checkpoint 恢复——HKUDS 多智能体架构有了更成熟的开源对标。三条都是"可立即借鉴"级别，不是空追论文。</div>
+</div>
+
+<!-- 维度1：模型 -->
+<div class="sec">
+<h2>🧠 维度一 · 模型 <span class="tag">DeepSeek 换型决策</span></h2>
+<div class="grid">
+<div class="item">
+<h3>DeepSeek V4.1 Flash 内测（9月8日）</h3>
+<div class="meta">来源：DeepSeek 官方交流群 · 2026-09-08 · 模型名 deepseek-v4.1-flash-expires-on-0910</div>
+<div style="font-size:13px;line-height:1.7">
+<p style="margin-bottom:8px"><b>关键变化</b>：①全新模型结构 ②原生多模态（文本+图像+音频） ③能力更强+速度更快+成本更低 ④计费与 V4 Flash 一致，单账号20并发</p>
+<p style="margin-bottom:8px"><b>官方野心</b>：反馈问卷直接问"V4.1 Flash 能否全面替换线上 V4 Pro"——若内测达标，Flash 将以更低成本逼近 Pro 性能</p>
+<p><b>限时</b>：模型名带 expires-on-0910，9月10日自动下线（内测窗口仅2天）</p>
+</div>
+<div class="verdict v-wait">Vibe-Trading 决策：观望 → 9月10日内测结束后看是否转正</div>
+</div>
+<div class="item">
+<h3>对 Vibe-Trading 的影响判断</h3>
+<div class="kv"><span class="k">当前用型</span><span class="v">DeepSeek V4（推理+Agent）</span></div>
+<div class="kv"><span class="k">换型条件</span><span class="v">V4.1 Flash 转正后，量化回测对比 V4 在预测准确率/推理成本上的差值</span></div>
+<div class="kv"><span class="k">潜在收益</span><span class="v" style="color:var(--up)">成本下降（Flash计费）+ 多模态可接K线图识别</span></div>
+<div class="kv"><span class="k">潜在风险</span><span class="v" style="color:var(--amber)">Flash 推理深度可能弱于 Pro，量化决策类任务需实测</span></div>
+<div class="kv"><span class="k">建议动作</span><span class="v">9月10日后关注是否转正；转正则跑 Vibe-Trading 回测对比</span></div>
+</div>
+</div>
+</div>
+
+<!-- 维度2：论文 -->
+<div class="sec">
+<h2>📄 维度二 · 论文 <span class="tag">LSTM+Attention 架构改进</span></h2>
+<div class="grid">
+<div class="item">
+<h3>HANET：分层混合频率注意力网络</h3>
+<div class="meta">arXiv:2606.00624 · 2026年6月 · Cucuringu 等 · 牛津+圣保罗大学</div>
+<div style="font-size:13px;line-height:1.7">
+<p style="margin-bottom:6px"><b>核心创新</b>：分层交叉注意力，把<b>月度宏观窗口</b>嵌进 <b>日频资产收益</b>，不丢弃日频粒度</p>
+<p style="margin-bottom:6px"><b>实验</b>：55个流动性期货跨资产类，HANET 跑赢所有忽略宏观的神经网络，<b>动荡期优势最明显</b></p>
+<p style="margin-bottom:6px"><b>消融</b>：同样宏观表征的纯 LSTM 表现差 → 收益来自<b>结构化宏观条件</b>而非特征堆砌</p>
+<p><b>可解释性</b>：注意力权重显示"哪些历史宏观周期对当前预测影响最大"</p>
+</div>
+<div class="verdict v-up">Vibe-Trading 可借鉴：加宏观维度</div>
+</div>
+<div class="item">
+<h3>对 Vibe-Trading LSTM+Attention 的启示</h3>
+<div class="kv"><span class="k">当前架构</span><span class="v">LSTM + Attention（日频量价）</span></div>
+<div class="kv"><span class="k">HANET 揭示短板</span><span class="v" style="color:var(--up)">缺宏观周期维度——纯量价 LSTM 在动荡期易失效</span></div>
+<div class="kv"><span class="k">可借鉴机制</span><span class="v">分层交叉注意力：日频收益嵌月度宏观（PMI/CPI/利率）</span></div>
+<div class="kv"><span class="k">落地难度</span><span class="v" style="color:var(--amber)">中——需加宏观数据源+改 Attention 结构</span></div>
+<div class="kv"><span class="k">优先级</span><span class="v" style="color:var(--up)">高——直接补当前最大短板</span></div>
+</div>
+</div>
+<div style="margin-top:10px;font-size:12px;color:var(--mut);padding:8px;background:#161b22;border-radius:6px">
+📌 另注：arXiv:2608.05755（8月）《LSTM 横截面异质性》——给 LSTM 加<b>行业 embedding</b>，S&P500 多空组合跑赢基准。对 Vibe-Trading 启示：若扩展到选股而非择时，可加行业 embedding 捕捉横截面差异。
+</div>
+</div>
+
+<!-- 维度3：工具/框架 -->
+<div class="sec">
+<h2>🔧 维度三 · 工具/框架 <span class="tag">多智能体对标</span></h2>
+<table>
+<tr><th>项目</th><th>Star</th><th>架构</th><th>对 Vibe-Trading 价值</th></tr>
+<tr><td><b>TradingAgents v0.4.0</b><br><span style="color:var(--mut);font-size:11px">TauricResearch · 9月8日更新</span></td><td class="hot">103k</td><td>5层12Agent（分析师团队→牛熊辩论→交易员→风控→组合经理）<br>价格 grounding + 决策记忆 + checkpoint 恢复</td><td>HKUDS 多智能体的<b>成熟开源对标</b>，可直接对比架构差距</td></tr>
+<tr><td><b>QuantBot</b><br><span style="color:var(--mut);font-size:11px">jeokeo011222</span></td><td>—</td><td>5 Agent（Planner/Quant/Risk/CIO/Trader）<br>盘前-盘中-盘后闭环 + QMT 实盘接口</td><td>盘前-盘中-盘后工作流<b>与你的四时段看板更新同构</b>，可借鉴 Agent 分工</td></tr>
+<tr><td><b>Vibe-Trading（自研）</b><br><span style="color:var(--mut);font-size:11px">当前状态</span></td><td>—</td><td>HKUDS 多智能体 + DeepSeek + LSTM+Attention + QuantDinger 回测</td><td>—</td></tr>
+</table>
+<div style="margin-top:10px">
+<div class="kv"><span class="k">TradingAgents 优势（相对 Vibe-Trading）</span><span class="v" style="color:var(--up)">价格 grounding（防脱离市场）+ 决策记忆（从历史错误学习）+ checkpoint（长任务中断恢复）</span></div>
+<div class="kv"><span class="k">Vibe-Trading 优势（相对 TradingAgents）</span><span class="v" style="color:var(--down)">A股本土化 + 数据源多级 fallback（tdx→baostock→tushare→akshare）+ 绑定你的实战持仓</span></div>
+<div class="kv"><span class="k">可借鉴优先级</span><span class="v">①决策记忆文件（trading_memory.md 模式） ②价格 grounding ③checkpoint 恢复</span></div>
+</div>
+</div>
+
+<!-- 维度4：趋势 -->
+<div class="sec">
+<h2>🌍 维度四 · 趋势 <span class="tag">AI+金融方向</span></h2>
+<div class="grid">
+<div class="item">
+<h3>趋势1：多智能体从"能跑"转向"能信"</h3>
+<div style="font-size:13px;line-height:1.7">TradingAgents 从 v0.3 到 v0.4 的迭代重点：从"接入更多模型"转向"<b>时间点正确性</b>（防 look-ahead 偷看未来）+ 决策可解释性"。整个开源金融智能体赛道都在从"模型多不多"转向"回测里有没有未来函数、数据可不可信"。</div>
+<div class="verdict v-up">Vibe-Trading 应跟进：回测审计</div>
+</div>
+<div class="item">
+<h3>趋势2：DeepSeek Flash 系列成本下探</h3>
+<div style="font-size:13px;line-height:1.7">V4 Flash 7月底公测 → V4-Flash-Vision 8月21日 → V4.1 Flash 9月8日内测。节奏密集，Flash 系列以更低成本逼近 Pro 能力，多模态从实验扩展到原生。对量化场景：推理成本下降 = 可跑更多回测轮次。</div>
+<div class="verdict v-up">成本红利窗口</div>
+</div>
+<div class="item">
+<h3>趋势3：宏观条件化成 LSTM 金融预测新范式</h3>
+<div style="font-size:13px;line-height:1.7">HANET（6月）+ 横截面 LSTM（8月）两篇论文都指向：<b>纯量价 LSTM 天花板已现</b>，下一代改进方向是"结构化条件化"——宏观周期 / 行业 embedding / 横截面中位数。Vibe-Trading 若不跟进，架构会落后。</div>
+<div class="verdict v-wait">需架构升级</div>
+</div>
+<div class="item">
+<h3>趋势4：GPT-6 Astra 发布（9月初）</h3>
+<div style="font-size:13px;line-height:1.7">周末消息面提及 GPT-6 Astra 发布。虽非 Vibe-Trading 直接用型，但反映闭源大模型推理能力继续跃升，Agent 类任务（如多智能体辩论）的 backbone 选择更多。Vibe-Trading 多智能体层未来可考虑混合 backbone（DeepSeek 推理 + GPT 辩论）。</div>
+<div class="verdict v-wait">远期观察</div>
+</div>
+</div>
+</div>
+
+<!-- 本周进展复盘 -->
+<div class="sec">
+<h2>📊 Vibe-Trading 本周进展复盘</h2>
+<div class="kv"><span class="k">本周新增数据/回测</span><span class="v" style="color:var(--amber)">待确认（QuantDinger Token 续期后跑回测）</span></div>
+<div class="kv"><span class="k">架构调整</span><span class="v">无（维持 LSTM+Attention+HKUDS 多智能体）</span></div>
+<div class="kv"><span class="k">本周外部冲击</span><span class="v" style="color:var(--up)">3条（DeepSeek 换型窗口 + HANET 补宏观 + TradingAgents 对标）</span></div>
+<div class="kv"><span class="k">最大短板确认</span><span class="v" style="color:var(--up)">缺宏观维度（HANET 论文实证）+ 缺决策记忆（TradingAgents 对比）</span></div>
+<div class="kv"><span class="k">预测vs实际</span><span class="v">上周预判"本周跑回测" → 实际未跑（Token 续期未完成），预判偏乐观</span></div>
+</div>
+
+<!-- 下周行动清单 -->
+<div class="todo">
+<h3>🎯 下周优先级行动清单</h3>
+<ul>
+<li><b>P0</b> · 完成 QuantDinger Token 续期，跑通至少一次 Vibe-Trading 回测出真实数据（最大短板=缺真实回测数据，不编造）</li>
+<li><b>P1</b> · 9月10日后关注 DeepSeek V4.1 Flash 是否转正，转正则跑 Vibe-Trading 回测对比 V4 vs V4.1 Flash（成本+准确率双维度）</li>
+<li><b>P1</b> · 研究 HANET 分层交叉注意力机制，评估移植到 Vibe-Trading 的可行性（加月度宏观窗口：PMI/CPI/利率/Shibor）</li>
+<li><b>P2</b> · 借鉴 TradingAgents 的 trading_memory.md 决策记忆模式，给 Vibe-Trading 加"历史决策+实际收益+复盘"注入机制</li>
+<li><b>P2</b> · 借鉴 TradingAgents 价格 grounding，约束交易 Agent 输出基于实际价格而非凭空生成</li>
+<li><b>P3</b> · 跟踪 GPT-6 Astra 在 Agent 辩论任务的表现，评估混合 backbone 可行性</li>
+</ul>
+</div>
+
+<div class="alert">
+⚠️ <b>诚实标注</b>：Vibe-Trading 当前最大短板是<b>缺真实回测数据</b>——所有架构判断（LSTM+Attention 选型、多智能体分工）都停留在"方向正确"层面，未经实盘回测验证。下周 P0 是跑出真实回测数据，否则架构优化都是空中楼阁。不编造回测数字。
+</div>
+
+<div class="disclaim">
+本复盘仅供学习研究，不构成投资建议。Vibe-Trading 系统处于研究阶段，回测结果不代表未来收益。<br>
+ai-tech-radar 技能驱动 · 工作空间：/Users/sxafangian/WorkBuddy/2026-09-06-11-16-35 · 2026-09-08
+</div>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周二收盘简报 · 2026-09-29 · 学习台金融域</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0d1117; color:#c9d1d9; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    padding:20px; line-height:1.6;
+  }
+  .backbtn {
+    position:fixed; top:20px; right:20px; z-index:100;
+    background:#238636; color:#fff; padding:8px 16px; border-radius:6px;
+    text-decoration:none; font-size:14px; font-weight:600;
+    border:1px solid #2ea043; transition:background .2s;
+  }
+  .backbtn:hover { background:#2ea043; }
+  .container { max-width:1100px; margin:0 auto; padding-bottom:40px; }
+  h1 { color:#f0f6fc; font-size:24px; padding:16px 0 8px; border-bottom:1px solid #21262d; }
+  .meta { color:#8b949e; font-size:13px; padding:8px 0 16px; }
+  .section { margin:20px 0; }
+  .section-title {
+    color:#58a6ff; font-size:16px; font-weight:600; margin-bottom:12px;
+    padding-left:10px; border-left:3px solid #58a6ff;
+  }
+  .grid-3 {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  }
+  .card {
+    background:#21262d; border:1px solid #30363d; border-radius:8px;
+    padding:16px;
+  }
+  .card-name { color:#8b949e; font-size:13px; margin-bottom:8px; }
+  .card-price { font-size:24px; font-weight:700; color:#f0f6fc; }
+  .card-change { font-size:14px; margin-top:6px; }
+  .up { color:#f85149; }
+  .down { color:#3fb950; }
+  .flat { color:#8b949e; }
+  .stat-row {
+    display:flex; justify-content:space-between; font-size:13px;
+    color:#8b949e; margin-top:8px; padding-top:8px; border-top:1px solid #30363d;
+  }
+  table { width:100%; border-collapse:collapse; background:#21262d; border-radius:8px; overflow:hidden; }
+  th, td { padding:10px 12px; text-align:left; font-size:13px; border-bottom:1px solid #30363d; }
+  th { color:#8b949e; background:#161b22; font-weight:600; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .highlight-box {
+    background:#161b22; border:1px solid #30363d; border-left:3px solid #f85149;
+    padding:14px 16px; border-radius:8px; margin:14px 0; font-size:13px; color:#c9d1d9;
+  }
+  .highlight-box.warn { border-left-color:#f0883e; }
+  .highlight-box.info { border-left-color:#58a6ff; }
+  .highlight-box.ok { border-left-color:#3fb950; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; font-size:13px; color:#c9d1d9; }
+  .tag-up { display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px; background:rgba(248,81,73,.15); color:#f85149; border:1px solid rgba(248,81,73,.3); margin-right:4px; }
+  .tag-down { display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px; background:rgba(63,185,80,.15); color:#3fb950; border:1px solid rgba(63,185,80,.3); margin-right:4px; }
+  .disclaimer {
+    margin-top:24px; padding:14px 16px; background:#161b22; border:1px dashed #30363d;
+    border-radius:8px; color:#6e7681; font-size:12px; line-height:1.7;
+  }
+  .reason-box {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:14px 16px; margin:10px 0;
+  }
+  .reason-box h4 { color:#f0883e; font-size:13px; margin-bottom:8px; }
+  .reason-box p { font-size:13px; color:#c9d1d9; margin:6px 0; }
+  .org-box {
+    background:#161b22; border:1px solid #30363d; border-radius:8px;
+    padding:12px 16px; margin:8px 0; font-size:13px;
+  }
+  .org-box b { color:#f0c674; }
+  @media(max-width:720px){
+    .grid-3 { grid-template-columns:1fr; }
+    body { padding:14px; }
+    h1 { font-size:20px; }
+    .backbtn { top:14px; right:14px; padding:6px 12px; font-size:12px; }
+  }
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+<div class="container">
+
+<h1>📊 周二收盘简报 · 2026-09-29</h1>
+<div class="meta">
+  学习台金融域 · 收盘持仓更新（工作日 15:30） · 国庆前倒数第二个交易日 · 数据口径=当日收盘 15:00<br>
+  数据源：Wind MCP 本会话未连接（连续第11次不可用）→ WebSearch fallback（财联社/中新经纬/中国经济网/东方财富收盘复盘/腾讯行情/富途/Investing.com/蓝鲸新闻），不造数
+</div>
+
+<!-- 三大指数收盘 3列卡片 -->
+<div class="section">
+  <div class="section-title">一、收盘三大指数 · 缩量弱反弹</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-name">上证指数 000001.SH</div>
+      <div class="card-price">3,830.45</div>
+      <div class="card-change up">+0.18% (+6.83)</div>
+      <div class="stat-row"><span>昨收</span><span>3,823.62</span></div>
+      <div class="stat-row"><span>沪市成交</span><span>6,617.04 亿</span></div>
+      <div class="stat-row"><span>近5日</span><span class="down">-3.02%</span></div>
+      <div class="stat-row"><span>性质</span><span class="up">9·28大跌后反抽</span></div>
+    </div>
+    <div class="card">
+      <div class="card-name">深证成指 399001.SZ</div>
+      <div class="card-price">12,901.95</div>
+      <div class="card-change up">+0.34% (+43.20)</div>
+      <div class="stat-row"><span>昨收</span><span>12,858.75</span></div>
+      <div class="stat-row"><span>深市成交</span><span>7,474.93 亿</span></div>
+      <div class="stat-row"><span>近5日</span><span class="down">-6.03%</span></div>
+      <div class="stat-row"><span>性质</span><span class="up">缩量修复</span></div>
+    </div>
+    <div class="card">
+      <div class="card-name">创业板指 399006.SZ</div>
+      <div class="card-price">3,142.56</div>
+      <div class="card-change up">+0.09% (+2.74)</div>
+      <div class="stat-row"><span>昨收</span><span>3,139.82</span></div>
+      <div class="stat-row"><span>创业成交</span><span>3,565.10 亿</span></div>
+      <div class="stat-row"><span>昨日</span><span class="down">-4.53%（领跌）</span></div>
+      <div class="stat-row"><span>性质</span><span class="flat">微涨弱修复</span></div>
+    </div>
+  </div>
+
+  <div class="highlight-box info">
+    <b>两市成交 14,092 亿（约1.42万亿）</b>，较上一交易日（17,028亿）<b style="color:#3fb950">缩量近 3,000 亿</b>，<b style="color:#f0883e">创14个月地量（2025年7月以来新低）</b>。<br>
+    全市场 <b style="color:#f85149">3,471 涨</b> / <b style="color:#3fb950">1,933 跌</b> / 155 平，赚钱效应约 <b style="color:#f85149">64%</b>（较9/28的16.5%大幅回升）。<br>
+    涨停 57 / 跌停 11，封板率 84%。北证50 +0.56%。<b>情绪评分约66分（乐观偏谨慎）</b>。<br>
+    <b>性质判断</b>：9·28大跌（创业板-4.53%）后的<b style="color:#f0883e">技术性反抽</b>，承接力不足，情绪修复但<b>未确认反转</b>——缩量说明是反弹而非反攻。
+  </div>
+</div>
+
+<!-- 板块涨跌 -->
+<div class="section">
+  <div class="section-title">二、板块涨跌 · 政策点火地产+固态电池</div>
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-name"><span class="tag-up">涨幅居前</span>政策催化主线 + 超跌反弹</div>
+    <ul>
+      <li><b>房地产</b>（领涨主线）：万科A、深物业A、信达地产、华发股份、滨江集团、华联控股涨停（板块涨超3%）——诱因：<b>9·28国常会部署增量政策</b>（盘活地方债/稳楼市/促增收），直接点燃地产链</li>
+      <li><b>固态电池/电池</b>：国轩高科、金龙羽、上海洗霸涨停；武汉蓝电30%涨停、尚水智能20%涨停、紫竹高科、维科技术涨停（板块涨超3%）——诱因：<b>工信部七部门《新型电池"十五五"规划》</b>发布（2030全固态电池规模化）</li>
+      <li><b>元件/PCB</b>：迅捷兴20%涨停，超声电子、奥士康、协和电子、澳弘电子涨停（板块涨超4%，<b>与9/28 PCB多杀多完全反转</b>）</li>
+      <li><b>AI营销/文化传媒/影视院线</b>：跟涨，风险偏好回暖</li>
+      <li><b>工业金属/贵金属/游戏</b>：涨幅靠前</li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-name"><span class="tag-down">跌幅居前</span>周期资源+防御兑现</div>
+    <ul>
+      <li><b>航天装备</b>：领跌（高位军工兑现）</li>
+      <li><b>石油石化/煤炭采选/油气开采</b>：小幅下跌（9/28领涨的石油石化逆势回调，板块轮动）</li>
+      <li><b>航运/港口航运</b>：下跌</li>
+      <li><b>种植业/农产品加工</b>：万向德农跌停，平潭发展、海南橡胶跌超3%（9/28领涨的农业反转）</li>
+      <li><b>PTA/培育钻石/非金属材料/燃气</b>：跌幅居前</li>
+    </ul>
+  </div>
+  <div class="highlight-box warn">
+    <b>板块轮动特征</b>：9/28领涨（石油石化/农业/汽车）→9/29领跌，9/28领跌（PCB/元件/电池）→9/29领涨。<b style="color:#f85149">一日反转再现</b>，是9月业绩空窗期板块轮动加速典型特征，追涨杀跌风险极高。
+  </div>
+</div>
+
+<!-- 反弹归因 -->
+<div class="section">
+  <div class="section-title">三、反弹归因 · 四重共振</div>
+  <div class="reason-box">
+    <h4>① 政策点火（核心催化）</h4>
+    <p>9·28国常会部署增量政策（盘活地方债/稳楼市/促增收），直接点燃地产链。房地产板块涨超3%，万科A等多股涨停。</p>
+  </div>
+  <div class="reason-box">
+    <h4>② 产业催化</h4>
+    <p>工信部七部门《新型电池"十五五"规划》发布（2030全固态电池规模化），固态电池概念爆发，国轩高科等涨停。</p>
+  </div>
+  <div class="reason-box">
+    <h4>③ 央行例会释放增量政策预期</h4>
+    <p>提振市场风险偏好，AI营销/文化传媒/影视院线跟涨。</p>
+  </div>
+  <div class="reason-box">
+    <h4>④ 超跌反抽（技术性）</h4>
+    <p>9·28大跌（创业板-4.53%/深成-3.44%）后技术性修复，但<b>缩量近3000亿创14个月地量</b>说明是反弹而非反攻，承接力不足。</p>
+  </div>
+</div>
+
+<!-- 持仓股收盘表现 -->
+<div class="section">
+  <div class="section-title">四、持仓股收盘表现</div>
+  <table>
+    <thead>
+      <tr>
+        <th>标的</th>
+        <th>收盘</th>
+        <th>涨跌幅</th>
+        <th>开/高/低</th>
+        <th>振幅/换手</th>
+        <th>关键指标</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>新锐股份</b><br><span style="color:#8b949e;font-size:11px">688257.SH</span></td>
+        <td class="num">55.52 元</td>
+        <td class="num up"><b>+1.83%</b></td>
+        <td class="num">54.92 / 56.95 / 53.71</td>
+        <td class="num">5.94% / 3.07%</td>
+        <td class="num">
+          成交6.03亿 · 量比0.72 · 委比24.14%<br>
+          5日 <span class="down">-6.80%</span> / 20日 <span class="down">-3.24%</span> / YTD <span class="up">+128.41%</span><br>
+          通用设备板块 <span class="down">-0.13%</span> 弱于大盘 · PE28.57 / PB6.87 · 总市值197.24亿<br>
+          <b style="color:#3fb950">定增落地催化</b>：9/29发行情况报告书+12亿现金管理公告
+        </td>
+      </tr>
+      <tr>
+        <td><b>小鹏集团-W</b><br><span style="color:#8b949e;font-size:11px">09868.HK</span></td>
+        <td class="num">约 37.56 港元</td>
+        <td class="num down"><b>-3.94%</b></td>
+        <td class="num">39.10 / 39.10 / <b style="color:#3fb950">37.44</b></td>
+        <td class="num">4.25% / 0.41%</td>
+        <td class="num">
+          前收39.10港 · 盘中最低37.44=<b style="color:#f85149">52周新低</b><br>
+          Investing.com报37.62港-3.78%交叉验证 · 总市值720.65亿<br>
+          <b style="color:#f0883e">30分析师80%强推目标86.64港 折价57%</b> · YTD约-49%<br>
+          港股汽车普跌：吉利-5.6%/蔚来-4.4%/奇瑞-4.04%
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box ok">
+    <b>新锐股份 688257</b>：今日 +1.83% 收55.52元，9·28破位（-6.34%/最低54.00）后首日反弹修复。<b style="color:#3fb950">重大催化：定增落地</b>——9/29发布《向特定对象发行A股股票发行情况报告书》，发行2592.09万股@47.83元/股，<b>募集资金净额12.32亿元已于9/23全额到账</b>，9/28董事会通过12亿闲置募资现金管理议案。募投项目：高性能数控刀片产业园（2027年）+高性能凿岩工具生产（2029年）+精密刀具研发检测中心（2029年）。<b>产能扩张+全球布局共振，中长期成长路径清晰</b>（华鑫证券9/24首次覆盖给买入评级，EPS26-28年2.50/3.40/4.35元）。但5日仍-6.80%、20日-3.24%，<b>反弹属超跌反抽非趋势反转</b>，节后待Q3季报（预约10/30披露）验证。
+  </div>
+  <div class="highlight-box">
+    <b>小鹏集团 09868.HK</b>：今日约-3.94%收37.56港元，<b style="color:#f85149">盘中最低37.44港元=52周新低（已破9/28的39.10）</b>，下降通道<b style="color:#f85149">加速恶化</b>。较9/28的39.10继续破位下行，<b>持仓最大独立风险线已触发——创新低</b>。港股汽车板块普跌（吉利-5.6%/蔚来-4.4%/奇瑞-4.04%/长城-2.51%/理想-1.4%/零跑-1.7%/比亚迪-2.3%），小鹏跌幅靠前。行业基本面恶化：1-8月汽车利润同比<b>-16%</b>、利润率仅3.6%（崔东树数据），失血式竞争+账期新规+金九银十承压中期逻辑未变。30分析师80%强推目标86.64港折价57%，估值极低但<b>下降通道未破，长持不补</b>。
+  </div>
+</div>
+
+<!-- 资金流向 -->
+<div class="section">
+  <div class="section-title">五、资金流向</div>
+  <div class="card">
+    <ul>
+      <li><b>主力资金净流入</b>（东财收盘复盘口径）：元件 <span class="up">+29.2亿</span>、电池 <span class="up">+21.8亿</span>、非金属材料 <span class="up">+13.5亿</span>、房地产开发 <span class="up">+13.3亿</span> 居前——<b>资金与涨幅共振，地产+电池为真涨主线</b>。蓝鲸数据：电新行业净流入19.83亿。</li>
+      <li><b>主力资金净流出</b>：机械设备、半导体、电子板块净流出；个股新易盛-5.85亿、中际旭创、海光信息、中船特气净流出居前（蓝鲸14:26数据，<b>较9/28高位科技大幅净流出收窄</b>）。</li>
+      <li><b>北向资金</b>：收盘综述未明确披露9/29全天具体净额，按规则<b>不造数如实标注</b>。节前外资倾向谨慎避险。</li>
+      <li><b>个股资金</b>：天孚通信、万科A、太辰光主力净流入居前（蓝鲸）；N鸿富诚净买入16.36亿居首。</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 机构观点 -->
+<div class="section">
+  <div class="section-title">六、机构观点</div>
+  <div class="org-box">
+    <b>东方财富收盘复盘</b>：三大指数缩量反弹，<b>成交地量是硬伤</b>——9·28大跌后的技术性反抽，承接力不足，情绪修复但未确认反转。明天为节前最后交易日，缩量反弹动能存疑。策略上不追高，重点看房地产+固态电池两条主线的持续性；若成交不能重回1.5万亿，反弹难延续，等节后右侧确认。关注3800点（沪指）支撑与3830上方压力。
+  </div>
+  <div class="org-box">
+    <b>历史规律参考</b>（延续9/28记录·中信建投统计）：2016年以来，剔除2018/2024两个市场波动较大年份，<b style="color:#3fb950">国庆长假后一周沪指上涨概率62.5%，平均+1.3%</b>。本次调整与缩量更多是交易性与季节性因素主导，节后有望迎来修复性反弹。
+  </div>
+</div>
+
+<!-- 风控提示 -->
+<div class="section">
+  <div class="section-title">七、风控提示</div>
+  <div class="highlight-box">
+    <b>节前主基调：9/30为节前最后交易日，总仓位 ≤ 7成，只卖不买，绝不满仓赌长假。</b><br>
+    ① 新锐688257：今日+1.83%反弹+定增12.32亿落地催化，但5日仍-6.80%属超跌反抽非趋势反转。<b>持仓不加</b>，节后待Q3季报（10/30）验证产能扩张兑现。YTD+128%高位特征持续，54元前低已破后反弹，<b>破54需警惕破51.15加速恶化</b>。<br>
+    ② 小鹏09868.HK：<b style="color:#f85149">今日创新低37.44港元（52周新低），持仓最大独立风险线已触发</b>，长持不补，破37.44加速恶化。港股汽车板块普跌+行业1-8月利润-16%利润率3.6%+失血竞争未解，中期逻辑未变。<br>
+    ③ 缩量近3000亿创14个月地量=承接力不足，<b>反弹非反攻</b>。若9/30成交不能重回1.5万亿，反弹难延续，等节后右侧确认。<br>
+    ④ 板块一日反转（9/28领涨→9/29领跌）再现，追涨杀跌风险极高，<b>只卖不买不追涨</b>。
+  </div>
+</div>
+
+<!-- 免责声明 -->
+<div class="disclaimer">
+  <b>免责声明</b>：本报告为学习台金融域自动化收盘简报，数据来源 Wind MCP（本会话未连接，连续第11次不可用）→ WebSearch fallback（财联社/中新经纬/中国经济网/东方财富收盘复盘/腾讯行情/富途/Investing.com/蓝鲸新闻），数据口径=当日15:00收盘。港股收盘价多源约37.56-37.62港元（富途午间休市价/Investing.com交叉验证），盘中最低37.44港元=52周新低（两源一致）。涉及机构观点、板块分析、风控提示均基于公开信息整理，<b>仅供学习与研究用途，不构成任何投资建议或买卖指令</b>。投资有风险，决策需谨慎，盈亏自负。持仓股点评仅为客观信息呈现，不代表作者立场或买卖建议。
+</div>
+
+</div>
+</body>
+</html>

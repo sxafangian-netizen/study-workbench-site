@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金融域周四盘后深度复盘 · 2026-09-10</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1140px;margin:0 auto}
+  .backbtn{position:fixed;top:24px;right:24px;z-index:999;background:#21262d;border:1px solid #30363d;color:#58a6ff;padding:7px 14px;border-radius:8px;font-size:13px;text-decoration:none;font-family:inherit;transition:all .15s;box-shadow:0 2px 8px #0006;cursor:pointer}.backbtn:hover{background:#30363d;border-color:#58a6ff}@media(max-width:600px){.backbtn{top:18px;right:14px;padding:6px 12px;font-size:12px}}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:26px 30px;margin-bottom:18px}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.y{color:#d29922;border-color:#d2992233}
+  .sec{margin:22px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0}
+  .kpi{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px}
+  .kpi .nm{color:#7d8590;font-size:12px;margin-bottom:4px}
+  .kpi .px{font-size:19px;font-weight:700}
+  .kpi .px.r{color:#f85149}.kpi .px.g{color:#3fb950}
+  .kpi .ch{font-size:12px;margin-top:2px}
+  .kpi .ch.r{color:#f85149}.kpi .ch.g{color:#3fb950}
+  .kpi .ex{font-size:11px;color:#7d8590;margin-top:4px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+  .box{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 18px}
+  .box h3{font-size:14px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .box h3.r{color:#f85149}.box h3.g{color:#3fb950}.box h3.b{color:#58a6ff}.box h3.y{color:#d29922}
+  .box ul{list-style:none;padding-left:16px}
+  .box li{font-size:12.5px;color:#c9d1d9;padding:4px 0;position:relative}
+  .box li:before{content:"▸";position:absolute;left:-14px}
+  .box.r li:before{color:#f85149}.box.g li:before{color:#3fb950}.box.b li:before{color:#58a6ff}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+  table th{background:#21262d;color:#8b949e;font-weight:600;padding:8px 6px;text-align:left;border-bottom:1px solid #30363d;font-size:11px}
+  table td{padding:7px 6px;border-bottom:1px solid #21262d;color:#c9d1d9}
+  table td.r{color:#f85149}table td.g{color:#3fb950}
+  .tier{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .lb{background:#21262d;border:1px solid #30363d;border-radius:8px;padding:8px 12px;font-size:12px}
+  .lb .h{color:#d29922;font-weight:700;margin-bottom:2px}
+  .lb .s{color:#c9d1d9}
+  .lb .t{color:#7d8590;font-size:11px}
+  .hold{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .hold h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .hold .hr{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #30363d22;font-size:13px;flex-wrap:wrap;gap:6px}
+  .hold .hr:last-child{border-bottom:none}
+  .hold .hr .l{color:#c9d1d9}.hold .hr .r{color:#e6edf3;font-weight:600}
+  .hold .hr .r.r{color:#f85149}.hold .hr .r.g{color:#3fb950}
+  .hold .det{font-size:11.5px;color:#7d8590;margin-top:2px;width:100%}
+  .risk{background:#f851490d;border:1px solid #f85149;border-radius:10px;padding:14px 18px;margin:14px 0}
+  .risk h3{color:#f85149;font-size:14px;margin-bottom:8px}
+  .risk p{color:#f85149cc;font-size:12.5px;margin-bottom:4px}
+  .outlook{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .outlook h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .outlook p{font-size:12.5px;color:#c9d1d9;margin-bottom:6px}
+  .outlook b{color:#e6edf3}
+  .scn{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
+  .scn .c{border-radius:10px;padding:14px 16px;border:1px solid #30363d}
+  .scn .c.b{background:rgba(63,185,80,.06);border-color:rgba(63,185,80,.35)}
+  .scn .c.m{background:rgba(210,153,34,.06);border-color:rgba(210,153,34,.35)}
+  .scn .c.r{background:rgba(248,81,73,.06);border-color:rgba(248,81,73,.35)}
+  .scn .c h4{font-size:13px;margin-bottom:8px}
+  .scn .c.b h4{color:#3fb950}.scn .c.m h4{color:#d29922}.scn .c.r h4{color:#f85149}
+  .scn .c p{font-size:11.5px;color:#c9d1d9;margin-bottom:4px}
+  .disc{margin-top:18px;color:#484f58;font-size:11px;border-top:1px solid #30363d;padding-top:12px;line-height:1.6}
+  .foot{margin-top:14px;color:#484f58;font-size:11px;text-align:center}
+  .note{background:#d299220d;border:1px solid #d29922;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;color:#d29922cc}
+  .emo{background:linear-gradient(135deg,#1c2128,#161b22);border:1px solid #1f6feb40;border-radius:10px;padding:16px 20px;margin:14px 0}
+  .emo h3{color:#58a6ff;font-size:14px;margin-bottom:10px}
+  .emo .bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12px}
+  .emo .bar .l{flex:0 0 88px;color:#7d8590}
+  .emo .bar .track{flex:1;height:8px;background:#21262d;border-radius:4px;overflow:hidden;position:relative}
+  .emo .bar .fill{height:100%;border-radius:4px}
+  .emo .bar .v{flex:0 0 44px;text-align:right;font-weight:600}
+  .flow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+  @media(max-width:700px){.grid3,.grid2,.scn,.flow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+
+<div class="hd">
+  <h1>金融域 · 周四盘后深度复盘</h1>
+  <div class="sub">2026-09-10 周四 16:30 · A股全天收盘口径(15:00) · 盘后深度复盘</div>
+  <div class="meta">
+    <span class="tag y">数据源：WebSearch(财联社盘后连板分析/懒哥复盘/东财收评/经传多赢/一财/每经/同花顺/腾讯每经)</span>
+    <span class="tag r">Wind MCP 本会话未连接，已直说不造数</span>
+    <span class="tag b">口径：当日收盘15:00 + 龙虎榜(T+1,今晚盘后更新9月10日席位)</span>
+    <span class="tag r">风控红色高亮 · 退潮期延续</span>
+  </div>
+</div>
+
+<div class="note">
+  ⚠️ 数据源说明：本次 Wind mcp__wind-finance__* 工具在本会话不可用（连接器未激活）。已按规则<b>直说不造数</b>，改用 WebSearch 抓取财联社盘后连板分析/懒哥深度复盘/东方财富收评/经传多赢龙虎榜/第一财经/每经/同花顺/腾讯自选股等多源数据，全部数字可溯源到来源+时点。9月10日龙虎榜席位明细为 T+1 数据（今晚盘后更新），今日可见为 9月9日席位。北向资金当日确切净额未获取（WebSearch返回为历史9月10日数据，沪指点位不匹配），按规则<b>不造数</b>。
+</div>
+
+<div class="sec">一、今日收盘回顾 · 9月10日全天（15:00）</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">上证指数 000001.SH</div><div class="px g">3934.40</div><div class="ch g">-0.43% (-17.11)</div><div class="ex">昨3951.51 / 开3939.09 / 高3949.25 / 低3927.35 / 振幅0.55% / 成交7796.73亿</div></div>
+  <div class="kpi"><div class="nm">深证成指 399001.SZ</div><div class="px g">13617.67</div><div class="ch g">-0.77% (-105.65)</div><div class="ex">昨13723.32 / 开13725 / 高13713.87 / 低13585.60 / 振幅0.93% / 成交8674.75亿</div></div>
+  <div class="kpi"><div class="nm">创业板指 399006.SZ</div><div class="px g">3338.42</div><div class="ch g">-0.49% (-16.55)</div><div class="ex">昨3354.97 / 高3355 / 低3320 / 振幅1.79% / 成交3800.56亿</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">科创50 000688.SH</div><div class="px g">1569.22</div><div class="ch g">-0.69% (-10.84)</div><div class="ex">双创指数再度承压 · AI硬件内部分化</div></div>
+  <div class="kpi"><div class="nm">两市合计成交</div><div class="px g">16471 亿</div><div class="ch g">缩量 -2085亿 (-11.2%)</div><div class="ex">约1.65万亿 · <b>创年内次新低</b> · 连续多日低于2万亿 · 沪7796.73亿/深8674.75亿</div></div>
+  <div class="kpi"><div class="nm">涨 / 跌 / 平</div><div class="px g">955/4512/110</div><div class="ch g">涨股比仅17%</div><div class="ex">涨跌比0.21:1 · <b>全A中位-1.08%</b> · 指数温和跌个股大面</div></div>
+</div>
+<div class="grid3">
+  <div class="kpi"><div class="nm">涨停 / 跌停</div><div class="px g">~40 / 13</div><div class="ch g">涨停续降 · 跌停翻倍</div><div class="ex">涨停49→40(口径35-40) · 跌停7→13 · 炸板22只/炸板率37%</div></div>
+  <div class="kpi"><div class="nm">北证50 899050.BJ</div><div class="px g">1051.41</div><div class="ch g">-2.81% (-30.40)</div><div class="ex"><b>领跌各宽基</b> · 小微盘风险偏好明显收缩</div></div>
+  <div class="kpi"><div class="nm">主力资金(上午口径)</div><div class="px g">-145 亿</div><div class="ch g">持续净流出</div><div class="ex">机构重仓-10亿/基金重仓-16亿 · 抛售力度不大但持续</div></div>
+</div>
+<div class="box" style="margin-top:8px"><p style="font-size:12px;color:#7d8590">三大指数集体收跌，<b>沪指-0.43%/深成指-0.77%/创业板-0.49%/北证50-2.81%领跌</b>。核心矛盾：<b>缩量普跌、指数小跌个股大面</b>——两市仅1.65万亿创年内次新低（缩2085亿，连续多日破2万亿），全市场仅955涨4512跌，全A中位-1.08%，指数跌幅掩盖个股杀跌。<b>资金再次"弃题材、抱防御"</b>：撤农业种植/水产/代糖（中粮糖业、海南橡胶跌停）、折叠屏（宜安科技-14%，苹果发布会"利好兑现"）、CRO（毕得医药/万邦医药领跌），抱<b>覆铜板/PCB涨价链+玻纤/电子布+银行/电力红利避险</b>。最高连板仅<b>4板（桂林旅游）</b>，连板梯队断层，连板晋级率仅20%不足三成。<b>情绪周期退潮期延续</b>，"追高即被套"特征明显。</p></div>
+
+<div class="sec">二、涨停梯队 · 连板高度压缩至4板 · 梯队断层</div>
+<div class="box b">
+  <h3 class="b">连板梯队全景（财联社盘后连板分析口径）</h3>
+  <ul>
+    <li><b>涨停约40家</b>（财联社盘中35家→收盘约40家，口径有差异）· 跌停13家 · 炸板22只/<b>炸板率37%</b></li>
+    <li><b>连板股总数9只</b>（三连板及以上3只）· 昨日连板15只 · <b>连板晋级率20%</b>（不足三成，短线情绪显著降温）</li>
+    <li><b>最高板 4 连板</b>：桂林旅游 000978.SZ（大消费/旅游景区+AI伴游+文旅AI短剧，公司已公告"未投入低低空经济项目"）—— 全市场唯一高度板，高度断层</li>
+    <li><b>3连板梯队（3只）</b>：云煤能源 600792.SH（焦炭/煤焦涨价）、瑞尔特 002790.SZ（智能卫浴家居）、红棉股份 000523.SZ（代糖/食糖+园区运营，前日强势的农业糖链仅剩一只）</li>
+    <li><b>2连板梯队（4只+）</b>：闽东电力 000993.SZ（绿色电力/算电协同）、南京港 002040.SZ（航运港口）、鼎信通讯 603421.SH（通信设备+智能电网）、国创高新 002377.SZ（炼化贸易+业绩预增）</li>
+    <li><b>首板约32只</b>：金安国纪 002636.SZ、超声电子 000823.SZ（4天2板）、逸豪新材 301176.SZ（20CM）、再升科技 603601.SH、九鼎新材 002201.SZ、凯盛新能 600876.SH、环旭电子 601231.SH、太极实业 600667.SH、湖南发展 000722.SZ、华银电力 600744.SH、乐山电力 600644.SH、南宁百货 600712.SH、新农开发 600359.SH、芯能科技 603105.SH</li>
+    <li><b>断板/负反馈信号</b>：百大集团断板（昨日5板独撑→今日断）；<b>昨3连板华脉科技+昨2连板泸天化双双跌停</b>；昨3连板金正大跌超9%；中百集团、红棉股份、中粮科技炸板跳水大幅回落；捷荣技术2连跌停；楚天龙、海南橡胶跌停</li>
+  </ul>
+</div>
+<div class="tier">
+  <div class="lb"><div class="h">4板</div><div class="s">桂林旅游 +9.97%</div><div class="t">旅游 · AI伴游 · 唯一高度</div></div>
+  <div class="lb"><div class="h">3板</div><div class="s">云煤能源 / 瑞尔特 / 红棉股份</div><div class="t">煤焦涨价/智能卫浴/代糖</div></div>
+  <div class="lb"><div class="h">2板</div><div class="s">闽东电力 / 南京港 / 鼎信通讯 / 国创高新</div><div class="t">绿电/航运/通信/炼化</div></div>
+  <div class="lb"><div class="h">4天2板</div><div class="s">超声电子 +10%</div><div class="t">PCB · 覆铜板涨价链</div></div>
+  <div class="lb"><div class="h">20CM首板</div><div class="s">逸豪新材</div><div class="t">铜箔 · 覆铜板链</div></div>
+  <div class="lb" style="border-color:#f8514940"><div class="h" style="color:#f85149">跌停13只</div><div class="s">海南橡胶/中粮糖业/捷荣技术/楚天龙等</div><div class="t">农业出清+高位股补跌</div></div>
+  <div class="lb" style="border-color:#f8514940"><div class="h" style="color:#f85149">百大断板</div><div class="s">昨日5板 → 今日断</div><div class="t">高度标杆熄火</div></div>
+</div>
+
+<div class="sec">三、情绪周期定位 · 退潮期延续（35°偏冷）</div>
+<div class="emo">
+  <h3>情绪温度计 · 六维对比</h3>
+  <div class="bar"><div class="l">今日情绪</div><div class="track"><div class="fill" style="width:35%;background:linear-gradient(90deg,#58a6ff,#f85149)"></div></div><div class="v" style="color:#f85149">35° 偏冷</div></div>
+  <div class="bar"><div class="l">昨日情绪</div><div class="track"><div class="fill" style="width:45%;background:linear-gradient(90deg,#58a6ff,#3fb950)"></div></div><div class="v" style="color:#3fb950">45° 偏冷</div></div>
+  <div class="bar"><div class="l">涨停强度</div><div class="track"><div class="fill" style="width:40%;background:#f85149"></div></div><div class="v" style="color:#f85149">40 ↓</div></div>
+  <div class="bar"><div class="l">连板高度</div><div class="track"><div class="fill" style="width:30%;background:#f85149"></div></div><div class="v" style="color:#f85149">30 ↓</div></div>
+  <div class="bar"><div class="l">量能</div><div class="track"><div class="fill" style="width:33%;background:#f85149"></div></div><div class="v" style="color:#f85149">33 ↓</div></div>
+  <div class="bar"><div class="l">涨股比</div><div class="track"><div class="fill" style="width:17%;background:#f85149"></div></div><div class="v" style="color:#f85149">17 ↓</div></div>
+  <div class="bar"><div class="l">主线清晰度</div><div class="track"><div class="fill" style="width:55%;background:#d29922"></div></div><div class="v" style="color:#d29922">55 →</div></div>
+</div>
+<div class="box" style="margin-top:8px">
+  <p style="font-size:12.5px;color:#c9d1d9">
+    <b>定位：退潮期延续 / 高度断层</b>。情绪从9月9日45°再降10°到35°，<b>五日连续降温</b>（68→60→45→35），赚钱效应持续恶化。<b>退潮三信号全面亮灯</b>：①成交连续多日低于2万亿、1.65万亿创年内次新低；②涨停49→40续降、跌停7→13翻倍；③最高板从7板塌到4板（且仅桂林旅游独撑，梯队断层）。<br>
+    <b>核心特征："追高即被套"</b>——前期强势题材（农业种植/水产/代糖、折叠屏、CRO）单日大幅回吐，"买预期卖事实"反复上演（苹果折叠屏发布会落地即跌、白糖涨价预期兑现即撤）。资金取向清晰：<b>弃题材、抱防御</b>——合力最强的是"涨价逻辑最硬"的覆铜板/PCB+玻纤/电子布，以及银行+电力的红利避险组合。<br>
+    <b>情绪节奏判断</b>：尚未到9月3日17跌停的极值恐慌，属"高位股出清+无新主线接棒"的真空期。要么等新主线（金融强国"十五五"规划细则落地可能催化），要么等老题材跌透，急不得。9月9日报告"悲观情景降仓防守"预警已部分兑现（沪指跌破3940、情绪再降10°）。
+  </p>
+</div>
+
+<div class="sec">四、板块资金流向 · 卖题材买材料 · 卖成长买红利</div>
+<div class="flow">
+  <div class="box g">
+    <h3 class="g">主力净流入榜 · 涨价链+红利避险双线</h3>
+    <table>
+      <tr><th>板块（概念）</th><th>净流入</th><th>性质</th></tr>
+      <tr><td>存储芯片</td><td class="r">+30.42亿</td><td>海外映射（SK海力士创新高）</td></tr>
+      <tr><td>PCB概念</td><td class="r">+29.73亿</td><td>覆铜板涨价链 · 产业逻辑最硬</td></tr>
+      <tr><td>先进封装</td><td class="r">+22.79亿</td><td>AI算力 · 算力硬件逆势承接</td></tr>
+      <tr><td>光伏建筑一体化</td><td class="r">+17.68亿</td><td>绿电+算电协同</td></tr>
+      <tr><td>绿色电力</td><td class="r">+16.10亿</td><td>红利避险 · 闽东电力2连板</td></tr>
+      <tr><td>电子元器件(行业)</td><td class="r">>50亿</td><td>居行业首位</td></tr>
+      <tr><td>电力(行业)</td><td class="r">近30亿</td><td>低估值高股息+算电协同</td></tr>
+      <tr><td>银行(行业)</td><td class="r">近24亿</td><td><b>集体创历史新高</b></td></tr>
+    </table>
+  </div>
+  <div class="box r">
+    <h3 class="r">主力净流出榜 · 高位科技+农业题材退潮</h3>
+    <table>
+      <tr><th>方向</th><th>净流出</th><th>性质</th></tr>
+      <tr><td>机器人概念</td><td class="g">-68亿</td><td>前期主线持续兑现</td></tr>
+      <tr><td>光通信</td><td class="g">-39亿</td><td>中际旭创/新易盛遭集中减仓</td></tr>
+      <tr><td>酒类</td><td class="g">>15亿</td><td>居净流出首位 · 白酒走弱</td></tr>
+      <tr><td>制药</td><td class="g">>12亿</td><td>医药普跌 · CRO领跌</td></tr>
+      <tr><td>农业</td><td class="g">近10亿</td><td>前日主线单日退潮</td></tr>
+      <tr><td>亨通光电(个股)</td><td class="g">-13.9亿</td><td>光模块高位股集中减仓</td></tr>
+      <tr><td>中际旭创(个股)</td><td class="g">-13.5亿</td><td>CPO龙头遭抛</td></tr>
+      <tr><td>新易盛(个股)</td><td class="g">-8.9亿</td><td>光模块同步</td></tr>
+    </table>
+  </div>
+</div>
+<div class="box" style="margin-top:6px">
+  <p style="font-size:12.5px;color:#c9d1d9">
+    <b>关键洞察：资金在做高低切换，并未离场。</b>一手"卖题材、买材料"——撤前期涨幅大的光模块/通信（中际旭创-13.5亿、新易盛-8.9亿）与机器人概念（-68亿），承接产业逻辑最硬的覆铜板/PCB/铜箔+电子布（金安国纪涨停+11.55亿、太极实业涨停+18.27亿、天孚通信+12.73亿）；一手"卖成长、买红利"——抱银行（南京/江苏/杭州/成都均创历史新高）+电力（闽东电力2连板）。<br>
+    <b>主线判断：仍无"总主线"</b>，但资金取向清晰——<b>撤题材、抱防御</b>。合力最强的是覆铜板/PCB+玻纤/电子布（AI材料端重定价，建滔年内第7张涨价函+松下/南亚塑胶跟进涨价，产业逻辑最硬、梯队最厚），以及银行+电力红利避险组合。资源端（煤炭/油气/航运）靠价格数据脉冲活跃但无梯队延续。前日主线农业与折叠屏、CRO集体退潮，说明<b>存量资金在缩量市里"只做逻辑最硬的一段"，热点延续性极差</b>。
+  </p>
+</div>
+<div class="note" style="margin-top:8px">
+  📊 北向资金：本次WebSearch未获取到9月10日确切净额数字（返回为历史9月10日数据，沪指点位3703/3234等不匹配今日3934.40），按规则<b>不造数</b>，标注"未获取"。注：8月起实时额度披露机制调整，盘后口径以交易所今晚披露为准。
+</div>
+
+<div class="sec">五、机构龙虎榜 · 9月10日席位（多口径，T+1今晚更新）</div>
+<div class="box b">
+  <h3 class="b">9月10日机构龙虎榜席位（多口径，T+1完整席位以交易所今晚披露为准）</h3>
+  <ul>
+    <li><b>⚠️ 口径差异警示</b>：本次WebSearch返回多个龙虎榜口径（第一财经/经传多赢/每经），数据存在差异，以下并列呈现，确切T+1席位以交易所今晚披露为准</li>
+    <li><b>第一财经口径</b>（17只个股机构身影，8买9卖）：净买入前三——<b>东方通 9559万</b>（计算机）、<b>银之杰 4886万</b>、<b>意华股份 4863万</b>；净卖出前三——<b>中国软件 -7114万</b>、<b>梦网集团 -4579万</b>、<b>晶方科技 -1120万</b></li>
+    <li><b>经传多赢口径</b>（11只个股机构身影，合计净卖出-6931.76万）：净买入——真视通 2292万、日久光电 1464万、保变电气 1070万、凯中精密 368万；净卖出——翠微股份 -2785万、大富科技 -2304万、汇绿生态 -784万</li>
+    <li><b>每经口径</b>（37只上榜，机构席位21只）：净买入前三——晓程科技 3.53亿、天际股份 1.59亿、浙江荣泰 1.17亿；利欧股份龙虎榜净买入4.12亿居首</li>
+    <li><b>北向资金龙虎榜席位</b>（经传口径）：10只个股，合计净卖出1.42亿；净买入常山北明 1446万、法本信息 360万；净卖出深圳华强 -4886万、联创电子 -4399万</li>
+  </ul>
+</div>
+<div class="box" style="margin-top:6px">
+  <p style="font-size:12.5px;color:#c9d1d9">
+    <b>结构解读</b>：多口径均显示机构在计算机（东方通/银之杰）、电子（日久光电/晓程科技）方向有承接动作，而高位科技（中国软件-7114万净卖出居首、梦网集团、晶方科技）遭机构减仓——<b>与板块资金流向"卖题材买材料"逻辑一致</b>。需注意：①数据口径差异显著（不同来源龙虎榜标准/时点不同），不应简单相加；②9月10日完整T+1席位今晚盘后才由交易所披露，届时复核；③机构在退潮日"低吸计算机/电子材料、高抛高位题材"动作若连续多日坐实，则"退潮期机构调仓换股"逻辑成立。
+  </p>
+</div>
+
+<div class="sec">六、持仓股复盘</div>
+<div class="hold">
+  <h3>📍 持仓股 · 长持不动 · 不加仓不割肉</h3>
+  <div class="hr"><div class="l">新锐股份 688257.SH（A股·硬质合金刀具+PCB刀具）</div><div class="r g">51.73 元 / -1.24%</div></div>
+  <div class="det">昨52.38 / 开51.80 / 高53.16 / 低51.15 / 振幅3.84% / 成交4.04亿 / 换手2.18% / PE(TTM)26.62 / PB6.40 / 总市值183.78亿 · 5日-2.62% · 20日-13.06% · 年初至今+112.82%</div>
+  <div class="det"><b>资金面</b>：主力资金净流出约1788万（资金流向口径），所属机械设备板块-1.61%/通用设备-1.87%跑输大盘 · 融资余额10.83亿(9/7口径) · 北向持股94.85万股(6/30口径) · <b>异动标签</b>：PCB概念+工业母机+2026中报预增(424.75%~523.76%)+专精特新小巨人</div>
+  <div class="det"><b>判断</b>：今日跟随通用设备板块弱势回调，20日已跌13.06%短期承压，但<b>长持逻辑未破</b>（2026中报预增5倍+PCB刀具资产收购+专精特新）。覆铜板/PCB涨价链是今日产业逻辑最硬方向，5日净流入29.73亿，金安国纪/超声电子/逸豪新材涨停——新锐作为PCB刀具上游间接受益，待板块资金回流修复 · <b>建议不动</b>：不加仓不割肉，关注51.15低点支撑，等PCB板块情绪回暖修复</div>
+</div>
+<div class="hold">
+  <h3>📍 小鹏集团 09868.HK（港股·新势力整车）</h3>
+  <div class="hr"><div class="l">港股 09868.HK</div><div class="r g">41.60 港元 / -1.65% (-0.70)</div></div>
+  <div class="det">昨42.30 / 开41.20 / 高41.80 / 低40.36 / 振幅3.40% / 换手0.83% · 5日-2.80% · 20日-8.33% · 年初至今-47.57% · <b>创2024年10月以来近2年新低</b> · 恒生指数24954.47(-1.27%) · 汽车板块-2.67%</div>
+  <div class="hr"><div class="l">美股 XPEV.US（9月9日收盘·美东时）</div><div class="r g">10.57 美元 / -3.29%</div></div>
+  <div class="det">5日-5.37% · 20日-11.03% · 年初至今-47.88% · 道指-0.77%/纳指-0.64% · 总市值101.11亿美元</div>
+  <div class="det"><b>判断</b>：港股汽车股持续走低，小鹏创近2年新低。催化=汽车行业"失血式"竞争加剧（1-5月行业利润率3.4%、整车仅1.5%微利）+《关于推动汽车企业规范供应商账款支付优化账期管理的通知》落地（首个行业账期管理文件，主机厂付款周期规范化，长期利好零部件、短期冲击整车现金流）+里昂证券下调9月销量预期至170-180万辆（同比-24%）。长持逻辑未破（小鹏MONA M03+G6改款放量+智驾NGP领先），但短期行业β承压 · <b>建议不动</b>：港股流动性承压期，等恒科修复+账期新规影响消化</div>
+</div>
+
+<div class="sec">七、明日三情景展望 · 9月11日（周五）</div>
+<div class="scn">
+  <div class="c b">
+    <h4>情景A · 乐观（25%）</h4>
+    <p>桂林旅游稳住5板续命</p>
+    <p>覆铜板/PCB分歧回流</p>
+    <p>银行/电力延续防御</p>
+    <p>→ 情绪企稳反弹回42°+</p>
+    <p>沪指收复3950站上5日线</p>
+    <p>创业板修复3350+ · 算力材料回暖</p>
+    <p style="color:#3fb950">持股不动 · 不追高</p>
+  </div>
+  <div class="c m">
+    <h4>情景B · 中性（50%）</h4>
+    <p>缩量震荡分化延续</p>
+    <p>桂林旅游炸板或勉强封板</p>
+    <p>覆铜板承接分歧（高开低走）</p>
+    <p>→ 情绪维持35°±5</p>
+    <p>沪指3910-3950区间</p>
+    <p>创业板3320±20</p>
+    <p>结构轮动 · 等待新主线</p>
+    <p style="color:#d29922">持仓不动 · 防守为主</p>
+  </div>
+  <div class="c r">
+    <h4>情景C · 悲观（25%）</h4>
+    <p>桂林旅游炸板+题材继续退潮</p>
+    <p>覆铜板/PCB一日游回落</p>
+    <p>银行/电力避险也补跌</p>
+    <p>→ 情绪跌破30°冰点</p>
+    <p>沪指失守3900回踩3870</p>
+    <p>创业板破3300 · 加速出清</p>
+    <p style="color:#f85149">降仓至4成 · 严格止损</p>
+  </div>
+</div>
+<div class="box" style="margin-top:6px">
+  <p style="font-size:12.5px;color:#c9d1d9">
+    <b>机构策略汇总</b>：①中信建投：海外扰动压制情绪，A股磨底阶段静待市场企稳——当前A股呈震荡筑底、结构性分化与快速轮动特征，核心在于海外宏观不确定性压制风险偏好+国内产业叙事空窗期+增量资金分化合力不足；短期海外压力升温（美股三连跌+布油破百+美债收益率走高+美联储9月加息概率抬升）持续压制全球成长股估值。②华泰证券：建议关注基础模型、算力及AI安全相关方向——GPT-6 Astra发布后市场关注Loop Transformer技术，智谱已将有效深度列为重点Scaling方向，Loop Transformer有望拓展模型Scaling路径、提升单位Token计算强度并拉动算力需求，同时模型安全及可观察性重要性提升。③政策面：下午国新办发布会宣布《金融强国建设"十五五"规划》正式出台，央行/金融监管总局/证监会/外汇局四部门同台，叠加8月CPI+0.8%/核心CPI回升至1.0%、PPI+3.8%——政策表述是否带来增量资金预期直接影响风险偏好。
+  </p>
+</div>
+
+<div class="sec">八、风控提示 · 退潮期防守优先</div>
+<div class="risk">
+  <h3>⚠️ 风控红色高亮 · 退潮期延续</h3>
+  <p>▸ <b>总仓位≤5成</b>：退潮期+高度断层+总龙头真空，防守优先于进攻，宁可空仓等新主线也别接下跌途中的飞刀</p>
+  <p>▸ <b>回避方向</b>：农业种植/水产/代糖（中粮糖业、海南橡胶跌停·前日主线单日退潮·断板风险已现）、折叠屏（宜安科技-14%·苹果发布会利好兑现·买预期卖事实）、CRO/医疗服务（毕得医药/万邦医药领跌·医药普跌）、白酒（酒类净流出居首>15亿）</p>
+  <p>▸ <b>新锐股份</b>：20日跌13.06%短期承压，但主力净流出幅度收窄+2026中报预增5倍+PCB刀具受益覆铜板涨价链，长持逻辑未破，<b>不加仓不割肉</b>，关注51.15低点支撑，等PCB板块资金回流修复</p>
+  <p>▸ <b>小鹏集团</b>：创近2年新低，港股汽车行业β承压（利润率3.4%失血式竞争+账期新规短期冲击+里昂下调9月销量预期），长持逻辑未破但短期弱势，<b>不动</b>，等恒科修复+行业β改善</p>
+  <p>▸ <b>跟随方向</b>：只做产业逻辑最硬的覆铜板/PCB+玻纤/电子布涨价链（建滔第7张涨价函实锤），逢低埋伏不追高；<b>不追当日防御股</b>（退潮期今天最强往往是明天高开低走）</p>
+  <p>▸ <b>三情景应对</b>：乐观25%持股不追高·中性50%防守为主·悲观25%降仓4成严格止损</p>
+  <p>▸ <b>核心纪律</b>：高位股果断离场，监管已出手方向别幻想反包，急不得——要么等新主线（金融强国"十五五"规划细则落地可能催化），要么等老题材跌透</p>
+</div>
+
+<div class="sec">九、机构观点 · 退潮期资金高低切换</div>
+<div class="outlook">
+  <h3>主线识别 · 涨价链 vs 避险 vs 出清</h3>
+  <p><b>产业逻辑最硬主线候选</b>：覆铜板/PCB/铜箔 + 玻纤/电子布（AI材料端重定价）——建滔积层板年内第7张涨价函（FR-4统一涨10%、薄布最高涨20%）、松下9月1日起调价（部分最高涨30%）、南亚塑胶跟进涨20%-25%，叠加高盛上调光模块出货预期。代表：金安国纪涨停+11.55亿主力净流入、超声电子4天2板、逸豪新材20CM、四会富仕+9.69%、再升科技/九鼎新材/凯盛新能涨停。<b>这是全场唯一有"涨价函实锤+机构研报+资金承接"三重共振的方向</b>，但需观察次日能否走出分歧回流（金安国纪/超声电子次日强承接是关键），若集体大面则涨价逻辑也只是一日游。</p>
+  <p><b>红利避险线</b>：银行/电力/煤炭——银行股集体创历史新高（南京/江苏/杭州/成都），电力板块低估值高股息+算电协同/绿电叙事（闽东电力2连板、湖南发展/华银电力/乐山电力涨停）。煤炭靠动力煤涨价数据脉冲（云煤能源3连板）。共性=低位+涨价/事件催化+低估值，是缩量退潮期避险资金"避风港"，<b>当日强但延续性待验证</b>，可作观察标的，不建议追高。</p>
+  <p><b>资源脉冲线</b>：煤炭/油气/航运——布伦特原油突破100美元（收101.21，+3.36%创5月新高）、动力煤CCI涨价12.94%、BDI报3620点。云煤能源3连板、南京港2连板、海通发展活跃。靠价格数据脉冲，无梯队延续，<b>支线脉冲级别</b>。</p>
+  <p><b>海外映射分化线</b>：存储/CPO——隔夜美股SK海力士涨7%创新高、美光涨2%+，瑞银预判Q3 DDR价格环比+22%/NAND+20%短缺持续至2027，苹果签3-5年无价格上限NAND长协。太极实业涨停+18.27亿净流入、深科技/佰维存储跟涨，但中际旭创/新易盛遭集中减仓（-13.5亿/-8.9亿），<b>内部分化</b>，存储强于光模块。</p>
+  <p><b>回避/出清中</b>：农业种植/水产/代糖（海南橡胶/中粮糖业跌停·资金集体撤离）、折叠屏（宜安科技-14%·苹果发布会买预期卖事实）、CRO/医疗服务/影视院线/白酒——资金正在撤、情绪正在杀的下跌趋势，高位断板股果断离场。</p>
+</div>
+
+<div class="disc">
+  <b>⚠️ 免责声明</b>：本报告仅基于公开行情数据生成，用于盘后情绪梳理与主线复盘，<b>不构成任何投资建议</b>。涉及持仓股的"建议不动/不加仓不割肉"为本人持仓纪律复盘，非投资建议。股市有风险，入市需谨慎。数据来源：财联社盘后连板分析/懒哥深度复盘/东方财富收评/经传多赢龙虎榜/第一财经/每经/同花顺/腾讯自选股等公开渠道，9月10日15:00收盘口径+龙虎榜T+1数据（今晚盘后更新9月10日席位）。Wind MCP本会话未连接，已直说不造数，全部数字可溯源到来源+时点。北向资金当日确切净额未获取（WebSearch返回为历史数据，沪指点位不匹配），不造数。
+</div>
+
+<div class="foot">
+  学习台 · 金融域 · 周四盘后深度复盘 · 2026-09-10 16:30 · 情绪温度35°偏冷(退潮期延续) · 最高板4板(桂林旅游) · 明日情景：乐观25%/中性50%/悲观25%
+</div>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新的学习工作台 · 五域聚合看板</title>
+<style>
+:root{
+ --bg:#0d1117;--bg2:#161b22;--card:#21262d;--card2:#2d333b;
+ --bd:#30363d;--bd2:#3d444d;
+ --txt:#e6edf3;--txt2:#8b949e;--txt3:#6e7681;
+ --gold:#f0c674;--gold2:#d29922;
+ --up:#f85149;--down:#3fb950;--amber:#f0883e;
+ --blue:#58a6ff;--purple:#bc8cff;--teal:#39d0c8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;
+ background-image:radial-gradient(900px 500px at 12% -5%,rgba(210,153,34,.10),transparent 60%),radial-gradient(800px 500px at 95% 0%,rgba(88,166,255,.07),transparent 55%);background-attachment:fixed}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1140px;margin:0 auto;padding:40px 28px 70px}
+.hero{border:1px solid var(--bd);background:linear-gradient(135deg,rgba(240,198,116,.06),rgba(13,17,23,.6));border-radius:16px;padding:34px 36px;margin-bottom:30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(400px 200px at 85% 20%,rgba(248,81,73,.06),transparent 70%);pointer-events:none}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--gold);border:1px solid rgba(210,153,34,.4);background:rgba(210,153,34,.08);padding:5px 12px;border-radius:999px;font-weight:600;margin-bottom:16px}
+.tag .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}
+h1{font-size:30px;font-weight:800;letter-spacing:-.3px;margin-bottom:8px}
+h1 .ac{background:linear-gradient(90deg,var(--gold),#f7b955);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:14px;color:var(--txt2);max-width:820px}
+.meta{display:flex;gap:22px;margin-top:18px;flex-wrap:wrap;font-size:12px;color:var(--txt3)}
+.meta b{color:var(--txt2);font-weight:600}
+section{margin-bottom:32px}
+.sh{display:flex;align-items:baseline;gap:10px;margin-bottom:16px}
+.sh h2{font-size:18px;font-weight:700}
+.sh .idx{font-size:12px;color:var(--gold2);font-weight:700}
+.sh .d{font-size:12px;color:var(--txt3);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dcard{border:1px solid var(--bd);background:linear-gradient(160deg,var(--card),var(--bg2));border-radius:14px;padding:20px 18px;transition:transform .25s,border-color .25s;display:flex;flex-direction:column}
+.dcard:hover{transform:translateY(-3px);border-color:var(--bd2)}
+.dh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:8px}
+.dh .name{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.dh .ic{font-size:18px}
+.st{font-size:11px;font-weight:600;padding:3px 8px;border-radius:6px;border:1px solid;white-space:nowrap}
+.st.ok{color:var(--down);border-color:rgba(63,185,80,.35);background:rgba(63,185,80,.08)}
+.st.half{color:var(--amber);border-color:rgba(240,136,62,.35);background:rgba(240,136,62,.08)}
+.st.todo{color:var(--up);border-color:rgba(248,81,73,.3);background:rgba(248,81,73,.06)}
+.row{font-size:13px;color:var(--txt2);margin-bottom:7px;display:flex;gap:8px}
+.row .k{color:var(--txt3);flex:0 0 44px;font-size:12px}
+.row .v{flex:1;min-width:0;overflow-wrap:anywhere}
+.latest{margin-top:12px;padding-top:12px;border-top:1px dashed var(--bd)}
+.latest .lt{font-size:11px;color:var(--txt3);margin-bottom:6px}
+.latest a{display:block;font-size:13px;color:var(--blue);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.latest a .dt{color:var(--txt3);font-size:11px;margin-left:6px}
+.empty{font-size:12px;color:var(--txt3);font-style:italic;margin-top:auto;padding-top:10px;border-top:1px dashed var(--bd)}
+.detail{border:1px solid var(--bd);border-radius:14px;background:var(--bg2);margin-bottom:14px;overflow:hidden}
+.detail>summary{cursor:pointer;padding:16px 20px;font-size:15px;font-weight:700;display:flex;align-items:center;gap:10px;list-style:none}
+.detail>summary::-webkit-details-marker{display:none}
+.detail>summary::before{content:"▸";color:var(--txt3);font-size:12px;transition:transform .2s}
+.detail[open]>summary::before{transform:rotate(90deg)}
+.detail>summary .sp{margin-left:auto;font-size:11px;color:var(--txt3);font-weight:500}
+.dbody{padding:0 20px 20px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dbody h4{font-size:12px;color:var(--gold);margin-bottom:8px;font-weight:700;letter-spacing:.3px}
+.dbody ol,.dbody ul{padding-left:18px;font-size:13px;color:var(--txt2)}
+.dbody li{margin-bottom:6px}
+.dbody .wide{grid-column:1/-1}
+.redline{font-size:12px;color:var(--amber);border-left:2px solid rgba(240,136,62,.5);padding-left:10px;margin-bottom:6px;background:rgba(240,136,62,.05)}
+.plist{list-style:none;padding-left:0!important;max-height:230px;overflow:auto;border:1px dashed var(--bd2);border-radius:10px;padding:10px 12px!important;background:rgba(13,17,23,.5)}
+.plist li{display:flex;gap:10px;align-items:baseline;font-size:13px}
+.plist .dt{flex:0 0 78px;color:var(--txt3);font-size:11px}
+.plist .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.layer{border:1px solid rgba(88,166,255,.3);border-radius:14px;background:linear-gradient(135deg,rgba(88,166,255,.06),var(--bg2));padding:20px 24px}
+.layer h3{font-size:15px;color:var(--blue);margin-bottom:10px}
+.layer .ml{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:12px}
+.layer .mi{font-size:13px;color:var(--txt2);padding-left:14px;position:relative}
+.layer .mi::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.layer .mi b{color:var(--txt)}
+.usage{border:1px solid var(--bd);border-radius:14px;background:var(--bg2);padding:20px 24px}
+.usage pre{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;overflow:auto;font-size:12.5px;color:var(--txt2);margin:10px 0 14px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.usage code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--gold)}
+footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid var(--bd);margin-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.dbody,.layer .ml{grid-template-columns:1fr}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.wrap{padding:24px 16px 50px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <div class="hero">
+  <div class="tag"><span class="dot"></span>学习工作台 · 五域聚合</div>
+  <h1>新的学习<span class="ac">工作台</span></h1>
+  <p class="sub">金融投资 · 管理 · 地缘政治 · 哲学历史 · AI科技 —— 五个同构学习单元，一个聚合看板，一条复盘回流。</p>
+  <div class="meta">
+   <span>生成于 <b>2026-10-08 21:32</b></span>
+   <span>学习域 <b>5 个</b>（已跑通 <b style="color:var(--down)">2/5</b>）</span>
+   <span>在库产物 <b>93 份</b> · 最新 <b>2026-10-08</b></span>
+   <span>手机访问 <a href="./" target="_blank">看板入口 →</a></span>
+  </div>
+ </div>
+
+ <section>
+  <div class="sh"><span class="idx">01</span><h2>五域卡片</h2><span class="d">单一聚合 · 早上扫一遍</span></div>
+  <div class="grid">
+   <div class="dcard" style="border-top:2px solid #f0c674">
+    <div class="dh"><div class="name"><span class="ic">📈</span>金融投资</div><span class="st ok">已跑通 · 模板域</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">Wind（指数/个股行情） · Alpha派投研（公告/宏观结构化） · agentic_search（自主检索）</span></div>
+    <div class="row"><span class="k">技能</span><span class="v">wb-finance-skill（总入口·红线） · ac-stock-ultrashort · cycle-dragon-trading · daily-review</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">日 4 档（08:00 盘前 / 11:35 午盘 / 15:30 收盘 / 16:30 盘后）</span></div>
+    <div class="latest"><div class="lt">最新产物 62 份</div>
+     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-10-08.html">周四 · 盘前<span class="dt">2026-10-08</span></a>
+     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-10-08.html">周四 · 盘后<span class="dt">2026-10-08</span></a>
+     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-10-05.html">金融域周一盘后深度复盘 · 2026-10-05 · 国庆长假第五日·非农落地特别版<span class="dt">2026-10-05</span></a>
+    </div>
+   </div>
+   <div class="dcard" style="border-top:2px solid #f0883e">
+    <div class="dh"><div class="name"><span class="ic">🏗️</span>管理</div><span class="st half">进行中 · 绑野里实战</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">野里项目一手实战（概预算 / 施工图 / 团队） · 商业经典（波特 / 德鲁克 / 明茨伯格 / HBR）</span></div>
+    <div class="row"><span class="k">技能</span><span class="v">management-coach（波特五力 / BCG / 7S / OKR / 组织行为）</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">周复盘 + 产物自动扫描</span></div>
+    <div class="latest"><div class="lt">最新产物 3 份</div>
+     <a href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8C%E6%B3%A2%E7%89%B9%E4%BA%94%E5%8A%9B%E5%88%86%E6%9E%90.html">野里波特五力分析 · 管理域实战<span class="dt">2026-09-09</span></a>
+     <a href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8C%E5%B9%B4%E5%BA%A6OKR.html">野里年度OKR · 管理域实战<span class="dt">2026-09-09</span></a>
+     <a href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8CBCG%E4%B8%9A%E6%80%81%E5%88%86%E6%9E%90.html">野里BCG业态矩阵 · 管理域实战<span class="dt">2026-09-09</span></a>
+    </div>
+   </div>
+   <div class="dcard" style="border-top:2px solid #58a6ff">
+    <div class="dh"><div class="name"><span class="ic">🌏</span>地缘政治</div><span class="st ok">日更运行</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">WebSearch 隔夜国际局势 · agentic_search 深度检索 · 智库报告（CSIS / IISS 等）</span></div>
+    <div class="row"><span class="k">技能</span><span class="v">geopolitics-coach（海权陆权 / 均势 / 修昔底德 / 文明冲突 / 地缘经济）</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">日 1 档（07:30 早间简报）+ 周日聚合</span></div>
+    <div class="latest"><div class="lt">最新产物 23 份</div>
+     <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-06.html">地缘早间简报 · 2026-10-06<span class="dt">2026-10-06</span></a>
+     <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-05.html">地缘早间简报 · 2026-10-05<span class="dt">2026-10-05</span></a>
+     <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-04.html">地缘早间简报 · 2026-10-04<span class="dt">2026-10-04</span></a>
+    </div>
+   </div>
+   <div class="dcard" style="border-top:2px solid #bc8cff">
+    <div class="dh"><div class="name"><span class="ic">📜</span>哲学历史</div><span class="st todo">起步 · 反思可复用</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">经典文本（道德经 / 论语 / 人类简史 / 枪炮病菌与钢铁） · 读书笔记与外部知识库</span></div>
+    <div class="row"><span class="k">技能</span><span class="v">philosophy-history-coach（核心理念交互 + 对照现实）</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">周复盘 + 读书笔记入库</span></div>
+    <div class="latest"><div class="lt">最新产物 1 份</div>
+     <a href="./%E5%93%B2%E5%8F%B2/%E9%81%93%E5%BE%B7%E7%BB%8F%E5%AF%B9%E7%85%A7%E6%8A%95%E8%B5%84.html">道德经·反者道之动 · 投资反转对照<span class="dt">2026-09-09</span></a>
+    </div>
+   </div>
+   <div class="dcard" style="border-top:2px solid #39d0c8">
+    <div class="dh"><div class="name"><span class="ic">🤖</span>AI科技</div><span class="st half">进行中 · 绑 Vibe-Trading</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">Vibe-Trading 自建量化系统实战 · arXiv / HuggingFace / 技术媒体</span></div>
+    <div class="row"><span class="k">技能</span><span class="v">ai-tech-radar（论文 / 模型 / 工具 / 趋势追踪）</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">周复盘（预测 vs 实际）</span></div>
+    <div class="latest"><div class="lt">最新产物 2 份</div>
+     <a href="./AI%E7%A7%91%E6%8A%80/Vibe-Trading%E5%A4%8D%E7%9B%98.html">Vibe-Trading 系统复盘 · AI科技四维<span class="dt">2026-09-09</span></a>
+     <a href="./AI%E7%A7%91%E6%8A%80/Vibe-Trading%E5%91%A8%E5%A4%8D%E7%9B%98_2026-09-08.html">Vibe-Trading 周复盘 · 2026-09-08<span class="dt">2026-09-08</span></a>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="sh"><span class="idx">02</span><h2>域详情 · 五环节闭环</h2><span class="d">输入 → 加工 → 沉淀 → 看板 → 复盘</span></div>
+  <details class="detail">
+   <summary>📈 金融投资<span class="sp">已跑通 · 模板域 · 产物 62 份</span></summary>
+   <div class="dbody">
+    <div>
+     <h4>五环节闭环</h4>
+     <ol>
+      <li>输入：Wind 拉指数/个股行情 + Alpha派 查公告与宏观 + agentic_search 补消息面，工作日 4 个时点定时抓取。</li>
+      <li>加工：wb-finance-skill 总入口做红线与路由，按场景挂 ac-stock-ultrashort / cycle-dragon-trading / daily-review。</li>
+      <li>沉淀：本仓 domains/金融 归档各时段 HTML，长期方向与教训写读复盘日志。</li>
+      <li>看板：四档深色 HTML 研报，看板金融卡永远指向最新一档。</li>
+      <li>复盘：日复盘（止盈止损反思）；周日并入五域聚合复盘。</li>
+     </ol>
+    </div>
+    <div>
+     <h4>硬约束</h4>
+      <div class="redline">不编造数据：每个数字可溯源到「来源 + 时点」</div>
+      <div class="redline">涉买卖建议必附免责声明</div>
+      <div class="redline">美股夏令时 21:30 / 冬令 22:30 开盘，跨市场窗口标清</div>
+     <h4>备注</h4>
+     <ul>
+      <li>金融域是其余四域的样板：把这里的五环节实体替换掉，就是新域。</li>
+     </ul>
+    </div>
+    <div class="wide">
+     <h4>产物清单</h4>
+     <ul class="plist">
+      <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-10-08.html">周四 · 盘前</a></li>
+      <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-10-08.html">周四 · 盘后</a></li>
+      <li><span class="dt">2026-10-05</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-10-05.html">金融域周一盘后深度复盘 · 2026-10-05 · 国庆长假第五日·非农落地特别版</a></li>
+      <li><span class="dt">2026-10-05</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E6%94%B6%E7%9B%98_2026-10-05.html">金融域周一收盘简报 · 2026-10-05 · 国庆假期休市(节中第五日·港股低开高走反弹)</a></li>
+      <li><span class="dt">2026-10-05</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%89%8D_2026-10-05.html">周一盘前 · 2026-10-05 · 学习台金融域（国庆休市期间版·第三日）</a></li>
+      <li><span class="dt">2026-10-02</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E7%9B%98%E5%90%8E_2026-10-02.html">金融域周五盘后深度复盘 · 2026-10-02 · 国庆长假第二日·非农前夕特别版</a></li>
+      <li><span class="dt">2026-10-02</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E6%94%B6%E7%9B%98_2026-10-02.html">金融域周五收盘简报 · 2026-10-02 · 国庆假期休市(节中第二日)</a></li>
+      <li><span class="dt">2026-10-02</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E7%9B%98%E5%89%8D_2026-10-02.html">周五盘前 · 2026-10-02 · 学习台金融域（国庆休市期间版·第二天）</a></li>
+      <li><span class="dt">2026-10-01</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-10-01.html">金融域周四盘后深度复盘 · 2026-10-01 · 国庆长假首日特别版</a></li>
+      <li><span class="dt">2026-10-01</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-10-01.html">金融域周四收盘简报 · 2026-10-01 · 国庆假期休市</a></li>
+      <li><span class="dt">2026-10-01</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-10-01.html">周四盘前 · 2026-10-01 · 学习台金融域（国庆休市期间版）</a></li>
+      <li><span class="dt">2026-09-30</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E7%9B%98%E5%90%8E_2026-09-30.html">金融域周三盘后深度复盘 · 2026-09-30</a></li>
+      <li><span class="dt">2026-09-30</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E6%94%B6%E7%9B%98_2026-09-30.html">金融域周三收盘简报 · 2026-09-30</a></li>
+      <li><span class="dt">2026-09-30</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E5%8D%88%E7%9B%98_2026-09-30.html">金融域周三午盘简报 · 2026-09-30</a></li>
+      <li><span class="dt">2026-09-30</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E7%9B%98%E5%89%8D_2026-09-30.html">周三盘前 · 2026-09-30 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-29</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%90%8E_2026-09-29.html">金融域周二盘后深度复盘 · 2026-09-29</a></li>
+      <li><span class="dt">2026-09-29</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E6%94%B6%E7%9B%98_2026-09-29.html">周二收盘简报 · 2026-09-29 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-29</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E5%8D%88%E7%9B%98_2026-09-29.html">金融域周二午盘简报 · 2026-09-29</a></li>
+      <li><span class="dt">2026-09-29</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%89%8D_2026-09-29.html">周二盘前 · 2026-09-29 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-28</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-09-28.html">金融域周一盘后深度复盘 · 2026-09-28</a></li>
+      <li><span class="dt">2026-09-28</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E6%94%B6%E7%9B%98_2026-09-28.html">周一收盘简报 · 2026-09-28 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-28</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E5%8D%88%E7%9B%98_2026-09-28.html">金融域周一午盘简报 · 2026-09-28</a></li>
+      <li><span class="dt">2026-09-28</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%89%8D_2026-09-28.html">周一盘前 · 2026-09-28 · 学习台金融域（中秋后复市首日）</a></li>
+      <li><span class="dt">2026-09-25</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E7%9B%98%E5%90%8E_2026-09-25.html">周五盘后复盘 · 2026-09-25 · 学习台金融域（中秋节休市特别版）</a></li>
+      <li><span class="dt">2026-09-25</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E6%94%B6%E7%9B%98_2026-09-25.html">周五收盘简报 · 2026-09-25 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-25</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E7%9B%98%E5%89%8D_2026-09-25.html">金融域周五盘前简报 · 2026-09-25 · 中秋休市期间</a></li>
+      <li><span class="dt">2026-09-24</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-09-24.html">周四盘后复盘 · 2026-09-24 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-24</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-09-24.html">周四收盘简报 · 2026-09-24 · 学习台金融域</a></li>
+      <li><span class="dt">2026-09-24</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E5%8D%88%E7%9B%98_2026-09-24.html">金融域周四午盘简报 · 2026-09-24</a></li>
+      <li><span class="dt">2026-09-24</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-09-24.html">金融域周四盘前简报 · 2026-09-24</a></li>
+      <li><span class="dt">2026-09-22</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%89%8D_2026-09-22.html">金融域周二盘前简报 · 2026-09-22</a></li>
+      <li><span class="dt">2026-09-21</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-09-21.html">金融域周一盘后深度复盘 · 2026-09-21</a></li>
+      <li><span class="dt">2026-09-21</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E6%94%B6%E7%9B%98_2026-09-21.html">金融域周一收盘简报 · 2026-09-21</a></li>
+      <li><span class="dt">2026-09-21</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%89%8D_2026-09-21.html">金融域周一盘前简报 · 2026-09-21</a></li>
+      <li><span class="dt">2026-09-17</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E5%8D%88%E7%9B%98_2026-09-17.html">金融域周四午盘简报 · 2026-09-17</a></li>
+      <li><span class="dt">2026-09-17</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-09-17.html">金融域周四收盘简报 · 2026-09-17</a></li>
+      <li><span class="dt">2026-09-17</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-09-17.html">金融域周四盘后深度复盘 · 2026-09-17</a></li>
+      <li><span class="dt">2026-09-16</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E7%9B%98%E5%89%8D_2026-09-16.html">金融域周三盘前简报 · 2026-09-16</a></li>
+      <li><span class="dt">2026-09-15</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%90%8E_2026-09-15.html">金融域周二盘后深度复盘 · 2026-09-15</a></li>
+      <li><span class="dt">2026-09-15</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E6%94%B6%E7%9B%98_2026-09-15.html">金融域周二收盘简报 · 2026-09-15</a></li>
+      <li><span class="dt">2026-09-15</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E5%8D%88%E7%9B%98_2026-09-15.html">金融域周二午盘简报 · 2026-09-15</a></li>
+      <li><span class="dt">2026-09-15</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%89%8D_2026-09-15.html">金融域周二盘前简报 · 2026-09-15</a></li>
+      <li><span class="dt">2026-09-11</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E6%94%B6%E7%9B%98_2026-09-11.html">金融域周五收盘简报 · 2026-09-11</a></li>
+      <li><span class="dt">2026-09-11</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E5%8D%88%E7%9B%98_2026-09-11.html">金融域周五午盘简报 · 2026-09-11</a></li>
+      <li><span class="dt">2026-09-11</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%94%E7%9B%98%E5%89%8D_2026-09-11.html">金融域周五盘前简报 · 2026-09-11</a></li>
+      <li><span class="dt">2026-09-10</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-09-10.html">金融域周四盘后深度复盘 · 2026-09-10</a></li>
+      <li><span class="dt">2026-09-10</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-09-10.html">金融域周四收盘简报 · 2026-09-10</a></li>
+      <li><span class="dt">2026-09-10</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E5%8D%88%E7%9B%98_2026-09-10.html">金融域周四午盘简报 · 2026-09-10</a></li>
+      <li><span class="dt">2026-09-10</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-09-10.html">金融域周四盘前简报 · 2026-09-10</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E5%8D%88%E7%9B%98_2026-09-09.html">金融域周三午盘简报 · 2026-09-09</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E7%9B%98%E5%90%8E_2026-09-09.html">金融域周三盘后深度复盘 · 2026-09-09</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E6%94%B6%E7%9B%98_2026-09-09.html">金融域周三收盘简报 · 2026-09-09</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%89%E7%9B%98%E5%89%8D_2026-09-09.html">金融域周三盘前简报 · 2026-09-09</a></li>
+      <li><span class="dt">2026-09-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E6%94%B6%E7%9B%98_2026-09-08.html">金融域周二收盘简报 · 2026-09-08</a></li>
+      <li><span class="dt">2026-09-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%89%8D_2026-09-08.html">金融域周二盘前简报 · 2026-09-08</a></li>
+      <li><span class="dt">2026-09-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E7%9B%98%E5%90%8E_2026-09-08.html">金融域周二盘后深度复盘 · 2026-09-08</a></li>
+      <li><span class="dt">2026-09-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%BA%8C%E5%8D%88%E7%9B%98_2026-09-08.html">金融域周二午盘简报 · 2026-09-08</a></li>
+      <li><span class="dt">2026-09-07</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E5%8D%88%E7%9B%98_2026-09-07.html">金融域周一午盘简报 · 2026-09-07</a></li>
+      <li><span class="dt">2026-09-07</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-09-07.html">金融域周一盘后深度复盘 · 2026-09-07</a></li>
+      <li><span class="dt">2026-09-07</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%89%8D_2026-09-07.html">金融域周一盘前简报 · 2026-09-07</a></li>
+      <li><span class="dt">2026-09-07</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E6%94%B6%E7%9B%98_2026-09-07.html">金融域周一收盘简报 · 2026-09-07</a></li>
+      <li><span class="dt">2026-09-06</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E6%9C%AB%E7%AE%80%E6%8A%A5_2026-09-06.html">金融域周末简报 · 2026-09-06</a></li>
+     </ul>
+     <div class="row" style="margin-top:8px"><span class="k">复盘</span><span class="v">sell-and-sell-short-coach + cognitive-awakening-coach</span></div>
+    </div>
+   </div>
+  </details>
+  <details class="detail">
+   <summary>🏗️ 管理<span class="sp">进行中 · 绑野里实战 · 产物 3 份</span></summary>
+   <div class="dbody">
+    <div>
+     <h4>五环节闭环</h4>
+     <ol>
+      <li>输入：野里项目真实决策 + 管理经典框架对照阅读。</li>
+      <li>加工：management-coach 把实战问题套进框架（五力/BCG/7S/OKR）。</li>
+      <li>沉淀：每个理论对照一次野里实际，留决策留痕。</li>
+      <li>看板：管理域产物清单卡（自动扫描目录生成）。</li>
+      <li>复盘：周复盘 + 单次决策复盘（事前验尸 / 事后校验）。</li>
+     </ol>
+    </div>
+    <div>
+     <h4>硬约束</h4>
+      <div class="redline">管理结论必须绑定野里真实数据，不写空中楼阁的通用建议</div>
+     <h4>备注</h4>
+     <ul>
+      <li>已有三份样例：野里波特五力分析 / 野里BCG业态分析 / 野里年度OKR。</li>
+     </ul>
+    </div>
+    <div class="wide">
+     <h4>产物清单</h4>
+     <ul class="plist">
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8C%E6%B3%A2%E7%89%B9%E4%BA%94%E5%8A%9B%E5%88%86%E6%9E%90.html">野里波特五力分析 · 管理域实战</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8C%E5%B9%B4%E5%BA%A6OKR.html">野里年度OKR · 管理域实战</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E7%AE%A1%E7%90%86/%E9%87%8E%E9%87%8CBCG%E4%B8%9A%E6%80%81%E5%88%86%E6%9E%90.html">野里BCG业态矩阵 · 管理域实战</a></li>
+     </ul>
+     <div class="row" style="margin-top:8px"><span class="k">复盘</span><span class="v">management-retrospect（决策复盘 · 事前验尸，可先用 cognitive-awakening-coach）</span></div>
+    </div>
+   </div>
+  </details>
+  <details class="detail">
+   <summary>🌏 地缘政治<span class="sp">日更运行 · 产物 23 份</span></summary>
+   <div class="dbody">
+    <div>
+     <h4>五环节闭环</h4>
+     <ol>
+      <li>输入：每日 07:30 采隔夜国际局势 + 智库报告。</li>
+      <li>加工：geopolitics-coach 五大框架拆解事件。</li>
+      <li>沉淀：每日简报归档（地缘/地缘简报_YYYY-MM-DD.html）+ 五大框架速查。</li>
+      <li>看板：地缘卡指向当日简报。</li>
+      <li>复盘：昨日预判校验（对 / 错 / 模糊），周日聚合。</li>
+     </ol>
+    </div>
+    <div>
+     <h4>硬约束</h4>
+      <div class="redline">立场严格遵循中国官方立场</div>
+      <div class="redline">预判必须写清可证伪的时间窗与观察指标</div>
+     <h4>备注</h4>
+     <ul>
+      <li>已连续产出一批日更简报，是本仓仅次于金融的第二条稳定流水线。</li>
+     </ul>
+    </div>
+    <div class="wide">
+     <h4>产物清单</h4>
+     <ul class="plist">
+      <li><span class="dt">2026-10-06</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-06.html">地缘早间简报 · 2026-10-06</a></li>
+      <li><span class="dt">2026-10-05</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-05.html">地缘早间简报 · 2026-10-05</a></li>
+      <li><span class="dt">2026-10-04</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-04.html">地缘早间简报 · 2026-10-04</a></li>
+      <li><span class="dt">2026-10-03</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-03.html">地缘早间简报 · 2026-10-03</a></li>
+      <li><span class="dt">2026-10-02</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-02.html">地缘早间简报 · 2026-10-02</a></li>
+      <li><span class="dt">2026-10-01</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-01.html">地缘早间简报 · 2026-10-01</a></li>
+      <li><span class="dt">2026-09-30</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-30.html">地缘早间简报 · 2026-09-30</a></li>
+      <li><span class="dt">2026-09-29</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-29.html">地缘早间简报 · 2026-09-29</a></li>
+      <li><span class="dt">2026-09-28</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-28.html">地缘早间简报 · 2026-09-28</a></li>
+      <li><span class="dt">2026-09-27</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-27.html">地缘早间简报 · 2026-09-27</a></li>
+      <li><span class="dt">2026-09-26</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-26.html">地缘早间简报 · 2026-09-26</a></li>
+      <li><span class="dt">2026-09-25</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-25.html">地缘早间简报 · 2026-09-25</a></li>
+      <li><span class="dt">2026-09-24</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-24.html">地缘早间简报 · 2026-09-24</a></li>
+      <li><span class="dt">2026-09-22</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-22.html">地缘早间简报 · 2026-09-22</a></li>
+      <li><span class="dt">2026-09-21</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-21.html">地缘早间简报 · 2026-09-21</a></li>
+      <li><span class="dt">2026-09-20</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-20.html">地缘早间简报 · 2026-09-20</a></li>
+      <li><span class="dt">2026-09-19</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-19.html">地缘早间简报 · 2026-09-19</a></li>
+      <li><span class="dt">2026-09-16</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-16.html">地缘早间简报 · 2026-09-16</a></li>
+      <li><span class="dt">2026-09-15</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-15.html">地缘早间简报 · 2026-09-15</a></li>
+      <li><span class="dt">2026-09-11</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-11.html">地缘早间简报 · 2026-09-11</a></li>
+      <li><span class="dt">2026-09-10</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-10.html">地缘早间简报 · 2026-09-10</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-09-09.html">地缘早间简报 · 2026-09-09</a></li>
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E4%BA%94%E5%A4%A7%E6%A1%86%E6%9E%B6%E9%80%9F%E6%9F%A5.html">地缘五大框架速查 · 大国格局结构化视角</a></li>
+     </ul>
+     <div class="row" style="margin-top:8px"><span class="k">复盘</span><span class="v">geopolitics-retrospect（预判校验）</span></div>
+    </div>
+   </div>
+  </details>
+  <details class="detail">
+   <summary>📜 哲学历史<span class="sp">起步 · 反思可复用 · 产物 1 份</span></summary>
+   <div class="dbody">
+    <div>
+     <h4>五环节闭环</h4>
+     <ol>
+      <li>输入：经典书目精读 + 读书笔记。</li>
+      <li>加工：philosophy-history-coach 做核心理念拆解与现实对照。</li>
+      <li>沉淀：笔记与对照思考（如「道德经对照投资」）。</li>
+      <li>看板：哲史卡收录对照文与笔记。</li>
+      <li>复盘：元认知反思（本周哪个判断被什么情绪/叙事带偏）。</li>
+     </ol>
+    </div>
+    <div>
+     <h4>硬约束</h4>
+      <div class="redline">不把经典当结论库，必须落到自己的具体决策场景</div>
+     <h4>备注</h4>
+     <ul>
+      <li>反思教练不新建，直接复用 cognitive-awakening-coach，省一个技能。</li>
+     </ul>
+    </div>
+    <div class="wide">
+     <h4>产物清单</h4>
+     <ul class="plist">
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./%E5%93%B2%E5%8F%B2/%E9%81%93%E5%BE%B7%E7%BB%8F%E5%AF%B9%E7%85%A7%E6%8A%95%E8%B5%84.html">道德经·反者道之动 · 投资反转对照</a></li>
+     </ul>
+     <div class="row" style="margin-top:8px"><span class="k">复盘</span><span class="v">cognitive-awakening-coach（元认知通用，直接复用）</span></div>
+    </div>
+   </div>
+  </details>
+  <details class="detail">
+   <summary>🤖 AI科技<span class="sp">进行中 · 绑 Vibe-Trading · 产物 2 份</span></summary>
+   <div class="dbody">
+    <div>
+     <h4>五环节闭环</h4>
+     <ol>
+      <li>输入：自建工具实战记录 + 论文/模型/工具动态。</li>
+      <li>加工：ai-tech-radar 做技术雷达与选型评估。</li>
+      <li>沉淀：工具评估、选型理由、踩坑记录。</li>
+      <li>看板：AI 域产物卡。</li>
+      <li>复盘：预测 vs 实际（用了什么模型/框架、效果如何、下次怎么选）。</li>
+     </ol>
+    </div>
+    <div>
+     <h4>硬约束</h4>
+      <div class="redline">以「自己造的工具」为复盘标的，比追论文可落地</div>
+     <h4>备注</h4>
+     <ul>
+      <li>实战锚点是 Vibe-Trading，复盘对象优先是自建系统而不是行业新闻。</li>
+     </ul>
+    </div>
+    <div class="wide">
+     <h4>产物清单</h4>
+     <ul class="plist">
+      <li><span class="dt">2026-09-09</span><a class="nm" href="./AI%E7%A7%91%E6%8A%80/Vibe-Trading%E5%A4%8D%E7%9B%98.html">Vibe-Trading 系统复盘 · AI科技四维</a></li>
+      <li><span class="dt">2026-09-08</span><a class="nm" href="./AI%E7%A7%91%E6%8A%80/Vibe-Trading%E5%91%A8%E5%A4%8D%E7%9B%98_2026-09-08.html">Vibe-Trading 周复盘 · 2026-09-08</a></li>
+     </ul>
+     <div class="row" style="margin-top:8px"><span class="k">复盘</span><span class="v">ai-tech-retrospect（预测 vs 实际）</span></div>
+    </div>
+   </div>
+  </details>
+ </section>
+
+ <section>
+  <div class="sh"><span class="idx">03</span><h2>知识输入层</h2><span class="d">横跨五域的外部知识</span></div>
+  <div class="layer">
+   <h3>📚 知识库聚合</h3>
+   <p style="font-size:13px;color:var(--txt2);margin-bottom:12px">横跨五域的外部知识输入层：公众号 / 知乎 / B站 / 小红书博主内容聚合，每条含标题、领域标签、核心框架提炼、原文链接。</p>
+   <div class="ml">
+    <div class="mi"><b>入口</b>：<a href="./%E7%9F%A5%E8%AF%86%E5%BA%93/index.html">学习台 · 知识库聚合</a>（2026-10-06）</div>
+    <div class="mi">管理域（野里相关条目自动进入管理卡）</div>
+    <div class="mi">地缘域（框架速查来源）</div>
+    <div class="mi">AI科技域（工具与模型动态）</div>
+   </div>
+  </div>
+  <div class="layer">
+   <h3>🗓️ 五域周报</h3>
+   <p style="font-size:13px;color:var(--txt2);margin-bottom:12px">每周日 20:00 自动聚合：本周五域产物清单 + A股周表现 + 复盘提示。产物放 domains/周报/。</p>
+   <div class="ml">
+    <div class="mi"><b>入口</b>：<a href="./%E5%91%A8%E6%8A%A5/%E4%BA%94%E5%9F%9F%E5%91%A8%E6%8A%A5_2026-10-08.html">五域周报 · 2026-10-08</a>（2026-10-08）</div>
+    <div class="mi">金融域（周表现）</div>
+    <div class="mi">四域（本周产物核对）</div>
+    <div class="mi">复盘回流（下周只改一件事）</div>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="sh"><span class="idx">04</span><h2>日常用法</h2><span class="d">本仓自带构建器，不依赖外部服务</span></div>
+  <div class="usage">
+   <pre># 1. 立刻跑一档（抓数据 → 出报告 → 更新看板 → 发布 → 飞书推送）
+python3 scripts/run_slot.py --slot pre        # pre | noon | close | post | geo | weekly | rebuild
+
+# 2. 只看板重建（扫描各域产物 → site/index.html + site/ 发布副本）
+python3 scripts/build_dashboard.py
+
+# 3. 想看/想发
+python3 scripts/publish.py --serve            # 局域网浏览（手机同 WiFi）
+python3 scripts/publish.py --git              # 推私有仓
+
+# 4. 定时任务（launchd，0 模型调用）
+python3 scripts/schedule_launchd.py --install</pre>
+   <p style="font-size:13px;color:var(--txt2)">新增/替换任何一个域目录里的 HTML，再跑一次 <code>build_dashboard.py</code>，看板自动反映最新产物。看板内部全部用相对路径，整个 <code>site/</code> 目录可以整包丢到任意静态托管或网盘，域名怎么换都不会失效。</p>
+  </div>
+ </section>
+
+ <footer>
+  <span>生成时间 2026-10-08 21:32 · 本页由 scripts/build_dashboard.py 自动生成，请勿手改 site/index.html</span>
+  <span>内容由 AI 生成，请核实重要信息 · 涉及投资的部分不构成买卖建议</span>
+ </footer>
+</div>
+</body>
+</html>

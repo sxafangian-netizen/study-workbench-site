@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周五收盘简报 · 2026-09-25 · 学习台金融域</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:#0d1117; color:#c9d1d9; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    padding:20px; line-height:1.6;
+  }
+  .backbtn {
+    position:fixed; top:20px; right:20px; z-index:100;
+    background:#238636; color:#fff; padding:8px 16px; border-radius:6px;
+    text-decoration:none; font-size:14px; font-weight:600;
+    border:1px solid #2ea043; transition:background .2s;
+  }
+  .backbtn:hover { background:#2ea043; }
+  .container { max-width:1100px; margin:0 auto; padding-bottom:40px; }
+  h1 { color:#f0f6fc; font-size:24px; padding:16px 0 8px; border-bottom:1px solid #21262d; }
+  .meta { color:#8b949e; font-size:13px; padding:8px 0 16px; }
+  .section { margin:20px 0; }
+  .section-title {
+    color:#58a6ff; font-size:16px; font-weight:600; margin-bottom:12px;
+    padding-left:10px; border-left:3px solid #58a6ff;
+  }
+  .grid-3 {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+  }
+  .card {
+    background:#21262d; border:1px solid #30363d; border-radius:8px;
+    padding:16px;
+  }
+  .card-name { color:#8b949e; font-size:13px; margin-bottom:8px; }
+  .card-price { font-size:24px; font-weight:700; color:#f0f6fc; }
+  .card-change { font-size:14px; margin-top:6px; }
+  .up { color:#f85149; }
+  .down { color:#3fb950; }
+  .flat { color:#8b949e; }
+  .stat-row {
+    display:flex; justify-content:space-between; font-size:13px;
+    color:#8b949e; margin-top:8px; padding-top:8px; border-top:1px solid #30363d;
+  }
+  table { width:100%; border-collapse:collapse; background:#21262d; border-radius:8px; overflow:hidden; }
+  th, td { padding:10px 12px; text-align:left; font-size:13px; border-bottom:1px solid #30363d; }
+  th { color:#8b949e; background:#161b22; font-weight:600; }
+  td.num { text-align:right; font-variant-numeric:tabular-nums; }
+  .highlight-box {
+    background:#161b22; border:1px solid #30363d; border-left:3px solid #f85149;
+    padding:12px 16px; border-radius:6px; margin:12px 0;
+  }
+  .warn-box {
+    background:#1c0d0d; border:1px solid #6f1212; border-left:3px solid #f85149;
+    padding:12px 16px; border-radius:6px; margin:12px 0;
+  }
+  .info-box {
+    background:#0d1c2c; border:1px solid #1f447a; border-left:3px solid #58a6ff;
+    padding:12px 16px; border-radius:6px; margin:12px 0;
+  }
+  .disclaimer {
+    margin-top:30px; padding:16px; background:#161b22; border:1px solid #30363d;
+    border-radius:8px; color:#8b949e; font-size:12px; line-height:1.8;
+  }
+  .tag {
+    display:inline-block; padding:2px 8px; border-radius:4px; font-size:11px;
+    margin-right:6px;
+  }
+  .tag-up { background:#3d1418; color:#f85149; }
+  .tag-down { background:#0d2818; color:#3fb950; }
+  .tag-info { background:#0d2818; color:#58a6ff; }
+  @media (max-width:768px) {
+    .grid-3 { grid-template-columns:1fr; }
+    .backbtn { position:static; display:inline-block; margin-bottom:16px; }
+  }
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+<div class="container">
+  <h1>周五收盘简报 · 2026-09-25</h1>
+  <div class="meta">学习台金融域 · 收盘持仓更新 · 数据源：WebSearch（Wind MCP本会话未连接，连续第十次不可用，按规则直说不造数）</div>
+
+  <div class="info-box">
+    <strong style="color:#58a6ff;">⚠️ 节假日特殊说明：</strong>
+    2026年9月25日（周五）为<strong style="color:#f0f6fc;">中秋节，A股休市</strong>，无9/25收盘数据。本简报A股部分（指数/板块/资金/新锐股份）采用<strong style="color:#f0f6fc;">9月24日（周四，中秋前最后交易日）收盘数据</strong>作为最新可用持仓快照；港股9/25正常开市，小鹏09868采用<strong style="color:#f0f6fc;">9月25日收盘数据</strong>。同花顺/东财等部分源标注"9月25日"的A股数据实为9/24缓存，已核实剔除。节后首个交易日关注开盘补跌与持仓风险线。
+  </div>
+
+  <div class="highlight-box">
+    <strong style="color:#f85149;">收盘核心结论：</strong>
+    A股9/25中秋节休市；9/24（中秋前最后交易日）三大指数集体低开低走，沪指-1.22%失守3900、深成-2.34%、创业板-2.68%领跌；两市1.65万亿缩量1116亿（节前效应）；4299跌/1120涨，赚钱效应仅20.7%持续低迷；成长科技（PCB/CRO/有色/电子）领跌，防御（煤炭/银行/纺织）+题材（福建本地/机器人/风电）逆势走强；北向净流出121.69亿连续多日流出；<strong style="color:#f85149;">港股9/25开市小鹏跌至39.46港元已跌破52周低39.54，创近期新低，生死线失守</strong>；新锐9/24放量-4.43%跌破59。
+  </div>
+
+  <div class="section">
+    <div class="section-title">收盘三大指数 <span style="font-size:12px;color:#8b949e;font-weight:normal;">（9/24收盘·A股9/25休市）</span></div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-name">上证指数 000001.SH</div>
+        <div class="card-price">3,888.37</div>
+        <div class="card-change down">-1.22% (-48.15)</div>
+        <div class="stat-row"><span>成交额</span><span>7,836 亿</span></div>
+        <div class="stat-row"><span>上涨/下跌</span><span>851 / 1,412</span></div>
+      </div>
+      <div class="card">
+        <div class="card-name">深证成指 399001.SZ</div>
+        <div class="card-price">13,316.97</div>
+        <div class="card-change down">-2.34% (-319.11)</div>
+        <div class="stat-row"><span>成交额</span><span>8,697 亿</span></div>
+        <div class="stat-row"><span>上涨/下跌</span><span>906 / 1,954</span></div>
+      </div>
+      <div class="card">
+        <div class="card-name">创业板指 399006.SZ</div>
+        <div class="card-price">3,288.95</div>
+        <div class="card-change down">-2.68% (-90.66)</div>
+        <div class="stat-row"><span>成交额</span><span>4,119 亿</span></div>
+        <div class="stat-row"><span>上涨/下跌</span><span>557 / 788</span></div>
+      </div>
+    </div>
+    <div class="stat-row" style="margin-top:12px;background:#21262d;padding:10px 12px;border-radius:6px;border:1px solid #30363d;">
+      <span><strong>两市合计成交</strong></span><span><strong style="color:#f0f6fc;">16,533 亿</strong> <span class="down">↓ 缩量 1,116 亿（连续调整+节前效应）</span></span>
+    </div>
+    <div class="stat-row" style="margin-top:8px;background:#21262d;padding:10px 12px;border-radius:6px;border:1px solid #30363d;">
+      <span><strong>全市场涨跌</strong></span><span><span class="up">1,120 涨</span> / <span class="down">4,299 跌</span> / 143 平 — 赚钱效应 20.7%</span>
+    </div>
+    <div class="stat-row" style="margin-top:8px;background:#21262d;padding:10px 12px;border-radius:6px;border:1px solid #30363d;">
+      <span><strong>涨停/跌停</strong></span><span><span class="up">51 涨停</span> / <span class="down">14 跌停</span>（涨幅9%+ 68只 / 跌幅9%+ 35只）</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">板块涨跌 <span style="font-size:12px;color:#8b949e;font-weight:normal;">（9/24）</span></div>
+    <table>
+      <tr><th>领涨方向</th><th>催化/龙头</th></tr>
+      <tr><td><span class="tag tag-up">福建本地</span></td><td>福建水泥2连板、路桥信息30CM涨停、海峡创新/平潭发展/厦门港务/漳州发展涨停</td></tr>
+      <tr><td><span class="tag tag-up">机器人</span></td><td>襄阳轴承/长华集团/中马传动/宁波东力涨停；马斯克称未来15年全球人形机器人或达100亿台</td></tr>
+      <tr><td><span class="tag tag-up">风电设备</span></td><td>吉鑫科技涨停、威力传动涨近10%；1-8月风电装机+19.6%</td></tr>
+      <tr><td><span class="tag tag-up">VNA仪器</span></td><td>东方中科2连板、电科思仪20CM涨停；800G/1.6T数据中心驱动测试需求</td></tr>
+      <tr><td><span class="tag tag-up">煤炭</span></td><td>云煤能源涨停、辽宁能源+3%；动力煤CCI涨价</td></tr>
+      <tr><td><span class="tag tag-up">银行</span></td><td>重庆/南京/江苏/齐鲁/渝农商行均涨超1%；防御避险</td></tr>
+      <tr><td><span class="tag tag-up">纺织服饰</span></td><td>华茂股份/泰慕士/七匹狼涨停、红蜻蜓/九牧王涨超6%</td></tr>
+    </table>
+    <table style="margin-top:12px;">
+      <tr><th>领跌方向</th><th>龙头表现</th></tr>
+      <tr><td><span class="tag tag-down">房地产</span></td><td>华丽家族跌停、华远控股/绿地控股下挫</td></tr>
+      <tr><td><span class="tag tag-down">PCB概念</span></td><td>超声电子跌停、逸豪新材跌超10%（与9/23 PCB领涨反转）</td></tr>
+      <tr><td><span class="tag tag-down">有色金属</span></td><td>江南新材跌超9%、山东黄金/北方铜业/中金黄金跌超5%</td></tr>
+      <tr><td><span class="tag tag-down">电子</span></td><td>视涯科技/逸豪新材/超声电子/莱宝高科跌停或跌超10%</td></tr>
+      <tr><td><span class="tag tag-down">贵金属</span></td><td>板块-5.03%、白银-4.08%</td></tr>
+      <tr><td><span class="tag tag-down">CRO</span></td><td>板块-3.74%（与9/21医药涨停潮反转）</td></tr>
+      <tr><td><span class="tag tag-down">覆铜板/玻璃玻纤</span></td><td>板块-5.05%/-4.36%</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">持仓股收盘表现</div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-name">新锐股份 688257.SH <span class="tag tag-info">9/24收盘</span></div>
+        <div class="card-price">58.21 <span style="font-size:14px;color:#8b949e;">元</span></div>
+        <div class="card-change down">-4.43% (-2.70)</div>
+        <div class="stat-row"><span>开/高/低</span><span>61.14 / 61.33 / 58.21</span></div>
+        <div class="stat-row"><span>振幅/换手</span><span>5.12% / 2.82%</span></div>
+        <div class="stat-row"><span>成交额</span><span>5.96 亿</span></div>
+        <div class="stat-row"><span>主力净流入</span><span class="down">-1,048 万</span></div>
+        <div class="stat-row"><span>5日/20日</span><span>+6.48% / +1.94%</span></div>
+        <div class="stat-row"><span>YTD</span><span class="up">+139.48%</span></div>
+        <div class="stat-row"><span>PE/PB</span><span>29.95 / 7.21</span></div>
+        <div class="stat-row"><span>总市值</span><span>206.80 亿</span></div>
+        <div class="stat-row"><span>9/25状态</span><span class="flat">A股休市无9/25数据</span></div>
+      </div>
+      <div class="card">
+        <div class="card-name">小鹏集团 09868.HK <span class="tag tag-up">9/25收盘</span></div>
+        <div class="card-price">39.46 <span style="font-size:14px;color:#8b949e;">港元</span></div>
+        <div class="card-change down">-1.89% (-0.76)</div>
+        <div class="stat-row"><span>9/24收盘</span><span>40.26 港元</span></div>
+        <div class="stat-row"><span>52周低</span><span class="down">39.54 <strong style="color:#f85149;">（9/25已跌破！39.46<39.54）</strong></span></div>
+        <div class="stat-row"><span>YTD</span><span class="down">约 -50%（跌破-50%关口）</span></div>
+        <div class="stat-row"><span>港股9/25</span><span>恒指盘中跌近2%·汽车股分化</span></div>
+        <div class="stat-row"><span>分析师</span><span>25买/1卖 强推</span></div>
+        <div class="stat-row"><span>目标价</span><span>75.45 港元（折价47.7%）</span></div>
+        <div class="stat-row"><span>市值</span><span>约 757 亿港元</span></div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;justify-content:center;">
+        <div class="card-name">持仓风控提示</div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          <span class="down">●</span> <strong style="color:#f85149;">小鹏9/25跌至39.46港元，已跌破52周低39.54，创近期新低，生死线失守</strong>。下降通道加速，汽车行业失血竞争+账期新规+金九银十承压中期逻辑未变，节后关注是否加速下行<br><br>
+          <span class="down">●</span> 新锐9/24放量回调-4.43%跌破59，主力净流出1048万，5日仍+6.48%但破位下行，高位获利回吐+板块偏弱共振，58.21低点为短期关键支撑<br><br>
+          <span class="down">●</span> A股9/25中秋节休市，节后首个交易日开盘可能补跌或跟随外围，持仓两大风险线（小鹏39.54已破/新锐58.21）需重点盯盘
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">资金流向 <span style="font-size:12px;color:#8b949e;font-weight:normal;">（9/24口径·A股9/25休市无更新）</span></div>
+    <table>
+      <tr><th>项目</th><th class="num">金额</th><th>说明</th></tr>
+      <tr><td>两市主力净流出</td><td class="num">-394.80 亿</td><td>9/24口径，节前避险降仓</td></tr>
+      <tr><td>北向资金净额</td><td class="num down">-121.69 亿</td><td>沪股通-58.89 / 深股通-62.80，连续多日流出</td></tr>
+      <tr><td>主力净流入居前</td><td class="num">—</td><td>国防军工/通用设备/交运设备/卫星互联网(+16.2亿)/航天装备(+13.5亿)</td></tr>
+      <tr><td>主力净流出居前</td><td class="num">—</td><td>电子(-92亿+)/半导体/有色金属/贵金属(-11.4亿)/CRO(-23.4亿)</td></tr>
+      <tr><td>MLF操作</td><td class="num">8,000 亿</td><td>9/24央行1年期MLF足额续作+9/28-10/8隔夜逆回购上限1万亿</td></tr>
+      <tr><td>央行三季度例会</td><td class="num">—</td><td>加大逆周期调节力度，保持流动性充裕，加强六张网建设等重点领域金融支持</td></tr>
+    </table>
+  </div>
+
+  <div class="warn-box">
+    <strong style="color:#f85149;">风控与操作纪律：</strong>
+    ① <strong>小鹏9/25已跌破52周低39.54（收盘39.46），生死线失守</strong>，下降通道加速，节后需重点评估是否触发止损纪律；② A股9/25中秋节休市，节后首个交易日开盘可能补跌或跟随外围（美债10y破5.1%压制全球风险偏好），建议<strong>只卖不买不追涨</strong>，保留现金过节；③ 成长科技（PCB/CRO/电子）一日切换领跌，前期热门赛道获利兑现，追高风险极高；④ 新锐58.21低点为短期关键支撑，跌破则趋势进一步恶化；⑤ 缩量下跌≠放量恐慌，抛压未完全释放，节后观察放量止跌信号或加速探底。
+  </div>
+
+  <div class="info-box">
+    <strong style="color:#58a6ff;">节后关注点：</strong>
+    ① 小鹏09868是否加速破位下行（39.46已破52周低，下一支撑位参考前期低点）；② 新锐688257节后开盘能否守住58.21；③ 美联储官员威廉姆斯"年底前再加息合理"鹰派表态+美债10y 5.13%/30y 5.50%创2004-2007年新高，全球风险资产承压；④ 中美第八轮经贸磋商达成多项共识+AI领域首次对话，节后或有风险偏好修复；⑤ 央行三季度例会"加大逆周期调节"+MLF 8000亿足额续作，流动性宽松信号明确。
+  </div>
+
+  <div class="disclaimer">
+    <strong>免责声明：</strong>本简报基于公开市场数据整理（财联社/华尔街见闻/金十数据/同花顺/东方财富/网易财经/港股行情指标表等），仅作教育与复盘用途，不构成任何投资建议或买卖推荐。市场有风险，决策需谨慎。<strong>2026年9月25日为中秋节，A股休市</strong>，本简报A股数据口径=9月24日（中秋前最后交易日）15:00收盘，港股小鹏09868数据口径=9月25日港股收盘。Wind MCP本会话未连接（连续第十次不可用），按规则直说不造数，已用WebSearch多源交叉替代。北向资金全天净额来自9/24收盘综述披露的-121.69亿元（沪-58.89/深-62.80）。小鹏9/25收盘39.46港元-1.89%来自港股行情指标表（交易日期2026-09-25）。
+  </div>
+</div>
+</body>
+</html>

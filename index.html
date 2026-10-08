@@ -35,6 +35,8 @@ section{margin-bottom:32px}
 .sh .idx{font-size:12px;color:var(--gold2);font-weight:700}
 .sh .d{font-size:12px;color:var(--txt3);margin-left:auto}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+/* grid/flex 子项默认 min-width:auto，会被 nowrap 内容撑破，手机端溢出 */
+.grid>*,.dbody>*,.layer .ml>*,.row>*,.dh>*{min-width:0}
 .dcard{border:1px solid var(--bd);background:linear-gradient(160deg,var(--card),var(--bg2));border-radius:14px;padding:20px 18px;transition:transform .25s,border-color .25s;display:flex;flex-direction:column}
 .dcard:hover{transform:translateY(-3px);border-color:var(--bd2)}
 .dh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:8px}
@@ -89,9 +91,9 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
   <h1>新的学习<span class="ac">工作台</span></h1>
   <p class="sub">金融投资 · 管理 · 地缘政治 · 哲学历史 · AI科技 —— 五个同构学习单元，一个聚合看板，一条复盘回流。</p>
   <div class="meta">
-   <span>生成于 <b>2026-10-08 22:02</b></span>
+   <span>生成于 <b>2026-10-08 22:52</b></span>
    <span>学习域 <b>5 个</b>（已跑通 <b style="color:var(--down)">2/5</b>）</span>
-   <span>在库产物 <b>93 份</b> · 最新 <b>2026-10-08</b></span>
+   <span>在库产物 <b>96 份</b> · 最新 <b>2026-10-08</b></span>
    <span>手机访问 <a href="./" target="_blank">看板入口 →</a></span>
   </div>
  </div>
@@ -104,10 +106,10 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
     <div class="row"><span class="k">输入</span><span class="v">Wind（指数/个股行情） · Alpha派投研（公告/宏观结构化） · agentic_search（自主检索）</span></div>
     <div class="row"><span class="k">技能</span><span class="v">wb-finance-skill（总入口·红线） · ac-stock-ultrashort · cycle-dragon-trading · daily-review</span></div>
     <div class="row"><span class="k">节奏</span><span class="v">日 4 档（08:00 盘前 / 11:35 午盘 / 15:30 收盘 / 16:30 盘后）</span></div>
-    <div class="latest"><div class="lt">最新产物 62 份</div>
+    <div class="latest"><div class="lt">最新产物 64 份</div>
      <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-10-08.html">周四 · 盘后<span class="dt">2026-10-08</span></a>
-     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-10-08.html">周四 · 盘前<span class="dt">2026-10-08</span></a>
-     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-10-05.html">金融域周一盘后深度复盘 · 2026-10-05 · 国庆长假第五日·非农落地特别版<span class="dt">2026-10-05</span></a>
+     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-10-08.html">周四 · 收盘<span class="dt">2026-10-08</span></a>
+     <a href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E5%8D%88%E7%9B%98_2026-10-08.html">周四 · 午盘<span class="dt">2026-10-08</span></a>
     </div>
    </div>
    <div class="dcard" style="border-top:2px solid #f0883e">
@@ -127,10 +129,10 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
     <div class="row"><span class="k">输入</span><span class="v">WebSearch 隔夜国际局势 · agentic_search 深度检索 · 智库报告（CSIS / IISS 等）</span></div>
     <div class="row"><span class="k">技能</span><span class="v">geopolitics-coach（海权陆权 / 均势 / 修昔底德 / 文明冲突 / 地缘经济）</span></div>
     <div class="row"><span class="k">节奏</span><span class="v">日 1 档（07:30 早间简报）+ 周日聚合</span></div>
-    <div class="latest"><div class="lt">最新产物 23 份</div>
+    <div class="latest"><div class="lt">最新产物 24 份</div>
+     <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-08.html">周四 · 地缘简报<span class="dt">2026-10-08</span></a>
      <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-06.html">地缘早间简报 · 2026-10-06<span class="dt">2026-10-06</span></a>
      <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-05.html">地缘早间简报 · 2026-10-05<span class="dt">2026-10-05</span></a>
-     <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-04.html">地缘早间简报 · 2026-10-04<span class="dt">2026-10-04</span></a>
     </div>
    </div>
    <div class="dcard" style="border-top:2px solid #bc8cff">
@@ -158,7 +160,7 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
  <section>
   <div class="sh"><span class="idx">02</span><h2>域详情 · 五环节闭环</h2><span class="d">输入 → 加工 → 沉淀 → 看板 → 复盘</span></div>
   <details class="detail">
-   <summary>📈 金融投资<span class="sp">已跑通 · 模板域 · 产物 62 份</span></summary>
+   <summary>📈 金融投资<span class="sp">已跑通 · 模板域 · 产物 64 份</span></summary>
    <div class="dbody">
     <div>
      <h4>五环节闭环</h4>
@@ -184,6 +186,8 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
      <h4>产物清单</h4>
      <ul class="plist">
       <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%90%8E_2026-10-08.html">周四 · 盘后</a></li>
+      <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E6%94%B6%E7%9B%98_2026-10-08.html">周四 · 收盘</a></li>
+      <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E5%8D%88%E7%9B%98_2026-10-08.html">周四 · 午盘</a></li>
       <li><span class="dt">2026-10-08</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E5%9B%9B%E7%9B%98%E5%89%8D_2026-10-08.html">周四 · 盘前</a></li>
       <li><span class="dt">2026-10-05</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E7%9B%98%E5%90%8E_2026-10-05.html">金融域周一盘后深度复盘 · 2026-10-05 · 国庆长假第五日·非农落地特别版</a></li>
       <li><span class="dt">2026-10-05</span><a class="nm" href="./%E9%87%91%E8%9E%8D/%E5%91%A8%E4%B8%80%E6%94%B6%E7%9B%98_2026-10-05.html">金融域周一收盘简报 · 2026-10-05 · 国庆假期休市(节中第五日·港股低开高走反弹)</a></li>
@@ -283,7 +287,7 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
    </div>
   </details>
   <details class="detail">
-   <summary>🌏 地缘政治<span class="sp">日更运行 · 产物 23 份</span></summary>
+   <summary>🌏 地缘政治<span class="sp">日更运行 · 产物 24 份</span></summary>
    <div class="dbody">
     <div>
      <h4>五环节闭环</h4>
@@ -307,6 +311,7 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
     <div class="wide">
      <h4>产物清单</h4>
      <ul class="plist">
+      <li><span class="dt">2026-10-08</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-08.html">周四 · 地缘简报</a></li>
       <li><span class="dt">2026-10-06</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-06.html">地缘早间简报 · 2026-10-06</a></li>
       <li><span class="dt">2026-10-05</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-05.html">地缘早间简报 · 2026-10-05</a></li>
       <li><span class="dt">2026-10-04</span><a class="nm" href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-04.html">地缘早间简报 · 2026-10-04</a></li>
@@ -438,13 +443,14 @@ python3 scripts/publish.py --git              # 推私有仓
 
 # 4. 定时任务（launchd，0 模型调用）
 python3 scripts/schedule_launchd.py --install</pre>
-   <p style="font-size:13px;color:var(--txt2)">公网看板：<a href="https://sxafangian-netizen.github.io/study-workbench-site/" target="_blank">sxafangian-netizen.github.io/study-workbench-site</a> —— 每次定时任务跑完自动同步更新（手机随时可开）。新增/替换任何一个域目录里的 HTML，再跑一次 <code>build_dashboard.py</code>，看板自动反映最新产物。看板内部全部用相对路径，整包丢到任意静态托管都不会失效。</p>
+   <p style="font-size:13px;color:var(--txt2)">公网看板：<a href="https://study-workbench-odm7gund.edgeone.cool/?eo_token=4ad49e534fd5b7a9560bd9ae1183e689&amp;eo_time=1791469368" target="_blank">study-workbench-odm7gund.edgeone.cool</a> —— 每次定时任务跑完自动同步更新（手机随时可开）。新增/替换任何一个域目录里的 HTML，再跑一次 <code>build_dashboard.py</code>，看板自动反映最新产物。看板内部全部用相对路径，整包丢到任意静态托管都不会失效。</p>
   </div>
  </section>
 
  <footer>
-  <span>生成时间 2026-10-08 22:02 · 本页由 scripts/build_dashboard.py 自动生成，请勿手改 site/index.html</span>
+  <span>生成时间 2026-10-08 22:52 · 本页由 scripts/build_dashboard.py 自动生成，请勿手改 site/index.html</span>
   <span>内容由 AI 生成，请核实重要信息 · 涉及投资的部分不构成买卖建议</span>
+  <span>本页由自动化脚本生成，仅供学习研究，不构成投资建议。数据以交易所为准。</span>
  </footer>
 </div>
 </body>

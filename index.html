@@ -91,7 +91,7 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
   <h1>新的学习<span class="ac">工作台</span></h1>
   <p class="sub">金融投资 · 管理 · 地缘政治 · 哲学历史 · AI科技 —— 五个同构学习单元，一个聚合看板，一条复盘回流。</p>
   <div class="meta">
-   <span>生成于 <b>2026-10-08 23:30</b></span>
+   <span>生成于 <b>2026-10-08 23:32</b></span>
    <span>学习域 <b>5 个</b>（已跑通 <b style="color:var(--down)">2/5</b>）</span>
    <span>在库产物 <b>96 份</b> · 最新 <b>2026-10-08</b></span>
    <span>手机访问 <a href="./" target="_blank">看板入口 →</a></span>
@@ -128,9 +128,9 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
    </div>
    <div class="dcard" style="border-top:2px solid #58a6ff">
     <div class="dh"><div class="name"><span class="ic">🌏</span>地缘政治</div><span class="st ok">日更运行</span></div>
-    <div class="row"><span class="k">输入</span><span class="v">WebSearch 隔夜国际局势 · agentic_search 深度检索 · 智库报告（CSIS / IISS 等）</span></div>
+    <div class="row"><span class="k">输入</span><span class="v">隔夜公开资讯（国际要闻 + 财经快讯原文备料） · agentic_search 深度检索 / 智库报告（CSIS / IISS 等）</span></div>
     <div class="row"><span class="k">技能</span><span class="v">geopolitics-coach（海权陆权 / 均势 / 修昔底德 / 文明冲突 / 地缘经济）</span></div>
-    <div class="row"><span class="k">节奏</span><span class="v">日 1 档（07:30 早间简报）+ 周日聚合</span></div>
+    <div class="row"><span class="k">节奏</span><span class="v">日 1 档（07:00 早间简报 · Codex 定时）+ 周日聚合</span></div>
     <div class="latest"><div class="lt">最新产物 24 份</div>
      <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-08.html">地缘早间简报 · 2026-10-08<span class="dt">2026-10-08</span></a>
      <a href="./%E5%9C%B0%E7%BC%98/%E5%9C%B0%E7%BC%98%E7%AE%80%E6%8A%A5_2026-10-06.html">地缘早间简报 · 2026-10-06<span class="dt">2026-10-06</span></a>
@@ -297,8 +297,8 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
     <div>
      <h4>五环节闭环</h4>
      <ol>
-      <li>输入：每日 07:30 采隔夜国际局势 + 智库报告。</li>
-      <li>加工：geopolitics-coach 五大框架拆解事件。</li>
+      <li>输入：每日 07:00 备料隔夜公开资讯（写作草稿留在 drafts/ 私有留痕，不进发布目录）。</li>
+      <li>加工：模型按五大框架拆解事件，脚本套模板出版式（脚本管版式、模型管内容）。</li>
       <li>沉淀：每日简报归档（地缘/地缘简报_YYYY-MM-DD.html）+ 五大框架速查。</li>
       <li>看板：地缘卡指向当日简报。</li>
       <li>复盘：昨日预判校验（对 / 错 / 模糊），周日聚合。</li>
@@ -311,6 +311,7 @@ footer{color:var(--txt3);font-size:12px;padding-top:22px;border-top:1px solid va
      <h4>备注</h4>
      <ul>
       <li>已连续产出一批日更简报，是本仓仅次于金融的第二条稳定流水线。</li>
+      <li>体例与旧 WorkBuddy 一致：隔夜要闻卡片 + 五大框架分析 + 前一日预判校验 + 持仓含义 + 立场声明；脚本管版式、模型管内容，来源行只写原始媒体名。</li>
      </ul>
     </div>
     <div class="wide">
@@ -448,12 +449,12 @@ python3 scripts/publish.py --git              # 推私有仓
 
 # 4. 定时任务（launchd，0 模型调用）
 python3 scripts/schedule_launchd.py --install</pre>
-   <p style="font-size:13px;color:var(--txt2)">公网看板：<a href="https://study-workbench-odm7gund.edgeone.cool/?eo_token=c42eeb38dab2b5d979e3516ebad56e10&amp;eo_time=1791472737" target="_blank">study-workbench-odm7gund.edgeone.cool</a> —— 每次定时任务跑完自动同步更新（手机随时可开）。新增/替换任何一个域目录里的 HTML，再跑一次 <code>build_dashboard.py</code>，看板自动反映最新产物。看板内部全部用相对路径，整包丢到任意静态托管都不会失效。</p>
+   <p style="font-size:13px;color:var(--txt2)">公网看板：<a href="https://study-workbench-odm7gund.edgeone.cool/?eo_token=c28cb1e3d1d898a8d6b65532738a1cdc&amp;eo_time=1791473469" target="_blank">study-workbench-odm7gund.edgeone.cool</a> —— 每次定时任务跑完自动同步更新（手机随时可开）。新增/替换任何一个域目录里的 HTML，再跑一次 <code>build_dashboard.py</code>，看板自动反映最新产物。看板内部全部用相对路径，整包丢到任意静态托管都不会失效。</p>
   </div>
  </section>
 
  <footer>
-  <span>生成时间 2026-10-08 23:30 · 本页由 scripts/build_dashboard.py 自动生成，请勿手改 site/index.html</span>
+  <span>生成时间 2026-10-08 23:32 · 本页由 scripts/build_dashboard.py 自动生成，请勿手改 site/index.html</span>
   <span>内容由 AI 生成，请核实重要信息 · 涉及投资的部分不构成买卖建议</span>
   <span>本页由自动化脚本生成，仅供学习研究，不构成投资建议。数据以交易所为准。</span>
  </footer>

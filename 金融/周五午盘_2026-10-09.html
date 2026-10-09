@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>周五 · 午盘</title>
+<style>
+:root{--bg:#0d1117;--bg2:#161b22;--card:#21262d;--card2:#2d333b;--bd:#30363d;--bd2:#3d444d;
+--txt:#e6edf3;--txt2:#8b949e;--txt3:#6e7681;--gold:#f0c674;--gold2:#d29922;
+--up:#f85149;--down:#3fb950;--amber:#f0883e;--blue:#58a6ff;--purple:#bc8cff;--teal:#39d0c8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+line-height:1.7;-webkit-font-smoothing:antialiased;background-image:radial-gradient(900px 500px at 12% -5%,rgba(210,153,34,.10),transparent 60%),radial-gradient(800px 500px at 95% 0%,rgba(88,166,255,.07),transparent 55%);background-attachment:fixed}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+.backbtn{position:fixed;top:16px;right:18px;z-index:9;font-size:12px;color:var(--txt2);border:1px solid var(--bd);
+background:rgba(22,27,34,.9);padding:6px 12px;border-radius:999px}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 28px 70px}
+.hero{border:1px solid var(--bd);background:linear-gradient(135deg,rgba(240,198,116,.06),rgba(13,17,23,.6));
+border-radius:16px;padding:30px 32px;margin-bottom:26px}
+.tag{display:inline-block;font-size:12px;color:var(--gold);border:1px solid rgba(210,153,34,.4);
+background:rgba(210,153,34,.08);padding:4px 12px;border-radius:999px;font-weight:600;margin-bottom:14px}
+h1{font-size:26px;font-weight:800;margin-bottom:6px}
+.sub{font-size:14px;color:var(--txt2)}
+.meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:var(--txt3)}
+.meta b{color:var(--txt2)}
+section{margin-bottom:26px}
+.sh{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.sh h2{font-size:17px;font-weight:700}.sh .idx{font-size:12px;color:var(--gold2);font-weight:700}
+.sh .d{font-size:12px;color:var(--txt3);margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.grid.g4{grid-template-columns:repeat(4,1fr)}
+.grid.g3{grid-template-columns:repeat(3,1fr)}
+.kcard{border:1px solid var(--bd);background:linear-gradient(160deg,var(--card),var(--bg2));border-radius:12px;padding:14px 15px}
+.kcard .n{font-size:12px;color:var(--txt3);margin-bottom:6px}
+.kcard .p{font-size:19px;font-weight:700;font-variant-numeric:tabular-nums}
+.kcard .c{font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums}
+.up{color:var(--up)}.down{color:var(--down)}.flat{color:var(--txt3)}
+.hcard{border:1px solid var(--bd);border-left:3px solid var(--gold2);background:linear-gradient(160deg,var(--card),var(--bg2));
+border-radius:12px;padding:16px 18px}
+.hcard .hn{font-size:15px;font-weight:700;display:flex;gap:8px;align-items:baseline}
+.hcard .hn .cd{font-size:11px;color:var(--txt3);font-weight:400}
+.hcard .row{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--txt2);margin-top:8px}
+.hcard .pnl{margin-top:10px;font-size:13px;border-top:1px dashed var(--bd);padding-top:8px}
+.newslist{list-style:none;border:1px solid var(--bd);border-radius:12px;background:var(--bg2);padding:6px 0}
+.newslist li{display:flex;gap:12px;padding:9px 18px;border-bottom:1px solid rgba(48,54,61,.6);font-size:13px;color:var(--txt2)}
+.newslist li:last-child{border-bottom:none}
+.newslist .t{flex:0 0 70px;color:var(--txt3);font-size:11px;padding-top:3px}
+.analysis{border:1px solid var(--bd);border-radius:12px;background:var(--bg2);padding:20px 24px;font-size:14px;color:var(--txt2)}
+.analysis h3{font-size:14px;color:var(--gold);margin:14px 0 8px}
+.analysis h3:first-child{margin-top:0}
+.analysis ul{padding-left:20px;margin-bottom:10px}
+.analysis li{margin-bottom:5px}
+.analysis strong{color:var(--txt)}
+.analysis p{margin-bottom:10px}
+.warn{font-size:12px;color:var(--amber);border-left:2px solid rgba(240,136,62,.5);padding-left:10px;margin-top:10px;background:rgba(240,136,62,.05)}
+footer{color:var(--txt3);font-size:12px;border-top:1px solid var(--bd);padding-top:18px;margin-top:26px}
+@media(max-width:900px){.grid,.grid.g4,.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid,.grid.g4,.grid.g3{grid-template-columns:1fr}.wrap{padding:24px 16px 50px}}
+</style>
+</head>
+<body>
+<a href="../" class="backbtn">← 返回学习台</a>
+<div class="wrap">
+ <div class="hero">
+  <div class="tag">金融投资 · 午盘</div>
+  <h1>周五 · 午盘</h1>
+  <p class="sub">2026-10-09 午盘简报 · 五域学习台 · 金融投资</p>
+  <div class="meta">
+
+   <span>生成时间 <b>2026-10-09 11:35</b></span>
+   <span>两市成交额 <b>11,686 亿</b></span>
+   <span>数据源 <b>腾讯行情 · 新浪全球指数 · 东方财富快讯</b></span>
+   <span>美股开盘口径：夏令时 21:30 / 冬令时 22:30（北京时间）</span>
+  </div>
+ </div>
+ <section>
+  <div class="sh"><span class="idx">01</span><h2>A股大盘</h2><span class="d">收盘 / 最新</span></div>
+  <div class="grid">
+   <div class="kcard"><div class="n">上证指数</div><div class="p">3,765.71</div><div class="c down">-1.21% · -46.19</div></div>
+   <div class="kcard"><div class="n">深证成指</div><div class="p">12,356.56</div><div class="c down">-2.09% · -264.34</div></div>
+   <div class="kcard"><div class="n">创业板指</div><div class="p">2,957.32</div><div class="c down">-2.61% · -79.34</div></div>
+   <div class="kcard"><div class="n">科创50</div><div class="p">1,401.24</div><div class="c down">-3.78% · -55.08</div></div>
+   <div class="kcard"><div class="n">沪深300</div><div class="p">4,255.65</div><div class="c down">-1.27% · -54.63</div></div>
+  </div>
+ </section>
+ <section>
+  <div class="sh"><span class="idx">02</span><h2>外盘 · 上一交易日</h2><span class="d">隔夜表现</span></div>
+  <div class="grid g4">
+   <div class="kcard"><div class="n">道琼斯</div><div class="p">51,231.64</div><div class="c up">+0.10% · +51.77</div></div>
+   <div class="kcard"><div class="n">纳斯达克</div><div class="p">27,193.34</div><div class="c down">-1.25% · -345.35</div></div>
+   <div class="kcard"><div class="n">标普500</div><div class="p">7,765.36</div><div class="c down">-0.47% · -36.41</div></div>
+   <div class="kcard"><div class="n">恒生指数</div><div class="p">24,030.01</div><div class="c up">+1.03% · +244.22</div></div>
+  </div>
+ </section>
+ <section>
+  <div class="sh"><span class="idx">03</span><h2>持仓</h2><span class="d">实时价格</span></div>
+  <div class="grid g3">
+   <div class="hcard"><div class="hn">新锐股份<span class="cd">688257</span></div><div class="row"><span>现价 <b class="down">46.84</b></span><span>涨跌 <b class="down">-7.25%</b></span><span>振幅 46.24 ~ 51.34</span><span>科创板 · 精密工具</span></div></div>
+   <div class="hcard"><div class="hn">小鹏集团-W<span class="cd">09868</span></div><div class="row"><span>现价 <b class="up">38.44</b></span><span>涨跌 <b class="up">+2.51%</b></span><span>振幅 37.22 ~ 38.70</span><span>港股 · 新能源车</span></div><div class="pnl">持仓 20,000 股 · 成本 75.00 · 浮盈亏 <b class="down">-731,200 HKD（-48.75%）</b></div></div>
+  </div>
+  <div class="warn">持仓浮盈亏合计（仅计已知成本标的）：<b>-731,200</b>（含港币，仅作参考，不折算汇率）</div>
+ </section>
+ <section>
+  <div class="sh"><span class="idx">04</span><h2>消息面</h2><span class="d">东方财富 7×24</span></div>
+  <ul class="newslist">
+   <li><span class="t">10-09 11:29</span><span>日本实际家庭消费连续九个月同比下滑<br><span style="color:var(--txt3)">【日本实际家庭消费连续九个月同比下滑】日本总务省9日公布的调查结果显示，受暴雨、台风等特殊天气因素影响，8月日本实际家庭消费支出连续第九个月同比下滑。</span></span></li>
+   <li><span class="t">10-09 11:28</span><span>逆市买入！早盘多只宽基大幅放量<br><span style="color:var(--txt3)">【逆市买入！早盘多只宽基大幅放量】近期A股持续震荡下挫，市场情绪整体偏谨慎，但逆市资金布局动作十分明显。今日（10月9日）早盘，各大主流宽基ETF迎来成交大幅放量行情，多只核心指数ETF半日成交额直接超越或逼近前一交易日全天水平，成为盘面最</span></span></li>
+   <li><span class="t">10-09 11:27</span><span>风电设备板块震荡下挫 大金重工触及跌停<br><span style="color:var(--txt3)">风电设备板块震荡下挫，大金重工触及跌停，海力风电飞沃科技、锡华科技、天顺风能、威力传动等快速跟跌。</span></span></li>
+   <li><span class="t">10-09 11:26</span><span>缺货看不到尽头！美国光通信龙头：2029年初的产能也已售罄<br><span style="color:var(--txt3)">【缺货看不到尽头！美国光通信龙头：2029年初的产能也已售罄】美国光通信龙头LumentumHoldings的首席执行官MichaelHurlston周五表示，由于科技公司争相建设更快的AI数据中心，该公司直至2029年初的光器件产能已全部</span></span></li>
+   <li><span class="t">10-09 11:25</span><span>“固收+”基金昨日遭较大强度赎回？业内人士回应来了<br><span style="color:var(--txt3)">【“固收+”基金昨日遭较大强度赎回？业内人士回应来了】有行业消息称，10月8日，“固收+”基金等遭遇较大强度赎回。对此，记者向业内多家机构求证了解到，相关赎回数据或来自某单一渠道。某公募机构市场人士表示，昨天纯债基金、二级债基赎回规模较平常</span></span></li>
+   <li><span class="t">10-09 11:23</span><span>英国“暴利税”预期引发汇丰渣打遭抛售 机构称核心基本面韧性犹存<br><span style="color:var(--txt3)">【英国“暴利税”预期引发汇丰渣打遭抛售 机构称核心基本面韧性犹存】近期汇丰与渣打在二级市场上遭遇持续抛售。根据近期报道，受地缘局势冲突推升政府借贷成本影响，英国财政面临严峻的赤字压力，财政大臣计划于10月28日正式公布新一届政府的首份财政预</span></span></li>
+   <li><span class="t">10-09 11:22</span><span>三生制药合作伙伴海和药物紫杉醇口服溶液乳腺癌适应症获批上市<br><span style="color:var(--txt3)">【三生制药合作伙伴海和药物紫杉醇口服溶液乳腺癌适应症获批上市】10月9日，记者从三生制药获悉，公司合作伙伴上海海和药物研究开发股份有限公司宣布，其与韩国大化制药公司合作开发的紫杉醇口服溶液新增用于治疗复发性或转移性HER2阴性乳腺癌适应症正</span></span></li>
+   <li><span class="t">10-09 11:22</span><span>南向资金净卖出额达20亿港元<br><span style="color:var(--txt3)">截至目前，南向资金净卖出额达20亿港元。</span></span></li>
+   <li><span class="t">10-09 11:21</span><span>菲尔兹奖得主陶哲轩点名批评OpenAI 呼吁数学家停止合作<br><span style="color:var(--txt3)">【菲尔兹奖得主陶哲轩点名批评OpenAI 呼吁数学家停止合作】OpenAI与数学界的紧张关系再度升级。菲尔兹奖得主陶哲轩近日在个人博客转载了一份由人类数学协会（AHM）发布的声明，批评OpenAI无视数学界研究规范，并呼吁数学家停止与其合作</span></span></li>
+   <li><span class="t">10-09 11:19</span><span>葛卫东又有“大动作”<br><span style="color:var(--txt3)">【葛卫东又有“大动作”】知名投资人葛卫东的一次“大动作”，再度吸引市场关注。根据新材料龙头企业中材科技10月8日晚间发布的2025年度向特定对象发行A股股票发行情况报告书，公司此次股票发行最终获配发行对象共计15名，发行价格为51.40元/</span></span></li>
+   <li><span class="t">10-09 11:17</span><span>振江股份：海外订单储备充足 欧洲区域项目按计划推进排产与交付<br><span style="color:var(--txt3)">【振江股份：海外订单储备充足 欧洲区域项目按计划推进排产与交付】振江股份在10月9日召开的2026年半年度业绩说明会上表示，公司海外订单储备充足，欧洲区域项目按计划推进排产与交付。欧洲风电政策、汇率波动、原材料价格等因素客观上会对经营成果带</span></span></li>
+   <li><span class="t">10-09 11:15</span><span>菲律宾股市指数上涨2.1%<br><span style="color:var(--txt3)">菲律宾股市指数上涨2.1%，至5725.55点。</span></span></li>
+  </ul>
+ </section>
+ <section>
+  <div class="sh"><span class="idx">05</span><h2>解读</h2><span class="d">自动解读</span></div>
+  <div class="analysis">
+<h3>大盘</h3>
+<ul>
+<li>主要指数<strong>普跌</strong>，均值 -2.19%；上证指数 3,765.71（-1.21%）、深证成指 12,356.56（-2.09%）、创业板指 2,957.32（-2.61%）、科创50 1,401.24（-3.78%）、沪深300 4,255.65（-1.27%）</li>
+<li>最弱：科创50 1,401.24（-3.78%）；最强：上证指数 3,765.71（-1.21%）</li>
+<li>两市成交额 <strong>11,686 亿</strong>（上证+深证口径）</li>
+</ul>
+<h3>外盘（上一交易日）</h3>
+<ul>
+<li>道琼斯 51,231.64（+0.10%）；纳斯达克 27,193.34（-1.25%）；标普500 7,765.36（-0.47%）；恒生指数 24,030.01（+1.03%）</li>
+</ul>
+<h3>持仓</h3>
+<ul>
+<li>新锐股份 46.84（-7.25%）</li>
+<li>小鹏集团-W 38.44（+2.51%），浮盈亏 -731,200 HKD（-48.75%） ⚠️ 深度回撤，需按纪律复核仓位与止损线</li>
+</ul>
+<h3>规则提示</h3>
+<ul>
+<li>小鹏集团-W回撤 -48.7%，按既定纪律核对止损/减仓条件，不用情绪决策</li>
+<li>指数单日跌幅超过 1.5%，属高波动日：新增仓位从严，优先控制回撤</li>
+<li>成交额偏低，题材持续性弱，避免追高</li>
+<li>口径：美股开盘口径：夏令时 21:30 / 冬令时 22:30（北京时间）；数据源 腾讯行情/新浪全球指数/东方财富快讯</li>
+</ul>
+  </div>
+ </section>
+ <footer>本页由自动化脚本生成，仅供学习研究，不构成投资建议。数据以交易所为准。 · 2026-10-09</footer>
+</div>
+<!--studyworkbench-wrapfix--><style>@media(max-width:640px){body{overflow-wrap:anywhere;word-break:break-word}}</style>
+</body>
+</html>

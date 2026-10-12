@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地缘早间简报 · 2026-10-13</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1180px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:28px 32px;margin-bottom:20px;position:relative}
+  .backbtn{position:absolute;top:20px;right:24px;background:#21262d;border:1px solid #30363d;color:#c9d1d9;padding:6px 14px;border-radius:6px;font-size:12px;text-decoration:none;transition:all .2s}
+  .backbtn:hover{background:#30363d;color:#58a6ff}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:.5px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.a{color:#f0883e;border-color:#f0883e33}
+  .sec{margin:24px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:8px}
+  .ncard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+  .ncard.hot{border-left:3px solid #f85149}
+  .ncard.warm{border-left:3px solid #f0883e}
+  .ncard.cool{border-left:3px solid #3fb950}
+  .ncard .nt{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .ncard .lvl{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .lvl.crit{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .lvl.high{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .lvl.mid{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .lvl.low{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .ncard h3{font-size:14.5px;font-weight:600;color:#e6edf3}
+  .ncard p{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+  .ncard .src{font-size:11px;color:#7d8590;margin-top:6px}
+  .fw{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;overflow:hidden;margin-bottom:14px}
+  .fw .fh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #30363d;background:#161b22}
+  .fw .fh .ft{font-size:15.5px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .num{width:28px;height:28px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+  .fw .body{padding:14px 20px}
+  .fw .body p{color:#c9d1d9;font-size:13.5px;margin-bottom:8px}
+  .fw .body p:last-child{margin-bottom:0}
+  .kw{color:#58a6ff;font-weight:600}
+  .kw.r{color:#f85149}
+  .kw.g{color:#3fb950}
+  .kw.a{color:#f0883e}
+  .lp{background:#0d1117;border:1px solid #30363d33;border-radius:8px;padding:10px 14px;margin-top:8px;border-left:3px solid #3fb950}
+  .lp .lt{font-size:12px;color:#7d8590;font-weight:600;margin-bottom:4px}
+  .lp .lb{font-size:13px;color:#c9d1d9}
+  .vf{background:#0d1117;border:1px solid #30363d33;border-radius:10px;margin-top:10px;overflow:hidden}
+  .vf .vrow{display:grid;grid-template-columns:200px 90px 1fr;gap:10px;padding:9px 14px;border-bottom:1px solid #30363d33;align-items:start;font-size:13px}
+  .vf .vrow:last-child{border-bottom:none}
+  .vp{color:#c9d1d9}
+  .vs{font-weight:700;font-size:12px;padding:3px 8px;border-radius:4px;text-align:center}
+  .vs.hit{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .vs.part{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .vs.miss{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .vs.wait{color:#7d8590;background:#7d859020;border:1px solid #7d859033}
+  .vs.rev{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .vd{color:#c9d1d9;font-size:12.5px}
+  .holdbox{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .holdbox h2{font-size:15px;color:#f0883e;margin-bottom:12px}
+  .hrow{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #30363d33}
+  .hrow:last-child{border-bottom:none}
+  .hl{color:#58a6ff;font-weight:600;font-size:13.5px}
+  .hr{color:#c9d1d9;font-size:12.5px;line-height:1.75}
+  .stance{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .stance h2{font-size:15px;color:#58a6ff;margin-bottom:10px}
+  .stance p{color:#c9d1d9;font-size:13px;margin-bottom:8px}
+  .stance p:last-child{margin-bottom:0}
+  .discl{background:#1a0f0f;border:1px solid #f8514933;border-radius:10px;padding:14px 18px;margin-top:14px}
+  .discl h3{color:#f85149;font-size:13px;margin-bottom:6px}
+  .discl p{color:#c9d1d9;font-size:12px}
+  .foot{text-align:center;color:#7d8590;font-size:11px;margin-top:18px;padding-top:14px;border-top:1px solid #30363d}
+  @media(max-width:760px){.news-grid{grid-template-columns:1fr}.vf .vrow{grid-template-columns:1fr;gap:4px}.hrow{grid-template-columns:1fr;gap:6px}.hd .backbtn{position:static;margin-bottom:10px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="hd">
+  <a class="backbtn" href="../">← 返回学习台</a>
+  <h1>🌍 地缘政治域 · 每日早间简报</h1>
+  <div class="sub">2026-10-13 星期二 · 覆盖 10-12 早间–10-13 早间公开资讯窗口 · 五大框架分析 + 10-12 预判校验</div>
+  <div class="meta"><span class="tag r">🔥 霍尔木兹</span>
+  <span class="tag a">也门·沙特</span>
+  <span class="tag g">朝鲜半岛</span>
+  <span class="tag b">市场定价</span></div>
+</div>
+<div class="sec">一、隔夜要闻（10-12 早间–10-13 早间公开资讯窗口）</div>
+<div class="news-grid">
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">关键</span><h3>伊朗称正"审议美方最新意见"、重开海峡条件不变 · 革命卫队称域外大国无权干涉 · 海峡及阿曼湾同日 6 船遇袭</h3></div>
+    <p>伊朗外交部发言人巴加埃 12 日表示，伊方正在<b class="kw r">审议美方针对伊方立场提出的最新意见</b>，审议结束后将立即向调解方传达其看法；他强调，伊朗关于<b class="kw r">重新开放霍尔木兹海峡的条件不变</b>。伊朗副外长加里巴巴迪同日称，伊方正<b class="kw a">敲定对美回应</b>，一旦磋商完成，将通过中间人传达其立场。</p>
+    <p>伊朗伊斯兰革命卫队总司令艾哈迈德·瓦希迪 12 日表态称，<b class="kw r">任何域外大国都无权威胁、维持霸权存在或干涉霍尔木兹海峡和波斯湾</b>。通道实体风险继续累积：英国海上贸易行动办公室（UKMTO）多份海事通报显示，11 日霍尔木兹海峡及阿曼湾海域<b class="kw r">共有 6 艘船舶接连遇袭</b>——海峡水道内 4 艘油轮在驶出途中遭"不明发射物"袭击、1 艘集装箱船在驶入途中被击中，阿曼湾苏哈尔锚地附近另有 1 艘油轮遭无人机袭击，当地部门协助船员撤离。</p>
+    <div class="src">新华社/路透 10-12</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">关键</span><h3>胡塞称再袭利雅得机场与海米斯穆谢特空军基地 · 沙特联军称拦截两枚弹道导弹 · 胡塞警告沙特机场"不安全"</h3></div>
+    <p>也门胡塞武装发言人叶海亚·萨雷亚 12 日称，该组织当晚向沙特首都利雅得的<b class="kw r">哈立德国王国际机场发射一枚弹道导弹并"命中目标"</b>，另用无人机袭击沙特西南部海米斯穆谢特的<b class="kw r">哈立德国王空军基地</b>，同样称命中。萨雷亚再次警告国际航空公司、航空从业人员及旅客不要使用沙特境内机场和领空，称除麦加、麦地那外<b class="kw a">沙特机场均"不安全"</b>。</p>
+    <p>沙特阿拉伯主导的多国联军发言人图尔基·马利基 12 日晚称，联军当天<b class="kw g">拦截并摧毁胡塞武装向海米斯穆谢特发射的两枚弹道导弹</b>，并表示正开展大规模军事行动、瓦解胡塞弹道导弹网络。当天沙特首都利雅得传出剧烈爆炸声；胡塞方面另称沙特在 24 小时内发动 119 次袭击，也门政府军称打死近千名胡塞武装人员（交战双方数字均未获独立核实）。</p>
+    <div class="src">新华社/公开资讯 10-12–13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">中东·美国</span><h3>特朗普称已与沙特王储讨论胡塞打击 · 称胡塞"行为不端" · 重申对伊战争将"很快结束、油价随后下跌"</h3></div>
+    <p>美国总统特朗普表示，他已与沙特王储穆罕默德·本·萨勒曼<b class="kw a">讨论也门胡塞武装发动的那些打击</b>，称胡塞武装"行为不端"，并<b class="kw r">重申与伊朗的战争将很快结束、油价将在那之后下跌</b>。就英国指认伊朗涉费尔福德基地事件是否采取行动，特朗普称"我们拭目以待"。</p>
+    <p>另据公开资讯，特朗普在同一窗口表示<b class="kw r">"我可能会对哥伦比亚取消关税"</b>，并称已与俄罗斯就柴油安排达成共识（详见下条）。上述均为口头表态，是否落为可执行安排尚无可核实文本。</p>
+    <div class="src">公开资讯 10-13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">俄美</span><h3>俄美已就柴油供应开始谈判 · 俄方发布命令部分解除柴油出口禁令 · 特朗普称"这不是我的协议、是为世界其他地区"</h3></div>
+    <p>俄罗斯分管能源工作的副总理诺瓦克 12 日称，<b class="kw r">俄美正就柴油供应问题进行谈判</b>；根据两国总统达成的协议，俄政府已迅速发布命令、<b class="kw r">部分解除对柴油出口的禁令</b>，允许向包括美国在内的全球市场供应柴油，目前两国能源部门与企业之间正展开谈判。诺瓦克并表示，俄罗斯<b class="kw a">有可能在全球市场上增加柴油供应</b>。</p>
+    <p>特朗普就此表态称，<b class="kw a">"我与俄罗斯的柴油协议对我来说算不上什么协议，这是为世界其他地区达成的协议"</b>。据路透社援引三名知情人士，美方特使库什纳与威特科夫上周五告诉乌克兰官员，允许俄罗斯出口柴油是<b class="kw a">促使俄方重返谈判桌、以结束俄乌战争的努力的一部分</b>。该安排在西方内部引发的分歧（英方与部分美国参议员反对、欧盟 12 日通过对俄新制裁）尚未收敛。</p>
+    <div class="src">新华社/路透 10-12–13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">俄乌</span><h3>特朗普称普京与泽连斯基"都支持"能源停火、认为普京更想达成协议 · 基辅遭袭致 1 死 11 伤</h3></div>
+    <p>特朗普 12 日称，他认为俄罗斯总统普京与乌克兰总统泽连斯基<b class="kw a">都支持</b>他所披露的能源停火安排，并称<b class="kw a">"普京比泽连斯基更想达成协议"</b>。乌方此前对该安排一度表示"也是新闻"，本轮窗口未见乌方就停火条款的新的权威确认。</p>
+    <p>与此同时，打击仍在持续：乌克兰首都<b class="kw r">基辅 12 日遭袭，已致 1 人死亡、11 人受伤</b>。停火安排是否成立、由谁执行，本窗口仍无可核实文本，与美方此前"俄尚未接受任何形式停火"的口径并存，属<b class="kw r">数据缺口·待观察</b>，不作推断。</p>
+    <div class="src">公开资讯 10-13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl mid">欧洲</span><h3>欧盟通过对俄新制裁名单 · 俄常驻欧盟代表团称单边制裁非法且毫无根据、将作适当回应</h3></div>
+    <p>俄罗斯常驻欧盟代表团 10 月 12 日回应欧盟当天通过的对俄制裁名单，强调俄方<b class="kw r">不承认此类绕过《联合国宪章》的单方面强制措施</b>，认为其非法且毫无根据，称欧盟试图通过制裁压力改变俄外交政策方针<b class="kw a">注定没有出路</b>，欧盟的敌对行动将得到俄方适当回应。</p>
+    <p>这与同窗口的"俄美柴油谈判、部分解禁"形成对照：制裁面与能源贸易面同时推进，欧洲在能源现实主义议题上的内部分歧继续公开化。</p>
+    <div class="src">央视 10-12</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl mid">东北亚</span><h3>朝鲜导弹总局 12 日进行战术弹道导弹试射</h3></div>
+    <p>据朝中社 13 日报道，<b class="kw r">朝鲜导弹总局 12 日进行了战术弹道导弹试射</b>。这是本资讯窗口内半岛方向的主要军事动向，具体射程、弹型与落点等参数未见独立核实，按<b class="kw a">数据缺口·待观察</b>处理。</p>
+    <p>中方在半岛问题上的立场一贯明确：坚持<b class="kw g">半岛无核化</b>目标，坚持维护半岛和平稳定，坚持通过对话协商解决问题。</p>
+    <div class="src">新华社 10-13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl mid">英伊</span><h3>英国再次指认伊朗涉费尔福德基地可疑图谋 · 伊朗外交部称"拙劣的假旗行动"并拒绝接受</h3></div>
+    <p>英国首相伯纳姆 12 日评估称，一起针对英国皇家空军费尔福德基地的可疑图谋<b class="kw a">"极有可能"是在伊朗协调、"几乎可以肯定"由革命卫队指挥</b>。伊朗外交部当日发表声明<b class="kw r">拒绝接受</b>该说法，称这是"拙劣的假旗行动"，批评英方在未提供令人信服证据的情况下提出指控、依赖"极有可能""几乎可以肯定"等措辞。</p>
+    <p>伊方并指责伦敦借相关指控<b class="kw a">逃避其所称英国参与美以对伊朗军事行动的责任</b>。同一窗口，英方再度指认、伊方再度抗议，事件定性仍无第三方核实结论。</p>
+    <div class="src">公开资讯 10-12</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl high">市场定价</span><h3>美股涨跌不一、费半连跌四日 · 美联储哈玛克称利率需进一步上调 · WTI 结算 93.74 美元/桶 · 金价回落</h3></div>
+    <p>10-12 美股收盘：<b class="kw r">道琼斯 51850.55（+0.38%）、标普 500 7807.24（-0.06%）、纳斯达克 27245.90（-0.44%）</b>，<b class="kw r">费城半导体指数跌 2.67%、连续四个交易日回撤，创 7 月以来最长连跌</b>，能源板块涨 1.43%。美国克利夫兰联储主席哈玛克称<b class="kw r">利率需要进一步上调</b>，对中性利率的预期在 FOMC 中属偏高水平、国债利率在历史标准下"适度"；市场定价 10 月维持利率不变概率约 79.5%。美元指数涨 0.37% 报 102.586，美元兑日元逼近 159 关口。</p>
+    <p>能源与贵金属：<b class="kw r">WTI 原油期货结算价 93.74 美元/桶</b>，上期所原油期货夜盘收涨 3.26%；卡塔尔将 11 月海上原油官方售价定为较阿曼/迪拜基准<b class="kw a">每桶贴水 8 美元</b>。现货黄金跌 0.56% 报 4170.70 美元/盎司，COMEX 铜涨 1.04%。<b class="kw a">布伦特独立报价与美债收益率数值本窗口未取到（10-12 美国债市因假日休市），按数据缺口·待观察处理。</b></p>
+    <div class="src">公开资讯/彭博 10-12–13</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl low">区域·经贸</span><h3>以色列北部爆炸致 1 死 24 伤 · 古巴颁布油气新法令推动能源独立 · 南加州两港 9 月创历史最忙 · 中资券商加码中东中亚</h3></div>
+    <p>以色列北部发生爆炸，<b class="kw r">造成 1 人死亡、24 人受伤</b>，具体原因与责任方本窗口未见权威通报，按<b class="kw a">数据缺口·待观察</b>处理。古巴方向，国家主席迪亚斯-卡内尔在世界粮食论坛谴责美国长期封锁加剧粮食困境，同日古巴<b class="kw a">颁布新的石油和天然气法令</b>以推动能源独立。</p>
+    <p>经贸侧两条线索同向：洛杉矶港与长滩港 9 月分别创下各自最繁忙月份，<b class="kw a">长滩港处理 997,177 标准箱、进口量同比增 31%</b>，企业提前应对关税、巴拿马运河干旱限航与燃料价格上涨等多重压力；中资券商年内境外子公司增资规模<b class="kw a">已突破 500 亿元</b>，中信建投国际取得迪拜国际金融中心牌照、国泰君安国际与哈萨克斯坦阿拉木图市签署合作备忘录，布局由香港枢纽向中东、中亚延伸。</p>
+    <div class="src">公开资讯/上证报 10-12–13</div>
+  </div>
+</div>
+
+<div class="sec">二、五大框架分析</div>
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">1</span>🌊 海权·陆权 · 海峡"许可制"未松动，风险从声明层落到船体与锚地</div></div>
+  <div class="body">
+    <p><b class="kw r">海上通道：</b>伊方口径本窗口没有松动——"正在审议美方最新意见"与"重开海峡条件不变"同时出现，等于把开放时点继续往后推；革命卫队把域外存在直接定义为"无权干涉"，将海峡通行权当作主权叙事的一部分。UKMTO 通报 6 艘船舶同日遇袭（4 艘出峡油轮、1 艘入峡集装箱船、阿曼湾锚地 1 艘油轮遭无人机袭击），说明风险已从"声明层"落到具体船体、锚地与船员撤离程序上。</p>
+    <p><b class="kw a">陆上中介：</b>调解方向仍是"中间人"结构——伊方称审议完成后通过调解方传达立场。值得注意的是阿曼方向：苏哈尔锚地遇袭意味着原本被视为缓冲的陆上邻国近岸海域也被纳入风险半径，中介节点的"安全溢价"正在被重新定价。该框架今天看到的是：一条国际海峡的通行权被当作政治筹码长期持有，而承载全球航运的物理节点（船体、锚地、保费）在承受后果。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">2</span>⚖️ 均势 · "边谈边打"固化，能源现实主义把盟友分歧推到台面</div></div>
+  <div class="body">
+    <p><b class="kw r">压与谈同框：</b>美方一侧同时进行三件事——与沙特王储直接讨论也门战事并称胡塞"行为不端"、就对伊战争给出"很快结束"的时间预期、与俄就柴油供应开谈。伊方一侧则是"审议中 + 条件不变 + 通过中间人传达"。谈的通道没有关闭，压的动作也没有停手，双方都在争取"停火与通行条件"的定义权，而非单点让步。</p>
+    <p><b class="kw g">盟友分歧：</b>俄美柴油安排把"能源现实主义"与盟友立场的裂缝再次公开——英方与部分美国参议员反对、欧盟 12 日通过对俄新制裁名单、俄方称将适当回应。制裁面与能源贸易面同时推进，说明美国在"压俄"与"稳油价"之间选择了双轨并行。该框架今天看到的是：均势不是一次性的力量对比，而是各方在同一周里对"谁定义条件"的持续争夺。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">3</span>🔥 修昔底德 · 竞争重心仍在算力与半导体基础设施，但估值与合规开始反向检验</div></div>
+  <div class="body">
+    <p><b class="kw r">基础设施锁定：</b>应用材料公司揭幕投资约 50 亿美元的 EPIC 研发中心（创始伙伴含台积电、英特尔、三星、美光、SK 海力士），并称未来几年营收有望翻倍而员工数不同步增长、更多依赖 AI 工具；英伟达推进 800V 供电与下一代可插拔光模块等新标准，纳微半导体与英伟达合作开发 800V 转 12V 供电板，英特尔开始向客户提供 GPU D 系列样品。竞争焦点继续落在<b class="kw a">"不可快速复制的物理资产与标准制定权"</b>上。</p>
+    <p><b class="kw a">反向检验：</b>费城半导体指数<b class="kw r">连跌四日、单日跌 2.67%</b>，纳指跌 0.44%，长端利率与估值形成拉锯；合规侧，麻省理工学院就数据中心计算芯片安全技术起诉亚马逊，AI 基础设施的法律与安全成本开始显性化。该框架今天看到的是：技术竞争已制度化为基础设施与规则的竞争，扩张叙事同时接受贴现率与法律的双重检验。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">4</span>🕊️ 文明冲突 · 受力点仍集中在民航与机场，冲突载体是具体利益而非文明对立</div></div>
+  <div class="body">
+    <p><b class="kw r">民用受力面：</b>本轮打击的最重后果继续落在机场与空军基地周边——胡塞称向利雅得哈立德国王国际机场发射弹道导弹并命中、以无人机袭击海米斯穆谢特空军基地，并公开警告国际航空公司与旅客"除麦加、麦地那外沙特机场均不安全"；利雅得传出剧烈爆炸声。民航设施、机组与旅客被直接卷入，把"民用保护"推上叙事前台。</p>
+    <p><b class="kw g">具体争端而非文明对立：</b>同一窗口的以色列北部爆炸、欧盟对俄新制裁下的能源博弈、古巴粮食与能源困境，载体都是边界、资源、制裁与具体利益。中方立场是主张通过对话协商妥善处理分歧、维护地区和平稳定，不把具体矛盾简化为文明之间的对立；该框架今天看到的仍是可谈判的利益与安全问题。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">5</span>💰 地缘经济 · 通道保费与成品油是本周定价轴，长端美债报价仍缺</div></div>
+  <div class="body">
+    <p><b class="kw r">供给侧集中变量：</b>霍尔木兹及阿曼湾 6 船遇袭、美俄柴油谈判并部分解禁、俄方称可能增加全球柴油供应、卡塔尔 11 月海上原油贴水 8 美元定价，共同作用于原油与成品油贸易流。<b class="kw a">WTI 结算 93.74 美元/桶</b>、上期所原油夜盘涨 3.26%，能源板块是当日美股少数上涨板块之一；<b class="kw a">布伦特独立报价本窗口未取到</b>，按数据缺口处理。</p>
+    <p><b class="kw a">金融条件：</b>美元指数 102.586（+0.37%）、美元兑日元逼近 159、美联储官员称利率需进一步上调，构成对成长股估值的贴现率变量；10-12 美国债市因假日休市，<b class="kw r">长端美债收益率数值缺口</b>待 10-13 开盘补足。贸易侧，南加州两港 9 月创纪录反映企业为关税、巴拿马运河限航与燃料成本提前备货。该框架今天看到的是：通道保费与成品油价差是本周最直接的定价轴，而利率端仍缺一个可验证的报价。</p>
+  </div>
+</div>
+
+<div class="sec">三、10-12 预判校验（回看 10-12 简报的跟踪项）</div>
+<div class="vf">
+  <div class="vrow">
+    <div class="vp">盯霍尔木兹海峡通行规则（"许可制"、七项条件、IMO 航线登记）对原油、成品油与航运保险的传导</div>
+    <div class="vs wait">待观察·有侧证</div>
+    <div class="vd">规则面无松动：伊方称<b>正在审议美方最新意见</b>、同时强调<b>重开海峡条件不变</b>，革命卫队称域外大国无权干涉；<b>IMO 航线登记本窗口无新进展</b>。侧证来自两个方向：实体风险累积（UKMTO 通报 11 日<b>6 艘船舶遇袭</b>），价格端开始反映（<b>WTI 结算 93.74 美元/桶，上期所原油夜盘 +3.26%</b>）。<b>布伦特独立报价未取到</b>，保费与运费的具体升幅亦无独立数据，不作推断。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯美俄柴油安排与 IEA 10-15 会议、成员国储备释放节奏对成品油贸易流的影响</div>
+    <div class="vs hit">命中·推进</div>
+    <div class="vd">安排从"宣布"进入"谈判与执行"阶段：俄副总理诺瓦克称<b>俄美已开始就柴油供应谈判</b>，俄政府已发布命令<b>部分解除柴油出口禁令</b>、允许向包括美国在内的全球市场供应，并称可能<b>增加全球柴油供应</b>；特朗普称这是"为世界其他地区达成的协议"；路透援引知情人士称库什纳与威特科夫向乌方说明此举意在促俄重返谈判桌。分歧同步固化：英方与部分美国参议员反对、<b>欧盟 12 日通过对俄新制裁</b>。IEA 会议定于 <b>10-15</b>，尚未召开。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯俄乌"能源停火"口径分歧能否收敛为可执行安排、美方对乌武器供应威胁的落地</div>
+    <div class="vs wait">待观察·口径仍分叉</div>
+    <div class="vd">特朗普称普京与泽连斯基<b>"都支持"能源停火</b>、并认为<b>普京比泽连斯基更想达成协议</b>，属时间线上最乐观的表态；但本窗口<b>未见停火文本、执行机制或第三方确认</b>，乌方亦无新的权威回应，与美方此前"俄尚未接受任何形式停火"的口径并存。反向证据是打击未停：<b>基辅 12 日遭袭致 1 死 11 伤</b>。对乌武器供应威胁的落地情况本窗口无新增可核实内容。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯沙特民航设施能否恢复运营与红海—也门打击链条是否继续外溢至第三国</div>
+    <div class="vs hit">命中·持续</div>
+    <div class="vd">打击链条未降温：胡塞 12 日称向<b>利雅得哈立德国王国际机场发射弹道导弹并命中</b>、以无人机袭击<b>海米斯穆谢特哈立德国王空军基地</b>，并公开警告国际航空公司与旅客沙特机场"不安全"；同日沙特首都<b>利雅得传出剧烈爆炸声</b>，多国联军称<b>拦截摧毁两枚弹道导弹</b>。民用航空设施仍是主要受力点，且冲突外溢叙事随航线警告扩散至第三方承运人。</div>
+  </div>
+  <div class="vrow">
+    <div class="vp">盯长端美债收益率与 AI 资本并购对全球成长股与港股科技风险偏好的双向作用</div>
+    <div class="vs part">部分兑现·方向分化</div>
+    <div class="vd">10-12 亚太与美股出现分野：<b>恒生指数收 24271.20（+0.25%）、上证指数 3797.24（-0.43%）</b>；美股<b>道指 51850.55（+0.38%）创新高，但纳指跌 0.44%、费半跌 2.67% 连跌四日</b>——成长与周期分化，而非单向的系统性风险偏好变化。AI 资本端延续（<b>应用材料揭幕 50 亿美元 EPIC 中心</b>、谷歌与 Planet 借 SpaceX 发射原型卫星、Meta 增加支出），但合规与安全成本显性化（MIT 起诉亚马逊）。<b>长端美债收益率数值因 10-12 假日休市缺口</b>，该变量待 10-13 补足。</div>
+  </div>
+</div>
+
+<div class="sec">四、持仓含义提示（客观映射 · 不给买卖建议）</div>
+<div class="holdbox">
+  <h2>💼 持仓含义提示（客观提示·不给买卖建议）</h2>
+  <div class="hrow">
+    <div class="hl">新锐股份 688257</div>
+    <div class="hr">硬质合金（钨钴）与精密工具。<b>10-12 收盘 44.20 元（-8.49%）</b>，当日开 47.97 元、最高 48.18 元、最低 44.00 元、<b>前收 48.30 元</b>，跌幅显著大于当日大盘（<b>上证指数收 3797.24、-0.43%</b>）。外部变量的客观映射：① <b>霍尔木兹海峡及阿曼湾 6 艘船舶遇袭、通行规则未松动</b>，抬升中东航运与保险成本，对跨境物流与工业运行成本形成间接压力；② <b>WTI 结算 93.74 美元/桶、上期所原油夜盘 +3.26%</b>，能源与电力成本属间接变量；③ 钨、钴属工业金属与战略资源，价格更多受制造业需求与出口环节影响，与地缘事件的传导链条较长。当日跌幅更多体现个股与板块层面的定价，与上述外部变量之间不构成直接因果，以上仅作客观映射，不构成买卖建议。</div>
+  </div>
+  <div class="hrow">
+    <div class="hl">小鹏集团-W 09868</div>
+    <div class="hr">港股中概、新能源车与智能辅助驾驶出海。<b>10-12 收盘 38.48 港元（+0.37%）</b>，当日开 39.04 港元、最高 40.20 港元、最低 38.00 港元、<b>前收 38.34 港元</b>；同日<b>恒生指数收 24271.20（+0.25%）</b>，港股风险偏好平稳。外部变量的客观映射：① <b>长端美债收益率与美联储官员"利率需进一步上调"的表态</b>压制全球成长股估值，构成贴现率层面的间接变量（美债报价待 10-13 补足）；② <b>纳指跌 0.44%、费半跌 2.67% 连跌四日</b>，外部科技与半导体板块回撤对港股科技情绪有传导；③ 同窗口<b>彭博电动汽车价格回报指数跌 1.51%</b>（小米集团 H 股 -5.55%、禾赛 ADR -5.56%、特斯拉 -1.22%），新能源车板块外部定价偏弱，而公司当日收涨，二者方向并不一致；④ <b>中资券商年内境外增资超 500 亿元、加码中东中亚</b>与传音控股港股 IPO 定价等，属中概与跨境融资层面的背景变量。以上仅作客观映射，不构成买卖建议。</div>
+  </div>
+  <div class="hrow">
+    <div class="hl">共同观察项</div>
+    <div class="hr">① <b>霍尔木兹"许可制"与 IMO 航线登记</b>，10-13 开盘是油价与航运保费的验证窗口；② <b>IEA 10-15 柴油会议</b>与成员国储备释放节奏、美俄柴油谈判的执行细节；③ <b>俄乌"能源停火"</b>能否从口头表态收敛为可执行安排，以及基辅方向打击是否延续；④ <b>沙特民航设施恢复情况</b>与红海—也门打击链条是否继续外溢至第三方承运人；⑤ <b>美股大行财报季开启</b>（高盛、花旗、摩根大通、富国银行、强生、联合健康等）叠加长端美债报价补足，对全球成长股与港股科技风险偏好的双向作用；⑥ <b>朝鲜半岛动向</b>（12 日战术弹道导弹试射）及中方半岛无核化、和平稳定与对话协商立场。以上均为客观观察项，不构成买卖建议。</div>
+  </div>
+</div>
+
+<div class="stance">
+  <h2>⚖ 立场声明</h2>
+  <p><b>台湾是中国领土不可分割的一部分</b>，台湾问题纯属中国内政，不容任何外来干涉。一个中国原则是国际关系基本准则和国际社会普遍共识，也是中美关系的政治基础。</p>
+  <p><b>黄岩岛及南海诸岛是中国固有领土</b>，中国对相关海域拥有主权与海洋权益。中方坚定捍卫领土主权和海洋权益，致力于同当事国通过对话协商妥善处理分歧。</p>
+  <p><b>中方反对缺乏联合国授权和国际法依据的单边制裁</b>，反对以涉及第三方为由对他国采取所谓次级制裁措施；主张维护以联合国为核心的国际体系和以国际法为基础的国际秩序。</p>
+  <p><b>朝鲜半岛事务是中国周边外交重要议程</b>：中方坚持半岛无核化目标，坚持维护半岛和平稳定，坚持通过对话协商解决问题。中方一贯坚持和平利用外空，反对外空武器化、战场化和军备竞赛。</p>
+</div>
+<div class="discl">
+  <h3>⚠ 免责声明</h3>
+  <p>本简报基于公开信息整理·仅供学习研究·不构成投资/政策建议。地缘事件发展具有高度不确定性·持仓含义提示仅为客观映射·不构成买卖建议。投资者应独立判断并自行承担风险。立场严格遵循中国官方立场·台湾/南海/中日等问题按中国官方表述。</p>
+</div>
+<div class="foot">
+  <p>学习台 · 地缘政治域每日早间简报 · 五大框架实战 · 2026-10-13 周二</p>
+</div>
+<!--studyworkbench-disclaimer--><div style="max-width:900px;margin:34px auto 28px;padding:14px 18px;border-top:1px solid rgba(139,148,158,.35);color:#8b949e;font-size:12px;line-height:1.7;text-align:center;font-family:-apple-system,'PingFang SC',system-ui,sans-serif">本页由自动化脚本生成，仅供学习研究，不构成投资建议。数据以交易所为准。</div>
+<!--studyworkbench-wrapfix--><style>@media(max-width:640px){body{overflow-wrap:anywhere;word-break:break-word}}</style>
+</body>
+</html>

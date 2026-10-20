@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>地缘早间简报 · 2026-10-21</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:24px;max-width:1180px;margin:0 auto}
+  .hd{border:1px solid #30363d;border-radius:12px;background:linear-gradient(135deg,#161b22 0%,#0d1117 100%);padding:28px 32px;margin-bottom:20px;position:relative}
+  .backbtn{position:absolute;top:20px;right:24px;background:#21262d;border:1px solid #30363d;color:#c9d1d9;padding:6px 14px;border-radius:6px;font-size:12px;text-decoration:none;transition:all .2s}
+  .backbtn:hover{background:#30363d;color:#58a6ff}
+  .hd h1{font-size:23px;font-weight:700;margin-bottom:6px;letter-spacing:.5px}
+  .hd .sub{color:#7d8590;font-size:13px}
+  .hd .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+  .tag{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:3px 10px;font-size:12px;color:#7d8590}
+  .tag.r{color:#f85149;border-color:#f8514933}
+  .tag.g{color:#3fb950;border-color:#3fb95033}
+  .tag.b{color:#58a6ff;border-color:#1f6feb33}
+  .tag.a{color:#f0883e;border-color:#f0883e33}
+  .sec{margin:24px 0 8px;font-size:13px;color:#7d8590;letter-spacing:1px;font-weight:600;text-transform:uppercase;border-left:3px solid #1f6feb;padding-left:10px}
+  .news-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:8px}
+  .ncard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px 18px;position:relative;overflow:hidden}
+  .ncard.hot{border-left:3px solid #f85149}
+  .ncard.warm{border-left:3px solid #f0883e}
+  .ncard.cool{border-left:3px solid #3fb950}
+  .ncard .nt{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .ncard .lvl{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+  .lvl.crit{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .lvl.high{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .lvl.mid{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .lvl.low{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .ncard h3{font-size:14.5px;font-weight:600;color:#e6edf3}
+  .ncard p{font-size:13px;color:#c9d1d9;margin-bottom:6px}
+  .ncard .src{font-size:11px;color:#7d8590;margin-top:6px}
+  .fw{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:0;overflow:hidden;margin-bottom:14px}
+  .fw .fh{display:flex;align-items:center;padding:16px 20px;border-bottom:1px solid #30363d;background:#161b22}
+  .fw .fh .ft{font-size:15.5px;font-weight:600;display:flex;align-items:center;gap:10px}
+  .num{width:28px;height:28px;border-radius:50%;background:#1f6feb1a;color:#58a6ff;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
+  .fw .body{padding:14px 20px}
+  .fw .body p{color:#c9d1d9;font-size:13.5px;margin-bottom:8px}
+  .fw .body p:last-child{margin-bottom:0}
+  .kw{color:#58a6ff;font-weight:600}
+  .kw.r{color:#f85149}
+  .kw.g{color:#3fb950}
+  .kw.a{color:#f0883e}
+  .lp{background:#0d1117;border:1px solid #30363d33;border-radius:8px;padding:10px 14px;margin-top:8px;border-left:3px solid #3fb950}
+  .lp .lt{font-size:12px;color:#7d8590;font-weight:600;margin-bottom:4px}
+  .lp .lb{font-size:13px;color:#c9d1d9}
+  .vf{background:#0d1117;border:1px solid #30363d33;border-radius:10px;margin-top:10px;overflow:hidden}
+  .vf .vrow{display:grid;grid-template-columns:200px 90px 1fr;gap:10px;padding:9px 14px;border-bottom:1px solid #30363d33;align-items:start;font-size:13px}
+  .vf .vrow:last-child{border-bottom:none}
+  .vp{color:#c9d1d9}
+  .vs{font-weight:700;font-size:12px;padding:3px 8px;border-radius:4px;text-align:center}
+  .vs.hit{color:#3fb950;background:#3fb95020;border:1px solid #3fb95040}
+  .vs.part{color:#d29922;background:#d2992220;border:1px solid #d2992240}
+  .vs.miss{color:#f85149;background:#f8514920;border:1px solid #f8514940}
+  .vs.wait{color:#7d8590;background:#7d859020;border:1px solid #7d859033}
+  .vs.rev{color:#f0883e;background:#f0883e20;border:1px solid #f0883e40}
+  .vd{color:#c9d1d9;font-size:12.5px}
+  .holdbox{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .holdbox h2{font-size:15px;color:#f0883e;margin-bottom:12px}
+  .hrow{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #30363d33}
+  .hrow:last-child{border-bottom:none}
+  .hl{color:#58a6ff;font-weight:600;font-size:13.5px}
+  .hr{color:#c9d1d9;font-size:12.5px;line-height:1.75}
+  .stance{background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px 22px;margin-top:14px}
+  .stance h2{font-size:15px;color:#58a6ff;margin-bottom:10px}
+  .stance p{color:#c9d1d9;font-size:13px;margin-bottom:8px}
+  .stance p:last-child{margin-bottom:0}
+  .discl{background:#1a0f0f;border:1px solid #f8514933;border-radius:10px;padding:14px 18px;margin-top:14px}
+  .discl h3{color:#f85149;font-size:13px;margin-bottom:6px}
+  .discl p{color:#c9d1d9;font-size:12px}
+  .foot{text-align:center;color:#7d8590;font-size:11px;margin-top:18px;padding-top:14px;border-top:1px solid #30363d}
+  @media(max-width:760px){.news-grid{grid-template-columns:1fr}.vf .vrow{grid-template-columns:1fr;gap:4px}.hrow{grid-template-columns:1fr;gap:6px}.hd .backbtn{position:static;margin-bottom:10px;display:inline-block}}
+</style>
+</head>
+<body>
+<div class="hd">
+  <a class="backbtn" href="../">← 返回学习台</a>
+  <h1>🌍 地缘政治域 · 每日早间简报</h1>
+  <div class="sub">2026-10-21 周三 · 覆盖 10-20 早间–10-21 早间公开资讯窗口 · 五大框架分析 + 10-19 最新一期预判校验</div>
+  <div class="meta"><span class="tag r">⚓ 霍尔木兹外交窗口</span>
+  <span class="tag a">🛢️ 能源与利率</span>
+  <span class="tag a">🤖 算力基础设施</span></div>
+</div>
+<div class="sec">一、隔夜要闻（10-20 早间–10-21 早间公开资讯窗口）</div>
+<div class="news-grid">
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">关键</span><h3>霍尔木兹开放方案进入附加条款博弈 · 制裁前提仍未松动</h3></div>
+    <p>伊朗外长阿拉格齐 10-21 表示，<b class="kw r">伊朗通过巴基斯坦、卡塔尔等中间国与美方的谈判仍在继续</b>，原计划在本轮进程第六天全面开放霍尔木兹海峡；美方称同意相关条款，但<b class="kw a">希望新增几项附加条款</b>。阿拉格齐同时称，伊方“不会在美方设定的框架内谈判”。</p>
+    <p>伊朗总统佩泽希齐扬则表示，地区紧张与霍尔木兹混乱源于美国侵略，<b class="kw r">美国须先解除施压、威胁和制裁，才具备对话条件</b>；伊朗官员另称所有浓缩核材料都将留在伊朗。开放方案的具体文本、生效日期及新增条款内容均未公开，属<b>数据缺口·待观察</b>。</p>
+    <div class="src">央视新闻 10-21 / 公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">升级</span><h3>也门打击频次维持高位 · 双方战报相反，平民伤亡仍待核实</h3></div>
+    <p>胡塞武装称过去 24 小时也门遭沙特空袭 <b class="kw r">93 次</b>，另一则通报称袭击也门多处目标并造成 <b class="kw r">8 人死亡</b>。沙特主导联军同日称，已<b class="kw a">摧毁胡塞武装一处导弹发射平台</b>。</p>
+    <p>双方通报聚焦不同目标与后果，本窗口没有联合国或独立调查机构给出的统一伤亡和设施损毁口径。平民伤亡、被袭目标性质及导弹平台位置仍属<b>数据缺口·待观察</b>，不宜仅依据单方战报推断战场走势。</p>
+    <div class="src">公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">外交</span><h3>美俄恢复高层接触 · 威特科夫 10-21 将会见普京</h3></div>
+    <p>美国官员 10-20 表示，美国总统特使威特科夫将于 10-21 与俄罗斯总统普京会面，特朗普女婿库什纳以视频方式参与。美方称，此前与乌克兰及欧洲方面的讨论涉及<b class="kw r">包括安全保障在内的全面和平框架</b>，乌方提出新的想法和建议。</p>
+    <p>美方还称，美国、乌克兰和欧洲的工作层已就下一步行动形成<b class="kw a">高度共识</b>，目标是在这一基础上与俄罗斯讨论相关提议。同日，乌克兰问题会谈在挪威举行。会面成果、和平框架文本、安全保障内容及乌俄双方接受程度仍未公布，属<b>数据缺口·待观察</b>。</p>
+    <div class="src">央视新闻 10-21</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">关键</span><h3>星盾限速争议升级 · 私营数字基础设施成为战场开关</h3></div>
+    <p>《华尔街日报》10-21 援引美国官员和知情人士称，SpaceX 创始人马斯克<b class="kw r">亲自批准对乌克兰所依赖的军用版星链实施限速</b>。报道说，限速公开前后马斯克与特朗普通话讨论此事，实施前也与包括特朗普在内的多名政府高层沟通过；特朗普公开否认自己下令限制，部分美国官员认为这是马斯克单方面行动。</p>
+    <p>报道把两项事实并置：乌军通信高度依赖商业卫星网络，而关键功能可以由一家私营公司调整。限速的技术范围、持续时间、乌克兰受影响的具体能力及最终授权链仍无完整权威说明，属<b>数据缺口·待观察</b>。这一事件显示，商业航天与通信基础设施已不只是市场服务，也会成为国家安全决策中的现实节点。</p>
+    <div class="src">《华尔街日报》10-21</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">地区</span><h3>中东安全格局两向变动：以军打击哈马斯高层，利比亚议会对土耳其重启合作</h3></div>
+    <p>以军 10-21 称打死了哈马斯安全机构一名高级成员。公开信息未披露该人员姓名、行动地点与巴方回应，相关影响仍待更多权威信息确认。</p>
+    <p>同日，利比亚国民代表大会宣布经投票<b class="kw r">废除此前“与土耳其断绝政治关系的决议”</b>，并批准 2019 年利比亚民族团结政府与土耳其签署的有关地中海“海事管辖权”谅解备忘录。两项决定的实际执行范围、土耳其回应及东地中海各方反应仍属<b>数据缺口·待观察</b>；可确认的是，利比亚的对外安全与海洋权益安排正在重新调整。</p>
+    <div class="src">公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">经贸</span><h3>欧盟对华“双轨”思路遭批 · 经贸分歧正被纳入限制工具</h3></div>
+    <p>围绕中欧混动汽车磋商，媒体报道称欧盟一些人认为对华施压取得成效，并拟在更多行业采取限制；欧盟峰会提出所谓对华“双轨”思路，即继续密集磋商，同时加大限制力度，甚至考虑动用“反胁迫”工具。</p>
+    <p>公开评论指出，<b class="kw r">“欧方施压奏效”的说法错误解读了中欧达成谅解的基础</b>，对华“双轨”不利于双方积累互信、推进合作。当前可确认的是政策讨论与舆论交锋，并未出现可执行的完整限制清单；具体行业、法律程序与实施时间仍属<b>数据缺口·待观察</b>。</p>
+    <div class="src">公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl mid">贸易</span><h3>加拿大 50% 关税遭起诉 · 行政征税权进入司法审查</h3></div>
+    <p>美国食品进口企业就特朗普政府对一系列加拿大商品征收 <b class="kw r">50% 关税</b>提起诉讼，认为总统无权援引一部此前从未被使用的美国法律条款征税，并称这反映出政府一系列关税行动涉嫌违法。</p>
+    <p>这是美加贸易争端持续期间最新一起诉讼，争点从商品清单扩展到总统与国会之间的征税权边界。法院是否受理、临时措施、判决时间及对已征关税的影响均未确定，属<b>数据缺口·待观察</b>。</p>
+    <div class="src">公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard hot">
+    <div class="nt"><span class="lvl crit">市场</span><h3>美股分化、油价回落、长端美债收益率下行 · 风险定价并未单边转向</h3></div>
+    <p>10-20 美股收盘，<b class="kw r">道指涨 1.02% 至 52495.88 点，标普 500 涨 0.28% 至 7712.57 点，纳指跌 0.02% 至 26424.82 点</b>；大型科技股多数下跌，而保健、房地产和金融板块支撑道指。纳斯达克金龙中国指数涨 0.68%。</p>
+    <p>能源与利率市场方向不同：<b class="kw a">WTI 原油期货结算价跌 1.87 美元至 101.79 美元/桶</b>；10 年期美债收益率跌 2.71 个基点至 5.1126%，30 年期跌 4.53 个基点至 5.4220%。美国 API 口径原油库存减少 493.1 万桶，馏分油库存减少 257.7 万桶。单日价格只能反映交易结果，不能据此推定霍尔木兹或俄乌局势已经缓和。</p>
+    <div class="src">公开资讯 10-21</div>
+  </div>
+
+  <div class="ncard warm">
+    <div class="nt"><span class="lvl high">科技</span><h3>算力资本开支继续放大 · AI 基础设施成为跨市场共同变量</h3></div>
+    <p>SpaceX 披露第三季度营收 <b class="kw r">145.8 亿美元</b>、净利润 44 亿美元，季度总资本支出 195.9 亿美元，并预计第四季度资本支出升至 35 亿至 40 亿美元。公司管理层还提出 2027 年新增大规模电力与冷却基础设施及扩大星链企业业务的目标。</p>
+    <p>同日，媒体披露 Anthropic 计划最多支出 860 亿美元租赁英伟达芯片，并示意未来数年可能为算力投入 7500 亿美元；城堡投资创始人格里芬则认为 AI“几乎可以肯定”存在泡沫，但技术进步同时真实存在。相关投入承诺能否兑现、融资结构与产能落地情况仍属<b>数据缺口·待观察</b>。</p>
+    <div class="src">公开资讯 10-21 / 《华尔街日报》10-21</div>
+  </div>
+
+  <div class="ncard cool">
+    <div class="nt"><span class="lvl mid">非传统安全</span><h3>公共卫生与海上搜救同时出现新事件 · 跨国风险不限于军事冲突</h3></div>
+    <p>世界卫生组织 10-21 通报，<b class="kw r">尼日利亚确诊一例输入型埃博拉 Bundibugyo 毒株感染病例</b>。同日，巴拿马南部太平洋海域发生 5.4 级地震；印度尼西亚一艘客轮起火，船上 <b class="kw a">460 人全部撤离</b>。</p>
+    <p>目前尚缺埃博拉病例的旅行轨迹、接触者规模与尼日利亚后续防控安排，也未见巴拿马地震的完整损失评估。三项事件的伤亡、损失与跨境传播风险仍属<b>数据缺口·待观察</b>，但共同提示：公共卫生、自然灾害与海上交通安全会独立于军事议程进入每日风险清单。</p>
+    <div class="src">世界卫生组织 10-21 / 公开资讯 10-21</div>
+  </div>
+</div>
+
+<div class="sec">二、五大框架分析</div>
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">1</span>🌊 海权·陆权 · 霍尔木兹争点从“是否开放”转为“按谁的条件开放”</div></div>
+  <div class="body">
+    <p><b class="kw r">今天这个框架先看到“条件”而非“开关”：</b>伊朗称原计划第六天全面开放霍尔木兹，但又说美方临时追加条款、伊方不接受美方设定框架；伊朗总统把解除制裁列为谈判前提。海峡是否恢复通航，因此不只取决于航道是否安全，也取决于制裁、核材料与核查安排能否形成交换。</p>
+    <p><b class="kw a">海上通道与陆地能源节点仍然互相替代：</b>霍尔木兹风险支撑原油供应担忧，而美国 API 原油库存下降、WTI 单日回落又说明市场并未按“立即断供”单一定价。船期、保险、泄漏与实船损伤在本窗口没有新增完整读数，属<b>数据缺口·待观察</b>。霸权竞争在这里体现为谁能设定航行规则、制裁豁免和谈判顺序。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">2</span>⚖️ 均势 · 美俄直接接触与地区联盟重组同时发生</div></div>
+  <div class="body">
+    <p><b class="kw r">欧洲安全线出现了新的会面节点：</b>威特科夫计划 10-21 会见普京，库什纳视频参与；美方称先与乌克兰、欧洲形成“高度共识”，再向俄方转达。这个安排说明美国试图把多边协调压缩成一条可操作的谈判链，但会面本身不等于俄方接受安全保障或停火框架。</p>
+    <p><b class="kw a">中东与北非则在进行另一种均势调整：</b>胡塞与沙特联军继续互相发布战果，利比亚国民代表大会废除与土耳其断交决议并批准地中海海事备忘录。各方增加合作选项，同时保留可逆空间。具体协议文本、执行机制和第三方反应均缺，属<b>数据缺口·待观察</b>。今天能确认的是联盟关系正在重新排列，而非已经固化为新的阵营。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">3</span>🔥 修昔底德 · 竞争从传统军力延伸到卫星网络与算力基础设施</div></div>
+  <div class="body">
+    <p><b class="kw r">星盾限速报道让“能力依赖”变得具体：</b>乌克兰军用通信依赖商业卫星，而《华尔街日报》报道关键功能由马斯克批准限速。无论最终授权链如何认定，私营基础设施所有者已经能在战场上形成直接影响。这是技术能力、企业控制权与国家安全目标交叠后的新型权力关系。</p>
+    <p><b class="kw a">算力投入则是长期竞争的另一把尺子：</b>SpaceX 继续扩大资本开支，Anthropic 拟以数百亿至数千亿美元规模锁定芯片与算力，限制因素从芯片延伸到电力、冷却和基础设施。投入承诺与实际产能之间仍有距离，属<b>数据缺口·待观察</b>。今天这个框架看到的是，竞争门槛正在从单一装备转向通信网络、能源供给、先进芯片与工程交付的综合能力。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">4</span>🕊️ 文明冲突 · 不把复杂冲突简化成文明标签，先看具体保护责任</div></div>
+  <div class="body">
+    <p><b class="kw r">今天最需要核实的是具体后果：</b>胡塞称也门 24 小时内遭 93 次空袭并致 8 人死亡，沙特联军则称摧毁导弹发射平台；以军称打死哈马斯安全机构高级成员。单方战报无法替代独立调查，平民身份、目标性质与责任归属都应以可核查证据为基础。</p>
+    <p><b class="kw a">非军事安全同样有真实的跨境影响：</b>尼日利亚出现输入型埃博拉病例，印尼客轮起火后 460 人撤离，巴拿马发生 5.4 级地震。简单用“文明冲突”解释这些事件会遮蔽公共卫生能力、应急治理和基础设施安全等可操作变量。中方主张通过对话协商处理分歧，反对针对平民和民用设施的袭击；本简报不对冲突走向作预判。</p>
+  </div>
+</div>
+
+<div class="fw">
+  <div class="fh"><div class="ft"><span class="num">5</span>💰 地缘经济 · 油价回落不等于风险解除，长端利率与科技资本开支另有约束</div></div>
+  <div class="body">
+    <p><b class="kw r">能源市场今天的信号是分化：</b>WTI 结算价下跌 1.87 美元至 101.79 美元/桶，但美国 API 原油、汽油和馏分油库存同时下降，霍尔木兹外交又未形成可执行开放文本。价格回落可能反映交易层面的仓位调整，不能据此断言供应风险消失；运费、保费与实际船流仍属<b>数据缺口·待观察</b>。</p>
+    <p><b class="kw a">金融与产业信号也没有指向单边避险：</b>道指上涨而纳指微跌，10 年期与 30 年期美债收益率下行，美元指数下跌，另有大额 AI 算力投入计划；欧洲对华贸易“双轨”讨论则把限制工具带入产业预期。今天这个框架看到的是能源成本、利率、科技资本开支和贸易规则四条传导链同时存在，任何单一价格都不足以代表整体地缘风险。</p>
+  </div>
+</div>
+
+<div class="sec">三、10-19 最新一期预判校验（10-20 未生成独立简报）</div>
+<p><b>校验口径：</b>10-20 没有独立地缘简报，本期回看 10-19 成品中的 10 条跟踪项；结论只依据本窗口新增公开事实，不补写当日不存在的预判。</p>
+<div class="vf">
+  <div class="vrow"><div class="vp">盯霍尔木兹—红海航运：触雷油轮核实、伊朗“关闭”执行范围、UKMTO 后续、运费与保费</div>
+    <div class="vs part">部分兑现·外交窗口明确，通行仍未恢复</div><div class="vd">伊朗外长称原计划第六天全面开放霍尔木兹，美方同意相关条款但追加若干条件，双方仍在通过中间国谈判。可确认方案仍在推进；<b>开放日期、附加条款、船运恢复及运费保费仍无完整数据</b>，属数据缺口·待观察。</div></div>
+
+  <div class="vrow"><div class="vp">盯也门—沙特链条：打击频次、伤亡口径、萨达/塔伊兹核实、埃及议会授权</div>
+    <div class="vs hit">命中·高频打击延续</div><div class="vd">胡塞称过去 24 小时遭沙特空袭 <b class="kw r">93 次</b>，另一通报称多处目标遭袭并致 8 人死亡；沙特联军称摧毁一处导弹发射平台。高频打击得到延续，但伤亡数字、目标性质与独立核实仍缺，属部分缺口。</div></div>
+
+  <div class="vrow"><div class="vp">盯美俄柴油合同、制裁豁免清单与能源金融航运影响</div>
+    <div class="vs part">部分兑现·高层外交恢复，制裁清单未解</div><div class="vd">威特科夫计划 10-21 会见普京，表明美俄沟通进入新节点；但本窗口<b>没有柴油合同签署、制裁豁免清单、数量价格或生效条件</b>。外交接触增加不能替代能源交易与制裁执行数据。</div></div>
+
+  <div class="vrow"><div class="vp">盯俄乌：本周和会、基辅/圣彼得堡损失评估、星盾限速权威说明</div>
+    <div class="vs part">部分兑现·外交与星盾争议均有新增</div><div class="vd">美方称威特科夫将向普京转达与乌克兰、欧洲形成的和平框架提议；《华尔街日报》报道马斯克批准军用版星链限速，并称实施前与特朗普沟通过，特朗普否认下令。会议结果、损失评估与限速授权链仍缺，属部分兑现·待观察。</div></div>
+
+  <div class="vrow"><div class="vp">盯欧洲气电价格与法国骚乱、马克龙海湾之行，以及中国前三季度经济数据</div>
+    <div class="vs wait">待观察·本窗口无完整后续</div><div class="vd">本窗口未见欧洲气电价格、马克龙海湾之行成果或法国社会秩序的新完整读数，也未见新的中国前三季度经济数据通报。相关影响仍属<b>数据缺口·待观察</b>。</div></div>
+
+  <div class="vrow"><div class="vp">盯美国 9 月 CPI/PPI、10 月议息定价、11-04 美债再融资</div>
+    <div class="vs part">部分兑现·利率与油价给出新增读数</div><div class="vd"><b class="kw r">10 年期美债收益率 5.1126%（-2.71bp）、30 年期 5.4220%（-4.53bp）</b>，WTI 结算价 101.79 美元/桶；美联储 10 月维持利率不变概率仍为 83.9%。但 CPI/PPI 完整读数和 11-04 再融资安排仍未出现，属部分兑现。</div></div>
+
+  <div class="vrow"><div class="vp">盯三星—台积电—英伟达 HBM 官方确认，以及三菱重工造船线细节</div>
+    <div class="vs part">部分兑现·算力瓶颈叙事强化</div><div class="vd">本窗口没有三家公司的 HBM 官方联合确认，也未见三菱重工造船线细节；但 Anthropic 拟大额租赁英伟达芯片、SpaceX 加速采购芯片制造设备与扩建电力冷却设施，进一步印证先进算力供应是产业竞争约束。不能据此替代具体 HBM 合作确认。</div></div>
+
+  <div class="vrow"><div class="vp">盯非传统安全：肯尼亚埃博拉感染链、坦桑尼亚筛查、日本猪瘟</div>
+    <div class="vs part">部分兑现·地域扩展到尼日利亚</div><div class="vd">世界卫生组织称尼日利亚确诊一例<b class="kw r">输入型埃博拉 Bundibugyo 毒株</b>病例。公共卫生风险出现新的地理节点，但病例旅行轨迹、接触者规模、肯尼亚感染链、坦桑尼亚筛查与日本猪瘟均无完整新数据，属部分兑现·待观察。</div></div>
+
+  <div class="vrow"><div class="vp">盯港股复市后的中概联动、MSCI 印尼与土耳其调整落地</div>
+    <div class="vs part">部分兑现·市场分化大于同步</div><div class="vd">10-20 恒生指数收跌 <b class="kw r">1.32%</b>，纳斯达克金龙中国指数收涨 <b class="kw a">0.68%</b>，MSCI 新兴市场股票指数跌 1.1%。港股与中概方向分化；MSCI 印尼、土耳其调整影响仍无新增完整说明，属部分兑现·待观察。</div></div>
+
+  <div class="vrow"><div class="vp">涉台动向按一个中国原则观察，不作走向预判</div>
+    <div class="vs wait">待观察·无新增事实性通报</div><div class="vd">本窗口未见涉台新的事实性通报。台湾是中国领土不可分割的一部分，台湾问题纯属中国内政；相关动向按一个中国原则观察，不据此推断政治走向。</div></div>
+</div>
+
+<div class="sec">四、持仓含义提示（客观映射 · 不给买卖建议）</div>
+<div class="holdbox">
+  <h2>💼 持仓含义提示（客观提示·不给买卖建议）</h2>
+  <p>10-21 早间 A 股与港股尚未开盘，以下采用 <b>10-20 最近收盘价</b>，不把盘前情绪或期货报价当作当日收盘。美股 10-20 已收盘；美股开盘口径为夏令时北京时间 21:30、冬令时 22:30。两只持仓在本窗口均未见公司层面的新增公告。</p>
+  <div class="hrow">
+    <div class="hl">新锐股份 688257</div>
+    <div class="hr">硬质合金（钨钴）与精密工具。<b>10-20 收盘 37.87 元（+2.80%）</b>，当日开 36.61 元、最高 38.97 元、最低 36.21 元、<b>前收 36.84 元</b>；同日上证指数收 3735.37（+0.12%）、创业板指收 2739.20（-0.26%）、沪深 300 收 4152.11（-0.54%）。个股较 10-19 的 36.84 元明显反弹，而主要宽基涨跌分化。外部变量的客观映射：① <b>能源与物流成本</b>——WTI 回落至 101.79 美元/桶，但霍尔木兹仍未形成可执行开放文本，燃料、海运与保险成本的方向并不单一；② <b>工业需求</b>——美国 API 原油、馏分油库存下降，中国利率调控机制讨论不等于降息，制造需求仍需后续宏观数据验证；③ <b>金属与硬质材料</b>——COMEX 铜涨 0.59%，本窗口未见钨钴公开报价或公司经营数据，不能由铜价直接外推公司成本与利润。以上仅作客观映射，不构成买卖建议。</div>
+  </div>
+  <div class="hrow">
+    <div class="hl">小鹏集团-W 09868</div>
+    <div class="hr">港股中概、新能源车与智能辅助驾驶出海。<b>10-20 收盘 37.60 港元（+0.37%）</b>，当日开 36.48 港元、最高 37.78 港元、最低 35.88 港元、<b>前收 37.46 港元</b>；同日恒生指数收 23867.74（<b class="kw r">-1.32%</b>），个股收涨而大盘下跌。外部变量的客观映射：① <b>欧洲贸易规则</b>——围绕混动车的磋商与所谓对华“双轨”讨论，涉及欧洲市场准入与贸易工具预期；② <b>行业风险偏好</b>——彭博电动汽车价格回报指数跌 1.01%，蔚来集团 H 股跌 3.5%、地平线 H 股跌 3.95%，同日小鹏收涨，显示板块内部并未同步；③ <b>AI 与出海</b>——算力资本开支扩大和星链企业业务扩张反映智能基础设施投入增加，但不等同于车企订单、毛利或智驾商业化的直接增量；④ <b>能源与供应链</b>——霍尔木兹和也门方向的风险仍影响海运时效、保费与欧洲能源成本。本窗口没有公司销量、财报或产品公告，以上仅作客观映射，不构成买卖建议。</div>
+  </div>
+  <div class="hrow">
+    <div class="hl">共同观察项</div>
+    <div class="hr">① <b>霍尔木兹</b>：首批开放船舶、附加条款文本、通行顺序、实际船流、运费与保费；② <b>也门—沙特</b>：93 次袭击与 8 人死亡口径的独立核实、导弹平台与民航设施状态；③ <b>美俄外交</b>：威特科夫与普京会面结果、和平框架是否形成书面文本、安全保障安排；④ <b>俄乌</b>：军用星链限速的授权链与技术范围、能源设施损失；⑤ <b>中东与北非</b>：利比亚—土耳其海事备忘录执行、以军行动后续；⑥ <b>经贸</b>：欧盟“双轨”是否转为具体限制清单、加拿大关税诉讼程序；⑦ <b>宏观</b>：9 月 CPI/PPI、10 月议息定价、11-04 美债再融资与长端收益率；⑧ <b>科技</b>：SpaceX 与 Anthropic 资本开支的融资和产能落地、HBM 合作官方确认；⑨ <b>非传统安全</b>：尼日利亚输入型埃博拉接触者追踪、巴拿马地震损失、印尼客轮事故调查；⑩ 涉台动向按<b>一个中国原则</b>观察，不作走向预判。以上均为客观观察项，不构成买卖建议。</div>
+  </div>
+</div>
+
+<div class="stance">
+  <h2>⚖ 立场声明</h2>
+  <p><b>台湾是中国领土不可分割的一部分</b>，台湾问题纯属中国内政，不容任何外来干涉。一个中国原则是国际关系基本准则和国际社会普遍共识，也是中美关系的政治基础。中方坚决反对任何形式的“台独”分裂行径和外部势力干涉。</p>
+  <p><b>黄岩岛及南海诸岛是中国固有领土</b>，中国对相关海域拥有主权与海洋权益。中方坚定捍卫领土主权和海洋权益，致力于同当事国通过对话协商妥善处理分歧，维护南海和平稳定。</p>
+  <p><b>中方反对缺乏联合国授权和国际法依据的单边制裁</b>，反对以涉及第三方为由对他国采取所谓次级制裁措施；主张维护以联合国为核心的国际体系和以国际法为基础的国际秩序。</p>
+  <p><b>朝鲜半岛事务是中国周边外交重要议程</b>：中方坚持半岛无核化目标，坚持维护半岛和平稳定，坚持通过对话协商解决问题。中方一贯坚持和平利用外空，反对外空武器化、战场化和军备竞赛。</p>
+</div>
+<div class="discl">
+  <h3>⚠ 免责声明</h3>
+  <p>本简报基于公开信息整理·仅供学习研究·不构成投资/政策建议。地缘事件发展具有高度不确定性·持仓含义提示仅为客观映射·不构成买卖建议。投资者应独立判断并自行承担风险。立场严格遵循中国官方立场·台湾/南海/中日等问题按中国官方表述。</p>
+</div>
+<div class="foot">
+  <p>学习台 · 地缘政治域每日早间简报 · 五大框架实战 · 2026-10-21 周三</p>
+</div>
+<!--studyworkbench-disclaimer--><div style="max-width:900px;margin:34px auto 28px;padding:14px 18px;border-top:1px solid rgba(139,148,158,.35);color:#8b949e;font-size:12px;line-height:1.7;text-align:center;font-family:-apple-system,'PingFang SC',system-ui,sans-serif">本页由自动化脚本生成，仅供学习研究，不构成投资建议。数据以交易所为准。</div>
+<!--studyworkbench-wrapfix--><style>@media(max-width:640px){body{overflow-wrap:anywhere;word-break:break-word}}</style>
+</body>
+</html>
